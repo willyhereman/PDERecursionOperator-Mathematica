@@ -1,0 +1,4518 @@
+(************** Content-type: application/mathematica **************
+                     CreatedBy='Mathematica 5.0'
+
+                    Mathematica-Compatible Notebook
+
+This notebook can be used with any Mathematica-compatible
+application, such as Mathematica, MathReader or Publicon. The data
+for the notebook starts with the line containing stars above.
+
+To get the notebook into a Mathematica-compatible application, do
+one of the following:
+
+* Save the data starting with the line of stars above into a file
+  with a name ending in .nb, then open the file inside the
+  application;
+
+* Copy the data starting with the line of stars above to the
+  clipboard, then use the Paste menu command inside the application.
+
+Data for notebooks contains only printable 7-bit ASCII and can be
+sent directly in email or through ftp in text mode.  Newlines can be
+CR, LF or CRLF (Unix, Macintosh or MS-DOS style).
+
+NOTE: If you modify the data for this notebook not in a Mathematica-
+compatible application, you must delete the line below containing
+the word CacheID, otherwise Mathematica-compatible applications may
+try to use invalid cache data.
+
+For more information on notebooks and Mathematica-compatible 
+applications, contact Wolfram Research:
+  web: http://www.wolfram.com
+  email: info@wolfram.com
+  phone: +1-217-398-0700 (U.S.)
+
+Notebook reader applications are available free of charge from 
+Wolfram Research.
+*******************************************************************)
+
+(*CacheID: 232*)
+
+
+(*NotebookFileLineBreakTest
+NotebookFileLineBreakTest*)
+(*NotebookOptionsPosition[    180073,       4205]*)
+(*NotebookOutlinePosition[    180773,       4229]*)
+(*  CellTagsIndexPosition[    180729,       4225]*)
+(*WindowFrame->Normal*)
+
+
+
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+    \(SetDirectory["\<d:\\demorecursionoperator\\onweb04-28-09\>"]\)], "Input"],
+
+Cell[BoxData[
+    \("d:\\demorecursionoperator\\onweb04-28-09"\)], "Output"]
+}, Open  ]],
+
+Cell[BoxData[
+    \(\(\(\ \)\( (*\ 
+      format : \ 
+        SetDirectory["\<d:\\myDirectory\>"]\ \
+*) \)\(\[IndentingNewLine]\)\)\)], "Input",
+  CellChangeTimes -> {{3.4471814858041105`*^9, 3.4471815188976483`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(Get["\<PDERecursionOperator.m\>"]\)], "Input"],
+
+Cell[BoxData[
+    \("Package InvariantsSymmetries has been successfully loaded"\)], "Print"],
+
+Cell[BoxData[
+    \("Loading Recursion Operator Package of September 20, 2007."\)], "Print"],
+
+Cell[BoxData[
+    \("Recursion Operator Package of September 20, 2007 loaded successfully."\
+\)], "Print"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\( (*\ 
+      Burgers'\ Equation\ *) \)\(\[IndentingNewLine]\)\(RecursionOperator[\
+\[IndentingNewLine]D[u[x, t], \ t]\  == 
+        u[x, t]*D[u[x, t], x] + D[u[x, t], {x, 2}], \[IndentingNewLine]u[x, 
+        t], {x, t}]\)\)\)], "Input"],
+
+Cell[BoxData[
+    \("{{{2 C[3]D_x^{1} + C[3]uI + C[3]u_{x}D_x^{-1}}}}"\)], "Print"],
+
+Cell[BoxData[
+    RowBox[{"{", 
+      RowBox[{"{", 
+        RowBox[{"{", 
+          
+          RowBox[{\(\((2\ C[3])\)*operatorD[1]\), 
+            "+", \(C[3]*u[x, t]*operatorD[0]\), "+", 
+            RowBox[{\(C[3]\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((1, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[\(-1\)]\)}]}], "}"}], "}"}], "}"}]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\( (*\ Burgers'\ Equation, \ 
+      recursion\ operator\ with\ explicit\ dependence\ on\ x\ and\ \(\(t\)\(.\
+\)\)\ *) \)\(\[IndentingNewLine]\)\(RecursionOperator[\[IndentingNewLine]D[
+          u[x, t], \ t]\  == 
+        u[x, t]*D[u[x, t], x] + D[u[x, t], {x, 2}], \[IndentingNewLine]u[x, 
+        t], {x, t}, MaxExplicitDependency \[Rule] 1]\)\)\)], "Input"],
+
+Cell[BoxData[
+    \("{{{2 C[5]tD_x^{1} + C[5]D_x^{-1} + C[5]tuI + C[5]tu_{x}D_x^{-1} + \
+C[5]xI}}}"\)], "Print"],
+
+Cell[BoxData[
+    RowBox[{"{", 
+      RowBox[{"{", 
+        RowBox[{"{", 
+          
+          RowBox[{\(C[5]*operatorD[\(-1\)]\), "+", \(C[5]*x*operatorD[0]\), 
+            "+", \(\((2\ C[5])\)*t*operatorD[1]\), 
+            "+", \(C[5]*t*u[x, t]*operatorD[0]\), "+", 
+            RowBox[{\(C[5]\), "*", "t", "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((1, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[\(-1\)]\)}]}], "}"}], "}"}], "}"}]], "Output"]
+}, Open  ]],
+
+Cell[BoxData[
+    RowBox[{"(*", " ", 
+      RowBox[{"{", 
+        RowBox[{"{", 
+          RowBox[{"{", 
+            
+            RowBox[{\(C[5]*operatorD[\(-1\)]\), "+", \(C[5]*x*operatorD[0]\), 
+              "+", \(\((2\ C[5])\)*t*operatorD[1]\), 
+              "+", \(C[5]*t*u[x, t]*operatorD[0]\), "+", 
+              RowBox[{\(C[5]\), "*", "t", "*", 
+                RowBox[{
+                  SuperscriptBox["u", 
+                    TagBox[\((1, 0)\),
+                      Derivative],
+                    MultilineFunction->None], "[", \(x, t\), "]"}], 
+                "*", \(operatorD[\(-1\)]\)}]}], "}"}], "}"}], "}"}], " ", 
+      "*)"}]], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\( (*\ 
+      Burger' s\ Equation\ with\ parameter\ \((nu)\)\ *) \)\(\
+\[IndentingNewLine]\)\(RecursionOperator[\[IndentingNewLine]D[u[x, t], 
+          t] \[Equal] \(-\ u[x, t]\)*D[u[x, t], x]\  + \ \[Nu]*
+            D[u[x, t], \ {x, 2}], \[IndentingNewLine]u[x, t], {x, 
+        t}, {\[Nu]}]\)\)\)], "Input"],
+
+Cell[BoxData[
+    \("{{{D_x^{1} + \\frac{-1}{2} \\frac{1}{\[Nu]^{1}}uI + \\frac{-1}{2} \
+\\frac{1}{\[Nu]^{1}}u_{x}D_x^{-1}}}}"\)], "Print"],
+
+Cell[BoxData[
+    RowBox[{"{", 
+      RowBox[{"{", 
+        RowBox[{"{", 
+          
+          RowBox[{\(DefiningEquation`Operator`Times[operatorD[1]]\), 
+            "+", \(\(-\(1\/\(2\ \[Nu]\)\)\)*u[x, t]*operatorD[0]\), "+", 
+            RowBox[{\(-\(1\/\(2\ \[Nu]\)\)\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((1, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[\(-1\)]\)}]}], "}"}], "}"}], "}"}]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\( (*\ 
+      Potential\ Burgers'\ \(Equation\ --\)\ R\ is\ only\ \(\(local\)\(.\)\)\ \
+*) \)\(\[IndentingNewLine]\)\(RecursionOperator[
+      D[u[x, t], \ t]\  \[Equal] \ D[u[x, t], x]^2 + D[u[x, t], {x, 2}], 
+      u[x, t], {x, 
+        t}, \[IndentingNewLine]WeightRules\  \[Rule] \ {weight[u] \[Rule] 
+            1}, \ Seed \[Rule] 2]\)\)\)], "Input"],
+
+Cell[BoxData[
+    \(weight::"nonuniform1" \(\(:\)\(\ \)\) 
+      "Given system has at least one equation with terms of unequal rank, so \
+that scaling properties can not be determined."\)], "Message"],
+
+Cell[BoxData[
+    \(weight::"nonuniform2" \(\(:\)\(\ \)\) 
+      "Incompatibility has been cured by assuming auxiliary parameters with \
+weight."\)], "Message"],
+
+Cell[BoxData[
+    \("{{{C[1]I + C[7]D_x^{1} + C[7]u_{x}I}}}"\)], "Print"],
+
+Cell[BoxData[
+    RowBox[{"{", 
+      RowBox[{"{", 
+        RowBox[{"{", 
+          RowBox[{\(C[1]*operatorD[0]\), "+", \(C[7]*operatorD[1]\), "+", 
+            RowBox[{\(C[7]\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((1, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[0]\)}]}], "}"}], "}"}], "}"}]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\( (*\ Potential\ Burgers'\ Equation, \ 
+      recursion\ operator\ with\ explicit\ dependence\ on\ x\ and\ \(t\ --\)\ \
+R\ is\ only\ \(\(local\)\(.\)\)\ \
+*) \)\(\[IndentingNewLine]\)\(RecursionOperator[
+      D[u[x, t], \ t]\  \[Equal] \ D[u[x, t], x]^2 + D[u[x, t], {x, 2}], 
+      u[x, t], {x, t}, 
+      WeightRules \[Rule] {weight[u] \[Rule] \(-weight[x]\)}, Seed \[Rule] 2, 
+      MaxExplicitDependency\  \[Rule] 1]\)\)\)], "Input"],
+
+Cell[BoxData[
+    \(weight::"nonuniform1" \(\(:\)\(\ \)\) 
+      "Given system has at least one equation with terms of unequal rank, so \
+that scaling properties can not be determined."\)], "Message"],
+
+Cell[BoxData[
+    \(weight::"nonuniform2" \(\(:\)\(\ \)\) 
+      "Incompatibility has been cured by assuming auxiliary parameters with \
+weight."\)], "Message"],
+
+Cell[BoxData[
+    \("{{{C[8]tD_x^{1} + C[8]tu_{x}I + \\frac{1}{2} C[8]xI}}}"\)], "Print"],
+
+Cell[BoxData[
+    RowBox[{"{", 
+      RowBox[{"{", 
+        RowBox[{"{", 
+          
+          RowBox[{\(C[8]\/2*x*operatorD[0]\), "+", \(C[8]*t*operatorD[1]\), 
+            "+", 
+            RowBox[{\(C[8]\), "*", "t", "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((1, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[0]\)}]}], "}"}], "}"}], "}"}]], "Output"]
+}, Open  ]],
+
+Cell[BoxData[
+    \(\(\( (*\ Diffusion\ Equation\ *) \)\(\[IndentingNewLine]\)\( (*\ 
+      R1\ is\ composed\ of\ the\ nonpolynomial\ \[Rho]\  = \ 
+        1/u\ \((\ 
+            or\ cosymmetry\ 1/\((u^2)\)\ )\)\ *) \)\(\[IndentingNewLine]\)\( \
+(*\ RecursionOperator[\[IndentingNewLine]D[u[x, t], t]\  \[Equal] \ 
+          u[x, t]^2*D[u[x, t], {x, 2}], \[IndentingNewLine]u[x, t], {x, t}, \ 
+        WeightRules \[Rule] {weight[
+                u] \[Rule] \(-weight[
+                  x]\)}]\[IndentingNewLine]*) \)\)\)], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\( (*\ 
+      The\ Korteweg - 
+        de\ Vries\ Equation\ *) \)\(\[IndentingNewLine]\)\(RecursionOperator[\
+\[IndentingNewLine]D[u[x, t], t]\  \[Equal] \ 
+        6*u[x, t]*D[u[x, t], x] + D[u[x, t], {x, 3}], \[IndentingNewLine]u[x, 
+        t], {x, t}]\)\)\)], "Input"],
+
+Cell[BoxData[
+    \("{{{2 C[3]uI + C[3]u_{x}D_x^{-1} + \\frac{1}{2} C[3]D_x^{2}}}}"\)], \
+"Print"],
+
+Cell[BoxData[
+    RowBox[{"{", 
+      RowBox[{"{", 
+        RowBox[{"{", 
+          RowBox[{\(C[3]\/2*operatorD[2]\), "+", 
+            RowBox[{\(C[3]\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((1, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[\(-1\)]\)}], 
+            "+", \(\((2\ C[3])\)*u[x, t]*operatorD[0]\)}], "}"}], "}"}], 
+      "}"}]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\( (*\ 
+      Potential\ Korteweg - 
+        de\ Vries\ Equation\ *) \)\(\[IndentingNewLine]\)\(RecursionOperator[\
+\[IndentingNewLine]D[u[x, t], t]\  \[Equal] \ 
+        3*D[u[x, t], x]^2 + D[u[x, t], {x, 3}], 
+      u[x, t], {x, t}]\)\)\)], "Input"],
+
+Cell[BoxData[
+    \("{{{-2C[5]D_x^{-1}u_{2 x}I + 4 C[5]u_{x}I + C[5]D_x^{2}}}}"\)], "Print"],
+
+Cell[BoxData[
+    RowBox[{"{", 
+      RowBox[{"{", 
+        RowBox[{"{", 
+          RowBox[{\(C[5]*operatorD[2]\), "+", 
+            RowBox[{\((4\ C[5])\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((1, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[0]\)}], "+", 
+            RowBox[{\(-2\), "*", \(C[5]\), "*", \(operatorD[\(-1\)]\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((2, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[0]\)}]}], "}"}], "}"}], "}"}]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\( (*\ 
+      Modified\ Korteweg - 
+        de\ Vries\ Equation\ *) \)\(\[IndentingNewLine]\)\(RecursionOperator[\
+\[IndentingNewLine]D[u[x, t], t]\  \[Equal] \ 
+        u[x, t]^2*D[u[x, t], x] + D[u[x, t], {x, 3}], \[IndentingNewLine]u[x, 
+        t], {x, t}]\)\)\)], "Input"],
+
+Cell[BoxData[
+    \("{{{2 C[5]u^{2}I + 2C[5]u_{x}D_x^{-1}uI + 3 C[5]D_x^{2}}}}"\)], "Print"],
+
+Cell[BoxData[
+    RowBox[{"{", 
+      RowBox[{"{", 
+        RowBox[{"{", 
+          
+          RowBox[{\(\((3\ C[5])\)*operatorD[2]\), 
+            "+", \(\((2\ C[5])\)*u[x, t]\^2*operatorD[0]\), "+", 
+            RowBox[{"2", "*", \(C[5]\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((1, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[\(-1\)]\), "*", \(u[x, t]\), 
+              "*", \(operatorD[0]\)}]}], "}"}], "}"}], "}"}]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\( (*\ 
+      Potential\ Modified\ Korteweg - 
+        de\ Vries\ Equation\ *) \)\(\[IndentingNewLine]\)\(RecursionOperator[\
+\[IndentingNewLine]D[u[x, t], \ t]\  \[Equal] \ 
+        1/3*D[u[x, t], x]^3 + D[u[x, t], {x, 3}], \[IndentingNewLine]u[x, 
+        t], {x, t}, \ \[IndentingNewLine]WeightRules\  \[Rule] \ {weight[
+              u] \[Rule] 1}, \[IndentingNewLine]Seed\  \[Rule] \ 
+        2\[IndentingNewLine]]\)\)\)], "Input"],
+
+Cell[BoxData[
+    \(weight::"nonuniform1" \(\(:\)\(\ \)\) 
+      "Given system has at least one equation with terms of unequal rank, so \
+that scaling properties can not be determined."\)], "Message"],
+
+Cell[BoxData[
+    \(weight::"nonuniform2" \(\(:\)\(\ \)\) 
+      "Incompatibility has been cured by assuming auxiliary parameters with \
+weight."\)], "Message"],
+
+Cell[BoxData[
+    \("{{{2 C[19]u_{x}^{2}I + -2C[19]u_{x}D_x^{-1}u_{2 x}I + 3 C[19]D_x^{2} + \
+C[1]I}}}"\)], "Print"],
+
+Cell[BoxData[
+    RowBox[{"{", 
+      RowBox[{"{", 
+        RowBox[{"{", 
+          
+          RowBox[{\(C[1]*operatorD[0]\), "+", \(\((3\ C[19])\)*operatorD[2]\),
+             "+", 
+            RowBox[{\((2\ C[19])\), "*", 
+              SuperscriptBox[
+                RowBox[{
+                  SuperscriptBox["u", 
+                    TagBox[\((1, 0)\),
+                      Derivative],
+                    MultilineFunction->None], "[", \(x, t\), "]"}], "2"], 
+              "*", \(operatorD[0]\)}], "+", 
+            RowBox[{\(-2\), "*", \(C[19]\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((1, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[\(-1\)]\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((2, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[0]\)}]}], "}"}], "}"}], "}"}]], "Output"]
+}, Open  ]],
+
+Cell[BoxData[
+    \(\(\( (*\ 
+      The\ Cylindrical\ Korteweg - 
+        de\ Vries\ Equation\ *) \)\(\[IndentingNewLine]\)\( (*\ 
+      R1\ is\ not\ the\ composition\ of\ symmetries\ and\ \
+\(\(cosymmetries\)\(.\)\)\ *) \)\(\[IndentingNewLine]\)\( (*\ 
+      RecursionOperator[\[IndentingNewLine]D[u[x, t], t]\  \[Equal] \ 
+          u[x, t]*D[u[x, t], x] + D[u[x, t], {x, 3}] - 
+            u[x, t]/\((2*t)\), \[IndentingNewLine]u[x, t], {x, t}, 
+        MaxExplicitDependency\  \[Rule] \ 
+          1]\[IndentingNewLine]*) \)\)\)], "Input"],
+
+Cell[BoxData[
+    \(\(\( (*\ Harry\ Dym\ Equation\ *) \)\(\[IndentingNewLine]\)\( (*\ 
+      R1\ composed\ of\ nonpolynomial\ density\ \[Rho]\  = \ 
+        1/\(\(u\)\(.\)\)\ *) \)\(\[IndentingNewLine]\)\( (*RecursionOperator[\
+\[IndentingNewLine]D[u[x, t], t]\  \[Equal] \ 
+          u[x, t]^3*D[u[x, t], {x, 3}], \[IndentingNewLine]u[x, t], {x, t}, \ 
+        WeightRules \[Rule] {weight[u] \[Rule] 
+              1}]\[IndentingNewLine]*) \)\)\)], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\( (*\ 
+      Kupershmidt\ Equation\ *) \)\(\[IndentingNewLine]\)\(RecursionOperator[\
+\[IndentingNewLine]D[u[x, t], t] \[Equal] 
+        D[u[x, t], {x, 5}] + 5*D[u[x, t], x]*D[u[x, t], {x, 3}] + 
+          5*D[u[x, t], {x, 2}]^2 - 5*u[x, t]^2*D[u[x, t], {x, 3}] - 
+          20*u[x, t]*D[u[x, t], x]*D[u[x, t], {x, 2}] - 5*D[u[x, t], x]^3 + 
+          5*u[x, t]^4*D[u[x, t], x], \[IndentingNewLine]u[x, t], {x, t}, 
+      Seed \[Rule] 2]\)\)\)], "Input"],
+
+Cell[BoxData[
+    \("{{{-10C[42]u^{2}u_{3 x}D_x^{-1}uI + 10C[42]u_{2 x}^{2}D_x^{-1}uI + \
+10C[42]u^{4}u_{x}D_x^{-1}uI + -10C[42]u_{x}^{3}D_x^{-1}uI + \
+-10C[42]u_{x}D_x^{-1}u^{2}u_{2 x}I + -10C[42]u_{x}D_x^{-1}uu_{x}^{2}I + \
+10C[42]u_{x}D_x^{-1}u_{x}u_{2 x}I + 10C[42]u_{x}u_{3 x}D_x^{-1}uI + 12 \
+C[42]uu_{4 x}I + -14 C[42]u_{3 x}D_x^{2} + 15 C[42]u_{2 x}^{2}I + -15 \
+C[42]u_{2 x}D_x^{3} + 18 C[42]uu_{x}^{2}D_x^{1} + 23 C[42]u_{x}u_{3 x}I + \
+2C[42]u_{5 x}D_x^{-1}uI + 2C[42]u_{x}D_x^{-1}u_{4 x}I + \
+2C[42]u_{x}D_x^{-1}u^{5}I + 30 C[42]uu_{3 x}D_x^{1} + 30 C[42]uu_{x}D_x^{3} + \
+31 C[42]u_{x}^{2}D_x^{2} + -38 C[42]u^{3}u_{2 x}I + 38 C[42]uu_{x}u_{2 x}I + \
+3 C[42]u^{2}u_{3 x}I + 40 C[42]uu_{2 x}D_x^{2} + -40C[42]uu_{x}u_{2 \
+x}D_x^{-1}uI + 4 C[42]u^{6}I + -54 C[42]u^{3}u_{x}D_x^{1} + 63 C[42]u_{x}u_{2 \
+x}D_x^{1} + 6 C[42]u^{2}D_x^{4} + 6 C[42]u^{2}u_{x}D_x^{2} + -6 C[42]u_{4 \
+x}D_x^{1} + 6 C[42]u_{x}^{3}I + -6 C[42]u_{x}D_x^{4} + -74 \
+C[42]u^{2}u_{x}^{2}I + 9 C[42]u^{2}u_{2 x}D_x^{1} + -9 C[42]u^{4}D_x^{2} + \
+-C[42]D_x^{6} + -C[42]u_{5 x}I}}}"\)], "Print"],
+
+Cell[BoxData[
+    RowBox[{"{", 
+      RowBox[{"{", 
+        RowBox[{"{", 
+          RowBox[{\(\(-C[42]\)*operatorD[6]\), "+", 
+            RowBox[{\((\(-15\)\ C[42])\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((2, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[3]\)}], "+", 
+            RowBox[{\((\(-14\)\ C[42])\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((3, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[2]\)}], 
+            "+", \(\((\(-9\)\ C[42])\)*u[x, t]\^4*operatorD[2]\), "+", 
+            RowBox[{\((\(-6\)\ C[42])\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((1, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[4]\)}], "+", 
+            RowBox[{\((\(-6\)\ C[42])\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((4, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[1]\)}], "+", 
+            RowBox[{\(-C[42]\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((5, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[0]\)}], 
+            "+", \(\((4\ C[42])\)*u[x, t]\^6*operatorD[0]\), 
+            "+", \(\((6\ C[42])\)*u[x, t]\^2*operatorD[4]\), "+", 
+            RowBox[{\((6\ C[42])\), "*", 
+              SuperscriptBox[
+                RowBox[{
+                  SuperscriptBox["u", 
+                    TagBox[\((1, 0)\),
+                      Derivative],
+                    MultilineFunction->None], "[", \(x, t\), "]"}], "3"], 
+              "*", \(operatorD[0]\)}], "+", 
+            RowBox[{\((15\ C[42])\), "*", 
+              SuperscriptBox[
+                RowBox[{
+                  SuperscriptBox["u", 
+                    TagBox[\((2, 0)\),
+                      Derivative],
+                    MultilineFunction->None], "[", \(x, t\), "]"}], "2"], 
+              "*", \(operatorD[0]\)}], "+", 
+            RowBox[{\((31\ C[42])\), "*", 
+              SuperscriptBox[
+                RowBox[{
+                  SuperscriptBox["u", 
+                    TagBox[\((1, 0)\),
+                      Derivative],
+                    MultilineFunction->None], "[", \(x, t\), "]"}], "2"], 
+              "*", \(operatorD[2]\)}], "+", 
+            RowBox[{\((\(-74\)\ C[42])\), "*", \(u[x, t]\^2\), "*", 
+              SuperscriptBox[
+                RowBox[{
+                  SuperscriptBox["u", 
+                    TagBox[\((1, 0)\),
+                      Derivative],
+                    MultilineFunction->None], "[", \(x, t\), "]"}], "2"], 
+              "*", \(operatorD[0]\)}], "+", 
+            RowBox[{\((\(-54\)\ C[42])\), "*", \(u[x, t]\^3\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((1, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[1]\)}], "+", 
+            RowBox[{\((\(-38\)\ C[42])\), "*", \(u[x, t]\^3\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((2, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[0]\)}], "+", 
+            RowBox[{\((3\ C[42])\), "*", \(u[x, t]\^2\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((3, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[0]\)}], "+", 
+            RowBox[{\((6\ C[42])\), "*", \(u[x, t]\^2\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((1, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[2]\)}], "+", 
+            RowBox[{\((9\ C[42])\), "*", \(u[x, t]\^2\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((2, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[1]\)}], "+", 
+            RowBox[{\((12\ C[42])\), "*", \(u[x, t]\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((4, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[0]\)}], "+", 
+            RowBox[{\((18\ C[42])\), "*", \(u[x, t]\), "*", 
+              SuperscriptBox[
+                RowBox[{
+                  SuperscriptBox["u", 
+                    TagBox[\((1, 0)\),
+                      Derivative],
+                    MultilineFunction->None], "[", \(x, t\), "]"}], "2"], 
+              "*", \(operatorD[1]\)}], "+", 
+            RowBox[{\((23\ C[42])\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((1, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((3, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[0]\)}], "+", 
+            RowBox[{\((30\ C[42])\), "*", \(u[x, t]\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((1, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[3]\)}], "+", 
+            RowBox[{\((30\ C[42])\), "*", \(u[x, t]\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((3, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[1]\)}], "+", 
+            RowBox[{\((40\ C[42])\), "*", \(u[x, t]\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((2, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[2]\)}], "+", 
+            RowBox[{\((63\ C[42])\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((1, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((2, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[1]\)}], "+", 
+            RowBox[{\((38\ C[42])\), "*", \(u[x, t]\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((1, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((2, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[0]\)}], "+", 
+            RowBox[{\(-10\), "*", \(C[42]\), "*", 
+              SuperscriptBox[
+                RowBox[{
+                  SuperscriptBox["u", 
+                    TagBox[\((1, 0)\),
+                      Derivative],
+                    MultilineFunction->None], "[", \(x, t\), "]"}], "3"], 
+              "*", \(operatorD[\(-1\)]\), "*", \(u[x, t]\), 
+              "*", \(operatorD[0]\)}], "+", 
+            RowBox[{"2", "*", \(C[42]\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((1, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[\(-1\)]\), "*", \(u[x, t]\^5\), 
+              "*", \(operatorD[0]\)}], "+", 
+            RowBox[{"2", "*", \(C[42]\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((1, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[\(-1\)]\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((4, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[0]\)}], "+", 
+            RowBox[{"2", "*", \(C[42]\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((5, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[\(-1\)]\), "*", \(u[x, t]\), 
+              "*", \(operatorD[0]\)}], "+", 
+            RowBox[{"10", "*", \(C[42]\), "*", 
+              SuperscriptBox[
+                RowBox[{
+                  SuperscriptBox["u", 
+                    TagBox[\((2, 0)\),
+                      Derivative],
+                    MultilineFunction->None], "[", \(x, t\), "]"}], "2"], 
+              "*", \(operatorD[\(-1\)]\), "*", \(u[x, t]\), 
+              "*", \(operatorD[0]\)}], "+", 
+            RowBox[{\(-10\), "*", \(C[42]\), "*", \(u[x, t]\^2\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((3, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[\(-1\)]\), "*", \(u[x, t]\), 
+              "*", \(operatorD[0]\)}], "+", 
+            RowBox[{\(-10\), "*", \(C[42]\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((1, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[\(-1\)]\), "*", \(u[x, t]\), "*", 
+              SuperscriptBox[
+                RowBox[{
+                  SuperscriptBox["u", 
+                    TagBox[\((1, 0)\),
+                      Derivative],
+                    MultilineFunction->None], "[", \(x, t\), "]"}], "2"], 
+              "*", \(operatorD[0]\)}], "+", 
+            RowBox[{\(-10\), "*", \(C[42]\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((1, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[\(-1\)]\), "*", \(u[x, t]\^2\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((2, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[0]\)}], "+", 
+            RowBox[{"10", "*", \(C[42]\), "*", \(u[x, t]\^4\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((1, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[\(-1\)]\), "*", \(u[x, t]\), 
+              "*", \(operatorD[0]\)}], "+", 
+            RowBox[{"10", "*", \(C[42]\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((1, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[\(-1\)]\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((1, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((2, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[0]\)}], "+", 
+            RowBox[{"10", "*", \(C[42]\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((1, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((3, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[\(-1\)]\), "*", \(u[x, t]\), 
+              "*", \(operatorD[0]\)}], "+", 
+            RowBox[{\(-40\), "*", \(C[42]\), "*", \(u[x, t]\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((1, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((2, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[\(-1\)]\), "*", \(u[x, t]\), 
+              "*", \(operatorD[0]\)}]}], "}"}], "}"}], "}"}]], "Output"]
+}, Open  ]],
+
+Cell[BoxData[
+    \(\(\( (*\ 
+      Potential\ Kupershmidt\ Equation\ *) \)\(\[IndentingNewLine]\)\( (*\ 
+      Should\ have\ a\ recursion\ operator\ of\ rank\ 6. \ *) \)\(\
+\[IndentingNewLine]\)\( (*\ Requires\ that\ weight[u]\  \[Rule] \ 0, \ 
+      which\ is\ not\ compatible\ with\ InvariantSymmetries . 
+          m . \ *) \)\(\[IndentingNewLine]\)\(\ \)\( (*\ 
+      RecursionOperator[\[IndentingNewLine]D[u[x, t], t] \[Equal] 
+          D[u[x, t], {x, 5}] + w[1]*5*D[u[x, t], {x, 2}]*D[u[x, t], {x, 3}] - 
+            w[2]*5*D[u[x, t], x]^2*D[u[x, t], {x, 3}] - 
+            w[2]*5*D[u[x, t], x]*D[u[x, t], {x, 2}]^2 + 
+            w[3]*D[u[x, t], x]^5, \[IndentingNewLine]u[x, t], {x, 
+          t}]\[IndentingNewLine]*) \)\)\)], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\( (*\ 
+      Sawada - Kotera\ Equation\ \
+*) \)\(\[IndentingNewLine]\)\(RecursionOperator[
+      D[u[x, t], \ t]\  \[Equal] \ 
+        5*u[x, t]^2*D[u[x, t], x] + 5*u[x, t]*D[u[x, t], {x, 3}] + 
+          5*D[u[x, t], x]*D[u[x, t], {x, 2}] + D[u[x, t], {x, 5}], 
+      u[x, t], {x, t}, \ Seed\  \[Rule] \ 2]\)\)\)], "Input"],
+
+Cell[BoxData[
+    \("{{{-10 C[17]u_{3 x}D_x^{1} + -11 C[17]u_{2 x}D_x^{2} + -16 C[17]uu_{2 \
+x}I + -1C[17]u_{x}D_x^{-1}u^{2}I + -21 C[17]uu_{x}D_x^{1} + \
+-2C[17]u_{x}D_x^{-1}u_{2 x}I + -4 C[17]u^{3}I + 5-C[17]u^{2}u_{x}D_x^{-1} + \
+-5 C[17]u_{4 x}I + 5-C[17]uu_{3 x}D_x^{-1} + 5-C[17]u_{x}u_{2 x}D_x^{-1} + -6 \
+C[17]uD_x^{4} + -6 C[17]u_{x}^{2}I + -9 C[17]u^{2}D_x^{2} + -9 \
+C[17]u_{x}D_x^{3} + -C[17]D_x^{6} + -C[17]u_{5 x}D_x^{-1}}}}"\)], "Print"],
+
+Cell[BoxData[
+    RowBox[{"{", 
+      RowBox[{"{", 
+        RowBox[{"{", 
+          RowBox[{\(\(-C[17]\)*operatorD[6]\), "+", 
+            RowBox[{\((\(-11\)\ C[17])\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((2, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[2]\)}], "+", 
+            RowBox[{\((\(-10\)\ C[17])\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((3, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[1]\)}], 
+            "+", \(\((\(-9\)\ C[17])\)*u[x, t]\^2*operatorD[2]\), "+", 
+            RowBox[{\((\(-9\)\ C[17])\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((1, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[3]\)}], 
+            "+", \(\((\(-6\)\ C[17])\)*u[x, t]*operatorD[4]\), "+", 
+            RowBox[{\((\(-6\)\ C[17])\), "*", 
+              SuperscriptBox[
+                RowBox[{
+                  SuperscriptBox["u", 
+                    TagBox[\((1, 0)\),
+                      Derivative],
+                    MultilineFunction->None], "[", \(x, t\), "]"}], "2"], 
+              "*", \(operatorD[0]\)}], "+", 
+            RowBox[{\((\(-5\)\ C[17])\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((4, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[0]\)}], 
+            "+", \(\((\(-4\)\ C[17])\)*u[x, t]\^3*operatorD[0]\), "+", 
+            RowBox[{\(-C[17]\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((5, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[\(-1\)]\)}], "+", 
+            RowBox[{\((\(-21\)\ C[17])\), "*", \(u[x, t]\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((1, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[1]\)}], "+", 
+            RowBox[{\((\(-16\)\ C[17])\), "*", \(u[x, t]\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((2, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[0]\)}], "+", 
+            RowBox[{"5", "*", \(-C[17]\), "*", \(u[x, t]\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((3, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[\(-1\)]\)}], "+", 
+            RowBox[{"5", "*", \(-C[17]\), "*", \(u[x, t]\^2\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((1, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[\(-1\)]\)}], "+", 
+            RowBox[{"5", "*", \(-C[17]\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((1, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((2, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[\(-1\)]\)}], "+", 
+            RowBox[{\(-2\), "*", \(C[17]\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((1, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[\(-1\)]\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((2, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[0]\)}], "+", 
+            RowBox[{\(-1\), "*", \(C[17]\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((1, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[\(-1\)]\), "*", \(u[x, t]\^2\), 
+              "*", \(operatorD[0]\)}]}], "}"}], "}"}], "}"}]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\( (*\ 
+      Potential\ Sawada - 
+        Kotera\ Equation\ *) \)\(\[IndentingNewLine]\)\(RecursionOperator[
+      D[u[x, t], \ t]\  \[Equal] \ 
+        5/3*D[u[x, t], x]^3 + 5*D[u[x, t], x]*D[u[x, t], {x, 3}] + 
+          D[u[x, t], {x, 5}], u[x, t], {x, t}, \ 
+      Seed\  \[Rule] \ 2\n]\)\)\)], "Input"],
+
+Cell[BoxData[
+    \("{{{-12-C[36]D_x^{-1}u_{2 x}u_{3 x}I + -13 C[36]u_{x}u_{3 x}I + \
+-2-C[36]D_x^{-1}u_{6 x}I + -2 C[36]u_{4 x}D_x^{1} + 2C[36]u_{x}D_x^{-1}u_{4 \
+x}I + 2C[36]u_{x}D_x^{-1}u_{x}u_{2 x}I + -3 C[36]u_{2 x}^{2}I + -3 C[36]u_{2 \
+x}D_x^{3} + -3 C[36]u_{5 x}I + -3 C[36]u_{x}u_{2 x}D_x^{1} + \
+-4-C[36]D_x^{-1}u_{x}^{2}u_{2 x}I + -4 C[36]u_{x}^{3}I + \
+-6-C[36]D_x^{-1}u_{x}u_{4 x}I + -6 C[36]u_{x}D_x^{4} + -8 C[36]u_{3 x}D_x^{2} \
++ -9 C[36]u_{x}^{2}D_x^{2} + -C[36]D_x^{6}}}}"\)], "Print"],
+
+Cell[BoxData[
+    RowBox[{"{", 
+      RowBox[{"{", 
+        RowBox[{"{", 
+          RowBox[{\(\(-C[36]\)*operatorD[6]\), "+", 
+            RowBox[{\((\(-9\)\ C[36])\), "*", 
+              SuperscriptBox[
+                RowBox[{
+                  SuperscriptBox["u", 
+                    TagBox[\((1, 0)\),
+                      Derivative],
+                    MultilineFunction->None], "[", \(x, t\), "]"}], "2"], 
+              "*", \(operatorD[2]\)}], "+", 
+            RowBox[{\((\(-8\)\ C[36])\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((3, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[2]\)}], "+", 
+            RowBox[{\((\(-6\)\ C[36])\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((1, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[4]\)}], "+", 
+            RowBox[{\((\(-4\)\ C[36])\), "*", 
+              SuperscriptBox[
+                RowBox[{
+                  SuperscriptBox["u", 
+                    TagBox[\((1, 0)\),
+                      Derivative],
+                    MultilineFunction->None], "[", \(x, t\), "]"}], "3"], 
+              "*", \(operatorD[0]\)}], "+", 
+            RowBox[{\((\(-3\)\ C[36])\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((2, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[3]\)}], "+", 
+            RowBox[{\((\(-3\)\ C[36])\), "*", 
+              SuperscriptBox[
+                RowBox[{
+                  SuperscriptBox["u", 
+                    TagBox[\((2, 0)\),
+                      Derivative],
+                    MultilineFunction->None], "[", \(x, t\), "]"}], "2"], "*",
+               \(operatorD[0]\)}], "+", 
+            RowBox[{\((\(-3\)\ C[36])\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((5, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[0]\)}], "+", 
+            RowBox[{\((\(-2\)\ C[36])\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((4, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[1]\)}], "+", 
+            RowBox[{\((\(-13\)\ C[36])\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((1, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((3, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[0]\)}], "+", 
+            RowBox[{\((\(-3\)\ C[36])\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((1, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((2, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[1]\)}], "+", 
+            
+            RowBox[{\(-2\), "*", \(-C[36]\), "*", \(operatorD[\(-1\)]\), "*", 
+              
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((6, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[0]\)}], "+", 
+            RowBox[{\(-12\), "*", \(-C[36]\), "*", \(operatorD[\(-1\)]\), "*",
+               
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((2, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((3, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[0]\)}], "+", 
+            
+            RowBox[{\(-6\), "*", \(-C[36]\), "*", \(operatorD[\(-1\)]\), "*", 
+              
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((1, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((4, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[0]\)}], "+", 
+            
+            RowBox[{\(-4\), "*", \(-C[36]\), "*", \(operatorD[\(-1\)]\), "*", 
+              
+              SuperscriptBox[
+                RowBox[{
+                  SuperscriptBox["u", 
+                    TagBox[\((1, 0)\),
+                      Derivative],
+                    MultilineFunction->None], "[", \(x, t\), "]"}], "2"], "*",
+               
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((2, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[0]\)}], "+", 
+            RowBox[{"2", "*", \(C[36]\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((1, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[\(-1\)]\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((4, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[0]\)}], "+", 
+            RowBox[{"2", "*", \(C[36]\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((1, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[\(-1\)]\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((1, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((2, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[0]\)}]}], "}"}], "}"}], "}"}]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\( (*\ 
+      Kaup - Kupershmidt\ Equation\ \
+*) \)\(\[IndentingNewLine]\)\(RecursionOperator[
+      D[u[x, t], \ t]\  \[Equal] \ 
+        20*u[x, t]^2*D[u[x, t], x] + 25*D[u[x, t], x]*D[u[x, t], {x, 2}] + 
+          10*u[x, t]*D[u[x, t], {x, 3}] + D[u[x, t], {x, 5}], 
+      u[x, t], {x, t}, \ Seed \[Rule] 2\n]\)\)\)], "Input"],
+
+Cell[BoxData[
+    \("{{{10-2 C[17]uu_{3 x}D_x^{-1} + -120 C[17]uu_{x}D_x^{1} + -12 \
+C[17]uD_x^{4} + -13 C[17]u_{4 x}I + 20-2 C[17]u^{2}u_{x}D_x^{-1} + 25-2 \
+C[17]u_{x}u_{2 x}D_x^{-1} + -2 C[17]u_{5 x}D_x^{-1} + \
+-2C[17]u_{x}D_x^{-1}u_{2 x}I + -32 C[17]u^{3}I + -35 C[17]u_{3 x}D_x^{1} + \
+-36 C[17]u^{2}D_x^{2} + -36 C[17]u_{x}D_x^{3} + -49 C[17]u_{2 x}D_x^{2} + -69 \
+C[17]u_{x}^{2}I + -82 C[17]uu_{2 x}I + -8C[17]u_{x}D_x^{-1}u^{2}I + \
+-C[17]D_x^{6}}}}"\)], "Print"],
+
+Cell[BoxData[
+    RowBox[{"{", 
+      RowBox[{"{", 
+        RowBox[{"{", 
+          RowBox[{\(\(-C[17]\)*operatorD[6]\), "+", 
+            RowBox[{\((\(-69\)\ C[17])\), "*", 
+              SuperscriptBox[
+                RowBox[{
+                  SuperscriptBox["u", 
+                    TagBox[\((1, 0)\),
+                      Derivative],
+                    MultilineFunction->None], "[", \(x, t\), "]"}], "2"], 
+              "*", \(operatorD[0]\)}], "+", 
+            RowBox[{\((\(-49\)\ C[17])\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((2, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[2]\)}], 
+            "+", \(\((\(-36\)\ C[17])\)*u[x, t]\^2*operatorD[2]\), "+", 
+            RowBox[{\((\(-36\)\ C[17])\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((1, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[3]\)}], "+", 
+            RowBox[{\((\(-35\)\ C[17])\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((3, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[1]\)}], 
+            "+", \(\((\(-32\)\ C[17])\)*u[x, t]\^3*operatorD[0]\), "+", 
+            RowBox[{\((\(-13\)\ C[17])\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((4, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[0]\)}], 
+            "+", \(\((\(-12\)\ C[17])\)*u[x, t]*operatorD[4]\), "+", 
+            RowBox[{\((\(-2\)\ C[17])\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((5, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[\(-1\)]\)}], "+", 
+            RowBox[{\((\(-120\)\ C[17])\), "*", \(u[x, t]\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((1, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[1]\)}], "+", 
+            RowBox[{\((\(-82\)\ C[17])\), "*", \(u[x, t]\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((2, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[0]\)}], "+", 
+            RowBox[{"10", "*", \((\(-2\)\ C[17])\), "*", \(u[x, t]\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((3, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[\(-1\)]\)}], "+", 
+            RowBox[{
+            "20", "*", \((\(-2\)\ C[17])\), "*", \(u[x, t]\^2\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((1, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[\(-1\)]\)}], "+", 
+            RowBox[{"25", "*", \((\(-2\)\ C[17])\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((1, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((2, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[\(-1\)]\)}], "+", 
+            RowBox[{\(-8\), "*", \(C[17]\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((1, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[\(-1\)]\), "*", \(u[x, t]\^2\), 
+              "*", \(operatorD[0]\)}], "+", 
+            RowBox[{\(-2\), "*", \(C[17]\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((1, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[\(-1\)]\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((2, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[0]\)}]}], "}"}], "}"}], "}"}]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\( (*\ 
+      Kaup - Kupershmidt\ Equation\ \((scaled)\)\ \
+*) \)\(\[IndentingNewLine]\)\(RecursionOperator[
+      D[u[x, t], \ t]\  \[Equal] \ 
+        5*u[x, t]^2*D[u[x, t], x] + 25/2*D[u[x, t], x]*D[u[x, t], {x, 2}] + 
+          5*u[x, t]*D[u[x, t], {x, 3}] + D[u[x, t], {x, 5}], 
+      u[x, t], {x, t}, \ Seed\  \[Rule] \ 2\n]\)\)\)], "Input"],
+
+Cell[BoxData[
+    \("{{{-120 C[17]uu_{x}D_x^{1} + -16 C[17]u^{3}I + -24 C[17]uD_x^{4} + -26 \
+C[17]u_{4 x}I + -2C[17]u_{x}D_x^{-1}u_{2 x}I + -36 C[17]u^{2}D_x^{2} + -4 \
+C[17]D_x^{6} + -4 C[17]u_{5 x}D_x^{-1} + -4C[17]u_{x}D_x^{-1}u^{2}I + 5-4 \
+C[17]u^{2}u_{x}D_x^{-1} + 5-4 C[17]uu_{3 x}D_x^{-1} + -69 C[17]u_{x}^{2}I + \
+-70 C[17]u_{3 x}D_x^{1} + -72 C[17]u_{x}D_x^{3} + -82 C[17]uu_{2 x}I + -98 \
+C[17]u_{2 x}D_x^{2} + \\frac{25}{2}-4 C[17]u_{x}u_{2 x}D_x^{-1}}}}"\)], \
+"Print"],
+
+Cell[BoxData[
+    RowBox[{"{", 
+      RowBox[{"{", 
+        RowBox[{"{", 
+          RowBox[{\(\((\(-4\)\ C[17])\)*operatorD[6]\), "+", 
+            RowBox[{\((\(-98\)\ C[17])\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((2, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[2]\)}], "+", 
+            RowBox[{\((\(-72\)\ C[17])\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((1, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[3]\)}], "+", 
+            RowBox[{\((\(-70\)\ C[17])\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((3, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[1]\)}], "+", 
+            RowBox[{\((\(-69\)\ C[17])\), "*", 
+              SuperscriptBox[
+                RowBox[{
+                  SuperscriptBox["u", 
+                    TagBox[\((1, 0)\),
+                      Derivative],
+                    MultilineFunction->None], "[", \(x, t\), "]"}], "2"], 
+              "*", \(operatorD[0]\)}], 
+            "+", \(\((\(-36\)\ C[17])\)*u[x, t]\^2*operatorD[2]\), "+", 
+            RowBox[{\((\(-26\)\ C[17])\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((4, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[0]\)}], 
+            "+", \(\((\(-24\)\ C[17])\)*u[x, t]*operatorD[4]\), 
+            "+", \(\((\(-16\)\ C[17])\)*u[x, t]\^3*operatorD[0]\), "+", 
+            RowBox[{\((\(-4\)\ C[17])\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((5, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[\(-1\)]\)}], "+", 
+            RowBox[{\((\(-120\)\ C[17])\), "*", \(u[x, t]\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((1, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[1]\)}], "+", 
+            RowBox[{\((\(-82\)\ C[17])\), "*", \(u[x, t]\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((2, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[0]\)}], "+", 
+            RowBox[{"5", "*", \((\(-4\)\ C[17])\), "*", \(u[x, t]\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((3, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[\(-1\)]\)}], "+", 
+            RowBox[{"5", "*", \((\(-4\)\ C[17])\), "*", \(u[x, t]\^2\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((1, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[\(-1\)]\)}], "+", 
+            RowBox[{\(25\/2\), "*", \((\(-4\)\ C[17])\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((1, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((2, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[\(-1\)]\)}], "+", 
+            RowBox[{\(-4\), "*", \(C[17]\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((1, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[\(-1\)]\), "*", \(u[x, t]\^2\), 
+              "*", \(operatorD[0]\)}], "+", 
+            RowBox[{\(-2\), "*", \(C[17]\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((1, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[\(-1\)]\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((2, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[0]\)}]}], "}"}], "}"}], "}"}]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\( (*\ 
+      Potential\ Kaup - 
+        Kupershmidt\ Equation\ \
+*) \)\(\[IndentingNewLine]\)\(RecursionOperator[
+      D[u[x, t], \ t]\  \[Equal] \ 
+        D[u[x, t], \ {x, 5}]\  + \ 
+          10*D[u[x, t], \ x]*D[u[x, t], \ {x, \ 3}]\  + \ 
+          15/2*D[u[x, t], \ {x, \ 2}]^2\  + \ 
+          20/3*D[u[x, t], \ x]^3, \[IndentingNewLine]u[x, t], {x, t}, 
+      Seed\  \[Rule] 2\n]\)\)\)], "Input"],
+
+Cell[BoxData[
+    \("{{{-10 C[36]u_{4 x}D_x^{1} + -12 C[36]u_{x}D_x^{4} + \
+16C[36]u_{x}D_x^{-1}u_{x}u_{2 x}I + -21 C[36]u_{2 x}^{2}I + -24 C[36]u_{2 \
+x}D_x^{3} + -24\\frac{-1}{2} C[36]D_x^{-1}u_{x}u_{4 x}I + -25 C[36]u_{3 \
+x}D_x^{2} + 2C[36]u_{x}D_x^{-1}u_{4 x}I + -2\\frac{-1}{2} C[36]D_x^{-1}u_{6 \
+x}I + -32 C[36]u_{x}^{3}I + -34 C[36]u_{x}u_{3 x}I + -36 \
+C[36]u_{x}^{2}D_x^{2} + -3 C[36]u_{5 x}I + -48 C[36]u_{x}u_{2 x}D_x^{1} + -48\
+\\frac{-1}{2} C[36]D_x^{-1}u_{2 x}u_{3 x}I + -64\\frac{-1}{2} \
+C[36]D_x^{-1}u_{x}^{2}u_{2 x}I + -C[36]D_x^{6}}}}"\)], "Print"],
+
+Cell[BoxData[
+    RowBox[{"{", 
+      RowBox[{"{", 
+        RowBox[{"{", 
+          RowBox[{\(\(-C[36]\)*operatorD[6]\), "+", 
+            RowBox[{\((\(-36\)\ C[36])\), "*", 
+              SuperscriptBox[
+                RowBox[{
+                  SuperscriptBox["u", 
+                    TagBox[\((1, 0)\),
+                      Derivative],
+                    MultilineFunction->None], "[", \(x, t\), "]"}], "2"], 
+              "*", \(operatorD[2]\)}], "+", 
+            RowBox[{\((\(-32\)\ C[36])\), "*", 
+              SuperscriptBox[
+                RowBox[{
+                  SuperscriptBox["u", 
+                    TagBox[\((1, 0)\),
+                      Derivative],
+                    MultilineFunction->None], "[", \(x, t\), "]"}], "3"], 
+              "*", \(operatorD[0]\)}], "+", 
+            RowBox[{\((\(-25\)\ C[36])\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((3, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[2]\)}], "+", 
+            RowBox[{\((\(-24\)\ C[36])\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((2, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[3]\)}], "+", 
+            RowBox[{\((\(-21\)\ C[36])\), "*", 
+              SuperscriptBox[
+                RowBox[{
+                  SuperscriptBox["u", 
+                    TagBox[\((2, 0)\),
+                      Derivative],
+                    MultilineFunction->None], "[", \(x, t\), "]"}], "2"], 
+              "*", \(operatorD[0]\)}], "+", 
+            RowBox[{\((\(-12\)\ C[36])\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((1, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[4]\)}], "+", 
+            RowBox[{\((\(-10\)\ C[36])\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((4, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[1]\)}], "+", 
+            RowBox[{\((\(-3\)\ C[36])\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((5, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[0]\)}], "+", 
+            RowBox[{\((\(-48\)\ C[36])\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((1, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((2, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[1]\)}], "+", 
+            RowBox[{\((\(-34\)\ C[36])\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((1, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((3, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[0]\)}], "+", 
+            
+            RowBox[{\(-2\), "*", \(-\(C[36]\/2\)\), 
+              "*", \(operatorD[\(-1\)]\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((6, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[0]\)}], "+", 
+            
+            RowBox[{\(-64\), "*", \(-\(C[36]\/2\)\), 
+              "*", \(operatorD[\(-1\)]\), "*", 
+              SuperscriptBox[
+                RowBox[{
+                  SuperscriptBox["u", 
+                    TagBox[\((1, 0)\),
+                      Derivative],
+                    MultilineFunction->None], "[", \(x, t\), "]"}], "2"], "*",
+               
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((2, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[0]\)}], "+", 
+            
+            RowBox[{\(-48\), "*", \(-\(C[36]\/2\)\), 
+              "*", \(operatorD[\(-1\)]\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((2, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((3, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[0]\)}], "+", 
+            
+            RowBox[{\(-24\), "*", \(-\(C[36]\/2\)\), 
+              "*", \(operatorD[\(-1\)]\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((1, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((4, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[0]\)}], "+", 
+            RowBox[{"2", "*", \(C[36]\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((1, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[\(-1\)]\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((4, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[0]\)}], "+", 
+            RowBox[{"16", "*", \(C[36]\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((1, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[\(-1\)]\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((1, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((2, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[0]\)}]}], "}"}], "}"}], "}"}]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\( (*\ 
+      Gardner\ Equation\ *) \)\(\[IndentingNewLine]\)\(RecursionOperator[\
+\[IndentingNewLine]D[w[x, t], \ t]\  == 
+        6*\((w[x, t]\  + \ \[Epsilon]^2*w[x, t]^2)\)*D[w[x, t], \ x]\  - \ 
+          D[w[x, t], \ {x, 3}], \[IndentingNewLine]w[x, t], {x, 
+        t}, {\[Epsilon]}, Seed \[Rule] 2]\)\)\)], "Input"],
+
+Cell[BoxData[
+    \(weight::"nonuniform1" \(\(:\)\(\ \)\) 
+      "Given system has at least one equation with terms of unequal rank, so \
+that scaling properties can not be determined."\)], "Message"],
+
+Cell[BoxData[
+    \(weight::"nonuniform2" \(\(:\)\(\ \)\) 
+      "Incompatibility has been cured by assuming auxiliary parameters with \
+weight."\)], "Message"],
+
+Cell[BoxData[
+    \("{{{2-1w_{x}D_x^{-1} + 2-2 \[Epsilon]^{2}w_{x}D_x^{-1}wI + -4wI + -4 \
+\[Epsilon]^{2}w^{2}I + C[1]I + D_x^{2}}}}"\)], "Print"],
+
+Cell[BoxData[
+    RowBox[{"{", 
+      RowBox[{"{", 
+        RowBox[{"{", 
+          
+          RowBox[{\(DefiningEquation`Operator`Times[operatorD[2]]\), 
+            "+", \(C[1]*operatorD[0]\), "+", \(\(-4\)*w[x, t]*operatorD[0]\), 
+            "+", \(\((\(-4\)\ \[Epsilon]\^2)\)*w[x, t]\^2*operatorD[0]\), "+",
+             
+            RowBox[{"2", "*", \(-1\), "*", 
+              RowBox[{
+                SuperscriptBox["w", 
+                  TagBox[\((1, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[\(-1\)]\)}], "+", 
+            RowBox[{"2", "*", \((\(-2\)\ \[Epsilon]\^2)\), "*", 
+              RowBox[{
+                SuperscriptBox["w", 
+                  TagBox[\((1, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[\(-1\)]\), "*", \(w[x, t]\), 
+              "*", \(operatorD[0]\)}]}], "}"}], "}"}], "}"}]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\( (*\ Lax\ Equation\ *) \)\(\[IndentingNewLine]\)\(RecursionOperator[
+      D[u[x, t], \ t]\  \[Equal] \ 
+        30*u[x, t]^2*D[u[x, t], x] + 20*D[u[x, t], x]*D[u[x, t], {x, 2}] + 
+          10*u[x, t]*D[u[x, t], {x, 3}] + D[u[x, t], {x, 5}], 
+      u[x, t], {x, t}]\)\)\)], "Input"],
+
+Cell[BoxData[
+    \("{{{2 C[3]uI + C[3]u_{x}D_x^{-1} + \\frac{1}{2} C[3]D_x^{2}}}}"\)], \
+"Print"],
+
+Cell[BoxData[
+    RowBox[{"{", 
+      RowBox[{"{", 
+        RowBox[{"{", 
+          RowBox[{\(C[3]\/2*operatorD[2]\), "+", 
+            RowBox[{\(C[3]\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((1, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[\(-1\)]\)}], 
+            "+", \(\((2\ C[3])\)*u[x, t]*operatorD[0]\)}], "}"}], "}"}], 
+      "}"}]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\( (*\ 
+      Caudrey - Dodd - Gibbon - Sawada - 
+        Kotera\ Equation\ *) \)\(\[IndentingNewLine]\)\(RecursionOperator[\
+\[IndentingNewLine]D[u[x, t], t]\  == \ \(-D[u[x, t], \ {x, \ 5}]\)\  - \ 
+          30*u[x, t]*D[u[x, t], \ {x, 3}]\  - \ 
+          30*D[u[x, t], \ x]*D[u[x, t], \ {x, 2}]\  - \ 
+          180*u[x, t]^2*D[u[x, t], x], \[IndentingNewLine]u[x, 
+        t], \[IndentingNewLine]{x, t}, \ 
+      Seed \[Rule] 2\[IndentingNewLine]]\)\)\)], "Input"],
+
+Cell[BoxData[
+    \("{{{-16 C[17]uu_{2 x}I + 180\\frac{-1}{6} C[17]u^{2}u_{x}D_x^{-1} + -21 \
+C[17]uu_{x}D_x^{1} + -24 C[17]u^{3}I + -2C[17]u_{x}D_x^{-1}u_{2 x}I + \
+30\\frac{-1}{6} C[17]uu_{3 x}D_x^{-1} + 30\\frac{-1}{6} C[17]u_{x}u_{2 \
+x}D_x^{-1} + -6 C[17]u_{x}^{2}I + -6C[17]u_{x}D_x^{-1}u^{2}I + -9 \
+C[17]u^{2}D_x^{2} + -C[17]uD_x^{4} + \\frac{-11}{6} C[17]u_{2 x}D_x^{2} + \
+\\frac{-1}{36} C[17]D_x^{6} + \\frac{-1}{6} C[17]u_{5 x}D_x^{-1} + \
+\\frac{-3}{2} C[17]u_{x}D_x^{3} + \\frac{-5}{3} C[17]u_{3 x}D_x^{1} + \
+\\frac{-5}{6} C[17]u_{4 x}I}}}"\)], "Print"],
+
+Cell[BoxData[
+    RowBox[{"{", 
+      RowBox[{"{", 
+        RowBox[{"{", 
+          
+          RowBox[{\(\(-\(C[17]\/36\)\)*operatorD[6]\), 
+            "+", \(\((\(-24\)\ C[17])\)*u[x, t]\^3*operatorD[0]\), 
+            "+", \(\((\(-9\)\ C[17])\)*u[x, t]\^2*operatorD[2]\), "+", 
+            RowBox[{\((\(-6\)\ C[17])\), "*", 
+              SuperscriptBox[
+                RowBox[{
+                  SuperscriptBox["u", 
+                    TagBox[\((1, 0)\),
+                      Derivative],
+                    MultilineFunction->None], "[", \(x, t\), "]"}], "2"], 
+              "*", \(operatorD[0]\)}], "+", 
+            RowBox[{\(-\(\(11\ C[17]\)\/6\)\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((2, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[2]\)}], "+", 
+            RowBox[{\(-\(\(5\ C[17]\)\/3\)\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((3, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[1]\)}], "+", 
+            RowBox[{\(-\(\(3\ C[17]\)\/2\)\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((1, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[3]\)}], 
+            "+", \(\(-C[17]\)*u[x, t]*operatorD[4]\), "+", 
+            RowBox[{\(-\(\(5\ C[17]\)\/6\)\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((4, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[0]\)}], "+", 
+            RowBox[{\(-\(C[17]\/6\)\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((5, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[\(-1\)]\)}], "+", 
+            RowBox[{\((\(-21\)\ C[17])\), "*", \(u[x, t]\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((1, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[1]\)}], "+", 
+            RowBox[{\((\(-16\)\ C[17])\), "*", \(u[x, t]\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((2, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[0]\)}], "+", 
+            RowBox[{"30", "*", \(-\(C[17]\/6\)\), "*", \(u[x, t]\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((3, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[\(-1\)]\)}], "+", 
+            RowBox[{"30", "*", \(-\(C[17]\/6\)\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((1, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((2, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[\(-1\)]\)}], "+", 
+            RowBox[{"180", "*", \(-\(C[17]\/6\)\), "*", \(u[x, t]\^2\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((1, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[\(-1\)]\)}], "+", 
+            RowBox[{\(-6\), "*", \(C[17]\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((1, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[\(-1\)]\), "*", \(u[x, t]\^2\), 
+              "*", \(operatorD[0]\)}], "+", 
+            RowBox[{\(-2\), "*", \(C[17]\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((1, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[\(-1\)]\), "*", 
+              RowBox[{
+                SuperscriptBox["u", 
+                  TagBox[\((2, 0)\),
+                    Derivative],
+                  MultilineFunction->None], "[", \(x, t\), "]"}], 
+              "*", \(operatorD[0]\)}]}], "}"}], "}"}], "}"}]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\( (*\ 
+      Dispersiveless\ Long\ Wave\ System\ \
+*) \)\(\[IndentingNewLine]\)\(RecursionOperator[{D[u[x, t], \ t]\  \[Equal] \ 
+          u[x, t]*D[v[x, t], x] + D[u[x, t], x]*v[x, t], 
+        D[v[x, t], \ t]\  \[Equal] \ 
+          D[u[x, t], x] + v[x, t]*D[v[x, t], x]}, {u[x, t], v[x, t]}, {x, 
+        t}]\)\)\)], "Input"],
+
+Cell[BoxData[
+    \(weight::"nonuniform3" \(\(:\)\(\ \)\) 
+      "The weights, \!\({\(\(\(\(weight[x]\)\) \[Rule] \(\(-1\)\)\)\), \(\(\(\
+\(weight[t]\)\) \[Rule] \(\(\(\(-1\)\) - \(\(weight[v]\)\)\)\)\)\), \
+\(\(\(\(weight[u]\)\) \[Rule] \(\(2\\ \(\(weight[v]\)\)\)\)\)\)}\), could not \
+be fixed.  The weights may be fixed using the WeightRules option."\)], \
+"Message"],
+
+Cell[BoxData[
+    \($Aborted\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(RecursionOperator[{D[u[x, t], \ t]\  \[Equal] \ 
+          u[x, t]*D[v[x, t], x] + D[u[x, t], x]*v[x, t], 
+        D[v[x, t], \ t]\  \[Equal] \ 
+          D[u[x, t], x] + v[x, t]*D[v[x, t], x]}, {u[x, t], v[x, t]}, {x, 
+        t}, \ WeightRules\  \[Rule] \ {weight[v] \[Rule] 1}]\)], "Input"],
+
+Cell[BoxData[
+    \("{{{\\frac{1}{2} C[8]vI, C[8]uI + \\frac{1}{2} C[8]u_{x}D_x^{-1}}, \
+{C[8]I, \\frac{1}{2} C[8]vI + \\frac{1}{2} C[8]v_{x}D_x^{-1}}}}"\)], "Print"],
+
+Cell[BoxData[
+    RowBox[{"{", 
+      RowBox[{"{", 
+        RowBox[{
+          RowBox[{"{", 
+            RowBox[{\(C[8]\/2*v[x, t]*operatorD[0]\), ",", 
+              RowBox[{
+                RowBox[{\(C[8]\/2\), "*", 
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\)}], 
+                "+", \(C[8]*u[x, t]*operatorD[0]\)}]}], "}"}], ",", 
+          RowBox[{"{", 
+            RowBox[{\(C[8]*operatorD[0]\), ",", 
+              RowBox[{\(C[8]\/2*v[x, t]*operatorD[0]\), "+", 
+                RowBox[{\(C[8]\/2\), "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\)}]}]}], "}"}]}], "}"}], 
+      "}"}]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\( (*\ Diffusion\ System\ *) \)\(\[IndentingNewLine]\)\( (*\ 
+      Using\ RankShift\  \[Rule] \ \(-1\)\ gives\ the\ recursion\ operator\ \
+reported\ in\ Jing\ Ping\ Wang' 
+          s\ PhD\ \(\(Thesis\)\(.\)\)\ \
+*) \)\(\[IndentingNewLine]\)\(RecursionOperator[{D[u[x, t], \ t]\  \[Equal] \ 
+          D[u[x, t], {x, 2}] + v[x, t]^2, 
+        D[v[x, t], t]\  \[Equal] \ D[v[x, t], {x, 2}]}, {u[x, t], 
+        v[x, t]}, {x, t}, WeightRules \[Rule] {weight[u] -> weight[v]}, 
+      RankShift \[Rule] \(-1\)\ ]\)\)\)], "Input"],
+
+Cell[BoxData[
+    \("{{{C[5]D_x^{1}, C[2]D_x^{1} + C[5]vD_x^{-1}}, {0, C[5]D_x^{1}}}}"\)], \
+"Print"],
+
+Cell[BoxData[
+    \({{{C[5]*operatorD[1], 
+          C[2]*operatorD[1] + C[5]*v[x, t]*operatorD[\(-1\)]}, {0, 
+          C[5]*operatorD[1]}}}\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(RecursionOperator[{D[u[x, t], \ t]\  \[Equal] \ 
+          D[u[x, t], {x, 2}] + v[x, t]^2, 
+        D[v[x, t], t]\  \[Equal] \ D[v[x, t], {x, 2}]}, {u[x, t], 
+        v[x, t]}, {x, t}, 
+      WeightRules \[Rule] {weight[u] -> weight[v]}\ ]\)], "Input"],
+
+Cell[BoxData[
+    \("{{{C[14]D_x^{2}, 2 C[14]vI + C[14]v_{x}D_x^{-1} + C[4]D_x^{2}}, {0, \
+C[14]D_x^{2}}}}"\)], "Print"],
+
+Cell[BoxData[
+    RowBox[{"{", 
+      RowBox[{"{", 
+        RowBox[{
+          RowBox[{"{", 
+            RowBox[{\(C[14]*operatorD[2]\), ",", 
+              RowBox[{\(C[4]*operatorD[2]\), "+", 
+                RowBox[{\(C[14]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\)}], 
+                "+", \(\((2\ C[14])\)*v[x, t]*operatorD[0]\)}]}], "}"}], 
+          ",", \({0, C[14]*operatorD[2]}\)}], "}"}], "}"}]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\( (*\ 
+      AKNS\ System\ *) \)\(\[IndentingNewLine]\)\(RecursionOperator[{D[
+            u[x, t], \ t]\  \[Equal] \ 
+          2*u[x, t]^2*v[x, t] - D[u[x, t], {x, 2}], 
+        D[v[x, t], \ t]\  \[Equal] \ \(-2\)*u[x, t]*v[x, t]^2 + 
+            D[v[x, t], {x, 2}]}, {u[x, t], v[x, t]}, {x, t}]\)\)\)], "Input"],
+
+Cell[BoxData[
+    \(weight::"nonuniform3" \(\(:\)\(\ \)\) 
+      "The weights, \!\({\(\(\(\(weight[x]\)\) \[Rule] \(\(-1\)\)\)\), \(\(\(\
+\(weight[t]\)\) \[Rule] \(\(-2\)\)\)\), \(\(\(\(weight[u]\)\) \[Rule] \(\(2 - \
+\(\(weight[v]\)\)\)\)\)\)}\), could not be fixed.  The weights may be fixed \
+using the WeightRules option."\)], "Message"],
+
+Cell[BoxData[
+    \($Aborted\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(RecursionOperator[{D[u[x, t], \ t]\  \[Equal] \ 
+          2*u[x, t]^2*v[x, t] - D[u[x, t], {x, 2}], 
+        D[v[x, t], \ t]\  \[Equal] \ \(-2\)*u[x, t]*v[x, t]^2 + 
+            D[v[x, t], {x, 2}]}, {u[x, t], v[x, t]}, {x, t}, \ 
+      WeightRules \[Rule] {weight[u]\  \[Rule] \ weight[v]}]\)], "Input"],
+
+Cell[BoxData[
+    \("{{{-1C[16]uD_x^{-1}vI + \\frac{1}{2} C[16]D_x^{1}, \
+-1C[16]uD_x^{-1}uI}, {C[16]vD_x^{-1}vI, C[16]vD_x^{-1}uI + \\frac{-1}{2} \
+C[16]D_x^{1}}}}"\)], "Print"],
+
+Cell[BoxData[
+    \({{{C[16]\/2*operatorD[1] + \(-1\)*C[16]*u[x, t]*operatorD[\(-1\)]*
+              v[x, t]*operatorD[0], \(-1\)*C[16]*u[x, t]*operatorD[\(-1\)]*
+            u[x, t]*operatorD[0]}, {C[16]*v[x, t]*operatorD[\(-1\)]*v[x, t]*
+            operatorD[0], \(-\(C[16]\/2\)\)*operatorD[1] + 
+            C[16]*v[x, t]*operatorD[\(-1\)]*u[x, t]*
+              operatorD[0]}}}\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\( (*\ 
+      Nonlinear\ Schrodinger\ System\ \
+*) \)\(\[IndentingNewLine]\)\(RecursionOperator[\[IndentingNewLine]{D[
+            u[x, t], t] \[Equal] 
+          D[v[x, t], {x, 2}] + 
+            v[x, t]*\((u[x, t]^2 + v[x, t]^2)\), \[IndentingNewLine]D[
+            v[x, t], t] \[Equal] \(-D[u[x, t], {x, 2}]\) - 
+            u[x, t]*\((u[x, t]^2 + v[x, t]^2)\)}, \[IndentingNewLine]{u[x, 
+          t], v[x, t]}, {x, t}]\)\)\)], "Input"],
+
+Cell[BoxData[
+    \("{{{-2C[16]vD_x^{-1}uI, -2C[16]vD_x^{-1}vI + -C[16]D_x^{1}}, \
+{2C[16]uD_x^{-1}uI + C[16]D_x^{1}, 2C[16]uD_x^{-1}vI}}}"\)], "Print"],
+
+Cell[BoxData[
+    \({{{\(-2\)*C[16]*v[x, t]*operatorD[\(-1\)]*u[x, t]*
+            operatorD[0], \(-C[16]\)*operatorD[1] + \(-2\)*C[16]*v[x, t]*
+              operatorD[\(-1\)]*v[x, t]*operatorD[0]}, {C[16]*operatorD[1] + 
+            2*C[16]*u[x, t]*operatorD[\(-1\)]*u[x, t]*operatorD[0], 
+          2*C[16]*u[x, t]*operatorD[\(-1\)]*v[x, t]*
+            operatorD[0]}}}\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(RecursionOperator[\[IndentingNewLine]{D[u[x, t], t] \[Equal] 
+          D[v[x, t], {x, 2}] - 
+            v[x, t]*\((u[x, t]^2 + v[x, t]^2)\), \[IndentingNewLine]D[
+            v[x, t], t] \[Equal] \(-D[u[x, t], {x, 2}]\) + 
+            u[x, t]*\((u[x, t]^2 + v[x, t]^2)\)}, \[IndentingNewLine]{u[x, 
+          t], v[x, t]}, {x, t}]\)], "Input"],
+
+Cell[BoxData[
+    \("{{{-2C[16]vD_x^{-1}uI, -2C[16]vD_x^{-1}vI + C[16]D_x^{1}}, \
+{2C[16]uD_x^{-1}uI + -C[16]D_x^{1}, 2C[16]uD_x^{-1}vI}}}"\)], "Print"],
+
+Cell[BoxData[
+    \({{{\(-2\)*C[16]*v[x, t]*operatorD[\(-1\)]*u[x, t]*operatorD[0], 
+          C[16]*operatorD[1] + \(-2\)*C[16]*v[x, t]*operatorD[\(-1\)]*v[x, t]*
+              operatorD[0]}, {\(-C[16]\)*operatorD[1] + 
+            2*C[16]*u[x, t]*operatorD[\(-1\)]*u[x, t]*operatorD[0], 
+          2*C[16]*u[x, t]*operatorD[\(-1\)]*v[x, t]*
+            operatorD[0]}}}\)], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\( (*\ 
+      Derivative\ Nonlinear\ Schrodinger\ System\ \
+*) \)\(\[IndentingNewLine]\)\(RecursionOperator[\[IndentingNewLine]{D[
+            u[x, t], 
+            t] \[Equal] \(-D[v[x, t], {x, 2}]\) - \((u[x, t]^2 + v[x, t]^2)\)*
+              D[u[x, t], x], \[IndentingNewLine]D[v[x, t], t] \[Equal] 
+          D[u[x, t], {x, 2}] - \((u[x, t]^2 + v[x, t]^2)\)*
+              D[v[x, t], x]}, \[IndentingNewLine]{u[x, t], v[x, t]}, {x, 
+        t}]\)\)\)], "Input"],
+
+Cell[BoxData[
+    \("{{{2C[24]u_{x}D_x^{-1}uI + -2 C[24]vD_x^{-1}v_{x}I + C[24]u^{2}I + \
+C[24]v^{2}I, -1-2 C[24]vD_x^{-1}u_{x}I + 2 C[24]D_x^{1} + \
+2C[24]u_{x}D_x^{-1}vI}, {-1-2 C[24]uD_x^{-1}v_{x}I + -2 C[24]D_x^{1} + \
+2C[24]v_{x}D_x^{-1}uI, -2 C[24]uD_x^{-1}u_{x}I + 2C[24]v_{x}D_x^{-1}vI + \
+C[24]u^{2}I + C[24]v^{2}I}}}"\)], "Print"],
+
+Cell[BoxData[
+    RowBox[{"{", 
+      RowBox[{"{", 
+        RowBox[{
+          RowBox[{"{", 
+            RowBox[{
+              
+              RowBox[{\(C[24]*u[x, t]\^2*operatorD[0]\), 
+                "+", \(C[24]*v[x, t]\^2*operatorD[0]\), "+", 
+                
+                RowBox[{\((\(-2\)\ C[24])\), "*", \(v[x, t]\), 
+                  "*", \(operatorD[\(-1\)]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[0]\)}], "+", 
+                RowBox[{"2", "*", \(C[24]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\), "*", \(u[x, t]\), 
+                  "*", \(operatorD[0]\)}]}], ",", 
+              RowBox[{\(\((2\ C[24])\)*operatorD[1]\), "+", 
+                
+                RowBox[{\(-1\), "*", \((\(-2\)\ C[24])\), "*", \(v[x, t]\), 
+                  "*", \(operatorD[\(-1\)]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[0]\)}], "+", 
+                RowBox[{"2", "*", \(C[24]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\), "*", \(v[x, t]\), 
+                  "*", \(operatorD[0]\)}]}]}], "}"}], ",", 
+          RowBox[{"{", 
+            RowBox[{
+              RowBox[{\(\((\(-2\)\ C[24])\)*operatorD[1]\), "+", 
+                
+                RowBox[{\(-1\), "*", \((\(-2\)\ C[24])\), "*", \(u[x, t]\), 
+                  "*", \(operatorD[\(-1\)]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[0]\)}], "+", 
+                RowBox[{"2", "*", \(C[24]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\), "*", \(u[x, t]\), 
+                  "*", \(operatorD[0]\)}]}], ",", 
+              
+              RowBox[{\(C[24]*u[x, t]\^2*operatorD[0]\), 
+                "+", \(C[24]*v[x, t]\^2*operatorD[0]\), "+", 
+                
+                RowBox[{\((\(-2\)\ C[24])\), "*", \(u[x, t]\), 
+                  "*", \(operatorD[\(-1\)]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[0]\)}], "+", 
+                RowBox[{"2", "*", \(C[24]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\), "*", \(v[x, t]\), 
+                  "*", \(operatorD[0]\)}]}]}], "}"}]}], "}"}], 
+      "}"}]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\( (*\ 
+      Modified\ Derivative\ Nonlinear\ Schrodinger\ System\ *) \)\(\
+\[IndentingNewLine]\)\(RecursionOperator[\[IndentingNewLine]{D[u[x, t], \ 
+            t]\  == \ D[
+            u[x, t]*\((u[x, t]^2 + v[x, t]^2)\)\  + \ \[Beta]*u[x, t] - 
+              D[v[x, t], x], x], \[IndentingNewLine]D[v[x, t], 
+            t]\  == \[IndentingNewLine]D[
+            v[x, t]*\((u[x, t]^2 + v[x, t]^2)\) + D[u[x, t], x], 
+            x]}, \[IndentingNewLine]{u[x, t], v[x, t]}, {x, t}, {\[Beta]}, 
+      WeightedParameters\  \[Rule] \ {\[Beta]}]\)\)\)], "Input"],
+
+Cell[BoxData[
+    \("{{{2\\frac{1}{2} C[15]u_{x}D_x^{-1}uI + C[15]u^{2}I + I, 2\\frac{1}{2} \
+C[15]u_{x}D_x^{-1}vI + C[15]uvI + \\frac{-1}{2} C[15]D_x^{1}}, {2\\frac{1}{2} \
+C[15]v_{x}D_x^{-1}uI + C[15]uvI + \\frac{1}{2} C[15]D_x^{1}, 2\\frac{1}{2} \
+C[15]v_{x}D_x^{-1}vI + C[15]v^{2}I + I + \\frac{-1}{2} \[Beta] C[15]I}}, \
+{{2\\frac{1}{2}u_{x}D_x^{-1}uI + C[16]I + \\frac{1}{2} \[Beta]I + u^{2}I, \
+2\\frac{1}{2}u_{x}D_x^{-1}vI + \\frac{-1}{2}D_x^{1} + uvI}, \
+{2\\frac{1}{2}v_{x}D_x^{-1}uI + \\frac{1}{2}D_x^{1} + uvI, \
+2\\frac{1}{2}v_{x}D_x^{-1}vI + C[16]I + v^{2}I}}}"\)], "Print"],
+
+Cell[BoxData[
+    RowBox[{"{", 
+      RowBox[{
+        RowBox[{"{", 
+          RowBox[{
+            RowBox[{"{", 
+              RowBox[{
+                
+                RowBox[{\(DefiningEquation`Operator`Times[operatorD[0]]\), 
+                  "+", \(C[15]*u[x, t]\^2*operatorD[0]\), "+", 
+                  RowBox[{"2", "*", \(C[15]\/2\), "*", 
+                    RowBox[{
+                      SuperscriptBox["u", 
+                        TagBox[\((1, 0)\),
+                          Derivative],
+                        MultilineFunction->None], "[", \(x, t\), "]"}], 
+                    "*", \(operatorD[\(-1\)]\), "*", \(u[x, t]\), 
+                    "*", \(operatorD[0]\)}]}], ",", 
+                
+                RowBox[{\(\(-\(C[15]\/2\)\)*operatorD[1]\), 
+                  "+", \(C[15]*u[x, t]*v[x, t]*operatorD[0]\), "+", 
+                  RowBox[{"2", "*", \(C[15]\/2\), "*", 
+                    RowBox[{
+                      SuperscriptBox["u", 
+                        TagBox[\((1, 0)\),
+                          Derivative],
+                        MultilineFunction->None], "[", \(x, t\), "]"}], 
+                    "*", \(operatorD[\(-1\)]\), "*", \(v[x, t]\), 
+                    "*", \(operatorD[0]\)}]}]}], "}"}], ",", 
+            RowBox[{"{", 
+              RowBox[{
+                
+                RowBox[{\(C[15]\/2*operatorD[1]\), 
+                  "+", \(C[15]*u[x, t]*v[x, t]*operatorD[0]\), "+", 
+                  RowBox[{"2", "*", \(C[15]\/2\), "*", 
+                    RowBox[{
+                      SuperscriptBox["v", 
+                        TagBox[\((1, 0)\),
+                          Derivative],
+                        MultilineFunction->None], "[", \(x, t\), "]"}], 
+                    "*", \(operatorD[\(-1\)]\), "*", \(u[x, t]\), 
+                    "*", \(operatorD[0]\)}]}], ",", 
+                
+                RowBox[{\(DefiningEquation`Operator`Times[operatorD[0]]\), 
+                  "+", \(\((\(-\(1\/2\)\)\ \[Beta]\ C[15])\)*operatorD[0]\), 
+                  "+", \(C[15]*v[x, t]\^2*operatorD[0]\), "+", 
+                  RowBox[{"2", "*", \(C[15]\/2\), "*", 
+                    RowBox[{
+                      SuperscriptBox["v", 
+                        TagBox[\((1, 0)\),
+                          Derivative],
+                        MultilineFunction->None], "[", \(x, t\), "]"}], 
+                    "*", \(operatorD[\(-1\)]\), "*", \(v[x, t]\), 
+                    "*", \(operatorD[0]\)}]}]}], "}"}]}], "}"}], ",", 
+        RowBox[{"{", 
+          RowBox[{
+            RowBox[{"{", 
+              RowBox[{
+                
+                RowBox[{\(\[Beta]\/2*operatorD[0]\), 
+                  "+", \(C[16]*operatorD[0]\), 
+                  "+", \(u[x, t]\^2*operatorD[0]\), "+", 
+                  RowBox[{"2", "*", \(1\/2\), "*", 
+                    RowBox[{
+                      SuperscriptBox["u", 
+                        TagBox[\((1, 0)\),
+                          Derivative],
+                        MultilineFunction->None], "[", \(x, t\), "]"}], 
+                    "*", \(operatorD[\(-1\)]\), "*", \(u[x, t]\), 
+                    "*", \(operatorD[0]\)}]}], ",", 
+                
+                RowBox[{\(\(-\(1\/2\)\)*operatorD[1]\), 
+                  "+", \(u[x, t]*v[x, t]*operatorD[0]\), "+", 
+                  RowBox[{"2", "*", \(1\/2\), "*", 
+                    RowBox[{
+                      SuperscriptBox["u", 
+                        TagBox[\((1, 0)\),
+                          Derivative],
+                        MultilineFunction->None], "[", \(x, t\), "]"}], 
+                    "*", \(operatorD[\(-1\)]\), "*", \(v[x, t]\), 
+                    "*", \(operatorD[0]\)}]}]}], "}"}], ",", 
+            RowBox[{"{", 
+              RowBox[{
+                
+                RowBox[{\(1\/2*operatorD[1]\), 
+                  "+", \(u[x, t]*v[x, t]*operatorD[0]\), "+", 
+                  RowBox[{"2", "*", \(1\/2\), "*", 
+                    RowBox[{
+                      SuperscriptBox["v", 
+                        TagBox[\((1, 0)\),
+                          Derivative],
+                        MultilineFunction->None], "[", \(x, t\), "]"}], 
+                    "*", \(operatorD[\(-1\)]\), "*", \(u[x, t]\), 
+                    "*", \(operatorD[0]\)}]}], ",", 
+                RowBox[{\(C[16]*operatorD[0]\), 
+                  "+", \(v[x, t]\^2*operatorD[0]\), "+", 
+                  RowBox[{"2", "*", \(1\/2\), "*", 
+                    RowBox[{
+                      SuperscriptBox["v", 
+                        TagBox[\((1, 0)\),
+                          Derivative],
+                        MultilineFunction->None], "[", \(x, t\), "]"}], 
+                    "*", \(operatorD[\(-1\)]\), "*", \(v[x, t]\), 
+                    "*", \(operatorD[0]\)}]}]}], "}"}]}], "}"}]}], 
+      "}"}]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\( (*\ 
+      Boussinesq\ System\ [
+          Ablowitz\ `91]\ *) \)\(\[IndentingNewLine]\)\(RecursionOperator[\
+\[IndentingNewLine]{D[u[x, t], t] \[Equal] 
+          D[u[x, t]*v[x, t], x] + D[v[x, t], {x, 3}], \[IndentingNewLine]D[
+            v[x, t], t] \[Equal] 
+          D[u[x, t], x] + v[x, t]*D[v[x, t], x]}, \[IndentingNewLine]{u[x, 
+          t], v[x, t]}, {x, t}]\)\)\)], "Input"],
+
+Cell[BoxData[
+    \("{{{\\frac{1}{2} C[8]vI, C[8]D_x^{2} + C[8]uI + \\frac{1}{2} \
+C[8]u_{x}D_x^{-1}}, {C[8]I, \\frac{1}{2} C[8]vI + \\frac{1}{2} \
+C[8]v_{x}D_x^{-1}}}}"\)], "Print"],
+
+Cell[BoxData[
+    RowBox[{"{", 
+      RowBox[{"{", 
+        RowBox[{
+          RowBox[{"{", 
+            RowBox[{\(C[8]\/2*v[x, t]*operatorD[0]\), ",", 
+              RowBox[{\(C[8]*operatorD[2]\), "+", 
+                RowBox[{\(C[8]\/2\), "*", 
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\)}], 
+                "+", \(C[8]*u[x, t]*operatorD[0]\)}]}], "}"}], ",", 
+          RowBox[{"{", 
+            RowBox[{\(C[8]*operatorD[0]\), ",", 
+              RowBox[{\(C[8]\/2*v[x, t]*operatorD[0]\), "+", 
+                RowBox[{\(C[8]\/2\), "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\)}]}]}], "}"}]}], "}"}], 
+      "}"}]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\( (*\ 
+      Boussinesq\ System\ *) \)\(\[IndentingNewLine]\)\(RecursionOperator[\
+\[IndentingNewLine]{D[u[x, t], \ t]\  \[Equal] \ 
+          D[v[x, t], x], \[IndentingNewLine]\ 
+        D[v[x, t], \ t]\  \[Equal] 
+          1/3*D[u[x, t], \ {x, 3}]\  + 
+            8/3*u[x, t]*D[u[x, t], \ x]}, \[IndentingNewLine]{u[x, t], 
+        v[x, t]}, {x, t}, \ Seed \[Rule] 2]\)\)\)], "Input"],
+
+Cell[BoxData[
+    \("{{{32 C[7]v_{x}D_x^{-1} + 9 C[7]vI, 3 C[7]D_x^{2} + 3 \
+C[7]u_{x}D_x^{-1} + 6 C[7]uI}, {10 C[7]uD_x^{2} + 15 C[7]u_{x}D_x^{1} + 16 \
+C[7]u^{2}I + 2 C[7]u_{3 x}D_x^{-1} + 82 C[7]uu_{x}D_x^{-1} + 9 C[7]u_{2 x}I + \
+C[7]D_x^{4}, 3 C[7]v_{x}D_x^{-1} + 9 C[7]vI}}}"\)], "Print"],
+
+Cell[BoxData[
+    RowBox[{"{", 
+      RowBox[{"{", 
+        RowBox[{
+          RowBox[{"{", 
+            RowBox[{
+              RowBox[{\(\((9\ C[7])\)*v[x, t]*operatorD[0]\), "+", 
+                RowBox[{"3", "*", \((2\ C[7])\), "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\)}]}], ",", 
+              RowBox[{\(\((3\ C[7])\)*operatorD[2]\), "+", 
+                RowBox[{\((3\ C[7])\), "*", 
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\)}], 
+                "+", \(\((6\ C[7])\)*u[x, t]*operatorD[0]\)}]}], "}"}], ",", 
+          RowBox[{"{", 
+            RowBox[{
+              RowBox[{\(C[7]*operatorD[4]\), "+", 
+                RowBox[{\((2\ C[7])\), "*", 
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((3, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\)}], "+", 
+                RowBox[{\((9\ C[7])\), "*", 
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((2, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[0]\)}], 
+                "+", \(\((10\ C[7])\)*u[x, t]*operatorD[2]\), "+", 
+                RowBox[{\((15\ C[7])\), "*", 
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[1]\)}], 
+                "+", \(\((16\ C[7])\)*u[x, t]\^2*operatorD[0]\), "+", 
+                RowBox[{"8", "*", \((2\ C[7])\), "*", \(u[x, t]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\)}]}], ",", 
+              RowBox[{
+                RowBox[{\((3\ C[7])\), "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\)}], 
+                "+", \(\((9\ C[7])\)*v[x, t]*operatorD[0]\)}]}], "}"}]}], 
+        "}"}], "}"}]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\( (*\ 
+      Modified\ Boussinesq\ System\ \
+*) \)\(\[IndentingNewLine]\)\(RecursionOperator[\[IndentingNewLine]{D[
+            u[x, t], \ t]\  \[Equal] \ 
+          3*D[v[x, t], {x, 2}] + 6*u[x, t]*D[v[x, t], x] + 
+            6*D[u[x, t], x]*v[x, t], \[IndentingNewLine]D[v[x, t], \ 
+            t]\  == \ \(-D[u[x, t], {x, 2}]\) - 6*v[x, t]*D[v[x, t], x] + 
+            2*u[x, t]*D[u[x, t], x]}, \[IndentingNewLine]{u[x, t], 
+        v[x, t]}, {x, t}, Seed\  \[Rule] \ 2]\)\)\)], "Input"],
+
+Cell[BoxData[
+    \("{{{-12 C[94]u_{x}D_x^{-1}v_{x}I + -22 C[94]u_{x}D_x^{-1}uvI + \
+-2C[94]v_{2 x}D_x^{-1}uI + 2 C[94]vD_x^{2} + 3 C[94]v_{x}D_x^{1} + \
+-4C[94]uv_{x}D_x^{-1}uI + -4 C[94]uv_{x}I + -4C[94]vu_{x}D_x^{-1}uI + -8 \
+C[94]u^{2}vI + C[94]v_{2 x}I, -12C[94]uv_{x}D_x^{-1}vI + -12 \
+C[94]u_{x}D_x^{-1}u^{2}I + -12C[94]vu_{x}D_x^{-1}vI + -12 C[94]vv_{x}I + -2 \
+C[94]u^{3}I + 2 C[94]uD_x^{2} + 2 C[94]u_{x}D_x^{-1}u_{x}I + 32 \
+C[94]u_{x}D_x^{-1}v^{2}I + 3 C[94]u_{x}D_x^{1} + -3 C[94]v^{2}D_x^{1} + -6 \
+C[94]uv^{2}I + -6C[94]v_{2 x}D_x^{-1}vI + C[94]D_x^{3} + -C[94]u^{2}D_x^{1} + \
+C[94]u_{2 x}I}, {-12 C[94]v_{x}D_x^{-1}v_{x}I + -22 C[94]v_{x}D_x^{-1}uvI + \
+-2 C[94]uv^{2}I + 4C[94]vv_{x}D_x^{-1}uI + C[94]u_{x}D_x^{1} + \
+C[94]v^{2}D_x^{1} + \\frac{-1}{3} C[94]D_x^{3} + \\frac{1}{3} \
+C[94]u^{2}D_x^{1} + \\frac{1}{3} C[94]u_{2 x}I + \\frac{2}{3}C[94]u_{2 \
+x}D_x^{-1}uI + \\frac{-2}{3} C[94]u^{3}I + \\frac{2}{3} C[94]uD_x^{2} + \
+\\frac{-4}{3}C[94]uu_{x}D_x^{-1}uI + \\frac{4}{3} C[94]uu_{x}I, 12 \
+C[94]v^{3}I + 12C[94]vv_{x}D_x^{-1}vI + -12 C[94]v_{x}D_x^{-1}u^{2}I + \
+2C[94]u_{2 x}D_x^{-1}vI + -2 C[94]vD_x^{2} + 2 C[94]v_{x}D_x^{-1}u_{x}I + 32 \
+C[94]v_{x}D_x^{-1}v^{2}I + -3 C[94]v_{x}D_x^{1} + -4 C[94]u^{2}vI + \
+-4C[94]uu_{x}D_x^{-1}vI + 4 C[94]vu_{x}I + -C[94]v_{2 x}I}}}"\)], "Print"],
+
+Cell[BoxData[
+    RowBox[{"{", 
+      RowBox[{"{", 
+        RowBox[{
+          RowBox[{"{", 
+            RowBox[{
+              RowBox[{
+                RowBox[{\(C[94]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((2, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[0]\)}], 
+                "+", \(\((2\ C[94])\)*v[x, t]*operatorD[2]\), "+", 
+                RowBox[{\((3\ C[94])\), "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[1]\)}], 
+                "+", \(\((\(-8\)\ C[94])\)*u[x, t]\^2*v[x, t]*operatorD[0]\), 
+                "+", 
+                RowBox[{\((\(-4\)\ C[94])\), "*", \(u[x, t]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[0]\)}], "+", 
+                RowBox[{\(-2\), "*", \(C[94]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((2, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\), "*", \(u[x, t]\), 
+                  "*", \(operatorD[0]\)}], "+", 
+                RowBox[{\(-1\), "*", \((2\ C[94])\), "*", 
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[0]\)}], "+", 
+                RowBox[{\(-4\), "*", \(C[94]\), "*", \(u[x, t]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\), "*", \(u[x, t]\), 
+                  "*", \(operatorD[0]\)}], "+", 
+                RowBox[{\(-4\), "*", \(C[94]\), "*", \(v[x, t]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\), "*", \(u[x, t]\), 
+                  "*", \(operatorD[0]\)}], "+", 
+                RowBox[{\(-2\), "*", \((2\ C[94])\), "*", 
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\), "*", \(u[x, t]\), 
+                  "*", \(v[x, t]\), "*", \(operatorD[0]\)}]}], ",", 
+              
+              RowBox[{\(C[94]*operatorD[3]\), 
+                "+", \(\((\(-3\)\ C[94])\)*v[x, t]\^2*operatorD[1]\), 
+                "+", \(\((\(-2\)\ C[94])\)*u[x, t]\^3*operatorD[0]\), 
+                "+", \(\(-C[94]\)*u[x, t]\^2*operatorD[1]\), "+", 
+                RowBox[{\(C[94]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((2, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[0]\)}], 
+                "+", \(\((2\ C[94])\)*u[x, t]*operatorD[2]\), "+", 
+                RowBox[{\((3\ C[94])\), "*", 
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[1]\)}], "+", 
+                RowBox[{\((\(-12\)\ C[94])\), "*", \(v[x, t]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[0]\)}], 
+                "+", \(\((\(-6\)\ C[94])\)*u[x, t]*v[x, t]\^2*operatorD[0]\), 
+                "+", 
+                RowBox[{\((2\ C[94])\), "*", 
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[0]\)}], "+", 
+                RowBox[{\(-6\), "*", \(C[94]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((2, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\), "*", \(v[x, t]\), 
+                  "*", \(operatorD[0]\)}], "+", 
+                RowBox[{\(-1\), "*", \((2\ C[94])\), "*", 
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\), "*", \(u[x, t]\^2\), 
+                  "*", \(operatorD[0]\)}], "+", 
+                RowBox[{"3", "*", \((2\ C[94])\), "*", 
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\), "*", \(v[x, t]\^2\), 
+                  "*", \(operatorD[0]\)}], "+", 
+                RowBox[{\(-12\), "*", \(C[94]\), "*", \(u[x, t]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\), "*", \(v[x, t]\), 
+                  "*", \(operatorD[0]\)}], "+", 
+                RowBox[{\(-12\), "*", \(C[94]\), "*", \(v[x, t]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\), "*", \(v[x, t]\), 
+                  "*", \(operatorD[0]\)}]}]}], "}"}], ",", 
+          RowBox[{"{", 
+            RowBox[{
+              
+              RowBox[{\(\(-\(C[94]\/3\)\)*operatorD[3]\), 
+                "+", \(\(-\(\(2\ C[94]\)\/3\)\)*u[x, t]\^3*operatorD[0]\), 
+                "+", \(C[94]\/3*u[x, t]\^2*operatorD[1]\), "+", 
+                RowBox[{\(C[94]\/3\), "*", 
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((2, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[0]\)}], 
+                "+", \(\(2\ C[94]\)\/3*u[x, t]*operatorD[2]\), 
+                "+", \(C[94]*v[x, t]\^2*operatorD[1]\), "+", 
+                RowBox[{\(C[94]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[1]\)}], 
+                "+", \(\((\(-2\)\ C[94])\)*u[x, t]*v[x, t]\^2*operatorD[0]\), 
+                "+", 
+                RowBox[{\(\(4\ C[94]\)\/3\), "*", \(u[x, t]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[0]\)}], "+", 
+                RowBox[{\(-1\), "*", \((2\ C[94])\), "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[0]\)}], "+", 
+                RowBox[{\(2\/3\), "*", \(C[94]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((2, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\), "*", \(u[x, t]\), 
+                  "*", \(operatorD[0]\)}], "+", 
+                RowBox[{\(-2\), "*", \((2\ C[94])\), "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\), "*", \(u[x, t]\), 
+                  "*", \(v[x, t]\), "*", \(operatorD[0]\)}], "+", 
+                RowBox[{\(-\(4\/3\)\), "*", \(C[94]\), "*", \(u[x, t]\), "*", 
+                  
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\), "*", \(u[x, t]\), 
+                  "*", \(operatorD[0]\)}], "+", 
+                RowBox[{"4", "*", \(C[94]\), "*", \(v[x, t]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\), "*", \(u[x, t]\), 
+                  "*", \(operatorD[0]\)}]}], ",", 
+              RowBox[{
+                RowBox[{\((\(-3\)\ C[94])\), "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[1]\)}], 
+                "+", \(\((\(-2\)\ C[94])\)*v[x, t]*operatorD[2]\), "+", 
+                RowBox[{\(-C[94]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((2, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[0]\)}], 
+                "+", \(\((12\ C[94])\)*v[x, t]\^3*operatorD[0]\), 
+                "+", \(\((\(-4\)\ C[94])\)*u[x, t]\^2*v[x, t]*operatorD[0]\), 
+                "+", 
+                RowBox[{\((4\ C[94])\), "*", \(v[x, t]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[0]\)}], "+", 
+                RowBox[{\((2\ C[94])\), "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[0]\)}], "+", 
+                RowBox[{\(-1\), "*", \((2\ C[94])\), "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\), "*", \(u[x, t]\^2\), 
+                  "*", \(operatorD[0]\)}], "+", 
+                RowBox[{"2", "*", \(C[94]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((2, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\), "*", \(v[x, t]\), 
+                  "*", \(operatorD[0]\)}], "+", 
+                RowBox[{"3", "*", \((2\ C[94])\), "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\), "*", \(v[x, t]\^2\), 
+                  "*", \(operatorD[0]\)}], "+", 
+                RowBox[{\(-4\), "*", \(C[94]\), "*", \(u[x, t]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\), "*", \(v[x, t]\), 
+                  "*", \(operatorD[0]\)}], "+", 
+                RowBox[{"12", "*", \(C[94]\), "*", \(v[x, t]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\), "*", \(v[x, t]\), 
+                  "*", \(operatorD[0]\)}]}]}], "}"}]}], "}"}], 
+      "}"}]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\( (*\ 
+      Hirota - Satsuma\ System\ \
+*) \)\(\[IndentingNewLine]\)\(RecursionOperator[\[IndentingNewLine]{D[
+            u[x, t], t]\  \[Equal] \ 
+          1/2*\((6*u[x, t]*D[u[x, t], \ x]\  + \ D[u[x, t], \ {x, 3}])\) - 
+            2*v[x, t]*D[v[x, t], \ x], \[IndentingNewLine]D[v[x, t], \ 
+            t]\  \[Equal] \ \(-3\)*u[x, t]*D[v[x, t], \ x]\  - \ 
+            D[v[x, t], \ {x, 3}]}, \[IndentingNewLine]{u[x, t], v[x, t]}, {x, 
+        t}, Seed \[Rule] 2]\)\)\)], "Input"],
+
+Cell[BoxData[
+    \("{{{-12 C[49]u^{2}I + 23 C[49]vv_{x}D_x^{-1} + -33 C[49]uu_{x}D_x^{-1} \
++ -3C[49]u_{x}D_x^{-1}uI + 4 C[49]v^{2}I + -6 C[49]u_{2 x}I + -6 \
+C[49]uD_x^{2} + -9 C[49]u_{x}D_x^{1} + \\frac{-1}{2}3 C[49]u_{3 x}D_x^{-1} + \
+\\frac{-3}{4} C[49]D_x^{4}, 2C[49]u_{x}D_x^{-1}vI + 4 C[49]uvI + 4 \
+C[49]v_{x}D_x^{1} + 5 C[49]vD_x^{2} + C[49]v_{2 x}I}, {33 C[49]uv_{x}D_x^{-1} \
++ 3 C[49]v_{3 x}D_x^{-1} + -3C[49]v_{x}D_x^{-1}uI + 9 C[49]v_{2 x}I + \
+\\frac{15}{2} C[49]v_{x}D_x^{1}, 12 C[49]uD_x^{2} + 2C[49]v_{x}D_x^{-1}vI + 3 \
+C[49]D_x^{4} + 4 C[49]v^{2}I + 6 C[49]u_{x}D_x^{1}}}}"\)], "Print"],
+
+Cell[BoxData[
+    RowBox[{"{", 
+      RowBox[{"{", 
+        RowBox[{
+          RowBox[{"{", 
+            RowBox[{
+              
+              RowBox[{\(\(-\(\(3\ C[49]\)\/4\)\)*operatorD[4]\), 
+                "+", \(\((\(-12\)\ C[49])\)*u[x, t]\^2*operatorD[0]\), "+", 
+                RowBox[{\((\(-9\)\ C[49])\), "*", 
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[1]\)}], 
+                "+", \(\((\(-6\)\ C[49])\)*u[x, t]*operatorD[2]\), "+", 
+                RowBox[{\((\(-6\)\ C[49])\), "*", 
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((2, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[0]\)}], 
+                "+", \(\((4\ C[49])\)*v[x, t]\^2*operatorD[0]\), "+", 
+                RowBox[{\(-\(1\/2\)\), "*", \((3\ C[49])\), "*", 
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((3, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\)}], "+", 
+                RowBox[{\(-3\), "*", \((3\ C[49])\), "*", \(u[x, t]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\)}], "+", 
+                RowBox[{"2", "*", \((3\ C[49])\), "*", \(v[x, t]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\)}], "+", 
+                RowBox[{\(-3\), "*", \(C[49]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\), "*", \(u[x, t]\), 
+                  "*", \(operatorD[0]\)}]}], ",", 
+              RowBox[{
+                RowBox[{\(C[49]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((2, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[0]\)}], "+", 
+                RowBox[{\((4\ C[49])\), "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[1]\)}], 
+                "+", \(\((5\ C[49])\)*v[x, t]*operatorD[2]\), 
+                "+", \(\((4\ C[49])\)*u[x, t]*v[x, t]*operatorD[0]\), "+", 
+                RowBox[{"2", "*", \(C[49]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\), "*", \(v[x, t]\), 
+                  "*", \(operatorD[0]\)}]}]}], "}"}], ",", 
+          RowBox[{"{", 
+            RowBox[{
+              RowBox[{
+                RowBox[{\((3\ C[49])\), "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((3, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\)}], "+", 
+                RowBox[{\(\(15\ C[49]\)\/2\), "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[1]\)}], "+", 
+                RowBox[{\((9\ C[49])\), "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((2, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[0]\)}], "+", 
+                RowBox[{"3", "*", \((3\ C[49])\), "*", \(u[x, t]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\)}], "+", 
+                RowBox[{\(-3\), "*", \(C[49]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\), "*", \(u[x, t]\), 
+                  "*", \(operatorD[0]\)}]}], ",", 
+              
+              RowBox[{\(\((3\ C[49])\)*operatorD[4]\), 
+                "+", \(\((4\ C[49])\)*v[x, t]\^2*operatorD[0]\), "+", 
+                RowBox[{\((6\ C[49])\), "*", 
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[1]\)}], 
+                "+", \(\((12\ C[49])\)*u[x, t]*operatorD[2]\), "+", 
+                RowBox[{"2", "*", \(C[49]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\), "*", \(v[x, t]\), 
+                  "*", \(operatorD[0]\)}]}]}], "}"}]}], "}"}], 
+      "}"}]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\( (*\ 
+      Symmetrically\ Coupled\ Korteweg - 
+        de\ Vries\ System\ *) \)\(\[IndentingNewLine]\)\(RecursionOperator[\
+\[IndentingNewLine]{D[u[x, t], t] \[Equal] 
+          D[u[x, t], {x, 3}] + D[v[x, t], {x, 3}] + 6*u[x, t]*D[u[x, t], x] + 
+            4*u[x, t]*D[v[x, t], x] + 
+            2*D[u[x, t], x]*v[x, t], \[IndentingNewLine]D[v[x, t], 
+            t] \[Equal] 
+          D[u[x, t], {x, 3}] + D[v[x, t], {x, 3}] + 6*v[x, t]*D[v[x, t], x] + 
+            4*v[x, t]*D[u[x, t], x] + 
+            2*D[v[x, t], x]*u[x, t]}, \[IndentingNewLine]{u[x, t], 
+        v[x, t]}, {x, t}, Seed \[Rule] 2, 
+      RankShift \[Rule] \(-1\)]\)\)\)], "Input"],
+
+Cell[BoxData[
+    \("{{{2 C[16]uI + C[16]u_{x}D_x^{-1} + \\frac{1}{2} C[16]D_x^{2}, 2 \
+C[16]uI + C[16]u_{x}D_x^{-1} + \\frac{1}{2} C[16]D_x^{2}}, {2 C[16]vI + \
+C[16]v_{x}D_x^{-1} + \\frac{1}{2} C[16]D_x^{2}, 2 C[16]vI + \
+C[16]v_{x}D_x^{-1} + \\frac{1}{2} C[16]D_x^{2}}}}"\)], "Print"],
+
+Cell[BoxData[
+    RowBox[{"{", 
+      RowBox[{"{", 
+        RowBox[{
+          RowBox[{"{", 
+            RowBox[{
+              RowBox[{\(C[16]\/2*operatorD[2]\), "+", 
+                RowBox[{\(C[16]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\)}], 
+                "+", \(\((2\ C[16])\)*u[x, t]*operatorD[0]\)}], ",", 
+              RowBox[{\(C[16]\/2*operatorD[2]\), "+", 
+                RowBox[{\(C[16]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\)}], 
+                "+", \(\((2\ C[16])\)*u[x, t]*operatorD[0]\)}]}], "}"}], ",", 
+          
+          RowBox[{"{", 
+            RowBox[{
+              RowBox[{\(C[16]\/2*operatorD[2]\), "+", 
+                RowBox[{\(C[16]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\)}], 
+                "+", \(\((2\ C[16])\)*v[x, t]*operatorD[0]\)}], ",", 
+              RowBox[{\(C[16]\/2*operatorD[2]\), "+", 
+                RowBox[{\(C[16]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\)}], 
+                "+", \(\((2\ C[16])\)*v[x, t]*operatorD[0]\)}]}], "}"}]}], 
+        "}"}], "}"}]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\( (*\ 
+      Complexly\ Coupled\ Korteweg - 
+        de\ Vries\ System\ *) \)\(\[IndentingNewLine]\)\( (*\ 
+      Generates\ two\ linear\ independent\ recursion\ opeators, \ 
+      one\ of\ which\ corresponds\ to\ that\ reported\ in\ Jing\ Ping\ Wang' 
+        s\ PhD\ \(\(Thesis\)\(.\)\)\ \
+*) \)\(\[IndentingNewLine]\)\(RecursionOperator[\[IndentingNewLine]{D[
+            u[x, t], t] \[Equal] 
+          D[u[x, t], {x, 3}] + 6*u[x, t]*D[u[x, t], x] + 
+            6*v[x, t]*D[v[x, t], x], \[IndentingNewLine]D[v[x, t], 
+            t] \[Equal] 
+          D[v[x, t], {x, 3}] + 6*u[x, t]*D[v[x, t], x] + 
+            6*v[x, t]*D[u[x, t], x]}, \[IndentingNewLine]{u[x, t], 
+        v[x, t]}, {x, t}]\)\)\)], "Input"],
+
+Cell[BoxData[
+    \("{{{2 C[19]uI + 2 C[20]vI + C[19]u_{x}D_x^{-1} + C[20]v_{x}D_x^{-1} + \
+\\frac{1}{2} C[19]D_x^{2}, 2 C[19]vI + 2 C[20]uI + C[19]v_{x}D_x^{-1} + \
+C[20]u_{x}D_x^{-1} + \\frac{1}{2} C[20]D_x^{2}}, {2 C[19]vI + 2 C[20]uI + \
+C[19]v_{x}D_x^{-1} + C[20]u_{x}D_x^{-1} + \\frac{1}{2} C[20]D_x^{2}, 2 \
+C[19]uI + 2 C[20]vI + C[19]u_{x}D_x^{-1} + C[20]v_{x}D_x^{-1} + \\frac{1}{2} \
+C[19]D_x^{2}}}}"\)], "Print"],
+
+Cell[BoxData[
+    RowBox[{"{", 
+      RowBox[{"{", 
+        RowBox[{
+          RowBox[{"{", 
+            RowBox[{
+              RowBox[{\(C[19]\/2*operatorD[2]\), "+", 
+                RowBox[{\(C[19]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\)}], 
+                "+", \(\((2\ C[19])\)*u[x, t]*operatorD[0]\), "+", 
+                RowBox[{\(C[20]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\)}], 
+                "+", \(\((2\ C[20])\)*v[x, t]*operatorD[0]\)}], ",", 
+              RowBox[{\(C[20]\/2*operatorD[2]\), "+", 
+                RowBox[{\(C[19]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\)}], 
+                "+", \(\((2\ C[19])\)*v[x, t]*operatorD[0]\), "+", 
+                RowBox[{\(C[20]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\)}], 
+                "+", \(\((2\ C[20])\)*u[x, t]*operatorD[0]\)}]}], "}"}], ",", 
+          
+          RowBox[{"{", 
+            RowBox[{
+              RowBox[{\(C[20]\/2*operatorD[2]\), "+", 
+                RowBox[{\(C[19]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\)}], 
+                "+", \(\((2\ C[19])\)*v[x, t]*operatorD[0]\), "+", 
+                RowBox[{\(C[20]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\)}], 
+                "+", \(\((2\ C[20])\)*u[x, t]*operatorD[0]\)}], ",", 
+              RowBox[{\(C[19]\/2*operatorD[2]\), "+", 
+                RowBox[{\(C[19]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\)}], 
+                "+", \(\((2\ C[19])\)*u[x, t]*operatorD[0]\), "+", 
+                RowBox[{\(C[20]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\)}], 
+                "+", \(\((2\ C[20])\)*v[x, t]*operatorD[0]\)}]}], "}"}]}], 
+        "}"}], "}"}]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\( (*\ 
+      Ito\ System\ \((Coupled\ Nonlinear\ Wave\ System)\)\ *) \)\(\
+\[IndentingNewLine]\)\(RecursionOperator[\[IndentingNewLine]{D[u[x, t], 
+            t] \[Equal] 
+          D[u[x, t], {x, 3}] + 6*u[x, t]*D[u[x, t], x] + 
+            2*v[x, t]*D[v[x, t], x], \[IndentingNewLine]D[v[x, t], 
+            t] \[Equal] 
+          2*u[x, t]*D[v[x, t], x] + 
+            2*D[u[x, t], x]*v[x, t]}, \[IndentingNewLine]{u[x, t], 
+        v[x, t]}, {x, t}]\)\)\)], "Input"],
+
+Cell[BoxData[
+    \("{{{2 C[15]uI + C[15]u_{x}D_x^{-1} + \\frac{1}{2} C[15]D_x^{2}, \
+C[15]vI}, {C[15]vI + C[15]v_{x}D_x^{-1}, 0}}}"\)], "Print"],
+
+Cell[BoxData[
+    RowBox[{"{", 
+      RowBox[{"{", 
+        RowBox[{
+          RowBox[{"{", 
+            RowBox[{
+              RowBox[{\(C[15]\/2*operatorD[2]\), "+", 
+                RowBox[{\(C[15]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\)}], 
+                "+", \(\((2\ C[15])\)*u[x, t]*operatorD[0]\)}], 
+              ",", \(C[15]*v[x, t]*operatorD[0]\)}], "}"}], ",", 
+          RowBox[{"{", 
+            RowBox[{
+              RowBox[{\(C[15]*v[x, t]*operatorD[0]\), "+", 
+                RowBox[{\(C[15]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\)}]}], ",", "0"}], "}"}]}], "}"}], 
+      "}"}]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\( (*\ 
+      Drinfel' d - Sokolov - 
+        Wilson\ System\ *) \)\(\[IndentingNewLine]\)\(RecursionOperator[\
+\[IndentingNewLine]{D[u[x, t], \ t]\  \[Equal] \ 
+          3*v[x, t]*D[v[x, t], \ x], \[IndentingNewLine]D[v[x, t], \ 
+            t]\  \[Equal] \ 
+          2*D[v[x, t], \ {x, 3}]\  + \ 2*u[x, t]*D[v[x, t], \ x]\  + \ 
+            D[u[x, t], x]*v[x, t]}, \[IndentingNewLine]{u[x, t], \ 
+        v[x, t]}, {x, t}, Seed \[Rule] 3]\)\)\)], "Input"],
+
+Cell[BoxData[
+    \("{{{-2 C[146]u_{x}D_x^{3} + -C[146]u^{2}D_x^{2} + \\frac{-10}{3} \
+C[146]uu_{x}D_x^{1} + \\frac{-13}{18} C[146]u_{4 x}I + \\frac{-1}{9} \
+C[146]D_x^{6} + \\frac{-1}{9}C[146]u_{5 x}D_x^{-1} + \\frac{-23}{12} \
+C[146]u_{x}^{2}I + \\frac{-2}{3} C[146]uD_x^{4} + \\frac{-2}{3}\\frac{-1}{4} \
+C[146]u_{x}D_x^{-1}v^{2}I + \\frac{-25}{18}C[146]u_{x}u_{2 x}D_x^{-1} + \
+\\frac{25}{3} C[146]vv_{x}D_x^{1} + \\frac{2}{9}\\frac{-1}{4} \
+C[146]u_{x}D_x^{-1}u_{2 x}I + \\frac{-35}{18} C[146]u_{3 x}D_x^{1} + \
+\\frac{37}{6} C[146]vv_{2 x}I + \\frac{-41}{18} C[146]uu_{2 x}I + \
+\\frac{4}{3} C[146]uv^{2}I + \\frac{47}{12} C[146]v_{x}^{2}I + \
+\\frac{-49}{18} C[146]u_{2 x}D_x^{2} + \\frac{-4}{9} C[146]u^{3}I + \
+\\frac{4}{9}\\frac{-1}{4} C[146]u_{x}D_x^{-1}u^{2}I + \
+\\frac{5}{2}C[146]v_{x}v_{2 x}D_x^{-1} + \\frac{5}{3}C[146]uvv_{x}D_x^{-1} + \
+\\frac{5}{3}C[146]vv_{3 x}D_x^{-1} + \\frac{5}{6}C[146]v^{2}u_{x}D_x^{-1} + \
+\\frac{-5}{9}C[146]u^{2}u_{x}D_x^{-1} + \\frac{-5}{9}C[146]uu_{3 x}D_x^{-1} + \
+\\frac{7}{3} C[146]v^{2}D_x^{2}, 2 C[146]v^{3}I + -2\\frac{-1}{4} \
+C[146]u_{x}D_x^{-1}v_{2 x}I + 3C[146]vv_{x}D_x^{-1}vI + \\frac{11}{3} \
+C[146]uv_{x}D_x^{1} + \\frac{13}{6} C[146]vu_{2 x}I + \\frac{14}{3} \
+C[146]vD_x^{4} + \\frac{16}{3} C[146]uvD_x^{2} + \\frac{1}{6} C[146]v_{4 x}I \
++ \\frac{17}{3} C[146]v_{x}D_x^{3} + \\frac{20}{3} C[146]vu_{x}D_x^{1} + \
+\\frac{2}{3} C[146]u^{2}vI + \\frac{-4}{3}\\frac{-1}{4} \
+C[146]u_{x}D_x^{-1}uvI + \\frac{5}{3} C[146]u_{x}v_{x}I + \\frac{5}{6} \
+C[146]uv_{2 x}I + \\frac{7}{2} C[146]v_{2 x}D_x^{2} + \\frac{7}{6} C[146]v_{3 \
+x}D_x^{1}}, {2 C[146]vu_{x}D_x^{1} + C[146]v_{5 x}D_x^{-1} + \\frac{11}{2} \
+C[146]uv_{2 x}I + \\frac{11}{2} C[146]v_{4 x}I + \\frac{14}{9} C[146]vD_x^{4} \
++ \\frac{16}{9} C[146]uvD_x^{2} + \\frac{2}{3} C[146]v^{3}I + \
+\\frac{-2}{3}\\frac{-1}{4} C[146]v_{x}D_x^{-1}v^{2}I + \\frac{27}{2} \
+C[146]v_{2 x}D_x^{2} + \\frac{2}{9} C[146]u^{2}vI + \\frac{2}{9}\\frac{-1}{4} \
+C[146]v_{x}D_x^{-1}u_{2 x}I + \\frac{3}{2} C[146]vu_{2 x}I + \
+\\frac{35}{18}C[146]v_{x}u_{2 x}D_x^{-1} + \\frac{46}{9} C[146]u_{x}v_{x}I + \
+\\frac{4}{9}\\frac{-1}{4} C[146]v_{x}D_x^{-1}u^{2}I + \
+\\frac{5}{2}C[146]u_{x}v_{2 x}D_x^{-1} + \\frac{53}{9} C[146]uv_{x}D_x^{1} + \
+\\frac{5}{3}C[146]uv_{3 x}D_x^{-1} + \\frac{5}{6}C[146]v^{2}v_{x}D_x^{-1} + \
+\\frac{5}{9}C[146]u^{2}v_{x}D_x^{-1} + \\frac{5}{9}C[146]uvu_{x}D_x^{-1} + \
+\\frac{5}{9}C[146]vu_{3 x}D_x^{-1} + \\frac{67}{9} C[146]v_{x}D_x^{3} + \
+\\frac{73}{6} C[146]v_{3 x}D_x^{1}, 12 C[146]u_{x}D_x^{3} + \
+2C[146]uv_{x}D_x^{-1}vI + 2C[146]v_{3 x}D_x^{-1}vI + -2\\frac{-1}{4} \
+C[146]v_{x}D_x^{-1}v_{2 x}I + 3 C[146]D_x^{6} + 3 C[146]u^{2}D_x^{2} + 6 \
+C[146]uD_x^{4} + 6 C[146]uu_{x}D_x^{1} + C[146]vu_{x}D_x^{-1}vI + \
+\\frac{11}{3} C[146]v^{2}D_x^{2} + \\frac{15}{2} C[146]u_{3 x}D_x^{1} + \
+\\frac{27}{2} C[146]u_{2 x}D_x^{2} + \\frac{3}{2} C[146]u_{4 x}I + \
+\\frac{3}{2} C[146]uu_{2 x}I + \\frac{3}{4} C[146]u_{x}^{2}I + \\frac{35}{3} \
+C[146]vv_{x}D_x^{1} + \\frac{-4}{3}\\frac{-1}{4} C[146]v_{x}D_x^{-1}uvI + \
+\\frac{49}{6} C[146]vv_{2 x}I + \\frac{67}{12} C[146]v_{x}^{2}I + \
+\\frac{8}{3} C[146]uv^{2}I}}}"\)], "Print"],
+
+Cell[BoxData[
+    RowBox[{"{", 
+      RowBox[{"{", 
+        RowBox[{
+          RowBox[{"{", 
+            RowBox[{
+              RowBox[{\(\(-\(C[146]\/9\)\)*operatorD[6]\), "+", 
+                RowBox[{\(-\(\(49\ C[146]\)\/18\)\), "*", 
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((2, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[2]\)}], "+", 
+                RowBox[{\((\(-2\)\ C[146])\), "*", 
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[3]\)}], "+", 
+                RowBox[{\(-\(\(35\ C[146]\)\/18\)\), "*", 
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((3, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[1]\)}], "+", 
+                RowBox[{\(-\(\(23\ C[146]\)\/12\)\), "*", 
+                  SuperscriptBox[
+                    RowBox[{
+                      SuperscriptBox["u", 
+                        TagBox[\((1, 0)\),
+                          Derivative],
+                        MultilineFunction->None], "[", \(x, t\), "]"}], "2"], 
+                  "*", \(operatorD[0]\)}], 
+                "+", \(\(-C[146]\)*u[x, t]\^2*operatorD[2]\), "+", 
+                RowBox[{\(-\(\(13\ C[146]\)\/18\)\), "*", 
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((4, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[0]\)}], 
+                "+", \(\(-\(\(2\ C[146]\)\/3\)\)*u[x, t]*operatorD[4]\), 
+                "+", \(\(-\(\(4\ C[146]\)\/9\)\)*u[x, t]\^3*operatorD[0]\), 
+                "+", \(\(7\ C[146]\)\/3*v[x, t]\^2*operatorD[2]\), "+", 
+                RowBox[{\(\(47\ C[146]\)\/12\), "*", 
+                  SuperscriptBox[
+                    RowBox[{
+                      SuperscriptBox["v", 
+                        TagBox[\((1, 0)\),
+                          Derivative],
+                        MultilineFunction->None], "[", \(x, t\), "]"}], "2"], 
+                  "*", \(operatorD[0]\)}], "+", 
+                RowBox[{\(-\(1\/9\)\), "*", \(C[146]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((5, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\)}], "+", 
+                RowBox[{\(-\(\(10\ C[146]\)\/3\)\), "*", \(u[x, t]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[1]\)}], "+", 
+                RowBox[{\(-\(\(41\ C[146]\)\/18\)\), "*", \(u[x, t]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((2, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[0]\)}], 
+                "+", \(\(4\ C[146]\)\/3*u[x, t]*v[x, t]\^2*operatorD[0]\), 
+                "+", 
+                RowBox[{\(\(37\ C[146]\)\/6\), "*", \(v[x, t]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((2, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[0]\)}], "+", 
+                RowBox[{\(\(25\ C[146]\)\/3\), "*", \(v[x, t]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[1]\)}], "+", 
+                RowBox[{\(-\(25\/18\)\), "*", \(C[146]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], "*", 
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((2, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\)}], "+", 
+                
+                RowBox[{\(-\(5\/9\)\), "*", \(C[146]\), "*", \(u[x, t]\), "*",
+                   
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((3, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\)}], "+", 
+                
+                RowBox[{\(-\(5\/9\)\), "*", \(C[146]\), "*", \(u[x, t]\^2\), 
+                  "*", 
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\)}], "+", 
+                RowBox[{\(5\/6\), "*", \(C[146]\), "*", \(v[x, t]\^2\), "*", 
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\)}], "+", 
+                RowBox[{\(5\/3\), "*", \(C[146]\), "*", \(v[x, t]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((3, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\)}], "+", 
+                RowBox[{\(5\/2\), "*", \(C[146]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((2, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\)}], "+", 
+                RowBox[{\(-\(2\/3\)\), "*", \(-\(C[146]\/4\)\), "*", 
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\), "*", \(v[x, t]\^2\), 
+                  "*", \(operatorD[0]\)}], "+", 
+                RowBox[{\(2\/9\), "*", \(-\(C[146]\/4\)\), "*", 
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((2, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[0]\)}], "+", 
+                RowBox[{\(4\/9\), "*", \(-\(C[146]\/4\)\), "*", 
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\), "*", \(u[x, t]\^2\), 
+                  "*", \(operatorD[0]\)}], "+", 
+                
+                RowBox[{\(5\/3\), "*", \(C[146]\), "*", \(u[x, t]\), 
+                  "*", \(v[x, t]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\)}]}], ",", 
+              RowBox[{
+                RowBox[{\(C[146]\/6\), "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((4, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[0]\)}], "+", 
+                RowBox[{\(\(7\ C[146]\)\/6\), "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((3, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[1]\)}], 
+                "+", \(\((2\ C[146])\)*v[x, t]\^3*operatorD[0]\), "+", 
+                RowBox[{\(\(7\ C[146]\)\/2\), "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((2, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[2]\)}], 
+                "+", \(\(14\ C[146]\)\/3*v[x, t]*operatorD[4]\), "+", 
+                RowBox[{\(\(17\ C[146]\)\/3\), "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[3]\)}], 
+                "+", \(\(2\ C[146]\)\/3*u[x, t]\^2*v[x, t]*operatorD[0]\), 
+                "+", 
+                RowBox[{\(\(5\ C[146]\)\/6\), "*", \(u[x, t]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((2, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[0]\)}], "+", 
+                RowBox[{\(\(5\ C[146]\)\/3\), "*", 
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[0]\)}], "+", 
+                RowBox[{\(\(13\ C[146]\)\/6\), "*", \(v[x, t]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((2, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[0]\)}], "+", 
+                RowBox[{\(\(11\ C[146]\)\/3\), "*", \(u[x, t]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[1]\)}], 
+                "+", \(\(16\ C[146]\)\/3*u[x, t]*v[x, t]*operatorD[2]\), "+", 
+                
+                RowBox[{\(\(20\ C[146]\)\/3\), "*", \(v[x, t]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[1]\)}], "+", 
+                RowBox[{\(-2\), "*", \(-\(C[146]\/4\)\), "*", 
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((2, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[0]\)}], "+", 
+                RowBox[{\(-\(4\/3\)\), "*", \(-\(C[146]\/4\)\), "*", 
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\), "*", \(u[x, t]\), 
+                  "*", \(v[x, t]\), "*", \(operatorD[0]\)}], "+", 
+                RowBox[{"3", "*", \(C[146]\), "*", \(v[x, t]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\), "*", \(v[x, t]\), 
+                  "*", \(operatorD[0]\)}]}]}], "}"}], ",", 
+          RowBox[{"{", 
+            RowBox[{
+              RowBox[{\(\(2\ C[146]\)\/3*v[x, t]\^3*operatorD[0]\), "+", 
+                RowBox[{\(C[146]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((5, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\)}], 
+                "+", \(\(14\ C[146]\)\/9*v[x, t]*operatorD[4]\), "+", 
+                RowBox[{\(\(11\ C[146]\)\/2\), "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((4, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[0]\)}], "+", 
+                RowBox[{\(\(67\ C[146]\)\/9\), "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[3]\)}], "+", 
+                RowBox[{\(\(73\ C[146]\)\/6\), "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((3, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[1]\)}], "+", 
+                RowBox[{\(\(27\ C[146]\)\/2\), "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((2, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[2]\)}], 
+                "+", \(\(2\ C[146]\)\/9*u[x, t]\^2*v[x, t]*operatorD[0]\), 
+                "+", 
+                RowBox[{\(\(3\ C[146]\)\/2\), "*", \(v[x, t]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((2, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[0]\)}], 
+                "+", \(\(16\ C[146]\)\/9*u[x, t]*v[x, t]*operatorD[2]\), "+", 
+                
+                RowBox[{\((2\ C[146])\), "*", \(v[x, t]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[1]\)}], "+", 
+                RowBox[{\(\(46\ C[146]\)\/9\), "*", 
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[0]\)}], "+", 
+                RowBox[{\(\(11\ C[146]\)\/2\), "*", \(u[x, t]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((2, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[0]\)}], "+", 
+                RowBox[{\(\(53\ C[146]\)\/9\), "*", \(u[x, t]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[1]\)}], "+", 
+                RowBox[{\(5\/9\), "*", \(C[146]\), "*", \(u[x, t]\^2\), "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\)}], "+", 
+                RowBox[{\(5\/9\), "*", \(C[146]\), "*", \(v[x, t]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((3, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\)}], "+", 
+                RowBox[{\(5\/6\), "*", \(C[146]\), "*", \(v[x, t]\^2\), "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\)}], "+", 
+                RowBox[{\(5\/3\), "*", \(C[146]\), "*", \(u[x, t]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((3, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\)}], "+", 
+                RowBox[{\(35\/18\), "*", \(C[146]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], "*", 
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((2, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\)}], "+", 
+                RowBox[{\(5\/2\), "*", \(C[146]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((2, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\)}], "+", 
+                RowBox[{\(-\(2\/3\)\), "*", \(-\(C[146]\/4\)\), "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\), "*", \(v[x, t]\^2\), 
+                  "*", \(operatorD[0]\)}], "+", 
+                RowBox[{\(2\/9\), "*", \(-\(C[146]\/4\)\), "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((2, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[0]\)}], "+", 
+                RowBox[{\(4\/9\), "*", \(-\(C[146]\/4\)\), "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\), "*", \(u[x, t]\^2\), 
+                  "*", \(operatorD[0]\)}], "+", 
+                
+                RowBox[{\(5\/9\), "*", \(C[146]\), "*", \(u[x, t]\), 
+                  "*", \(v[x, t]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\)}]}], ",", 
+              RowBox[{\(\((3\ C[146])\)*operatorD[6]\), "+", 
+                RowBox[{\(\(3\ C[146]\)\/4\), "*", 
+                  SuperscriptBox[
+                    RowBox[{
+                      SuperscriptBox["u", 
+                        TagBox[\((1, 0)\),
+                          Derivative],
+                        MultilineFunction->None], "[", \(x, t\), "]"}], "2"], 
+                  "*", \(operatorD[0]\)}], "+", 
+                RowBox[{\(\(3\ C[146]\)\/2\), "*", 
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((4, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[0]\)}], 
+                "+", \(\((3\ C[146])\)*u[x, t]\^2*operatorD[2]\), 
+                "+", \(\(11\ C[146]\)\/3*v[x, t]\^2*operatorD[2]\), "+", 
+                RowBox[{\(\(67\ C[146]\)\/12\), "*", 
+                  SuperscriptBox[
+                    RowBox[{
+                      SuperscriptBox["v", 
+                        TagBox[\((1, 0)\),
+                          Derivative],
+                        MultilineFunction->None], "[", \(x, t\), "]"}], "2"], 
+                  "*", \(operatorD[0]\)}], 
+                "+", \(\((6\ C[146])\)*u[x, t]*operatorD[4]\), "+", 
+                RowBox[{\(\(15\ C[146]\)\/2\), "*", 
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((3, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[1]\)}], "+", 
+                RowBox[{\((12\ C[146])\), "*", 
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[3]\)}], "+", 
+                RowBox[{\(\(27\ C[146]\)\/2\), "*", 
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((2, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[2]\)}], "+", 
+                RowBox[{\(\(3\ C[146]\)\/2\), "*", \(u[x, t]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((2, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[0]\)}], 
+                "+", \(\(8\ C[146]\)\/3*u[x, t]*v[x, t]\^2*operatorD[0]\), 
+                "+", 
+                RowBox[{\((6\ C[146])\), "*", \(u[x, t]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[1]\)}], "+", 
+                RowBox[{\(\(49\ C[146]\)\/6\), "*", \(v[x, t]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((2, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[0]\)}], "+", 
+                RowBox[{\(\(35\ C[146]\)\/3\), "*", \(v[x, t]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[1]\)}], "+", 
+                RowBox[{\(-2\), "*", \(-\(C[146]\/4\)\), "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((2, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[0]\)}], "+", 
+                RowBox[{"2", "*", \(C[146]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((3, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\), "*", \(v[x, t]\), 
+                  "*", \(operatorD[0]\)}], "+", 
+                RowBox[{\(C[146]\), "*", \(v[x, t]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\), "*", \(v[x, t]\), 
+                  "*", \(operatorD[0]\)}], "+", 
+                RowBox[{\(-\(4\/3\)\), "*", \(-\(C[146]\/4\)\), "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\), "*", \(u[x, t]\), 
+                  "*", \(v[x, t]\), "*", \(operatorD[0]\)}], "+", 
+                RowBox[{"2", "*", \(C[146]\), "*", \(u[x, t]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\), "*", \(v[x, t]\), 
+                  "*", \(operatorD[0]\)}]}]}], "}"}]}], "}"}], 
+      "}"}]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\( (*\ 
+      Benney\ System\ *) \)\(\[IndentingNewLine]\)\(RecursionOperator[\
+\[IndentingNewLine]{D[u[x, t], t] \[Equal] 
+          v[x, t]*D[v[x, t], x] + 
+            2*D[u[x, t]*w[x, t], x], \[IndentingNewLine]D[v[x, t], 
+            t] \[Equal] 
+          2*D[u[x, t], x] + D[v[x, t]*w[x, t], x], \[IndentingNewLine]D[
+            w[x, t], t] \[Equal] 
+          2*D[v[x, t], x] + 2*w[x, t]*D[w[x, t], x]}, \[IndentingNewLine]{u[
+          x, t], v[x, t], w[x, t]}, {x, t}, 
+      WeightRules \[Rule] {weight[w] \[Rule] 1}]\)\)\)], "Input"],
+
+Cell[BoxData[
+    \("{{{C[32]wI, C[32]vI, 2 C[32]uI + C[32]u_{x}D_x^{-1}}, {2 C[32]I, 0, \
+C[32]vI + C[32]v_{x}D_x^{-1}}, {0, 2 C[32]I, C[32]wI + C[32]w_{x}D_x^{-1}}}}"\
+\)], "Print"],
+
+Cell[BoxData[
+    RowBox[{"{", 
+      RowBox[{"{", 
+        RowBox[{
+          RowBox[{"{", 
+            
+            RowBox[{\(C[32]*w[x, t]*operatorD[0]\), 
+              ",", \(C[32]*v[x, t]*operatorD[0]\), ",", 
+              RowBox[{
+                RowBox[{\(C[32]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\)}], 
+                "+", \(\((2\ C[32])\)*u[x, t]*operatorD[0]\)}]}], "}"}], ",", 
+          
+          RowBox[{"{", 
+            RowBox[{\(\((2\ C[32])\)*operatorD[0]\), ",", "0", ",", 
+              RowBox[{\(C[32]*v[x, t]*operatorD[0]\), "+", 
+                RowBox[{\(C[32]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\)}]}]}], "}"}], ",", 
+          RowBox[{"{", 
+            RowBox[{"0", ",", \(\((2\ C[32])\)*operatorD[0]\), ",", 
+              RowBox[{\(C[32]*w[x, t]*operatorD[0]\), "+", 
+                RowBox[{\(C[32]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["w", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\)}]}]}], "}"}]}], "}"}], 
+      "}"}]], "Output"]
+}, Open  ]],
+
+Cell[BoxData[
+    \(\(\( (*\ 
+      Dispersive\ Water\ Wave\ System\ *) \)\(\[IndentingNewLine]\)\( (*\ 
+      Does\ not\ report\ the\ recursion\ operator\ reported\ in\ Jing\ Ping\ \
+Wang' s\ doctoral\ dissertation\ *) \)\(\[IndentingNewLine]\)\( (*\ 
+      RecursionOperator[\[IndentingNewLine]{D[w[x, t], t] \[Equal] 
+            D[v[x, t]*w[x, t], x], 
+          D[u[x, t], t] \[Equal] \(-D[u[x, t], {x, 2}]\) + 
+              2*D[u[x, t]*v[x, t], x] + 
+              w[x, t]*D[w[x, t], x], \[IndentingNewLine]D[v[x, t], 
+              t] \[Equal] 
+            D[v[x, t], {x, 2}] - 2*D[u[x, t], x] + 
+              2*v[x, t]*D[v[x, t], x]}, \[IndentingNewLine]{w[x, t], u[x, t], 
+          v[x, t]}, {x, t}]\[IndentingNewLine]*) \)\)\)], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\( (*\ 
+      Meuris - Deconinck - 
+        Verheest\ System\ *) \)\(\ \)\(\n\)\(RecursionOperator[{D[u[x, t], \ 
+            t]\  \[Equal] \ \[Beta]*D[u[x, t], x] + 
+            3*D[u[x, t], x]*u[x, t]^2 + D[u[x, t], x]*v[x, t]^2 + 
+            2*u[x, t]*D[v[x, t], x]*v[x, t] - 
+            D[v[x, t], {x, 2}] + \[Gamma]*D[v[x, t], x], 
+        D[v[x, t], \ t]\  == 
+          D[u[x, t], {x, 2}] + \[Theta]*D[u[x, t], x] + 
+            2*D[u[x, t], x]*u[x, t]*v[x, t] + 
+            u[x, t]^2*D[v[x, t], x] + \[Delta]*D[v[x, t], x] + 
+            3*D[v[x, t], x]*v[x, t]^2}, {u[x, t], v[x, t]}, {x, 
+        t}, \ {\[Beta], \[Gamma], \[Delta], \[Theta]}, \ 
+      WeightedParameters\  \[Rule] \ {\[Beta], \[Gamma], \[Delta], \[Theta]}]\
+\)\)\)], "Input"],
+
+Cell[BoxData[
+    \("{{{I, 0}, {0, I}}, {{2\\frac{1}{2}u_{x}D_x^{-1}uI + C[16]I + \
+\\frac{1}{2} \[Beta]I + \\frac{-1}{2} \[Delta]I + u^{2}I, \
+2\\frac{1}{2}u_{x}D_x^{-1}vI + \\frac{-1}{2}D_x^{1} + \\frac{1}{2} \[Theta]I \
++ uvI}, {2\\frac{1}{2}v_{x}D_x^{-1}uI + \\frac{1}{2}D_x^{1} + \\frac{1}{2} \
+\[Theta]I + uvI, 2\\frac{1}{2}v_{x}D_x^{-1}vI + C[16]I + v^{2}I}}}"\)], \
+"Print"],
+
+Cell[BoxData[
+    \("{{{C[16]I + \\frac{1}{2}\[Beta]I + \\frac{-1}{2}\[Delta]I + u^{2}I + \
+u_{x}D_x^{-1}uI, \\frac{-1}{2}D_x^{1} + \\frac{1}{2}\[Theta]I + uvI + \
+u_{x}D_x^{-1}vI}, {\\frac{1}{2}D_x^{1} + \\frac{1}{2}\[Theta]I + uvI + \
+v_{x}D_x^{-1}uI, C[16]I + v^{2}I + v_{x}D_x^{-1}vI}}}"\)], "Print"],
+
+Cell[BoxData[
+    RowBox[{"{", 
+      RowBox[{\({{DefiningEquation`Operator`Times[operatorD[0]], 0}, {0, 
+            DefiningEquation`Operator`Times[operatorD[0]]}}\), ",", 
+        RowBox[{"{", 
+          RowBox[{
+            RowBox[{"{", 
+              RowBox[{
+                
+                RowBox[{\(\[Beta]\/2*operatorD[0]\), 
+                  "+", \(\(-\(\[Delta]\/2\)\)*operatorD[0]\), 
+                  "+", \(C[16]*operatorD[0]\), 
+                  "+", \(u[x, t]\^2*operatorD[0]\), "+", 
+                  RowBox[{"2", "*", \(1\/2\), "*", 
+                    RowBox[{
+                      SuperscriptBox["u", 
+                        TagBox[\((1, 0)\),
+                          Derivative],
+                        MultilineFunction->None], "[", \(x, t\), "]"}], 
+                    "*", \(operatorD[\(-1\)]\), "*", \(u[x, t]\), 
+                    "*", \(operatorD[0]\)}]}], ",", 
+                
+                RowBox[{\(\(-\(1\/2\)\)*operatorD[1]\), 
+                  "+", \(\[Theta]\/2*operatorD[0]\), 
+                  "+", \(u[x, t]*v[x, t]*operatorD[0]\), "+", 
+                  RowBox[{"2", "*", \(1\/2\), "*", 
+                    RowBox[{
+                      SuperscriptBox["u", 
+                        TagBox[\((1, 0)\),
+                          Derivative],
+                        MultilineFunction->None], "[", \(x, t\), "]"}], 
+                    "*", \(operatorD[\(-1\)]\), "*", \(v[x, t]\), 
+                    "*", \(operatorD[0]\)}]}]}], "}"}], ",", 
+            RowBox[{"{", 
+              RowBox[{
+                
+                RowBox[{\(1\/2*operatorD[1]\), 
+                  "+", \(\[Theta]\/2*operatorD[0]\), 
+                  "+", \(u[x, t]*v[x, t]*operatorD[0]\), "+", 
+                  RowBox[{"2", "*", \(1\/2\), "*", 
+                    RowBox[{
+                      SuperscriptBox["v", 
+                        TagBox[\((1, 0)\),
+                          Derivative],
+                        MultilineFunction->None], "[", \(x, t\), "]"}], 
+                    "*", \(operatorD[\(-1\)]\), "*", \(u[x, t]\), 
+                    "*", \(operatorD[0]\)}]}], ",", 
+                
+                RowBox[{\(C[16]*operatorD[0]\), 
+                  "+", \(v[x, t]\^2*operatorD[0]\), "+", 
+                  RowBox[{"2", "*", \(1\/2\), "*", 
+                    RowBox[{
+                      SuperscriptBox["v", 
+                        TagBox[\((1, 0)\),
+                          Derivative],
+                        MultilineFunction->None], "[", \(x, t\), "]"}], 
+                    "*", \(operatorD[\(-1\)]\), "*", \(v[x, t]\), 
+                    "*", \(operatorD[0]\)}]}]}], "}"}]}], "}"}]}], 
+      "}"}]], "Output"]
+}, Open  ]],
+
+Cell[BoxData[
+    \(\(\( (*\ 
+      Jaulent\ and\ Miodek\ System\ \((related\ to\ Dispersive\ Water\ \
+Wave)\)\ *) \)\(\[IndentingNewLine]\)\( (*\ 
+      Clarkson\ and\ Ludlow, \ \[IndentingNewLine]Symmetry\ Reductions, \ 
+      Exact\ Solutions, \ 
+      and\ Painleve\ Analysis\ for\ a\ Generalized\ Boussinesq\ Equation, \ \
+\[IndentingNewLine]J . \ Math . \ Anal . \ and\ \(\(Appl\)\(.\)\), \ 
+      186, \ \(132--\) 155, \ \(\((1994)\)\(.\)\)*) \)\)\)], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(RecursionOperator[\[IndentingNewLine]{D[u[x, t], t] \[Equal] 
+          u[x, t]*D[v[x, t], x] + 1/2*D[u[x, t], x]*v[x, t] - 
+            1/4*D[v[x, t], {x, 3}], \[IndentingNewLine]D[v[x, t], t] \[Equal] 
+          D[u[x, t], x] + 3/2*v[x, t]*D[v[x, t], x]}, \[IndentingNewLine]{u[
+          x, t], v[x, t]}, {x, t}]\)], "Input"],
+
+Cell[BoxData[
+    \("{{{0, 2 C[12]uI + C[12]u_{x}D_x^{-1} + \\frac{-1}{2} C[12]D_x^{2}}, {2 \
+C[12]I, 2 C[12]vI + C[12]v_{x}D_x^{-1}}}}"\)], "Print"],
+
+Cell[BoxData[
+    RowBox[{"{", 
+      RowBox[{"{", 
+        RowBox[{
+          RowBox[{"{", 
+            RowBox[{"0", ",", 
+              RowBox[{\(\(-\(C[12]\/2\)\)*operatorD[2]\), "+", 
+                RowBox[{\(C[12]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\)}], 
+                "+", \(\((2\ C[12])\)*u[x, t]*operatorD[0]\)}]}], "}"}], ",", 
+          
+          RowBox[{"{", 
+            RowBox[{\(\((2\ C[12])\)*operatorD[0]\), ",", 
+              RowBox[{
+                RowBox[{\(C[12]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\)}], 
+                "+", \(\((2\ C[12])\)*v[x, t]*operatorD[0]\)}]}], "}"}]}], 
+        "}"}], "}"}]], "Output"]
+}, Open  ]],
+
+Cell[BoxData[
+    \(\(\( (*\ 
+      Dispersive\ Water\ Wave\ equation\ of\ Kuperschmidt\ *) \)\(\
+\[IndentingNewLine]\)\( (*\ 
+      Clarkson\ and\ Ludlow, \ \[IndentingNewLine]Symmetry\ Reductions, \ 
+      Exact\ Solutions, \ 
+      and\ Painleve\ Analysis\ for\ a\ Generalized\ Boussinesq\ Equation, \ \
+\[IndentingNewLine]J . \ Math . \ Anal . \ and\ \(\(Appl\)\(.\)\), \ 
+      186, \ \(132--\) 155, \ \(\((1994)\)\(.\)\)*) \)\)\)], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(RecursionOperator[\[IndentingNewLine]{D[u[x, t], t] \[Equal] 
+            D[u[x, t]*v[x, t], x] + a*D[v[x, t], {x, 3}] - 
+              b*D[u[x, t], {x, 2}], \[IndentingNewLine]D[v[x, t], t] \[Equal] 
+            D[u[x, t], x] + v[x, t]*D[v[x, t], x] + 
+              b*D[v[x, t], {x, 2}]}\  /. \ {a \[Rule] 1, 
+          b \[Rule] 1}, \[IndentingNewLine]{u[x, t], v[x, t]}, {x, 
+        t}]\)], "Input"],
+
+Cell[BoxData[
+    \("{{{-2 C[12]D_x^{1} + C[12]vI, 2 C[12]D_x^{2} + 2 C[12]uI + \
+C[12]u_{x}D_x^{-1}}, {2 C[12]I, 2 C[12]D_x^{1} + C[12]vI + \
+C[12]v_{x}D_x^{-1}}}}"\)], "Print"],
+
+Cell[BoxData[
+    RowBox[{"{", 
+      RowBox[{"{", 
+        RowBox[{
+          RowBox[{"{", 
+            
+            RowBox[{\(\((\(-2\)\ C[12])\)*operatorD[1] + 
+                C[12]*v[x, t]*operatorD[0]\), ",", 
+              RowBox[{\(\((2\ C[12])\)*operatorD[2]\), "+", 
+                RowBox[{\(C[12]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["u", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\)}], 
+                "+", \(\((2\ C[12])\)*u[x, t]*operatorD[0]\)}]}], "}"}], ",", 
+          
+          RowBox[{"{", 
+            RowBox[{\(\((2\ C[12])\)*operatorD[0]\), ",", 
+              
+              RowBox[{\(\((2\ C[12])\)*operatorD[1]\), 
+                "+", \(C[12]*v[x, t]*operatorD[0]\), "+", 
+                RowBox[{\(C[12]\), "*", 
+                  RowBox[{
+                    SuperscriptBox["v", 
+                      TagBox[\((1, 0)\),
+                        Derivative],
+                      MultilineFunction->None], "[", \(x, t\), "]"}], 
+                  "*", \(operatorD[\(-1\)]\)}]}]}], "}"}]}], "}"}], 
+      "}"}]], "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+    \(\(\( (*\ 
+      Dispersiveless\ Long\ Wave\ System\ \
+*) \)\(\[IndentingNewLine]\)\({RecursionOperator[\[IndentingNewLine]{D[
+              u[x, t], t] \[Equal] 
+            u[x, t]*D[v[x, t], x] + 
+              D[u[x, t], x]*v[x, t], \[IndentingNewLine]D[v[x, t], 
+              t] \[Equal] 
+            D[u[x, t], x] + v[x, t]*D[v[x, t], x]}, \[IndentingNewLine]{u[x, 
+            t], v[x, t]}, {x, t}, \ 
+        WeightRules\  \[Rule] \ {weight[v] \[Rule] 
+              1}, \[IndentingNewLine]RankShift\  \[Rule] \(-1\)\
+\[IndentingNewLine]], \
+\[IndentingNewLine]RecursionOperator[\[IndentingNewLine]{D[u[x, t], 
+              t] \[Equal] 
+            u[x, t]*D[v[x, t], x] + 
+              D[u[x, t], x]*v[x, t], \[IndentingNewLine]D[v[x, t], 
+              t] \[Equal] 
+            D[u[x, t], x] + v[x, t]*D[v[x, t], x]}, \[IndentingNewLine]{u[x, 
+            t], v[x, t]}, {x, t}, \ 
+        WeightRules\  \[Rule] \ {weight[v] \[Rule] 
+              1}\[IndentingNewLine]], \[IndentingNewLine]RecursionOperator[\
+\[IndentingNewLine]{D[u[x, t], t] \[Equal] 
+            u[x, t]*D[v[x, t], x] + 
+              D[u[x, t], x]*v[x, t], \[IndentingNewLine]D[v[x, t], 
+              t] \[Equal] 
+            D[u[x, t], x] + v[x, t]*D[v[x, t], x]}, \[IndentingNewLine]{u[x, 
+            t], v[x, t]}, {x, t}, \ 
+        WeightRules\  \[Rule] \ {weight[v] \[Rule] 
+              1}, \[IndentingNewLine]RankShift\  \[Rule] 
+          1\[IndentingNewLine]]}\)\)\)], "Input"],
+
+Cell[BoxData[
+    \("{{{C[4]I, 0}, {0, C[4]I}}}"\)], "Print"],
+
+Cell[BoxData[
+    \("{{{\\frac{1}{2} C[8]vI, C[8]uI + \\frac{1}{2} C[8]u_{x}D_x^{-1}}, \
+{C[8]I, \\frac{1}{2} C[8]vI + \\frac{1}{2} C[8]v_{x}D_x^{-1}}}}"\)], "Print"],
+
+Cell[BoxData[
+    \("{{{2 C[28]uI + C[28]u_{x}D_x^{-1} + \\frac{1}{2} C[28]v^{2}I, 2 \
+C[28]uvI + C[28]uv_{x}D_x^{-1} + C[28]vu_{x}D_x^{-1}}, {2 C[28]vI + \
+C[28]v_{x}D_x^{-1}, 2 C[28]uI + C[28]u_{x}D_x^{-1} + C[28]vv_{x}D_x^{-1} + \
+\\frac{1}{2} C[28]v^{2}I}}}"\)], "Print"],
+
+Cell[BoxData[
+    RowBox[{"{", 
+      RowBox[{\({{{C[4]*operatorD[0], 0}, {0, C[4]*operatorD[0]}}}\), ",", 
+        RowBox[{"{", 
+          RowBox[{"{", 
+            RowBox[{
+              RowBox[{"{", 
+                RowBox[{\(C[8]\/2*v[x, t]*operatorD[0]\), ",", 
+                  RowBox[{
+                    RowBox[{\(C[8]\/2\), "*", 
+                      RowBox[{
+                        SuperscriptBox["u", 
+                          TagBox[\((1, 0)\),
+                            Derivative],
+                          MultilineFunction->None], "[", \(x, t\), "]"}], 
+                      "*", \(operatorD[\(-1\)]\)}], 
+                    "+", \(C[8]*u[x, t]*operatorD[0]\)}]}], "}"}], ",", 
+              RowBox[{"{", 
+                RowBox[{\(C[8]*operatorD[0]\), ",", 
+                  RowBox[{\(C[8]\/2*v[x, t]*operatorD[0]\), "+", 
+                    RowBox[{\(C[8]\/2\), "*", 
+                      RowBox[{
+                        SuperscriptBox["v", 
+                          TagBox[\((1, 0)\),
+                            Derivative],
+                          MultilineFunction->None], "[", \(x, t\), "]"}], 
+                      "*", \(operatorD[\(-1\)]\)}]}]}], "}"}]}], "}"}], "}"}],
+         ",", 
+        RowBox[{"{", 
+          RowBox[{"{", 
+            RowBox[{
+              RowBox[{"{", 
+                RowBox[{
+                  RowBox[{\(C[28]\/2*v[x, t]\^2*operatorD[0]\), "+", 
+                    RowBox[{\(C[28]\), "*", 
+                      RowBox[{
+                        SuperscriptBox["u", 
+                          TagBox[\((1, 0)\),
+                            Derivative],
+                          MultilineFunction->None], "[", \(x, t\), "]"}], 
+                      "*", \(operatorD[\(-1\)]\)}], 
+                    "+", \(\((2\ C[28])\)*u[x, t]*operatorD[0]\)}], ",", 
+                  RowBox[{
+                    RowBox[{\(C[28]\), "*", \(u[x, t]\), "*", 
+                      RowBox[{
+                        SuperscriptBox["v", 
+                          TagBox[\((1, 0)\),
+                            Derivative],
+                          MultilineFunction->None], "[", \(x, t\), "]"}], 
+                      "*", \(operatorD[\(-1\)]\)}], "+", 
+                    RowBox[{\(C[28]\), "*", \(v[x, t]\), "*", 
+                      RowBox[{
+                        SuperscriptBox["u", 
+                          TagBox[\((1, 0)\),
+                            Derivative],
+                          MultilineFunction->None], "[", \(x, t\), "]"}], 
+                      "*", \(operatorD[\(-1\)]\)}], 
+                    "+", \(\((2\ C[28])\)*u[x, t]*v[x, t]*operatorD[0]\)}]}], 
+                "}"}], ",", 
+              RowBox[{"{", 
+                RowBox[{
+                  RowBox[{
+                    RowBox[{\(C[28]\), "*", 
+                      RowBox[{
+                        SuperscriptBox["v", 
+                          TagBox[\((1, 0)\),
+                            Derivative],
+                          MultilineFunction->None], "[", \(x, t\), "]"}], 
+                      "*", \(operatorD[\(-1\)]\)}], 
+                    "+", \(\((2\ C[28])\)*v[x, t]*operatorD[0]\)}], ",", 
+                  RowBox[{\(C[28]\/2*v[x, t]\^2*operatorD[0]\), "+", 
+                    RowBox[{\(C[28]\), "*", 
+                      RowBox[{
+                        SuperscriptBox["u", 
+                          TagBox[\((1, 0)\),
+                            Derivative],
+                          MultilineFunction->None], "[", \(x, t\), "]"}], 
+                      "*", \(operatorD[\(-1\)]\)}], 
+                    "+", \(\((2\ C[28])\)*u[x, t]*operatorD[0]\), "+", 
+                    RowBox[{\(C[28]\), "*", \(v[x, t]\), "*", 
+                      RowBox[{
+                        SuperscriptBox["v", 
+                          TagBox[\((1, 0)\),
+                            Derivative],
+                          MultilineFunction->None], "[", \(x, t\), "]"}], 
+                      "*", \(operatorD[\(-1\)]\)}]}]}], "}"}]}], "}"}], 
+          "}"}]}], "}"}]], "Output"]
+}, Open  ]]
+},
+FrontEndVersion->"5.0 for Microsoft Windows",
+ScreenRectangle->{{0, 1280}, {0, 941}},
+WindowSize->{898, 604},
+WindowMargins->{{44, Automatic}, {Automatic, 31}},
+Magnification->1.25,
+StyleDefinitions -> "Default.nb"
+]
+
+(*******************************************************************
+Cached data follows.  If you edit this Notebook file directly, not
+using Mathematica, you must remove the line containing CacheID at
+the top of  the file.  The cache data will then be recreated when
+you save this file from within Mathematica.
+*******************************************************************)
+
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+
+(*NotebookFileOutline
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[1776, 53, 93, 1, 35, "Input"],
+Cell[1872, 56, 76, 1, 35, "Output"]
+}, Open  ]],
+Cell[1963, 60, 217, 5, 56, "Input"],
+
+Cell[CellGroupData[{
+Cell[2205, 69, 66, 1, 35, "Input"],
+Cell[2274, 72, 92, 1, 30, "Print"],
+Cell[2369, 75, 92, 1, 30, "Print"],
+Cell[2464, 78, 106, 2, 30, "Print"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[2607, 85, 260, 5, 98, "Input"],
+Cell[2870, 92, 83, 1, 30, "Print"],
+Cell[2956, 95, 500, 13, 56, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[3493, 113, 383, 6, 98, "Input"],
+Cell[3879, 121, 112, 2, 30, "Print"],
+Cell[3994, 125, 590, 14, 56, "Output"]
+}, Open  ]],
+Cell[4599, 142, 661, 16, 56, "Input"],
+
+Cell[CellGroupData[{
+Cell[5285, 162, 333, 6, 98, "Input"],
+Cell[5621, 170, 139, 2, 51, "Print"],
+Cell[5763, 174, 555, 13, 75, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[6355, 192, 378, 7, 98, "Input"],
+Cell[6736, 201, 200, 3, 49, "Message"],
+Cell[6939, 206, 160, 3, 49, "Message"],
+Cell[7102, 211, 73, 1, 30, "Print"],
+Cell[7178, 214, 454, 11, 35, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[7669, 230, 461, 8, 98, "Input"],
+Cell[8133, 240, 200, 3, 49, "Message"],
+Cell[8336, 245, 160, 3, 49, "Message"],
+Cell[8499, 250, 89, 1, 30, "Print"],
+Cell[8591, 253, 495, 13, 49, "Output"]
+}, Open  ]],
+Cell[9101, 269, 532, 9, 140, "Input"],
+
+Cell[CellGroupData[{
+Cell[9658, 282, 294, 6, 98, "Input"],
+Cell[9955, 290, 98, 2, 30, "Print"],
+Cell[10056, 294, 499, 13, 74, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[10592, 312, 273, 6, 77, "Input"],
+Cell[10868, 320, 92, 1, 30, "Print"],
+Cell[10963, 323, 750, 18, 56, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[11750, 346, 299, 6, 98, "Input"],
+Cell[12052, 354, 92, 1, 30, "Print"],
+Cell[12147, 357, 578, 14, 56, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[12762, 376, 458, 8, 161, "Input"],
+Cell[13223, 386, 200, 3, 49, "Message"],
+Cell[13426, 391, 160, 3, 49, "Message"],
+Cell[13589, 396, 116, 2, 30, "Print"],
+Cell[13708, 400, 1077, 27, 57, "Output"]
+}, Open  ]],
+Cell[14800, 430, 543, 10, 140, "Input"],
+Cell[15346, 442, 458, 7, 140, "Input"],
+
+Cell[CellGroupData[{
+Cell[15829, 453, 477, 8, 161, "Input"],
+Cell[16309, 463, 1075, 15, 282, "Print"],
+Cell[17387, 480, 13515, 315, 630, "Output"]
+}, Open  ]],
+Cell[30917, 798, 746, 12, 224, "Input"],
+
+Cell[CellGroupData[{
+Cell[31688, 814, 347, 7, 119, "Input"],
+Cell[32038, 823, 452, 6, 114, "Print"],
+Cell[32493, 831, 4765, 111, 246, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[37295, 947, 330, 7, 119, "Input"],
+Cell[37628, 956, 504, 7, 135, "Print"],
+Cell[38135, 965, 6908, 170, 270, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[45080, 1140, 351, 7, 119, "Input"],
+Cell[45434, 1149, 472, 7, 135, "Print"],
+Cell[45909, 1158, 4824, 112, 267, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[50770, 1275, 369, 7, 119, "Input"],
+Cell[51142, 1284, 483, 7, 135, "Print"],
+Cell[51628, 1293, 4823, 111, 289, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[56488, 1409, 428, 10, 140, "Input"],
+Cell[56919, 1421, 569, 8, 156, "Print"],
+Cell[57491, 1431, 6960, 171, 341, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[64488, 1607, 345, 6, 98, "Input"],
+Cell[64836, 1615, 200, 3, 49, "Message"],
+Cell[65039, 1620, 160, 3, 49, "Message"],
+Cell[65202, 1625, 146, 2, 51, "Print"],
+Cell[65351, 1629, 1013, 23, 77, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[66401, 1657, 307, 5, 98, "Input"],
+Cell[66711, 1664, 98, 2, 30, "Print"],
+Cell[66812, 1668, 499, 13, 74, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[67348, 1686, 492, 9, 161, "Input"],
+Cell[67843, 1697, 568, 8, 156, "Print"],
+Cell[68414, 1707, 4827, 112, 347, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[73278, 1824, 352, 7, 98, "Input"],
+Cell[73633, 1833, 371, 6, 69, "Message"],
+Cell[74007, 1841, 42, 1, 35, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[74086, 1847, 313, 5, 77, "Input"],
+Cell[74402, 1854, 166, 2, 51, "Print"],
+Cell[74571, 1858, 1041, 25, 125, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[75649, 1888, 548, 9, 140, "Input"],
+Cell[76200, 1899, 101, 2, 30, "Print"],
+Cell[76304, 1903, 155, 3, 56, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[76496, 1911, 272, 5, 77, "Input"],
+Cell[76771, 1918, 120, 2, 30, "Print"],
+Cell[76894, 1922, 645, 15, 56, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[77576, 1942, 337, 6, 98, "Input"],
+Cell[77916, 1950, 341, 5, 69, "Message"],
+Cell[78260, 1957, 42, 1, 35, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[78339, 1963, 324, 5, 77, "Input"],
+Cell[78666, 1970, 178, 3, 51, "Print"],
+Cell[78847, 1975, 396, 6, 135, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[79280, 1986, 462, 9, 119, "Input"],
+Cell[79745, 1997, 152, 2, 51, "Print"],
+Cell[79900, 2001, 386, 6, 98, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[80323, 2012, 365, 6, 98, "Input"],
+Cell[80691, 2020, 152, 2, 51, "Print"],
+Cell[80846, 2024, 384, 6, 98, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[81267, 2035, 488, 9, 119, "Input"],
+Cell[81758, 2046, 340, 5, 93, "Print"],
+Cell[82101, 2053, 3759, 84, 224, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[85897, 2142, 584, 10, 140, "Input"],
+Cell[86484, 2154, 588, 8, 156, "Print"],
+Cell[87075, 2164, 4833, 104, 588, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[91945, 2273, 412, 8, 119, "Input"],
+Cell[92360, 2283, 182, 3, 51, "Print"],
+Cell[92545, 2288, 1069, 25, 111, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[93651, 2318, 411, 8, 119, "Input"],
+Cell[94065, 2328, 294, 4, 72, "Print"],
+Cell[94362, 2334, 2910, 65, 182, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[97309, 2404, 514, 9, 161, "Input"],
+Cell[97826, 2415, 1312, 18, 345, "Print"],
+Cell[99141, 2435, 14844, 314, 916, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[114022, 2754, 510, 9, 140, "Input"],
+Cell[114535, 2765, 607, 8, 156, "Print"],
+Cell[115145, 2775, 6311, 137, 383, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[121493, 2917, 681, 13, 161, "Input"],
+Cell[122177, 2932, 287, 4, 72, "Print"],
+Cell[122467, 2938, 1945, 45, 212, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[124449, 2988, 739, 14, 182, "Input"],
+Cell[125191, 3004, 423, 6, 114, "Print"],
+Cell[125617, 3012, 3445, 77, 294, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[129099, 3094, 494, 10, 119, "Input"],
+Cell[129596, 3106, 145, 2, 51, "Print"],
+Cell[129744, 3110, 1072, 26, 98, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[130853, 3141, 481, 9, 140, "Input"],
+Cell[131337, 3152, 3151, 44, 807, "Print"],
+Cell[134491, 3198, 27661, 586, 2305, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[162189, 3789, 568, 11, 140, "Input"],
+Cell[162760, 3802, 183, 3, 51, "Print"],
+Cell[162946, 3807, 1615, 38, 119, "Output"]
+}, Open  ]],
+Cell[164576, 3848, 750, 13, 203, "Input"],
+
+Cell[CellGroupData[{
+Cell[165351, 3865, 778, 15, 203, "Input"],
+Cell[166132, 3882, 382, 6, 93, "Print"],
+Cell[166517, 3890, 304, 4, 72, "Print"],
+Cell[166824, 3896, 2694, 58, 323, "Output"]
+}, Open  ]],
+Cell[169533, 3957, 467, 8, 119, "Input"],
+
+Cell[CellGroupData[{
+Cell[170025, 3969, 348, 5, 119, "Input"],
+Cell[170376, 3976, 149, 2, 51, "Print"],
+Cell[170528, 3980, 1106, 27, 98, "Output"]
+}, Open  ]],
+Cell[171649, 4010, 446, 8, 119, "Input"],
+
+Cell[CellGroupData[{
+Cell[172120, 4022, 424, 7, 119, "Input"],
+Cell[172547, 4031, 178, 3, 51, "Print"],
+Cell[172728, 4036, 1237, 30, 98, "Output"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+Cell[174002, 4071, 1492, 30, 392, "Input"],
+Cell[175497, 4103, 61, 1, 30, "Print"],
+Cell[175561, 4106, 166, 2, 51, "Print"],
+Cell[175730, 4110, 275, 4, 72, "Print"],
+Cell[176008, 4116, 4049, 86, 306, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+
+
+(*******************************************************************
+End of Mathematica Notebook file.
+*******************************************************************)
+

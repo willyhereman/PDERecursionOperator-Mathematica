@@ -1,0 +1,264 @@
+(***********************************************************************
+
+                    Mathematica-Compatible Notebook
+
+This notebook can be used on any computer system with Mathematica 4.0,
+MathReader 4.0, or any compatible application. The data for the notebook 
+starts with the line containing stars above.
+
+To get the notebook into a Mathematica-compatible application, do one of 
+the following:
+
+* Save the data starting with the line of stars above into a file
+  with a name ending in .nb, then open the file inside the application;
+
+* Copy the data starting with the line of stars above to the
+  clipboard, then use the Paste menu command inside the application.
+
+Data for notebooks contains only printable 7-bit ASCII and can be
+sent directly in email or through ftp in text mode.  Newlines can be
+CR, LF or CRLF (Unix, Macintosh or MS-DOS style).
+
+NOTE: If you modify the data for this notebook not in a Mathematica-
+compatible application, you must delete the line below containing the 
+word CacheID, otherwise Mathematica-compatible applications may try to 
+use invalid cache data.
+
+For more information on notebooks and Mathematica-compatible 
+applications, contact Wolfram Research:
+  web: http://www.wolfram.com
+  email: info@wolfram.com
+  phone: +1-217-398-0700 (U.S.)
+
+Notebook reader applications are available free of charge from 
+Wolfram Research.
+***********************************************************************)
+
+(*CacheID: 232*)
+
+
+(*NotebookFileLineBreakTest
+NotebookFileLineBreakTest*)
+(*NotebookOptionsPosition[      7033,        197]*)
+(*NotebookOutlinePosition[      7744,        222]*)
+(*  CellTagsIndexPosition[      7700,        218]*)
+(*WindowFrame->Normal*)
+
+
+
+Notebook[{
+Cell[BoxData[
+    StyleBox[\(\(SetDirectory["\<c:\\myDirectory\>"];\)\n
+      << recursionOperator.m\),
+      FormatType->StandardForm]], "Input"],
+
+Cell[BoxData[
+    \( (*\ The\ Korteweg - de\ Vries\ *) \)], "Input"],
+
+Cell[BoxData[
+    \(RecursionOperator[\[IndentingNewLine]D[u[x, t], t]\  \[Equal] \ 
+        6*u[x, t]*D[u[x, t], x] + D[u[x, t], {x, 3}], \[IndentingNewLine]u[x, 
+        t], \[IndentingNewLine]{x, t}\[IndentingNewLine]]\)], "Input"],
+
+Cell[BoxData[
+    \( (*\ Potential\ Korteweg - de\ Vries\ *) \)], "Input"],
+
+Cell[BoxData[
+    \(RecursionOperator[\[IndentingNewLine]D[u[x, t], t]\  \[Equal] \ 
+        3*D[u[x, t], x]^2 + D[u[x, t], {x, 3}], u[x, t], {x, t}]\)], "Input"],
+
+Cell[BoxData[
+    \( (*\ Modefied\ Korteweg - de\ Vries\ *) \)], "Input"],
+
+Cell[BoxData[
+    \(RecursionOperator[\[IndentingNewLine]D[u[x, t], t]\  \[Equal] \ 
+        u[x, t]^2*D[u[x, t], x] + D[u[x, t], {x, 3}], \[IndentingNewLine]u[x, 
+        t], {x, t}]\)], "Input"],
+
+Cell[BoxData[
+    \(\(\( (*\ 
+      Burgers'\ Equation\ *) \)\(\[IndentingNewLine]\)\(RecursionOperator[
+      D[u[x, t], \ t]\  == u[x, t]*D[u[x, t], x] + D[u[x, t], {x, 2}], 
+      u[x, t], {x, t}]\)\)\)], "Input"],
+
+Cell[BoxData[
+    \( (*\ Burger' s\ Equation\ with\ parameter\ *) \)], "Input"],
+
+Cell[BoxData[
+    \(RecursionOperator[\[IndentingNewLine]D[u[x, t], 
+          t] \[Equal] \(-\ u[x, t]\)*D[u[x, t], x]\  + \ \[Nu]*
+            D[u[x, t], \ {x, 2}], \[IndentingNewLine]u[x, 
+        t], \[IndentingNewLine]{x, 
+        t}, \[IndentingNewLine]{\[Nu]}\[IndentingNewLine]]\)], "Input"],
+
+Cell[BoxData[
+    \( (*\ Kaup - Kupershmidt\ Equation\ *) \)], "Input"],
+
+Cell[BoxData[
+    \(RecursionOperator[
+      D[u[x, t], \ t]\  \[Equal] \ 
+        20*u[x, t]^2*D[u[x, t], x] + 25*D[u[x, t], x]*D[u[x, t], {x, 2}] + 
+          10*u[x, t]*D[u[x, t], {x, 3}] + D[u[x, t], {x, 5}], 
+      u[x, t], {x, t}, \ Seed \[Rule] 2\n]\)], "Input"],
+
+Cell[BoxData[
+    \( (*\ Kaup - Kupershmidt\ Equation\ \((scaled)\)\ *) \)], "Input"],
+
+Cell[BoxData[
+    \(RecursionOperator[
+      D[u[x, t], \ t]\  \[Equal] \ 
+        5*u[x, t]^2*D[u[x, t], x] + 25/2*D[u[x, t], x]*D[u[x, t], {x, 2}] + 
+          5*u[x, t]*D[u[x, t], {x, 3}] + D[u[x, t], {x, 5}], 
+      u[x, t], {x, t}, \ Seed\  \[Rule] \ 2\n]\)], "Input"],
+
+Cell[BoxData[
+    \( (*\ Potential\ Kaup - Kupershmidt\ *) \)], "Input"],
+
+Cell[BoxData[
+    \(RecursionOperator[
+      D[u[x, t], \ t]\  \[Equal] \ 
+        D[u[x, t], \ {x, 5}]\  + \ 
+          10*D[u[x, t], \ x]*D[u[x, t], \ {x, \ 3}]\  + \ 
+          15/2*D[u[x, t], \ {x, \ 2}]^2\  + \ 
+          20/3*D[u[x, t], \ x]^3, \[IndentingNewLine]u[x, t], {x, t}, 
+      Seed\  \[Rule] 2\n]\)], "Input"],
+
+Cell[BoxData[
+    \( (*\ Sawada - Kotera\ Equation\ *) \)], "Input"],
+
+Cell[BoxData[
+    \(RecursionOperator[
+      D[u[x, t], \ t]\  \[Equal] \ 
+        5*u[x, t]^2*D[u[x, t], x] + 5*u[x, t]*D[u[x, t], {x, 3}] + 
+          5*D[u[x, t], x]*D[u[x, t], {x, 2}] + D[u[x, t], {x, 5}], 
+      u[x, t], {x, t}, \ Seed\  \[Rule] \ 2]\)], "Input"],
+
+Cell[BoxData[
+    \( (*\ Potential\ Sawada - Kotera\ Equation*) \)], "Input"],
+
+Cell[BoxData[
+    \(RecursionOperator[
+      D[u[x, t], \ t]\  \[Equal] \ 
+        5/3*D[u[x, t], x]^3 + 5*D[u[x, t], x]*D[u[x, t], {x, 3}] + 
+          D[u[x, t], {x, 5}], u[x, t], {x, t}, \ 
+      Seed\  \[Rule] \ 2\n]\)], "Input"],
+
+Cell[BoxData[
+    \( (*\ Hirota - Satsuma\ *) \)], "Input"],
+
+Cell[BoxData[
+    \(RecursionOperator[\[IndentingNewLine]{D[u[x, t], t]\  \[Equal] \ 
+          1/2*\((6*u[x, t]*D[u[x, t], \ x]\  + \ D[u[x, t], \ {x, 3}])\) - 
+            2*v[x, t]*D[v[x, t], \ x], \[IndentingNewLine]D[v[x, t], \ 
+            t]\  \[Equal] \ \(-3\)*u[x, t]*D[v[x, t], \ x]\  - \ 
+            D[v[x, t], \ {x, 3}]}, \[IndentingNewLine]{u[x, t], v[x, t]}, {x, 
+        t}, \ Seed \[Rule] 2\[IndentingNewLine]]\)], "Input"],
+
+Cell[BoxData[
+    \( (*\ Diffusion\ System\ *) \)], "Input"],
+
+Cell[BoxData[
+    \(RecursionOperator[{D[u[x, t], \ t]\  \[Equal] \ 
+          D[u[x, t], {x, 2}] + v[x, t]^2, 
+        D[v[x, t], t]\  \[Equal] \ D[v[x, t], {x, 2}]}, {u[x, t], 
+        v[x, t]}, {x, 
+        t}, \[IndentingNewLine]WeightRules\  \[Rule] \ {Weight[u]\  \[Rule] \ 
+            Weight[v]}]\)], "Input"],
+
+Cell[BoxData[
+    \( (*\ Dispersiveless\ Long\ Wave\ System\ *) \)], "Input"],
+
+Cell[BoxData[
+    \(RecursionOperator[{D[u[x, t], \ t]\  \[Equal] \ 
+          u[x, t]*D[v[x, t], x] + D[u[x, t], x]*v[x, t], 
+        D[v[x, t], \ t]\  \[Equal] \ 
+          D[u[x, t], x] + v[x, t]*D[v[x, t], x]}, {u[x, t], v[x, t]}, {x, 
+        t}, \ WeightRules\  \[Rule] \ {Weight[u]\  \[Rule] \ 2}]\)], "Input"],
+
+Cell[BoxData[
+    \( (*\ AKNS\ *) \)], "Input"],
+
+Cell[BoxData[
+    \(RecursionOperator[{D[u[x, t], \ t]\  \[Equal] \ 
+          2*u[x, t]^2*v[x, t] - D[u[x, t], {x, 2}], 
+        D[v[x, t], \ t]\  \[Equal] \ \(-2\)*u[x, t]*v[x, t]^2 + 
+            D[v[x, t], {x, 2}]}, {u[x, t], v[x, t]}, {x, t}, \ 
+      WeightRules \[Rule] {Weight[u]\  \[Rule] \ Weight[v]}]\)], "Input"],
+
+Cell[BoxData[
+    \( (*\ Lax\ *) \)], "Input"],
+
+Cell[BoxData[
+    \(RecursionOperator[
+      D[u[x, t], \ t]\  \[Equal] \ 
+        30*u[x, t]^2*D[u[x, t], x] + 20*D[u[x, t], x]*D[u[x, t], {x, 2}] + 
+          10*u[x, t]*D[u[x, t], {x, 3}] + D[u[x, t], {x, 5}], 
+      u[x, t], {x, t}]\)], "Input"]
+},
+FrontEndVersion->"4.0 for Microsoft Windows",
+ScreenRectangle->{{0, 1280}, {0, 926}},
+ScreenStyleEnvironment->"Working",
+WindowSize->{894, 686},
+WindowMargins->{{38, Automatic}, {Automatic, 24}},
+Magnification->1.25
+]
+
+
+(***********************************************************************
+Cached data follows.  If you edit this Notebook file directly, not using
+Mathematica, you must remove the line containing CacheID at the top of 
+the file.  The cache data will then be recreated when you save this file 
+from within Mathematica.
+***********************************************************************)
+
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+
+(*NotebookFileOutline
+Notebook[{
+Cell[1717, 49, 146, 3, 56, "Input"],
+Cell[1866, 54, 68, 1, 35, "Input"],
+Cell[1937, 57, 234, 3, 119, "Input"],
+Cell[2174, 62, 74, 1, 35, "Input"],
+Cell[2251, 65, 162, 2, 56, "Input"],
+Cell[2416, 69, 73, 1, 35, "Input"],
+Cell[2492, 72, 196, 3, 77, "Input"],
+Cell[2691, 77, 216, 4, 77, "Input"],
+Cell[2910, 83, 79, 1, 35, "Input"],
+Cell[2992, 86, 299, 5, 140, "Input"],
+Cell[3294, 93, 71, 1, 35, "Input"],
+Cell[3368, 96, 269, 5, 98, "Input"],
+Cell[3640, 103, 85, 1, 35, "Input"],
+Cell[3728, 106, 273, 5, 98, "Input"],
+Cell[4004, 113, 72, 1, 35, "Input"],
+Cell[4079, 116, 326, 7, 119, "Input"],
+Cell[4408, 125, 68, 1, 35, "Input"],
+Cell[4479, 128, 268, 5, 98, "Input"],
+Cell[4750, 135, 77, 1, 35, "Input"],
+Cell[4830, 138, 233, 5, 98, "Input"],
+Cell[5066, 145, 59, 1, 35, "Input"],
+Cell[5128, 148, 440, 6, 140, "Input"],
+Cell[5571, 156, 60, 1, 35, "Input"],
+Cell[5634, 159, 317, 6, 77, "Input"],
+Cell[5954, 167, 77, 1, 35, "Input"],
+Cell[6034, 170, 317, 5, 77, "Input"],
+Cell[6354, 177, 47, 1, 35, "Input"],
+Cell[6404, 180, 324, 5, 77, "Input"],
+Cell[6731, 187, 46, 1, 35, "Input"],
+Cell[6780, 190, 249, 5, 77, "Input"]
+}
+]
+*)
+
+
+
+
+(***********************************************************************
+End of Mathematica Notebook file.
+***********************************************************************)
+
