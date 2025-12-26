@@ -1,0 +1,3301 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[    163759,       3293]
+NotebookOptionsPosition[    154694,       3150]
+NotebookOutlinePosition[    155453,       3176]
+CellTagsIndexPosition[    155380,       3171]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"(*", " ", 
+  RowBox[{
+   RowBox[{"Last", " ", 
+    RowBox[{"updated", ":", " ", "Wednesday"}]}], ",", " ", 
+   RowBox[{"November", " ", "19"}], ",", " ", 
+   RowBox[{
+    RowBox[{"2025", " ", "at", " ", "23"}], ":", 
+    RowBox[{"00", " ", "by", " ", "Hereman", " ", "in", " ", "Boulder"}]}]}], 
+  " ", "*)"}]], "Input",
+ CellChangeTimes->{{3.9726062281158733`*^9, 
+  3.9726062376170845`*^9}},ExpressionUUID->"8e7798ea-d49c-4b8c-9fd9-\
+14bde0da1dc6"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"SetDirectory", "[", 
+  "\"\<C:\\\\data\\\\project-Hyman\\\\Recursion-Operator\>\"", "]"}]], "Input",
+ CellChangeTimes->{
+  3.926714905876038*^9, {3.926811854106498*^9, 3.9268118834224143`*^9}, {
+   3.9284909660680327`*^9, 3.9284909860136986`*^9}, {3.9726062701598897`*^9, 
+   3.9726062842815466`*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"72da48ff-d013-4217-b126-dca01c0458a9"],
+
+Cell[BoxData["\<\"C:\\\\data\\\\project-Hyman\\\\Recursion-Operator\"\>"], \
+"Output",
+ CellChangeTimes->{3.9726097401022167`*^9},
+ CellLabel->"Out[1]=",ExpressionUUID->"6ed65ad0-1a3a-4072-934d-801678b108dd"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"(*", " ", 
+  RowBox[{"Will", " ", "automatically", " ", "load", " ", 
+   RowBox[{"InvariantsSymmetries", ".", "m"}], " ", "if", " ", "put", " ", 
+   "in", " ", "the", " ", "above", " ", "directory"}], " ", "*)"}]], "Input",
+ CellChangeTimes->{{3.972607391941687*^9, 
+  3.9726074248479757`*^9}},ExpressionUUID->"809f447b-93de-464f-bbdd-\
+7f921b1b88cf"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Get", "[", "\"\<PDERecursionOperator-Aug24-2024.m\>\"", 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.92837311532668*^9, 3.928373132341931*^9}, {
+  3.9284910187346954`*^9, 3.928491018954723*^9}, {3.928491643184678*^9, 
+  3.928491643499199*^9}, {3.9284917865744014`*^9, 3.928491786764612*^9}, {
+  3.9291317507817144`*^9, 3.929131753285738*^9}, {3.929147064847178*^9, 
+  3.9291470717899275`*^9}, {3.93352852527328*^9, 3.933528537600995*^9}, {
+  3.9726063426567135`*^9, 3.972606343999341*^9}},
+ CellLabel->"In[2]:=",ExpressionUUID->"0a5f21b9-5082-4e69-8051-a4ccc13253e9"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["\<\"Loading Package InvariantsSymmetries.m of May 13, \
+2009.\"\>"], "Print",
+ CellChangeTimes->{3.9726097430272455`*^9},
+ CellLabel->
+  "During evaluation of \
+In[2]:=",ExpressionUUID->"7c63dd76-d162-4e0b-9238-3f8e6ca71275"],
+
+Cell[BoxData["\<\"Package InvariantsSymmetries.m of May 13, 2009 is \
+successfully loaded.\"\>"], "Print",
+ CellChangeTimes->{3.9726097430272455`*^9},
+ CellLabel->
+  "During evaluation of \
+In[2]:=",ExpressionUUID->"aabb2a03-c9f8-4807-b4d4-2840c430cdbb"],
+
+Cell[BoxData["\<\"Loading Recursion Operator Package of September 20, 2007.\"\
+\>"], "Print",
+ CellChangeTimes->{3.972609743043366*^9},
+ CellLabel->
+  "During evaluation of \
+In[2]:=",ExpressionUUID->"f4e7f53e-85fa-4798-8ed7-feb5df49b86a"],
+
+Cell[BoxData["\<\"Last updated on August 24, 2024 by Willy Hereman and Unal \
+Goktas.\"\>"], "Print",
+ CellChangeTimes->{3.972609743043366*^9},
+ CellLabel->
+  "During evaluation of \
+In[2]:=",ExpressionUUID->"d586ade5-c71d-465b-b990-90cff690ae94"],
+
+Cell[BoxData["\<\"Recursion Operator Package of September 20, 2007 loaded \
+successfully.\"\>"], "Print",
+ CellChangeTimes->{3.972609743043366*^9},
+ CellLabel->
+  "During evaluation of \
+In[2]:=",ExpressionUUID->"eb102a02-a11b-48ff-bde7-dd312bb9a076"],
+
+Cell[BoxData["\<\"Last updated on August 24, 2024 by Willy Hereman and Unal \
+Goktas.\"\>"], "Print",
+ CellChangeTimes->{3.972609743059046*^9},
+ CellLabel->
+  "During evaluation of \
+In[2]:=",ExpressionUUID->"446465cc-d751-4933-8ed4-4d5a04d9d8c8"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"(*", " ", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+    "Equations", " ", "need", " ", "to", " ", "be", " ", "given", " ", "in", 
+     " ", "this", " ", "format", " ", "u_t"}], " ", "=", " ", 
+    RowBox[{"...", "..."}]}], ",", " ", 
+   RowBox[{"v_t", " ", "=", " ", 
+    RowBox[{"...", ".."}]}]}], " ", "*)"}]], "Input",
+ CellChangeTimes->{{3.972610161329816*^9, 
+  3.9726101873549447`*^9}},ExpressionUUID->"ab2ec4d5-f5a5-4f1a-ac09-\
+4c479d16f59f"],
+
+Cell[BoxData[
+ RowBox[{"GardnerEq", ":=", 
+  RowBox[{
+   RowBox[{
+    SubscriptBox["\[PartialD]", "t"], 
+    RowBox[{"u", "[", 
+     RowBox[{"x", ",", "t"}], "]"}]}], "==", 
+   RowBox[{"-", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"aaa", "*", "alpha", "*", 
+       RowBox[{"u", "[", 
+        RowBox[{"x", ",", "t"}], "]"}], "*", 
+       RowBox[{
+        SubscriptBox["\[PartialD]", "x"], 
+        RowBox[{"u", "[", 
+         RowBox[{"x", ",", "t"}], "]"}]}]}], "+", 
+      RowBox[{"beta", "*", 
+       RowBox[{
+        RowBox[{"u", "[", 
+         RowBox[{"x", ",", "t"}], "]"}], "^", "2"}], "*", 
+       RowBox[{
+        SubscriptBox["\[PartialD]", "x"], 
+        RowBox[{"u", "[", 
+         RowBox[{"x", ",", "t"}], "]"}]}]}], "+", 
+      RowBox[{
+       SubscriptBox["\[PartialD]", 
+        RowBox[{"{", 
+         RowBox[{"x", ",", "3"}], "}"}]], 
+       RowBox[{"u", "[", 
+        RowBox[{"x", ",", "t"}], "]"}]}]}], ")"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.9266965261745896`*^9, 3.9266965293579392`*^9}, {
+   3.926696586112974*^9, 3.9266966368833246`*^9}, {3.926696692912382*^9, 
+   3.9266966938764744`*^9}, {3.926717211786155*^9, 3.926717215337995*^9}, {
+   3.926717535277058*^9, 3.92671753565879*^9}, {3.9267177946800814`*^9, 
+   3.9267178040686493`*^9}, 3.9267178562582235`*^9, {3.9268119234766507`*^9, 
+   3.9268119567527947`*^9}, {3.928344152784651*^9, 3.9283441835065966`*^9}, {
+   3.928372381326326*^9, 3.928372391145035*^9}, {3.9290676790029526`*^9, 
+   3.929067731720914*^9}, {3.97260743267782*^9, 3.9726074371058407`*^9}},
+ TextAlignment->Left,
+ TextJustification->1,
+ CellTags->"Examples",
+ CellLabel->"In[3]:=",ExpressionUUID->"78a25c54-5640-401b-a521-823f311dc292"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["GardnerEq"], "Input",
+ CellChangeTimes->{{3.928344172948202*^9, 3.9283441750832825`*^9}, 
+   3.928372395442818*^9, {3.929067739668935*^9, 3.929067743212302*^9}, 
+   3.9726074490400963`*^9},
+ CellLabel->"In[4]:=",ExpressionUUID->"74f9ca84-67d1-4416-b4f8-5497673fd39e"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   SuperscriptBox["u", 
+    TagBox[
+     RowBox[{"(", 
+      RowBox[{"0", ",", "1"}], ")"}],
+     Derivative],
+    MultilineFunction->None], "[", 
+   RowBox[{"x", ",", "t"}], "]"}], "\[Equal]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"-", "aaa"}], " ", "alpha", " ", 
+    RowBox[{"u", "[", 
+     RowBox[{"x", ",", "t"}], "]"}], " ", 
+    RowBox[{
+     SuperscriptBox["u", 
+      TagBox[
+       RowBox[{"(", 
+        RowBox[{"1", ",", "0"}], ")"}],
+       Derivative],
+      MultilineFunction->None], "[", 
+     RowBox[{"x", ",", "t"}], "]"}]}], "-", 
+   RowBox[{"beta", " ", 
+    SuperscriptBox[
+     RowBox[{"u", "[", 
+      RowBox[{"x", ",", "t"}], "]"}], "2"], " ", 
+    RowBox[{
+     SuperscriptBox["u", 
+      TagBox[
+       RowBox[{"(", 
+        RowBox[{"1", ",", "0"}], ")"}],
+       Derivative],
+      MultilineFunction->None], "[", 
+     RowBox[{"x", ",", "t"}], "]"}]}], "-", 
+   RowBox[{
+    SuperscriptBox["u", 
+     TagBox[
+      RowBox[{"(", 
+       RowBox[{"3", ",", "0"}], ")"}],
+      Derivative],
+     MultilineFunction->None], "[", 
+    RowBox[{"x", ",", "t"}], "]"}]}]}]], "Output",
+ CellChangeTimes->{3.9726097495015373`*^9},
+ CellLabel->"Out[4]=",ExpressionUUID->"4a63b37d-f043-46a5-8b51-6873f21f2581"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"RecursionOperator", "[", 
+  RowBox[{"GardnerEq", ",", 
+   RowBox[{"u", "[", 
+    RowBox[{"x", ",", "t"}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "t"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"aaa", ",", "alpha", ",", "beta"}], "}"}], ",", 
+   RowBox[{"WeightRules", "->", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"weight", "[", "aaa", "]"}], "->", "1"}], "}"}]}], ",", 
+   RowBox[{"WeightedParameters", "->", 
+    RowBox[{"{", "aaa", "}"}]}], ",", " ", 
+   RowBox[{"Seed", "->", "2"}], ",", " ", 
+   RowBox[{"Verbose", "->", "False"}]}], " ", "]"}]], "Input",
+ CellChangeTimes->{{3.9336047331237698`*^9, 3.9336047352070475`*^9}, 
+   3.9726074528319426`*^9},
+ CellLabel->"In[5]:=",ExpressionUUID->"7d947f8f-8fc7-4493-b879-a928e014d974"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["\<\"{{{2\\\\frac{1}{3} beta u_{x} D_x^{-1}uI + 2\\\\frac{1}{6} \
+aaa alpha u_{x} D_x^{-1} + C[1]I +  D_x^{2} + \\\\frac{2}{3} aaa alphauI + \\\
+\\frac{2}{3} betau^{2}I}}}\"\>"], "Print",
+ CellChangeTimes->{3.972609754339573*^9},
+ CellLabel->
+  "During evaluation of \
+In[5]:=",ExpressionUUID->"0f934371-694a-4c6e-887c-4acd7afbbc75"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      TemplateBox[{"1"},
+       "C"], ".", "\<\"I\"\>"}], "+", 
+     RowBox[{
+      FractionBox[
+       RowBox[{"2", " ", "aaa", " ", "alpha"}], "3"], ".", "u", 
+      ".", "\<\"I\"\>"}], "+", 
+     RowBox[{
+      FractionBox[
+       RowBox[{"2", " ", "beta"}], "3"], ".", 
+      SuperscriptBox["u", "2"], ".", "\<\"I\"\>"}], "+", 
+     RowBox[{"2", ".", 
+      FractionBox[
+       RowBox[{"aaa", " ", "alpha"}], "6"], ".", 
+      SubscriptBox["u", 
+       TemplateBox[{"x"},
+        "RowDefault"]], ".", 
+      SubsuperscriptBox["D", "x", "\<\"-1\"\>"]}], "+", 
+     RowBox[{"2", ".", 
+      FractionBox["beta", "3"], ".", 
+      SubscriptBox["u", 
+       TemplateBox[{"x"},
+        "RowDefault"]], ".", 
+      SubsuperscriptBox["D", "x", "\<\"-1\"\>"], ".", "u", ".", "\<\"I\"\>"}],
+      "+", 
+     SubsuperscriptBox["D", "x", "\<\"2\"\>"]}], "}"}], "}"}], "}"}]], "Print",
+ CellChangeTimes->{3.972609754403824*^9},
+ CellLabel->
+  "During evaluation of \
+In[5]:=",ExpressionUUID->"67083091-09b4-43c8-909a-15cdf6bc5205"],
+
+Cell[BoxData["Null"], "Print",
+ CellChangeTimes->{3.972609754408657*^9},
+ CellLabel->
+  "During evaluation of \
+In[5]:=",ExpressionUUID->"c5edbfca-3e55-40c7-9826-f494dccd4bb1"]
+}, Open  ]],
+
+Cell["\<\
+{{{C[1]*operatorD[0] + operatorD[2] + 
+    (2*aaa*alpha*operatorD[0]*u[x, t])/3 + 
+    (2*beta*operatorD[0]*u[x, t]^2)/3 + 
+    (aaa*alpha*operatorD[-1]*Derivative[1, 0][u][x, t])/3 + 
+    (2*beta*operatorD[-1]*operatorD[0]*u[x, t]*
+      Derivative[1, 0][u][x, t])/3}}}\
+\>", "Output",
+ CellChangeTimes->{3.972609754408657*^9},
+ CellLabel->
+  "Out[5]//InputForm=",ExpressionUUID->"a448546f-8e54-4238-8f3e-86aff0e7720c"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"(*", " ", 
+  RowBox[{
+   RowBox[{
+   "to", " ", "see", " ", "the", " ", "steps", " ", "of", " ", "the", " ", 
+    "computation", " ", "set", " ", "Verbose"}], " ", "->", " ", "True"}], 
+  " ", "*)"}]], "Input",
+ CellChangeTimes->{{3.97260764319884*^9, 
+  3.9726076605959005`*^9}},ExpressionUUID->"98f71d01-1bf8-4690-8782-\
+71101f889d14"],
+
+Cell[BoxData[
+ RowBox[{"RecursionOperator", "[", 
+  RowBox[{"GardnerEq", ",", 
+   RowBox[{"u", "[", 
+    RowBox[{"x", ",", "t"}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "t"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"aaa", ",", "alpha", ",", "beta"}], "}"}], ",", 
+   RowBox[{"WeightRules", "->", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"weight", "[", "aaa", "]"}], "->", "1"}], "}"}]}], ",", 
+   RowBox[{"WeightedParameters", "->", 
+    RowBox[{"{", "aaa", "}"}]}], ",", " ", 
+   RowBox[{"Seed", "->", "2"}], ",", " ", 
+   RowBox[{"Verbose", "->", "True"}]}], " ", "]"}]], "Input",
+ CellChangeTimes->{{3.926714954616108*^9, 3.9267149759476757`*^9}, {
+   3.92671502659899*^9, 3.9267150288086414`*^9}, {3.926715181726091*^9, 
+   3.926715233650285*^9}, {3.9267152790768847`*^9, 3.9267152840177097`*^9}, {
+   3.9267153235732565`*^9, 3.926715323840181*^9}, {3.926715354871055*^9, 
+   3.926715355370965*^9}, {3.9267154019892893`*^9, 3.9267154343387957`*^9}, {
+   3.9267154694805593`*^9, 3.926715470761858*^9}, {3.9267163067820215`*^9, 
+   3.9267163068636055`*^9}, 3.926716411784519*^9, {3.9267174023393583`*^9, 
+   3.9267174031650248`*^9}, {3.9268119697533965`*^9, 
+   3.9268119827298098`*^9}, {3.9283441926347103`*^9, 3.928344256871848*^9}, {
+   3.928372402160078*^9, 3.9283724094776287`*^9}, {3.9290677500192113`*^9, 
+   3.9290677746610613`*^9}, {3.9291203247042413`*^9, 3.929120325388951*^9}, {
+   3.9726074829151545`*^9, 3.972607487362958*^9}},
+ CellLabel->"In[5]:=",ExpressionUUID->"deb6ca51-4790-4159-b7f0-5fbd35c202d1"],
+
+Cell[BoxData[
+ RowBox[{"(*", " ", 
+  RowBox[{
+   RowBox[{"coupled", " ", "KdV", " ", "system"}], ",", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"a", ".", "k", ".", "a", ".", " ", "the"}], " ", "Hirota"}], "-", 
+    RowBox[{"Satsuma", " ", "system"}]}]}], " ", "*)"}]], "Input",
+ CellChangeTimes->{{3.933628857042034*^9, 3.9336288712331753`*^9}, {
+  3.933634870901469*^9, 
+  3.9336348794345675`*^9}},ExpressionUUID->"a8e2ca6f-b53a-40c5-9af2-\
+95d21c45cb5b"],
+
+Cell[BoxData[
+ RowBox[{"HirotaSatsumacKdVEqs", " ", ":=", " ", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"D", "[", 
+      RowBox[{
+       RowBox[{"u", "[", 
+        RowBox[{"x", ",", "t"}], "]"}], ",", "t"}], "]"}], " ", "\[Equal]", 
+     " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"1", "/", "2"}], "*", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"6", "*", 
+          RowBox[{"u", "[", 
+           RowBox[{"x", ",", "t"}], "]"}], "*", 
+          RowBox[{"D", "[", 
+           RowBox[{
+            RowBox[{"u", "[", 
+             RowBox[{"x", ",", "t"}], "]"}], ",", " ", "x"}], "]"}]}], " ", 
+         "+", " ", 
+         RowBox[{"D", "[", 
+          RowBox[{
+           RowBox[{"u", "[", 
+            RowBox[{"x", ",", "t"}], "]"}], ",", " ", 
+           RowBox[{"{", 
+            RowBox[{"x", ",", "3"}], "}"}]}], "]"}]}], ")"}]}], "-", 
+      RowBox[{"6", "*", 
+       RowBox[{"v", "[", 
+        RowBox[{"x", ",", "t"}], "]"}], "*", 
+       RowBox[{"D", "[", 
+        RowBox[{
+         RowBox[{"v", "[", 
+          RowBox[{"x", ",", "t"}], "]"}], ",", " ", "x"}], "]"}]}]}]}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"D", "[", 
+      RowBox[{
+       RowBox[{"v", "[", 
+        RowBox[{"x", ",", "t"}], "]"}], ",", " ", "t"}], "]"}], " ", 
+     "\[Equal]", " ", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", "3"}], "*", 
+       RowBox[{"u", "[", 
+        RowBox[{"x", ",", "t"}], "]"}], "*", 
+       RowBox[{"D", "[", 
+        RowBox[{
+         RowBox[{"v", "[", 
+          RowBox[{"x", ",", "t"}], "]"}], ",", " ", "x"}], "]"}]}], " ", "-", 
+      " ", 
+      RowBox[{"D", "[", 
+       RowBox[{
+        RowBox[{"v", "[", 
+         RowBox[{"x", ",", "t"}], "]"}], ",", " ", 
+        RowBox[{"{", 
+         RowBox[{"x", ",", "3"}], "}"}]}], "]"}]}]}]}], "}"}]}]], "Input",
+ CellChangeTimes->{{3.9336286949422193`*^9, 3.933628717756129*^9}, {
+  3.972607532706678*^9, 3.9726075393394356`*^9}, {3.972608663571474*^9, 
+  3.9726086893827114`*^9}, {3.9726093904529467`*^9, 3.9726093909508905`*^9}},
+ CellLabel->"In[6]:=",ExpressionUUID->"d8c859c6-78d9-4f8d-83b8-c5d0ec09c27d"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["HirotaSatsumacKdVEqs"], "Input",
+ CellChangeTimes->{{3.933628877975144*^9, 3.933628878510211*^9}, 
+   3.9726075523099737`*^9, 3.972608701151815*^9},
+ CellLabel->"In[7]:=",ExpressionUUID->"cdefed80-871e-4da4-bb9e-d51a317796bb"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["u", 
+      TagBox[
+       RowBox[{"(", 
+        RowBox[{"0", ",", "1"}], ")"}],
+       Derivative],
+      MultilineFunction->None], "[", 
+     RowBox[{"x", ",", "t"}], "]"}], "\[Equal]", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", "6"}], " ", 
+      RowBox[{"v", "[", 
+       RowBox[{"x", ",", "t"}], "]"}], " ", 
+      RowBox[{
+       SuperscriptBox["v", 
+        TagBox[
+         RowBox[{"(", 
+          RowBox[{"1", ",", "0"}], ")"}],
+         Derivative],
+        MultilineFunction->None], "[", 
+       RowBox[{"x", ",", "t"}], "]"}]}], "+", 
+     RowBox[{
+      FractionBox["1", "2"], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"6", " ", 
+         RowBox[{"u", "[", 
+          RowBox[{"x", ",", "t"}], "]"}], " ", 
+         RowBox[{
+          SuperscriptBox["u", 
+           TagBox[
+            RowBox[{"(", 
+             RowBox[{"1", ",", "0"}], ")"}],
+            Derivative],
+           MultilineFunction->None], "[", 
+          RowBox[{"x", ",", "t"}], "]"}]}], "+", 
+        RowBox[{
+         SuperscriptBox["u", 
+          TagBox[
+           RowBox[{"(", 
+            RowBox[{"3", ",", "0"}], ")"}],
+           Derivative],
+          MultilineFunction->None], "[", 
+         RowBox[{"x", ",", "t"}], "]"}]}], ")"}]}]}]}], ",", 
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["v", 
+      TagBox[
+       RowBox[{"(", 
+        RowBox[{"0", ",", "1"}], ")"}],
+       Derivative],
+      MultilineFunction->None], "[", 
+     RowBox[{"x", ",", "t"}], "]"}], "\[Equal]", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", "3"}], " ", 
+      RowBox[{"u", "[", 
+       RowBox[{"x", ",", "t"}], "]"}], " ", 
+      RowBox[{
+       SuperscriptBox["v", 
+        TagBox[
+         RowBox[{"(", 
+          RowBox[{"1", ",", "0"}], ")"}],
+         Derivative],
+        MultilineFunction->None], "[", 
+       RowBox[{"x", ",", "t"}], "]"}]}], "-", 
+     RowBox[{
+      SuperscriptBox["v", 
+       TagBox[
+        RowBox[{"(", 
+         RowBox[{"3", ",", "0"}], ")"}],
+        Derivative],
+       MultilineFunction->None], "[", 
+      RowBox[{"x", ",", "t"}], "]"}]}]}]}], "}"}]], "Output",
+ CellChangeTimes->{3.9726097706464987`*^9},
+ CellLabel->"Out[7]=",ExpressionUUID->"5452b2e8-4457-4a23-a646-53deea049cfa"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"RecursionOperator", "[", 
+  RowBox[{"HirotaSatsumacKdVEqs", ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"u", "[", 
+      RowBox[{"x", ",", "t"}], "]"}], ",", 
+     RowBox[{"v", "[", 
+      RowBox[{"x", ",", "t"}], "]"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "t"}], "}"}], ",", 
+   RowBox[{"Seed", "\[Rule]", "2"}], ",", " ", 
+   RowBox[{"Verbose", " ", "->", " ", "False"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.9336287586991644`*^9, 3.9336288146316075`*^9}, {
+   3.9336358377578983`*^9, 3.9336358413255415`*^9}, 3.972607555489583*^9, 
+   3.9726087090870943`*^9},
+ CellLabel->"In[8]:=",ExpressionUUID->"27d31476-b25a-4125-a744-c04b97aba2d5"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["\<\"{{{-12 C[48]v v_{x} D_x^{-1} + 2C[48] u_{x} D_x^{-1}uI + 4 \
+C[48] u_{2 x}I + 4 C[48]u D_x^{2} + 6 C[48] u_{x} D_x^{1} + 8 C[48]u^{2}I + \
+-8 C[48]v^{2}I + \\\\frac{-1}{12}-12 C[48] u_{3 x} D_x^{-1} + \
+\\\\frac{-1}{2}-12 C[48]u u_{x} D_x^{-1} + \\\\frac{1}{2} C[48] D_x^{4}, -10 \
+C[48]v D_x^{2} + -2 C[48] v_{2 x}I + -4C[48] u_{x} D_x^{-1}vI + -8 C[48]uvI + \
+-8 C[48] v_{x} D_x^{1}}, {2C[48] v_{x} D_x^{-1}uI + -5 C[48] v_{x} D_x^{1} + \
+-6 C[48] v_{2 x}I + \\\\frac{1}{2}-12 C[48]u v_{x} D_x^{-1} + \
+\\\\frac{1}{6}-12 C[48] v_{3 x} D_x^{-1}, -2 C[48] D_x^{4} + -4 C[48] u_{x} \
+D_x^{1} + -4C[48] v_{x} D_x^{-1}vI + -8 C[48]u D_x^{2} + -8 \
+C[48]v^{2}I}}}\"\>"], "Print",
+ CellChangeTimes->{3.9726097757605143`*^9},
+ CellLabel->
+  "During evaluation of \
+In[8]:=",ExpressionUUID->"b0f11beb-a8ba-40bf-adf2-4560a8dd591c"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        FractionBox[
+         TemplateBox[{"48"},
+          "C"], "2"], ".", 
+        SubsuperscriptBox["D", "x", "\<\"4\"\>"]}], "+", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "8"}], " ", 
+          TemplateBox[{"48"},
+           "C"]}], ")"}], ".", 
+        SuperscriptBox["v", "2"], ".", "\<\"I\"\>"}], "+", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"4", " ", 
+          TemplateBox[{"48"},
+           "C"]}], ")"}], ".", "u", ".", 
+        SubsuperscriptBox["D", "x", "\<\"2\"\>"]}], "+", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"4", " ", 
+          TemplateBox[{"48"},
+           "C"]}], ")"}], ".", 
+        SubscriptBox["u", 
+         TemplateBox[{"x", "x"},
+          "RowDefault"]], ".", "\<\"I\"\>"}], "+", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"6", " ", 
+          TemplateBox[{"48"},
+           "C"]}], ")"}], ".", 
+        SubscriptBox["u", 
+         TemplateBox[{"x"},
+          "RowDefault"]], ".", 
+        SubsuperscriptBox["D", "x", "\<\"1\"\>"]}], "+", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"8", " ", 
+          TemplateBox[{"48"},
+           "C"]}], ")"}], ".", 
+        SuperscriptBox["u", "2"], ".", "\<\"I\"\>"}], "+", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"-", 
+          FractionBox["1", "12"]}], ")"}], ".", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "12"}], " ", 
+          TemplateBox[{"48"},
+           "C"]}], ")"}], ".", 
+        SubscriptBox["u", 
+         TemplateBox[{"x", "x", "x"},
+          "RowDefault"]], ".", 
+        SubsuperscriptBox["D", "x", "\<\"-1\"\>"]}], "+", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "12"}], " ", 
+          TemplateBox[{"48"},
+           "C"]}], ")"}], ".", "v", ".", 
+        SubscriptBox["v", 
+         TemplateBox[{"x"},
+          "RowDefault"]], ".", 
+        SubsuperscriptBox["D", "x", "\<\"-1\"\>"]}], "+", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"-", 
+          FractionBox["1", "2"]}], ")"}], ".", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "12"}], " ", 
+          TemplateBox[{"48"},
+           "C"]}], ")"}], ".", "u", ".", 
+        SubscriptBox["u", 
+         TemplateBox[{"x"},
+          "RowDefault"]], ".", 
+        SubsuperscriptBox["D", "x", "\<\"-1\"\>"]}], "+", 
+       RowBox[{"2", ".", 
+        TemplateBox[{"48"},
+         "C"], ".", 
+        SubscriptBox["u", 
+         TemplateBox[{"x"},
+          "RowDefault"]], ".", 
+        SubsuperscriptBox["D", "x", "\<\"-1\"\>"], ".", "u", 
+        ".", "\<\"I\"\>"}]}], ",", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "10"}], " ", 
+          TemplateBox[{"48"},
+           "C"]}], ")"}], ".", "v", ".", 
+        SubsuperscriptBox["D", "x", "\<\"2\"\>"]}], "+", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "8"}], " ", 
+          TemplateBox[{"48"},
+           "C"]}], ")"}], ".", 
+        SubscriptBox["v", 
+         TemplateBox[{"x"},
+          "RowDefault"]], ".", 
+        SubsuperscriptBox["D", "x", "\<\"1\"\>"]}], "+", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "2"}], " ", 
+          TemplateBox[{"48"},
+           "C"]}], ")"}], ".", 
+        SubscriptBox["v", 
+         TemplateBox[{"x", "x"},
+          "RowDefault"]], ".", "\<\"I\"\>"}], "+", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "8"}], " ", 
+          TemplateBox[{"48"},
+           "C"]}], ")"}], ".", "u", ".", "v", ".", "\<\"I\"\>"}], "+", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"-", "4"}], ")"}], ".", 
+        TemplateBox[{"48"},
+         "C"], ".", 
+        SubscriptBox["u", 
+         TemplateBox[{"x"},
+          "RowDefault"]], ".", 
+        SubsuperscriptBox["D", "x", "\<\"-1\"\>"], ".", "v", 
+        ".", "\<\"I\"\>"}]}]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "6"}], " ", 
+          TemplateBox[{"48"},
+           "C"]}], ")"}], ".", 
+        SubscriptBox["v", 
+         TemplateBox[{"x", "x"},
+          "RowDefault"]], ".", "\<\"I\"\>"}], "+", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "5"}], " ", 
+          TemplateBox[{"48"},
+           "C"]}], ")"}], ".", 
+        SubscriptBox["v", 
+         TemplateBox[{"x"},
+          "RowDefault"]], ".", 
+        SubsuperscriptBox["D", "x", "\<\"1\"\>"]}], "+", 
+       RowBox[{
+        FractionBox["1", "6"], ".", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "12"}], " ", 
+          TemplateBox[{"48"},
+           "C"]}], ")"}], ".", 
+        SubscriptBox["v", 
+         TemplateBox[{"x", "x", "x"},
+          "RowDefault"]], ".", 
+        SubsuperscriptBox["D", "x", "\<\"-1\"\>"]}], "+", 
+       RowBox[{
+        FractionBox["1", "2"], ".", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "12"}], " ", 
+          TemplateBox[{"48"},
+           "C"]}], ")"}], ".", "u", ".", 
+        SubscriptBox["v", 
+         TemplateBox[{"x"},
+          "RowDefault"]], ".", 
+        SubsuperscriptBox["D", "x", "\<\"-1\"\>"]}], "+", 
+       RowBox[{"2", ".", 
+        TemplateBox[{"48"},
+         "C"], ".", 
+        SubscriptBox["v", 
+         TemplateBox[{"x"},
+          "RowDefault"]], ".", 
+        SubsuperscriptBox["D", "x", "\<\"-1\"\>"], ".", "u", 
+        ".", "\<\"I\"\>"}]}], ",", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "2"}], " ", 
+          TemplateBox[{"48"},
+           "C"]}], ")"}], ".", 
+        SubsuperscriptBox["D", "x", "\<\"4\"\>"]}], "+", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "8"}], " ", 
+          TemplateBox[{"48"},
+           "C"]}], ")"}], ".", "u", ".", 
+        SubsuperscriptBox["D", "x", "\<\"2\"\>"]}], "+", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "8"}], " ", 
+          TemplateBox[{"48"},
+           "C"]}], ")"}], ".", 
+        SuperscriptBox["v", "2"], ".", "\<\"I\"\>"}], "+", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "4"}], " ", 
+          TemplateBox[{"48"},
+           "C"]}], ")"}], ".", 
+        SubscriptBox["u", 
+         TemplateBox[{"x"},
+          "RowDefault"]], ".", 
+        SubsuperscriptBox["D", "x", "\<\"1\"\>"]}], "+", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"-", "4"}], ")"}], ".", 
+        TemplateBox[{"48"},
+         "C"], ".", 
+        SubscriptBox["v", 
+         TemplateBox[{"x"},
+          "RowDefault"]], ".", 
+        SubsuperscriptBox["D", "x", "\<\"-1\"\>"], ".", "v", 
+        ".", "\<\"I\"\>"}]}]}], "}"}]}], "}"}], "}"}]], "Print",
+ CellChangeTimes->{3.9726097761856127`*^9},
+ CellLabel->
+  "During evaluation of \
+In[8]:=",ExpressionUUID->"e9d5baf4-d636-481b-b4ef-cd40eb74567d"],
+
+Cell[BoxData["Null"], "Print",
+ CellChangeTimes->{3.9726097761927805`*^9},
+ CellLabel->
+  "During evaluation of \
+In[8]:=",ExpressionUUID->"822477aa-0fed-4e0d-bbe5-6203e09c78b9"]
+}, Open  ]],
+
+Cell["\<\
+{{{(C[48]*operatorD[4])/2 + 4*C[48]*operatorD[2]*u[x, t] + 
+    8*C[48]*operatorD[0]*u[x, t]^2 - 8*C[48]*operatorD[0]*
+     v[x, t]^2 + 6*C[48]*operatorD[1]*Derivative[1, 0][u][x, 
+      t] + 6*C[48]*operatorD[-1]*u[x, t]*
+     Derivative[1, 0][u][x, t] + 2*C[48]*operatorD[-1]*
+     operatorD[0]*u[x, t]*Derivative[1, 0][u][x, t] - 
+    12*C[48]*operatorD[-1]*v[x, t]*Derivative[1, 0][v][x, 
+      t] + 4*C[48]*operatorD[0]*Derivative[2, 0][u][x, t] + 
+    C[48]*operatorD[-1]*Derivative[3, 0][u][x, t], 
+   -10*C[48]*operatorD[2]*v[x, t] - 8*C[48]*operatorD[0]*
+     u[x, t]*v[x, t] - 4*C[48]*operatorD[-1]*operatorD[0]*
+     v[x, t]*Derivative[1, 0][u][x, t] - 
+    8*C[48]*operatorD[1]*Derivative[1, 0][v][x, t] - 
+    2*C[48]*operatorD[0]*Derivative[2, 0][v][x, t]}, 
+  {-5*C[48]*operatorD[1]*Derivative[1, 0][v][x, t] - 
+    6*C[48]*operatorD[-1]*u[x, t]*Derivative[1, 0][v][x, 
+      t] + 2*C[48]*operatorD[-1]*operatorD[0]*u[x, t]*
+     Derivative[1, 0][v][x, t] - 6*C[48]*operatorD[0]*
+     Derivative[2, 0][v][x, t] - 2*C[48]*operatorD[-1]*
+     Derivative[3, 0][v][x, t], -2*C[48]*operatorD[4] - 
+    8*C[48]*operatorD[2]*u[x, t] - 8*C[48]*operatorD[0]*
+     v[x, t]^2 - 4*C[48]*operatorD[1]*Derivative[1, 0][u][x, 
+      t] - 4*C[48]*operatorD[-1]*operatorD[0]*v[x, t]*
+     Derivative[1, 0][v][x, t]}}}\
+\>", "Output",
+ CellChangeTimes->{3.9726097761927805`*^9},
+ CellLabel->
+  "Out[8]//InputForm=",ExpressionUUID->"ec86dcbd-5b91-4ec9-86b5-419f54ae961c"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"(*", " ", 
+  RowBox[{
+   RowBox[{
+   "to", " ", "see", " ", "the", " ", "steps", " ", "of", " ", "the", " ", 
+    "computation", " ", "set", " ", "Verbose"}], " ", "->", " ", "True"}], 
+  " ", "*)"}]], "Input",
+ CellChangeTimes->{{3.97260764319884*^9, 
+  3.9726076605959005`*^9}},ExpressionUUID->"507bc9ff-8428-4d18-917c-\
+d0f53f1ed6b5"],
+
+Cell[BoxData[
+ RowBox[{"RecursionOperator", "[", 
+  RowBox[{"HirotaSatsumacKdVEqs", ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"u", "[", 
+      RowBox[{"x", ",", "t"}], "]"}], ",", 
+     RowBox[{"v", "[", 
+      RowBox[{"x", ",", "t"}], "]"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "t"}], "}"}], ",", 
+   RowBox[{"Seed", "\[Rule]", "2"}], ",", " ", 
+   RowBox[{"Verbose", " ", "->", " ", "True"}]}], "]"}]], "Input",
+ CellChangeTimes->{3.9726075592412887`*^9, 
+  3.972608726908346*^9},ExpressionUUID->"0680ad1c-b05e-47c5-b70b-\
+661a2df7673c"],
+
+Cell[BoxData[
+ RowBox[{"(*", " ", 
+  RowBox[{
+   RowBox[{"Hirota", "-", 
+    RowBox[{
+    "Satsuma", " ", "coupled", " ", "system", " ", "of", " ", "KdV", " ", 
+     "equations", " ", "with", " ", "parameter", " ", 
+     RowBox[{"alpha", ".", " ", "Only"}], " ", "for", " ", "alpha"}]}], " ", 
+   "=", " ", 
+   RowBox[{
+    RowBox[{"1", "/", "2"}], " ", "will", " ", "a", " ", "recursion", " ", 
+    "operator", " ", "exist"}]}], " ", "*)"}]], "Input",
+ CellChangeTimes->{{3.9726077424207597`*^9, 3.9726078148186436`*^9}, {
+  3.9726079987736664`*^9, 3.9726080011932774`*^9}, {3.9726087307887545`*^9, 
+  3.9726087375602093`*^9}},ExpressionUUID->"6738b85c-c527-4bf6-a6b5-\
+b07d2827f899"],
+
+Cell[BoxData[
+ RowBox[{"(*", " ", 
+  RowBox[{
+   RowBox[{
+   "The", " ", "code", " ", "does", " ", "NOT", " ", "automatically", " ", 
+    "compute", " ", "that", " ", "alpha"}], " ", "=", " ", 
+   RowBox[{"1", "/", "2"}]}], " ", "*)"}]], "Input",
+ CellChangeTimes->{{3.9726081071902666`*^9, 
+  3.972608136897026*^9}},ExpressionUUID->"c9fb1319-489b-468f-9148-\
+717ca73a8dbc"],
+
+Cell[BoxData[
+ RowBox[{"HirotaSatsumaEq1Par", " ", ":=", 
+  RowBox[{
+   RowBox[{
+    SubscriptBox["\[PartialD]", "t"], 
+    RowBox[{"u", "[", 
+     RowBox[{"x", ",", "t"}], "]"}]}], "==", 
+   RowBox[{
+    RowBox[{"6", " ", "\[Alpha]", " ", 
+     RowBox[{"u", "[", 
+      RowBox[{"x", ",", "t"}], "]"}], " ", 
+     RowBox[{
+      SubscriptBox["\[PartialD]", "x"], 
+      RowBox[{"u", "[", 
+       RowBox[{"x", ",", "t"}], "]"}]}]}], "-", 
+    RowBox[{"6", " ", 
+     RowBox[{"v", "[", 
+      RowBox[{"x", ",", "t"}], "]"}], " ", 
+     RowBox[{
+      SubscriptBox["\[PartialD]", "x"], 
+      RowBox[{"v", "[", 
+       RowBox[{"x", ",", "t"}], "]"}]}]}], "+", 
+    RowBox[{"\[Alpha]", " ", 
+     RowBox[{
+      SubscriptBox["\[PartialD]", 
+       RowBox[{"{", 
+        RowBox[{"x", ",", "3"}], "}"}]], 
+      RowBox[{"u", "[", 
+       RowBox[{"x", ",", "t"}], "]"}]}]}]}]}]}]], "Input",
+ CellChangeTimes->{{3.972607959593367*^9, 3.9726079618000784`*^9}, 
+   3.972608015818159*^9, {3.972609837553897*^9, 3.972609839990541*^9}, {
+   3.9726100519506817`*^9, 3.9726100687622905`*^9}},
+ CellLabel->"In[21]:=",ExpressionUUID->"adac03ff-89a4-4654-873d-f9be2c8e157e"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["HirotaSatsumaEq1Par"], "Input",
+ CellChangeTimes->{{3.972607970145991*^9, 3.9726079733596735`*^9}, 
+   3.9726080481783686`*^9, {3.9726098533019066`*^9, 3.9726098535362787`*^9}},
+ CellLabel->"In[22]:=",ExpressionUUID->"2f7a2244-e7b9-40d8-b4c4-b433b8b5cdfd"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   SuperscriptBox["u", 
+    TagBox[
+     RowBox[{"(", 
+      RowBox[{"0", ",", "1"}], ")"}],
+     Derivative],
+    MultilineFunction->None], "[", 
+   RowBox[{"x", ",", "t"}], "]"}], "\[Equal]", 
+  RowBox[{
+   RowBox[{"6", " ", "\[Alpha]", " ", 
+    RowBox[{"u", "[", 
+     RowBox[{"x", ",", "t"}], "]"}], " ", 
+    RowBox[{
+     SuperscriptBox["u", 
+      TagBox[
+       RowBox[{"(", 
+        RowBox[{"1", ",", "0"}], ")"}],
+       Derivative],
+      MultilineFunction->None], "[", 
+     RowBox[{"x", ",", "t"}], "]"}]}], "-", 
+   RowBox[{"6", " ", 
+    RowBox[{"v", "[", 
+     RowBox[{"x", ",", "t"}], "]"}], " ", 
+    RowBox[{
+     SuperscriptBox["v", 
+      TagBox[
+       RowBox[{"(", 
+        RowBox[{"1", ",", "0"}], ")"}],
+       Derivative],
+      MultilineFunction->None], "[", 
+     RowBox[{"x", ",", "t"}], "]"}]}], "+", 
+   RowBox[{"\[Alpha]", " ", 
+    RowBox[{
+     SuperscriptBox["u", 
+      TagBox[
+       RowBox[{"(", 
+        RowBox[{"3", ",", "0"}], ")"}],
+       Derivative],
+      MultilineFunction->None], "[", 
+     RowBox[{"x", ",", "t"}], "]"}]}]}]}]], "Output",
+ CellChangeTimes->{3.972610086282982*^9},
+ CellLabel->"Out[22]=",ExpressionUUID->"3485697d-89dd-4d42-8e9f-940decbc5fce"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"HirotaSatsumaEq2Par", " ", ":=", 
+  RowBox[{
+   RowBox[{
+    SubscriptBox["\[PartialD]", "t"], 
+    RowBox[{"v", "[", 
+     RowBox[{"x", ",", "t"}], "]"}]}], " ", "==", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"-", "3"}], " ", 
+     RowBox[{"u", "[", 
+      RowBox[{"x", ",", "t"}], "]"}], " ", 
+     RowBox[{
+      SubscriptBox["\[PartialD]", "x"], 
+      RowBox[{"v", "[", 
+       RowBox[{"x", ",", "t"}], "]"}]}]}], "-", 
+    RowBox[{
+     SubscriptBox["\[PartialD]", 
+      RowBox[{"{", 
+       RowBox[{"x", ",", "3"}], "}"}]], 
+     RowBox[{"v", "[", 
+      RowBox[{"x", ",", "t"}], "]"}]}]}]}]}]], "Input",
+ CellChangeTimes->{{3.972609864913502*^9, 3.9726098827975817`*^9}, {
+  3.9726100904256015`*^9, 3.9726101033540583`*^9}},
+ CellLabel->"In[23]:=",ExpressionUUID->"c88fd7e8-91e4-4b7c-9686-4fb4a912b7af"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["HirotaSatsumaEq2Par"], "Input",
+ CellChangeTimes->{{3.9726098975840015`*^9, 3.9726098978740225`*^9}},
+ CellLabel->"In[24]:=",ExpressionUUID->"5991285b-054c-4341-a338-2ea006f1997a"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   SuperscriptBox["v", 
+    TagBox[
+     RowBox[{"(", 
+      RowBox[{"0", ",", "1"}], ")"}],
+     Derivative],
+    MultilineFunction->None], "[", 
+   RowBox[{"x", ",", "t"}], "]"}], "\[Equal]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"-", "3"}], " ", 
+    RowBox[{"u", "[", 
+     RowBox[{"x", ",", "t"}], "]"}], " ", 
+    RowBox[{
+     SuperscriptBox["v", 
+      TagBox[
+       RowBox[{"(", 
+        RowBox[{"1", ",", "0"}], ")"}],
+       Derivative],
+      MultilineFunction->None], "[", 
+     RowBox[{"x", ",", "t"}], "]"}]}], "-", 
+   RowBox[{
+    SuperscriptBox["v", 
+     TagBox[
+      RowBox[{"(", 
+       RowBox[{"3", ",", "0"}], ")"}],
+      Derivative],
+     MultilineFunction->None], "[", 
+    RowBox[{"x", ",", "t"}], "]"}]}]}]], "Output",
+ CellChangeTimes->{3.97260990185501*^9, 3.97261010698047*^9},
+ CellLabel->"Out[24]=",ExpressionUUID->"d6f98244-52b4-4d9b-8bc7-a4e6f95ce4d5"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"(*", " ", 
+  RowBox[{
+   RowBox[{"Quick", " ", "test", " ", "if", " ", "for", " ", "alpha"}], " ", 
+   "=", " ", 
+   RowBox[{
+    RowBox[{"1", "/", "2"}], " ", "we", " ", "have", " ", "the", " ", 
+    "integrable", " ", "equations"}]}], " ", "*)"}]], "Input",
+ CellChangeTimes->{{3.972609907555387*^9, 
+  3.972609943505449*^9}},ExpressionUUID->"3c713248-916d-41f3-94aa-\
+2e6cb960fffd"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"MapAll", "[", 
+  RowBox[{"Expand", ",", "HirotaSatsumacKdVEqs"}], "]"}]], "Input",
+ CellChangeTimes->{{3.9726094787306547`*^9, 3.97260949316589*^9}},
+ CellLabel->"In[25]:=",ExpressionUUID->"412a812a-2297-4f61-ac78-aced7e67bc62"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["u", 
+      TagBox[
+       RowBox[{"(", 
+        RowBox[{"0", ",", "1"}], ")"}],
+       Derivative],
+      MultilineFunction->None], "[", 
+     RowBox[{"x", ",", "t"}], "]"}], "\[Equal]", 
+    RowBox[{
+     RowBox[{"3", " ", 
+      RowBox[{"u", "[", 
+       RowBox[{"x", ",", "t"}], "]"}], " ", 
+      RowBox[{
+       SuperscriptBox["u", 
+        TagBox[
+         RowBox[{"(", 
+          RowBox[{"1", ",", "0"}], ")"}],
+         Derivative],
+        MultilineFunction->None], "[", 
+       RowBox[{"x", ",", "t"}], "]"}]}], "-", 
+     RowBox[{"6", " ", 
+      RowBox[{"v", "[", 
+       RowBox[{"x", ",", "t"}], "]"}], " ", 
+      RowBox[{
+       SuperscriptBox["v", 
+        TagBox[
+         RowBox[{"(", 
+          RowBox[{"1", ",", "0"}], ")"}],
+         Derivative],
+        MultilineFunction->None], "[", 
+       RowBox[{"x", ",", "t"}], "]"}]}], "+", 
+     RowBox[{
+      FractionBox["1", "2"], " ", 
+      RowBox[{
+       SuperscriptBox["u", 
+        TagBox[
+         RowBox[{"(", 
+          RowBox[{"3", ",", "0"}], ")"}],
+         Derivative],
+        MultilineFunction->None], "[", 
+       RowBox[{"x", ",", "t"}], "]"}]}]}]}], ",", 
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["v", 
+      TagBox[
+       RowBox[{"(", 
+        RowBox[{"0", ",", "1"}], ")"}],
+       Derivative],
+      MultilineFunction->None], "[", 
+     RowBox[{"x", ",", "t"}], "]"}], "\[Equal]", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", "3"}], " ", 
+      RowBox[{"u", "[", 
+       RowBox[{"x", ",", "t"}], "]"}], " ", 
+      RowBox[{
+       SuperscriptBox["v", 
+        TagBox[
+         RowBox[{"(", 
+          RowBox[{"1", ",", "0"}], ")"}],
+         Derivative],
+        MultilineFunction->None], "[", 
+       RowBox[{"x", ",", "t"}], "]"}]}], "-", 
+     RowBox[{
+      SuperscriptBox["v", 
+       TagBox[
+        RowBox[{"(", 
+         RowBox[{"3", ",", "0"}], ")"}],
+        Derivative],
+       MultilineFunction->None], "[", 
+      RowBox[{"x", ",", "t"}], "]"}]}]}]}], "}"}]], "Output",
+ CellChangeTimes->{3.972609948499401*^9, 3.972610109117668*^9},
+ CellLabel->"Out[25]=",ExpressionUUID->"fa96eba7-5bc2-47d4-a4f9-783442b64d98"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"HirotaSatsumaEq1Par", " ", "/.", " ", 
+  RowBox[{"{", 
+   RowBox[{"\[Alpha]", " ", "->", " ", 
+    RowBox[{"1", "/", "2"}]}], "}"}]}]], "Input",
+ CellChangeTimes->{{3.972498375604598*^9, 3.9724983761018763`*^9}, {
+  3.9726054304193974`*^9, 3.972605439027621*^9}, {3.972607977012926*^9, 
+  3.972607988842519*^9}, {3.9726088470370607`*^9, 3.9726088774145956`*^9}},
+ CellLabel->"In[26]:=",ExpressionUUID->"7f651977-a47e-4e3e-ac4d-58f7d11dd1c1"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   SuperscriptBox["u", 
+    TagBox[
+     RowBox[{"(", 
+      RowBox[{"0", ",", "1"}], ")"}],
+     Derivative],
+    MultilineFunction->None], "[", 
+   RowBox[{"x", ",", "t"}], "]"}], "\[Equal]", 
+  RowBox[{
+   RowBox[{"3", " ", 
+    RowBox[{"u", "[", 
+     RowBox[{"x", ",", "t"}], "]"}], " ", 
+    RowBox[{
+     SuperscriptBox["u", 
+      TagBox[
+       RowBox[{"(", 
+        RowBox[{"1", ",", "0"}], ")"}],
+       Derivative],
+      MultilineFunction->None], "[", 
+     RowBox[{"x", ",", "t"}], "]"}]}], "-", 
+   RowBox[{"6", " ", 
+    RowBox[{"v", "[", 
+     RowBox[{"x", ",", "t"}], "]"}], " ", 
+    RowBox[{
+     SuperscriptBox["v", 
+      TagBox[
+       RowBox[{"(", 
+        RowBox[{"1", ",", "0"}], ")"}],
+       Derivative],
+      MultilineFunction->None], "[", 
+     RowBox[{"x", ",", "t"}], "]"}]}], "+", 
+   RowBox[{
+    FractionBox["1", "2"], " ", 
+    RowBox[{
+     SuperscriptBox["u", 
+      TagBox[
+       RowBox[{"(", 
+        RowBox[{"3", ",", "0"}], ")"}],
+       Derivative],
+      MultilineFunction->None], "[", 
+     RowBox[{"x", ",", "t"}], "]"}]}]}]}]], "Output",
+ CellChangeTimes->{3.972609954106498*^9, 3.9726101119235506`*^9},
+ CellLabel->"Out[26]=",ExpressionUUID->"baf5396d-afaf-4c91-b05b-5a0b861ea011"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"HirotaSatsumaEq2Par", " ", "/.", " ", 
+  RowBox[{"{", 
+   RowBox[{"\[Alpha]", " ", "->", " ", 
+    RowBox[{"1", "/", "2"}]}], "}"}]}]], "Input",
+ CellChangeTimes->{{3.9726089302897367`*^9, 3.9726089304979725`*^9}},
+ CellLabel->"In[27]:=",ExpressionUUID->"1959cf42-ba8d-4549-9e24-91bab7f280f5"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   SuperscriptBox["v", 
+    TagBox[
+     RowBox[{"(", 
+      RowBox[{"0", ",", "1"}], ")"}],
+     Derivative],
+    MultilineFunction->None], "[", 
+   RowBox[{"x", ",", "t"}], "]"}], "\[Equal]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"-", "3"}], " ", 
+    RowBox[{"u", "[", 
+     RowBox[{"x", ",", "t"}], "]"}], " ", 
+    RowBox[{
+     SuperscriptBox["v", 
+      TagBox[
+       RowBox[{"(", 
+        RowBox[{"1", ",", "0"}], ")"}],
+       Derivative],
+      MultilineFunction->None], "[", 
+     RowBox[{"x", ",", "t"}], "]"}]}], "-", 
+   RowBox[{
+    SuperscriptBox["v", 
+     TagBox[
+      RowBox[{"(", 
+       RowBox[{"3", ",", "0"}], ")"}],
+      Derivative],
+     MultilineFunction->None], "[", 
+    RowBox[{"x", ",", "t"}], "]"}]}]}]], "Output",
+ CellChangeTimes->{3.972609956399707*^9, 3.9726101161212144`*^9},
+ CellLabel->"Out[27]=",ExpressionUUID->"3d395ab3-836d-4861-9ddc-b59bbca1ed7c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"RecursionOperator", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"HirotaSatsumaEq1Par", ",", "HirotaSatsumaEq2Par"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"u", "[", 
+      RowBox[{"x", ",", "t"}], "]"}], ",", 
+     RowBox[{"v", "[", 
+      RowBox[{"x", ",", "t"}], "]"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "t"}], "}"}], ",", 
+   RowBox[{"Seed", "\[Rule]", "2"}], ",", " ", 
+   RowBox[{"Verbose", " ", "->", " ", "False"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.972607735690641*^9, 3.972607737921034*^9}, {
+  3.9726078234241285`*^9, 3.9726078237554307`*^9}, {3.9726080549756017`*^9, 
+  3.972608079075486*^9}},
+ CellLabel->"In[28]:=",ExpressionUUID->"8822d26c-6e8c-455f-a37e-17173da55943"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Thread", "tdlen", 
+   "\"Objects of unequal length in \\!\\(\\*RowBox[{\\\"\[LeftSkeleton]\\\", \
+\\\"1\\\", \\\"\[RightSkeleton]\\\"}]\\) cannot be combined.\"", 2, 28, 7, 
+   27858035363772182891, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.972609978951883*^9, 3.9726101285865364`*^9},
+ CellLabel->
+  "During evaluation of \
+In[28]:=",ExpressionUUID->"bd4eb63b-7014-46f3-8781-4cff82a90b7a"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Thread", "tdlen", 
+   "\"Objects of unequal length in \\!\\(\\*RowBox[{\\\"\[LeftSkeleton]\\\", \
+\\\"1\\\", \\\"\[RightSkeleton]\\\"}]\\) cannot be combined.\"", 2, 28, 8, 
+   27858035363772182891, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.972609978951883*^9, 3.972610128602769*^9},
+ CellLabel->
+  "During evaluation of \
+In[28]:=",ExpressionUUID->"3fa255ce-407c-48c9-a7bc-a90d58f8c11f"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Thread", "tdlen", 
+   "\"Objects of unequal length in \\!\\(\\*RowBox[{\\\"\[LeftSkeleton]\\\", \
+\\\"1\\\", \\\"\[RightSkeleton]\\\"}]\\) cannot be combined.\"", 2, 28, 9, 
+   27858035363772182891, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.972609978951883*^9, 3.9726101286187315`*^9},
+ CellLabel->
+  "During evaluation of \
+In[28]:=",ExpressionUUID->"21c9d2ff-7bdb-4455-8cfb-0bf5c1ddb562"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General", "stop", 
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"Thread\\\", \\\"::\\\", \
+\\\"tdlen\\\"}], \\\"MessageName\\\"]\\) will be suppressed during this \
+calculation.\"", 2, 28, 10, 27858035363772182891, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.972609978951883*^9, 3.9726101286187315`*^9},
+ CellLabel->
+  "During evaluation of \
+In[28]:=",ExpressionUUID->"b699659e-6eda-4315-a89c-4ec7d8b8fc62"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Solve", "naqs", 
+   "\"\\!\\(\\*RowBox[{RowBox[{RowBox[{\\\"2\\\", \\\" \\\", \
+RowBox[{\\\"(\\\", RowBox[{RowBox[{RowBox[{\\\"-\\\", \\\"60\\\"}], \\\" \
+\\\", TemplateBox[List[\\\"1\\\"], \\\"C\\\"]}], \\\"\[Equal]\\\", \
+\\\"0\\\"}], \\\")\\\"}]}], \\\"+\\\", RowBox[{\\\"(\\\", \
+RowBox[{RowBox[{RowBox[{\\\"-\\\", \\\"30\\\"}], \\\" \\\", TemplateBox[List[\
+\\\"1\\\"], \\\"C\\\"]}], \\\"\[Equal]\\\", \\\"0\\\"}], \\\")\\\"}], \\\"+\\\
+\", RowBox[{\\\"(\\\", RowBox[{RowBox[{RowBox[{\\\"-\\\", \\\"27\\\"}], \\\" \
+\\\", TemplateBox[List[\\\"1\\\"], \\\"C\\\"]}], \\\"\[Equal]\\\", \
+\\\"0\\\"}], \\\")\\\"}], \\\"+\\\", RowBox[{\\\"2\\\", \\\" \\\", RowBox[{\\\
+\"(\\\", RowBox[{RowBox[{RowBox[{\\\"-\\\", \\\"6\\\"}], \\\" \\\", \
+TemplateBox[List[\\\"1\\\"], \\\"C\\\"]}], \\\"\[Equal]\\\", \\\"0\\\"}], \
+\\\")\\\"}]}], \\\"+\\\", RowBox[{\\\"(\\\", \
+RowBox[{RowBox[{RowBox[{\\\"-\\\", \\\"18\\\"}], \\\" \\\", TemplateBox[List[\
+\\\"2\\\"], \\\"C\\\"]}], \\\"\[Equal]\\\", \\\"0\\\"}], \\\")\\\"}], \\\"+\\\
+\", RowBox[{\\\"(\\\", RowBox[{RowBox[{RowBox[{\\\"-\\\", \\\"15\\\"}], \\\" \
+\\\", TemplateBox[List[\\\"2\\\"], \\\"C\\\"]}], \\\"\[Equal]\\\", \
+\\\"0\\\"}], \\\")\\\"}], \\\"+\\\", RowBox[{\\\"2\\\", \\\" \\\", RowBox[{\\\
+\"(\\\", RowBox[{RowBox[{RowBox[{\\\"-\\\", \\\"6\\\"}], \\\" \\\", \
+TemplateBox[List[\\\"2\\\"], \\\"C\\\"]}], \\\"\[Equal]\\\", \\\"0\\\"}], \
+\\\")\\\"}]}], \\\"+\\\", RowBox[{\\\"(\\\", \
+RowBox[{RowBox[{RowBox[{\\\"-\\\", \\\"6\\\"}], \\\" \\\", \
+TemplateBox[List[\\\"3\\\"], \\\"C\\\"]}], \\\"\[Equal]\\\", \\\"0\\\"}], \
+\\\")\\\"}], \\\"+\\\", RowBox[{\\\"(\\\", RowBox[{RowBox[{RowBox[{\\\"-\\\", \
+\\\"3\\\"}], \\\" \\\", TemplateBox[List[\\\"3\\\"], \\\"C\\\"]}], \\\"\
+\[Equal]\\\", \\\"0\\\"}], \\\")\\\"}], \\\"+\\\", RowBox[{\\\"(\\\", \
+RowBox[{RowBox[{RowBox[{\\\"-\\\", \\\"18\\\"}], \\\" \\\", TemplateBox[List[\
+\\\"4\\\"], \\\"C\\\"]}], \\\"\[Equal]\\\", \\\"0\\\"}], \\\")\\\"}], \\\"+\\\
+\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"196\\\", \
+\\\"\[RightSkeleton]\\\"}]}], \\\"&&\\\", RowBox[{RowBox[{\\\"(\\\", \
+RowBox[{RowBox[{\\\"6\\\", \\\" \\\", \\\"\[Alpha]\\\", \\\" \\\", \
+TemplateBox[List[\\\"1\\\"], \\\"C\\\"]}], \\\"\[Equal]\\\", \\\"0\\\"}], \
+\\\")\\\"}], \\\"+\\\", RowBox[{\\\"(\\\", RowBox[{RowBox[{\\\"24\\\", \\\" \
+\\\", \\\"\[Alpha]\\\", \\\" \\\", TemplateBox[List[\\\"1\\\"], \\\"C\\\"]}], \
+\\\"\[Equal]\\\", \\\"0\\\"}], \\\")\\\"}], \\\"+\\\", RowBox[{\\\"(\\\", \
+RowBox[{RowBox[{\\\"30\\\", \\\" \\\", \\\"\[Alpha]\\\", \\\" \\\", \
+TemplateBox[List[\\\"1\\\"], \\\"C\\\"]}], \\\"\[Equal]\\\", \\\"0\\\"}], \
+\\\")\\\"}], \\\"+\\\", RowBox[{\\\"2\\\", \\\" \\\", RowBox[{\\\"(\\\", \
+RowBox[{RowBox[{\\\"60\\\", \\\" \\\", \\\"\[Alpha]\\\", \\\" \\\", \
+TemplateBox[List[\\\"1\\\"], \\\"C\\\"]}], \\\"\[Equal]\\\", \\\"0\\\"}], \
+\\\")\\\"}]}], \\\"+\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"3\\\", \\\"\
+\[RightSkeleton]\\\"}], \\\"+\\\", RowBox[{\\\"(\\\", \
+RowBox[{RowBox[{\\\"12\\\", \\\" \\\", \\\"\[Alpha]\\\", \\\" \\\", \
+TemplateBox[List[\\\"2\\\"], \\\"C\\\"]}], \\\"\[Equal]\\\", \\\"0\\\"}], \
+\\\")\\\"}], \\\"+\\\", RowBox[{\\\"(\\\", RowBox[{RowBox[{\\\"18\\\", \\\" \
+\\\", \\\"\[Alpha]\\\", \\\" \\\", TemplateBox[List[\\\"2\\\"], \\\"C\\\"]}], \
+\\\"\[Equal]\\\", \\\"0\\\"}], \\\")\\\"}], \\\"+\\\", RowBox[{\\\"(\\\", \
+RowBox[{RowBox[{RowBox[{\\\"-\\\", \\\"12\\\"}], \\\" \\\", TemplateBox[List[\
+\\\"3\\\"], \\\"C\\\"]}], \\\"\[Equal]\\\", \\\"0\\\"}], \\\")\\\"}], \\\"+\\\
+\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"221\\\", \
+\\\"\[RightSkeleton]\\\"}]}]}]\\) is not a quantified system of equations and \
+inequalities.\"", 2, 28, 11, 27858035363772182891, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.972609978951883*^9, 3.9726101299563255`*^9},
+ CellLabel->
+  "During evaluation of \
+In[28]:=",ExpressionUUID->"dfd6472e-1a24-4bfe-95a2-72948f27e9f4"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Solve", "naqs", 
+   "\"\\!\\(\\*RowBox[{RowBox[{RowBox[{\\\"2\\\", \\\" \\\", \
+RowBox[{\\\"(\\\", RowBox[{RowBox[{RowBox[{\\\"-\\\", \\\"60\\\"}], \\\" \
+\\\", TemplateBox[List[\\\"1\\\"], \\\"C\\\"]}], \\\"\[Equal]\\\", \
+\\\"0\\\"}], \\\")\\\"}]}], \\\"+\\\", RowBox[{\\\"(\\\", \
+RowBox[{RowBox[{RowBox[{\\\"-\\\", \\\"30\\\"}], \\\" \\\", TemplateBox[List[\
+\\\"1\\\"], \\\"C\\\"]}], \\\"\[Equal]\\\", \\\"0\\\"}], \\\")\\\"}], \\\"+\\\
+\", RowBox[{\\\"(\\\", RowBox[{RowBox[{RowBox[{\\\"-\\\", \\\"27\\\"}], \\\" \
+\\\", TemplateBox[List[\\\"1\\\"], \\\"C\\\"]}], \\\"\[Equal]\\\", \
+\\\"0\\\"}], \\\")\\\"}], \\\"+\\\", RowBox[{\\\"2\\\", \\\" \\\", RowBox[{\\\
+\"(\\\", RowBox[{RowBox[{RowBox[{\\\"-\\\", \\\"6\\\"}], \\\" \\\", \
+TemplateBox[List[\\\"1\\\"], \\\"C\\\"]}], \\\"\[Equal]\\\", \\\"0\\\"}], \
+\\\")\\\"}]}], \\\"+\\\", RowBox[{\\\"(\\\", \
+RowBox[{RowBox[{RowBox[{\\\"-\\\", \\\"18\\\"}], \\\" \\\", TemplateBox[List[\
+\\\"2\\\"], \\\"C\\\"]}], \\\"\[Equal]\\\", \\\"0\\\"}], \\\")\\\"}], \\\"+\\\
+\", RowBox[{\\\"(\\\", RowBox[{RowBox[{RowBox[{\\\"-\\\", \\\"15\\\"}], \\\" \
+\\\", TemplateBox[List[\\\"2\\\"], \\\"C\\\"]}], \\\"\[Equal]\\\", \
+\\\"0\\\"}], \\\")\\\"}], \\\"+\\\", RowBox[{\\\"2\\\", \\\" \\\", RowBox[{\\\
+\"(\\\", RowBox[{RowBox[{RowBox[{\\\"-\\\", \\\"6\\\"}], \\\" \\\", \
+TemplateBox[List[\\\"2\\\"], \\\"C\\\"]}], \\\"\[Equal]\\\", \\\"0\\\"}], \
+\\\")\\\"}]}], \\\"+\\\", RowBox[{\\\"(\\\", \
+RowBox[{RowBox[{RowBox[{\\\"-\\\", \\\"6\\\"}], \\\" \\\", \
+TemplateBox[List[\\\"3\\\"], \\\"C\\\"]}], \\\"\[Equal]\\\", \\\"0\\\"}], \
+\\\")\\\"}], \\\"+\\\", RowBox[{\\\"(\\\", RowBox[{RowBox[{RowBox[{\\\"-\\\", \
+\\\"3\\\"}], \\\" \\\", TemplateBox[List[\\\"3\\\"], \\\"C\\\"]}], \\\"\
+\[Equal]\\\", \\\"0\\\"}], \\\")\\\"}], \\\"+\\\", RowBox[{\\\"(\\\", \
+RowBox[{RowBox[{RowBox[{\\\"-\\\", \\\"18\\\"}], \\\" \\\", TemplateBox[List[\
+\\\"4\\\"], \\\"C\\\"]}], \\\"\[Equal]\\\", \\\"0\\\"}], \\\")\\\"}], \\\"+\\\
+\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"196\\\", \
+\\\"\[RightSkeleton]\\\"}]}], \\\"&&\\\", RowBox[{RowBox[{\\\"(\\\", \
+RowBox[{RowBox[{\\\"6\\\", \\\" \\\", \\\"\[Alpha]\\\", \\\" \\\", \
+TemplateBox[List[\\\"1\\\"], \\\"C\\\"]}], \\\"\[Equal]\\\", \\\"0\\\"}], \
+\\\")\\\"}], \\\"+\\\", RowBox[{\\\"(\\\", RowBox[{RowBox[{\\\"24\\\", \\\" \
+\\\", \\\"\[Alpha]\\\", \\\" \\\", TemplateBox[List[\\\"1\\\"], \\\"C\\\"]}], \
+\\\"\[Equal]\\\", \\\"0\\\"}], \\\")\\\"}], \\\"+\\\", RowBox[{\\\"(\\\", \
+RowBox[{RowBox[{\\\"30\\\", \\\" \\\", \\\"\[Alpha]\\\", \\\" \\\", \
+TemplateBox[List[\\\"1\\\"], \\\"C\\\"]}], \\\"\[Equal]\\\", \\\"0\\\"}], \
+\\\")\\\"}], \\\"+\\\", RowBox[{\\\"2\\\", \\\" \\\", RowBox[{\\\"(\\\", \
+RowBox[{RowBox[{\\\"60\\\", \\\" \\\", \\\"\[Alpha]\\\", \\\" \\\", \
+TemplateBox[List[\\\"1\\\"], \\\"C\\\"]}], \\\"\[Equal]\\\", \\\"0\\\"}], \
+\\\")\\\"}]}], \\\"+\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"3\\\", \\\"\
+\[RightSkeleton]\\\"}], \\\"+\\\", RowBox[{\\\"(\\\", \
+RowBox[{RowBox[{\\\"12\\\", \\\" \\\", \\\"\[Alpha]\\\", \\\" \\\", \
+TemplateBox[List[\\\"2\\\"], \\\"C\\\"]}], \\\"\[Equal]\\\", \\\"0\\\"}], \
+\\\")\\\"}], \\\"+\\\", RowBox[{\\\"(\\\", RowBox[{RowBox[{\\\"18\\\", \\\" \
+\\\", \\\"\[Alpha]\\\", \\\" \\\", TemplateBox[List[\\\"2\\\"], \\\"C\\\"]}], \
+\\\"\[Equal]\\\", \\\"0\\\"}], \\\")\\\"}], \\\"+\\\", RowBox[{\\\"(\\\", \
+RowBox[{RowBox[{RowBox[{\\\"-\\\", \\\"12\\\"}], \\\" \\\", TemplateBox[List[\
+\\\"3\\\"], \\\"C\\\"]}], \\\"\[Equal]\\\", \\\"0\\\"}], \\\")\\\"}], \\\"+\\\
+\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"221\\\", \
+\\\"\[RightSkeleton]\\\"}]}]}]\\) is not a quantified system of equations and \
+inequalities.\"", 2, 28, 12, 27858035363772182891, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.972609978951883*^9, 3.972610129988087*^9},
+ CellLabel->
+  "During evaluation of \
+In[28]:=",ExpressionUUID->"47777ed6-1868-4113-8c6b-7ec7cc7515a8"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "ReplaceAll", "reps", 
+   "\"\\!\\(\\*RowBox[{\\\"{\\\", RowBox[{RowBox[{RowBox[{\\\"2\\\", \\\" \
+\\\", RowBox[{\\\"(\\\", RowBox[{RowBox[{RowBox[{\\\"-\\\", \\\"60\\\"}], \
+\\\" \\\", TemplateBox[List[\\\"1\\\"], \\\"C\\\"]}], \\\"\[Equal]\\\", \\\"0\
+\\\"}], \\\")\\\"}]}], \\\"+\\\", RowBox[{\\\"(\\\", RowBox[{RowBox[{RowBox[{\
+\\\"-\\\", \\\"30\\\"}], \\\" \\\", TemplateBox[List[\\\"1\\\"], \
+\\\"C\\\"]}], \\\"\[Equal]\\\", \\\"0\\\"}], \\\")\\\"}], \\\"+\\\", RowBox[{\
+\\\"(\\\", RowBox[{RowBox[{RowBox[{\\\"-\\\", \\\"27\\\"}], \\\" \\\", \
+TemplateBox[List[\\\"1\\\"], \\\"C\\\"]}], \\\"\[Equal]\\\", \\\"0\\\"}], \
+\\\")\\\"}], \\\"+\\\", RowBox[{\\\"2\\\", \\\" \\\", RowBox[{\\\"(\\\", \
+RowBox[{RowBox[{RowBox[{\\\"-\\\", \\\"6\\\"}], \\\" \\\", \
+TemplateBox[List[\\\"1\\\"], \\\"C\\\"]}], \\\"\[Equal]\\\", \\\"0\\\"}], \
+\\\")\\\"}]}], \\\"+\\\", RowBox[{\\\"(\\\", \
+RowBox[{RowBox[{RowBox[{\\\"-\\\", \\\"18\\\"}], \\\" \\\", TemplateBox[List[\
+\\\"2\\\"], \\\"C\\\"]}], \\\"\[Equal]\\\", \\\"0\\\"}], \\\")\\\"}], \\\"+\\\
+\", RowBox[{\\\"(\\\", RowBox[{RowBox[{RowBox[{\\\"-\\\", \\\"15\\\"}], \\\" \
+\\\", TemplateBox[List[\\\"2\\\"], \\\"C\\\"]}], \\\"\[Equal]\\\", \
+\\\"0\\\"}], \\\")\\\"}], \\\"+\\\", RowBox[{\\\"2\\\", \\\" \\\", RowBox[{\\\
+\"(\\\", RowBox[{RowBox[{RowBox[{\\\"-\\\", \\\"6\\\"}], \\\" \\\", \
+TemplateBox[List[\\\"2\\\"], \\\"C\\\"]}], \\\"\[Equal]\\\", \\\"0\\\"}], \
+\\\")\\\"}]}], \\\"+\\\", RowBox[{\\\"(\\\", \
+RowBox[{RowBox[{RowBox[{\\\"-\\\", \\\"6\\\"}], \\\" \\\", \
+TemplateBox[List[\\\"3\\\"], \\\"C\\\"]}], \\\"\[Equal]\\\", \\\"0\\\"}], \
+\\\")\\\"}], \\\"+\\\", RowBox[{\\\"(\\\", RowBox[{RowBox[{RowBox[{\\\"-\\\", \
+\\\"3\\\"}], \\\" \\\", TemplateBox[List[\\\"3\\\"], \\\"C\\\"]}], \\\"\
+\[Equal]\\\", \\\"0\\\"}], \\\")\\\"}], \\\"+\\\", RowBox[{\\\"(\\\", \
+RowBox[{RowBox[{RowBox[{\\\"-\\\", \\\"18\\\"}], \\\" \\\", TemplateBox[List[\
+\\\"4\\\"], \\\"C\\\"]}], \\\"\[Equal]\\\", \\\"0\\\"}], \\\")\\\"}], \\\"+\\\
+\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"196\\\", \
+\\\"\[RightSkeleton]\\\"}]}], \\\",\\\", RowBox[{RowBox[{\\\"(\\\", \
+RowBox[{RowBox[{\\\"6\\\", \\\" \\\", \\\"\[Alpha]\\\", \\\" \\\", \
+TemplateBox[List[\\\"1\\\"], \\\"C\\\"]}], \\\"\[Equal]\\\", \\\"0\\\"}], \
+\\\")\\\"}], \\\"+\\\", RowBox[{\\\"(\\\", RowBox[{RowBox[{\\\"24\\\", \\\" \
+\\\", \\\"\[Alpha]\\\", \\\" \\\", TemplateBox[List[\\\"1\\\"], \\\"C\\\"]}], \
+\\\"\[Equal]\\\", \\\"0\\\"}], \\\")\\\"}], \\\"+\\\", RowBox[{\\\"(\\\", \
+RowBox[{RowBox[{\\\"30\\\", \\\" \\\", \\\"\[Alpha]\\\", \\\" \\\", \
+TemplateBox[List[\\\"1\\\"], \\\"C\\\"]}], \\\"\[Equal]\\\", \\\"0\\\"}], \
+\\\")\\\"}], \\\"+\\\", RowBox[{\\\"2\\\", \\\" \\\", RowBox[{\\\"(\\\", \
+RowBox[{RowBox[{\\\"60\\\", \\\" \\\", \\\"\[Alpha]\\\", \\\" \\\", \
+TemplateBox[List[\\\"1\\\"], \\\"C\\\"]}], \\\"\[Equal]\\\", \\\"0\\\"}], \
+\\\")\\\"}]}], \\\"+\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"3\\\", \\\"\
+\[RightSkeleton]\\\"}], \\\"+\\\", RowBox[{\\\"(\\\", \
+RowBox[{RowBox[{\\\"12\\\", \\\" \\\", \\\"\[Alpha]\\\", \\\" \\\", \
+TemplateBox[List[\\\"2\\\"], \\\"C\\\"]}], \\\"\[Equal]\\\", \\\"0\\\"}], \
+\\\")\\\"}], \\\"+\\\", RowBox[{\\\"(\\\", RowBox[{RowBox[{\\\"18\\\", \\\" \
+\\\", \\\"\[Alpha]\\\", \\\" \\\", TemplateBox[List[\\\"2\\\"], \\\"C\\\"]}], \
+\\\"\[Equal]\\\", \\\"0\\\"}], \\\")\\\"}], \\\"+\\\", RowBox[{\\\"(\\\", \
+RowBox[{RowBox[{RowBox[{\\\"-\\\", \\\"12\\\"}], \\\" \\\", TemplateBox[List[\
+\\\"3\\\"], \\\"C\\\"]}], \\\"\[Equal]\\\", \\\"0\\\"}], \\\")\\\"}], \\\"+\\\
+\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"221\\\", \
+\\\"\[RightSkeleton]\\\"}]}]}], \\\"}\\\"}]\\) is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing.\"", 2, 28, 13, 27858035363772182891, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.972609978951883*^9, 3.972610130036139*^9},
+ CellLabel->
+  "During evaluation of \
+In[28]:=",ExpressionUUID->"0859cda1-50d8-4d98-afd4-139277e723f2"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "ReplaceAll", "reps", 
+   "\"\\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"\[Alpha]\\\", \\\",\\\", \
+TemplateBox[List[\\\"1\\\"], \\\"C\\\"], \\\",\\\", \
+TemplateBox[List[\\\"2\\\"], \\\"C\\\"], \\\",\\\", \
+TemplateBox[List[\\\"3\\\"], \\\"C\\\"], \\\",\\\", \
+TemplateBox[List[\\\"4\\\"], \\\"C\\\"], \\\",\\\", \
+TemplateBox[List[\\\"5\\\"], \\\"C\\\"], \\\",\\\", \
+TemplateBox[List[\\\"6\\\"], \\\"C\\\"], \\\",\\\", \
+TemplateBox[List[\\\"7\\\"], \\\"C\\\"], \\\",\\\", \
+TemplateBox[List[\\\"8\\\"], \\\"C\\\"], \\\",\\\", \
+TemplateBox[List[\\\"9\\\"], \\\"C\\\"], \\\",\\\", RowBox[{\\\"\
+\[LeftSkeleton]\\\", \\\"52\\\", \\\"\[RightSkeleton]\\\"}]}], \\\"}\\\"}]\\) \
+is neither a list of replacement rules nor a valid dispatch table, and so \
+cannot be used for replacing.\"", 2, 28, 14, 27858035363772182891, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.972609978951883*^9, 3.9726101300843973`*^9},
+ CellLabel->
+  "During evaluation of \
+In[28]:=",ExpressionUUID->"c3c3777f-8d0f-417b-8d2f-8e11c2100ad9"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Solve", "naqs", 
+   "\"\\!\\(\\*RowBox[{RowBox[{\\\"{\\\", \
+RowBox[{RowBox[{RowBox[{\\\"DefiningEquation`Operator`Times\\\", \\\"[\\\", \
+RowBox[{TemplateBox[List[\\\"1\\\"], \\\"C\\\"], \\\",\\\", \
+RowBox[{\\\"recursionOperator`Private`operatorD\\\", \\\"[\\\", \\\"4\\\", \\\
+\"]\\\"}]}], \\\"]\\\"}], \\\"+\\\", \
+RowBox[{\\\"DefiningEquation`Operator`Times\\\", \\\"[\\\", \
+RowBox[{TemplateBox[List[\\\"11\\\"], \\\"C\\\"], \\\",\\\", \
+RowBox[{\\\"recursionOperator`Private`operatorD\\\", \\\"[\\\", \\\"4\\\", \\\
+\"]\\\"}]}], \\\"]\\\"}], \\\"+\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"8\\\
+\", \\\"\[RightSkeleton]\\\"}], \\\"+\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \
+\\\"21\\\", \\\"\[RightSkeleton]\\\"}]}], \\\",\\\", \
+RowBox[{RowBox[{\\\"DefiningEquation`Operator`Times\\\", \\\"[\\\", \
+RowBox[{TemplateBox[List[\\\"21\\\"], \\\"C\\\"], \\\",\\\", RowBox[{RowBox[{\
+\\\"\[LeftSkeleton]\\\", \\\"35\\\", \\\"\[RightSkeleton]\\\"}], \\\"[\\\", \
+\\\"4\\\", \\\"]\\\"}]}], \\\"]\\\"}], \\\"+\\\", RowBox[{\\\"\[LeftSkeleton]\
+\\\", \\\"1\\\", \\\"\[RightSkeleton]\\\"}], \\\"+\\\", RowBox[{\\\"\
+\[LeftSkeleton]\\\", \\\"8\\\", \\\"\[RightSkeleton]\\\"}], \\\"+\\\", \
+RowBox[{\\\"\[LeftSkeleton]\\\", \\\"20\\\", \\\"\[RightSkeleton]\\\"}]}]}], \
+\\\"}\\\"}], RowBox[{\\\"\[LeftSkeleton]\\\", \\\"2\\\", \\\"\[RightSkeleton]\
+\\\"}], \\\"\[VeryThinSpace]\\\", RowBox[{\\\"{\\\", RowBox[{\\\"\
+\[LeftSkeleton]\\\", \\\"1\\\", \\\"\[RightSkeleton]\\\"}], \\\"}\\\"}]}]\\) \
+is not a quantified system of equations and inequalities.\"", 2, 28, 15, 
+   27858035363772182891, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.972609978951883*^9, 3.9726101301037035`*^9},
+ CellLabel->
+  "During evaluation of \
+In[28]:=",ExpressionUUID->"94cc4660-afa4-4f54-b714-b2f7770d6b4d"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General", "stop", 
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"Solve\\\", \\\"::\\\", \
+\\\"naqs\\\"}], \\\"MessageName\\\"]\\) will be suppressed during this \
+calculation.\"", 2, 28, 16, 27858035363772182891, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.972609978951883*^9, 3.97261013011965*^9},
+ CellLabel->
+  "During evaluation of \
+In[28]:=",ExpressionUUID->"8df9622d-b4a7-42ff-b8bb-853e21622fee"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "ReplaceAll", "reps", 
+   "\"\\!\\(\\*RowBox[{\\\"{\\\", RowBox[{RowBox[{RowBox[{\\\"2\\\", \\\" \
+\\\", RowBox[{\\\"(\\\", RowBox[{RowBox[{RowBox[{\\\"-\\\", \\\"60\\\"}], \
+\\\" \\\", TemplateBox[List[\\\"1\\\"], \\\"C\\\"]}], \\\"\[Equal]\\\", \\\"0\
+\\\"}], \\\")\\\"}]}], \\\"+\\\", RowBox[{\\\"(\\\", RowBox[{RowBox[{RowBox[{\
+\\\"-\\\", \\\"30\\\"}], \\\" \\\", TemplateBox[List[\\\"1\\\"], \
+\\\"C\\\"]}], \\\"\[Equal]\\\", \\\"0\\\"}], \\\")\\\"}], \\\"+\\\", RowBox[{\
+\\\"(\\\", RowBox[{RowBox[{RowBox[{\\\"-\\\", \\\"27\\\"}], \\\" \\\", \
+TemplateBox[List[\\\"1\\\"], \\\"C\\\"]}], \\\"\[Equal]\\\", \\\"0\\\"}], \
+\\\")\\\"}], \\\"+\\\", RowBox[{\\\"2\\\", \\\" \\\", RowBox[{\\\"(\\\", \
+RowBox[{RowBox[{RowBox[{\\\"-\\\", \\\"6\\\"}], \\\" \\\", \
+TemplateBox[List[\\\"1\\\"], \\\"C\\\"]}], \\\"\[Equal]\\\", \\\"0\\\"}], \
+\\\")\\\"}]}], \\\"+\\\", RowBox[{\\\"(\\\", \
+RowBox[{RowBox[{RowBox[{\\\"-\\\", \\\"18\\\"}], \\\" \\\", TemplateBox[List[\
+\\\"2\\\"], \\\"C\\\"]}], \\\"\[Equal]\\\", \\\"0\\\"}], \\\")\\\"}], \\\"+\\\
+\", RowBox[{\\\"(\\\", RowBox[{RowBox[{RowBox[{\\\"-\\\", \\\"15\\\"}], \\\" \
+\\\", TemplateBox[List[\\\"2\\\"], \\\"C\\\"]}], \\\"\[Equal]\\\", \
+\\\"0\\\"}], \\\")\\\"}], \\\"+\\\", RowBox[{\\\"2\\\", \\\" \\\", RowBox[{\\\
+\"(\\\", RowBox[{RowBox[{RowBox[{\\\"-\\\", \\\"6\\\"}], \\\" \\\", \
+TemplateBox[List[\\\"2\\\"], \\\"C\\\"]}], \\\"\[Equal]\\\", \\\"0\\\"}], \
+\\\")\\\"}]}], \\\"+\\\", RowBox[{\\\"(\\\", \
+RowBox[{RowBox[{RowBox[{\\\"-\\\", \\\"6\\\"}], \\\" \\\", \
+TemplateBox[List[\\\"3\\\"], \\\"C\\\"]}], \\\"\[Equal]\\\", \\\"0\\\"}], \
+\\\")\\\"}], \\\"+\\\", RowBox[{\\\"(\\\", RowBox[{RowBox[{RowBox[{\\\"-\\\", \
+\\\"3\\\"}], \\\" \\\", TemplateBox[List[\\\"3\\\"], \\\"C\\\"]}], \\\"\
+\[Equal]\\\", \\\"0\\\"}], \\\")\\\"}], \\\"+\\\", RowBox[{\\\"(\\\", \
+RowBox[{RowBox[{RowBox[{\\\"-\\\", \\\"18\\\"}], \\\" \\\", TemplateBox[List[\
+\\\"4\\\"], \\\"C\\\"]}], \\\"\[Equal]\\\", \\\"0\\\"}], \\\")\\\"}], \\\"+\\\
+\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"196\\\", \
+\\\"\[RightSkeleton]\\\"}]}], \\\",\\\", RowBox[{RowBox[{\\\"(\\\", \
+RowBox[{RowBox[{\\\"6\\\", \\\" \\\", \\\"\[Alpha]\\\", \\\" \\\", \
+TemplateBox[List[\\\"1\\\"], \\\"C\\\"]}], \\\"\[Equal]\\\", \\\"0\\\"}], \
+\\\")\\\"}], \\\"+\\\", RowBox[{\\\"(\\\", RowBox[{RowBox[{\\\"24\\\", \\\" \
+\\\", \\\"\[Alpha]\\\", \\\" \\\", TemplateBox[List[\\\"1\\\"], \\\"C\\\"]}], \
+\\\"\[Equal]\\\", \\\"0\\\"}], \\\")\\\"}], \\\"+\\\", RowBox[{\\\"(\\\", \
+RowBox[{RowBox[{\\\"30\\\", \\\" \\\", \\\"\[Alpha]\\\", \\\" \\\", \
+TemplateBox[List[\\\"1\\\"], \\\"C\\\"]}], \\\"\[Equal]\\\", \\\"0\\\"}], \
+\\\")\\\"}], \\\"+\\\", RowBox[{\\\"2\\\", \\\" \\\", RowBox[{\\\"(\\\", \
+RowBox[{RowBox[{\\\"60\\\", \\\" \\\", \\\"\[Alpha]\\\", \\\" \\\", \
+TemplateBox[List[\\\"1\\\"], \\\"C\\\"]}], \\\"\[Equal]\\\", \\\"0\\\"}], \
+\\\")\\\"}]}], \\\"+\\\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"3\\\", \\\"\
+\[RightSkeleton]\\\"}], \\\"+\\\", RowBox[{\\\"(\\\", \
+RowBox[{RowBox[{\\\"12\\\", \\\" \\\", \\\"\[Alpha]\\\", \\\" \\\", \
+TemplateBox[List[\\\"2\\\"], \\\"C\\\"]}], \\\"\[Equal]\\\", \\\"0\\\"}], \
+\\\")\\\"}], \\\"+\\\", RowBox[{\\\"(\\\", RowBox[{RowBox[{\\\"18\\\", \\\" \
+\\\", \\\"\[Alpha]\\\", \\\" \\\", TemplateBox[List[\\\"2\\\"], \\\"C\\\"]}], \
+\\\"\[Equal]\\\", \\\"0\\\"}], \\\")\\\"}], \\\"+\\\", RowBox[{\\\"(\\\", \
+RowBox[{RowBox[{RowBox[{\\\"-\\\", \\\"12\\\"}], \\\" \\\", TemplateBox[List[\
+\\\"3\\\"], \\\"C\\\"]}], \\\"\[Equal]\\\", \\\"0\\\"}], \\\")\\\"}], \\\"+\\\
+\", RowBox[{\\\"\[LeftSkeleton]\\\", \\\"221\\\", \
+\\\"\[RightSkeleton]\\\"}]}]}], \\\"}\\\"}]\\) is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing.\"", 2, 28, 17, 27858035363772182891, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.972609978951883*^9, 3.9726101301516104`*^9},
+ CellLabel->
+  "During evaluation of \
+In[28]:=",ExpressionUUID->"3c4492bb-08e4-460b-a9d7-4111a1f47949"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General", "stop", 
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"ReplaceAll\\\", \
+\\\"::\\\", \\\"reps\\\"}], \\\"MessageName\\\"]\\) will be suppressed during \
+this calculation.\"", 2, 28, 18, 27858035363772182891, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.972609978951883*^9, 3.972610130167672*^9},
+ CellLabel->
+  "During evaluation of \
+In[28]:=",ExpressionUUID->"5fda6a91-1973-41dd-b385-7d514d0083f8"],
+
+Cell[BoxData["\<\"Solve[{-1\\\\frac{1}{\[Alpha]^{1}}C[45]v v_{x} D_x^{-1} + \
+2C[41] u_{x} D_x^{-1}uI + 2C[49] u_{x} D_x^{-1}uI + -4C[42] u_{x} D_x^{-1}vI \
++ -4C[51] u_{x} D_x^{-1}vI + C[10]uvI + C[11] D_x^{4} + C[12]u D_x^{2} + \
+C[13]u^{2}I + C[14]v D_x^{2} + C[15]v^{2}I + C[16] u_{x} D_x^{1} + C[17] \
+v_{x} D_x^{1} + C[18] u_{2 x}I + C[19] v_{2 x}I + C[1] D_x^{4} + C[20]uvI + \
+C[2]u D_x^{2} + C[3]u^{2}I + C[44]u u_{x} D_x^{-1} + C[46]0 -> 0 u_{x} \
+D_x^{-1} + C[47]0 -> 0 u_{x} D_x^{-1} + C[48] u_{x} D_x^{-1}vI + C[4]v \
+D_x^{2} + C[50] u_{x} D_x^{-1}uI + C[5]v^{2}I + C[6] u_{x} D_x^{1} + C[7] \
+v_{x} D_x^{1} + C[8] u_{2 x}I + C[9] v_{2 x}I + \\\\frac{1}{6}C[43] u_{3 x} \
+D_x^{-1}, 2C[52] v_{x} D_x^{-1}uI + 2C[59] v_{x} D_x^{-1}uI + -4C[53] v_{x} \
+D_x^{-1}vI + -4C[61] v_{x} D_x^{-1}vI + C[21] D_x^{4} + C[22]u D_x^{2} + \
+C[23]u^{2}I + C[24]v D_x^{2} + C[25]v^{2}I + C[26] u_{x} D_x^{1} + C[27] \
+v_{x} D_x^{1} + C[28] u_{2 x}I + C[29] v_{2 x}I + C[30]uvI + C[31] D_x^{4} + \
+C[32]u D_x^{2} + C[33]u^{2}I + C[34]v D_x^{2} + C[35]v^{2}I + C[36] u_{x} \
+D_x^{1} + C[37] v_{x} D_x^{1} + C[38] u_{2 x}I + C[39] v_{2 x}I + C[40]uvI + \
+C[56]0 -> 0 v_{x} D_x^{-1} + C[57]0 -> 0 v_{x} D_x^{-1} + C[58] v_{x} \
+D_x^{-1}vI + C[60] v_{x} D_x^{-1}uI + \
+\\\\frac{-1}{2}\\\\frac{1}{\[Alpha]^{1}}C[55]u v_{x} D_x^{-1} + \
+\\\\frac{-1}{6}\\\\frac{1}{\[Alpha]^{1}}C[54] v_{3 x} D_x^{-1}} /. \
+{2*(-60*C[1] == 0) + (-30*C[1] == 0) + (-27*C[1] == 0) + 2*(-6*C[1] == 0) + \
+(-18*C[2] == 0) + (-15*C[2] == 0) + 2*(-6*C[2] == 0) + (-6*C[3] == 0) + \
+(-3*C[3] == 0) + (-18*C[4] == 0) + (-15*C[4] == 0) + 2*(-6*C[4] == 0) + \
+(-6*C[5] == 0) + (-3*C[5] == 0) + (-9*C[6] == 0) + 2*(-6*C[6] == 0) + \
+(-9*C[7] == 0) + 2*(-6*C[7] == 0) + (-6*C[8] == 0) + (-3*C[8] == 0) + \
+(-6*C[9] == 0) + (-3*C[9] == 0) + (-6*C[10] == 0) + (-3*C[10] == 0) + \
+2*(-60*C[11] == 0) + (-30*C[11] == 0) + (-27*C[11] == 0) + 2*(-6*C[11] == 0) \
++ (-18*C[12] == 0) + (-15*C[12] == 0) + 2*(-6*C[12] == 0) + (-6*C[13] == 0) + \
+(-3*C[13] == 0) + (-18*C[14] == 0) + (-15*C[14] == 0) + 2*(-6*C[14] == 0) + \
+(-6*C[15] == 0) + (-3*C[15] == 0) + (-9*C[16] == 0) + 2*(-6*C[16] == 0) + \
+(-9*C[17] == 0) + 2*(-6*C[17] == 0) + (-6*C[18] == 0) + (-3*C[18] == 0) + \
+(-6*C[19] == 0) + (-3*C[19] == 0) + (-6*C[20] == 0) + (-3*C[20] == 0) + \
+(-18*C[21] == 0) + 2*(-12*C[21] == 0) + (-3*C[21] == 0) + (-6*C[22] == 0) + \
+2*(-3*C[22] == 0) + (C[22] == 0) + 2*(3*C[22] == 0) + (\[Alpha]*C[22] == 0) + \
+(6*\[Alpha]*C[22] == 0) + (-12*C[23] == 0) + (2*C[23] == 0) + 5*(6*C[23] == \
+0) + (2*\[Alpha]*C[23] == 0) + (12*\[Alpha]*C[23] == 0) + (-6*C[24] == 0) + \
+(-3*C[24] == 0) + 2*(3*C[24] == 0) + 4*(6*C[25] == 0) + 2*(-6*C[26] == 0) + \
+(-3*C[26] == 0) + (C[26] == 0) + 3*(3*C[26] == 0) + (\[Alpha]*C[26] == 0) + \
+2*(6*\[Alpha]*C[26] == 0) + (-6*C[27] == 0) + 2*(3*C[27] == 0) + (-18*C[28] \
+== 0) + (-6*C[28] == 0) + (C[28] == 0) + 3*(3*C[28] == 0) + (\[Alpha]*C[28] \
+== 0) + (6*\[Alpha]*C[28] == 0) + (18*\[Alpha]*C[28] == 0) + (-6*C[29] == 0) \
++ (-3*C[29] == 0) + 2*(3*C[29] == 0) + (-6*C[30] == 0) + (C[30] == 0) + \
+7*(3*C[30] == 0) + (6*C[30] == 0) + (\[Alpha]*C[30] == 0) + (6*\[Alpha]*C[30] \
+== 0) + (-18*C[31] == 0) + 2*(-12*C[31] == 0) + (-3*C[31] == 0) + (-6*C[32] \
+== 0) + 2*(-3*C[32] == 0) + (C[32] == 0) + 2*(3*C[32] == 0) + (\[Alpha]*C[32] \
+== 0) + (6*\[Alpha]*C[32] == 0) + (-12*C[33] == 0) + (2*C[33] == 0) + \
+5*(6*C[33] == 0) + (2*\[Alpha]*C[33] == 0) + (12*\[Alpha]*C[33] == 0) + \
+(-6*C[34] == 0) + (-3*C[34] == 0) + 2*(3*C[34] == 0) + 4*(6*C[35] == 0) + \
+2*(-6*C[36] == 0) + (-3*C[36] == 0) + (C[36] == 0) + 3*(3*C[36] == 0) + (\
+\[Alpha]*C[36] == 0) + 2*(6*\[Alpha]*C[36] == 0) + (-6*C[37] == 0) + \
+2*(3*C[37] == 0) + (-18*C[38] == 0) + (-6*C[38] == 0) + (C[38] == 0) + \
+3*(3*C[38] == 0) + (\[Alpha]*C[38] == 0) + (6*\[Alpha]*C[38] == 0) + (18*\
+\[Alpha]*C[38] == 0) + (-6*C[39] == 0) + (-3*C[39] == 0) + 2*(3*C[39] == 0) + \
+(-6*C[40] == 0) + (C[40] == 0) + 7*(3*C[40] == 0) + (6*C[40] == 0) + \
+(\[Alpha]*C[40] == 0) + (6*\[Alpha]*C[40] == 0) + (-12*C[41] == 0) + (6*C[41] \
+== 0) + (12*C[41] == 0) + (-24*C[42] == 0) + (-12*C[42] == 0) + (24*C[42] == \
+0) + (-C[43] == 0) + (\\\\frac{1}{2}*C[43] == 0) + (-6*C[44] == 0) + (3*C[44] \
+== 0) + (-3*\\\\frac{1}{\[Alpha]^{1}}*C[45] == 0) + \
+(6*\\\\frac{1}{\[Alpha]^{1}}*C[45] == 0) + (-6*C[48] == 0) + (3*C[48] == 0) + \
+(6*C[48] == 0) + (-12*C[49] == 0) + (6*C[49] == 0) + (12*C[49] == 0) + \
+(-6*C[50] == 0) + (3*C[50] == 0) + (6*C[50] == 0) + (-24*C[51] == 0) + \
+(-12*C[51] == 0) + (24*C[51] == 0) + (-12*C[52] == 0) + (-6*C[52] == 0) + \
+(2*C[52] == 0) + 4*(6*C[52] == 0) + (12*C[52] == 0) + (2*\[Alpha]*C[52] == 0) \
++ (12*\[Alpha]*C[52] == 0) + 5*(-12*C[53] == 0) + (12*C[53] == 0) + \
+3*(\\\\frac{-1}{2}*\\\\frac{1}{\[Alpha]^{1}}*C[54] == 0) + (\\\\frac{1}{2}*\\\
+\\frac{1}{\[Alpha]^{1}}*C[54] == 0) + \
+2*(\\\\frac{1}{\[Alpha]^{1}}*\\\\frac{3}{2}*C[54] == 0) + (-3*C[55] == 0) + (\
+\\\\frac{-1}{2}*C[55] == 0) + (-3*\\\\frac{1}{\[Alpha]^{1}}*C[55] == 0) + (3*\
+\\\\frac{1}{\[Alpha]^{1}}*C[55] == 0) + \
+(\\\\frac{-1}{2}*\\\\frac{1}{\[Alpha]^{1}}*C[55] == 0) + 7*(\\\\frac{1}{\
+\[Alpha]^{1}}*\\\\frac{-3}{2}*C[55] == 0) + (-3*C[58] == 0) + 5*(3*C[58] == \
+0) + (-12*C[59] == 0) + (-6*C[59] == 0) + (2*C[59] == 0) + 4*(6*C[59] == 0) + \
+(12*C[59] == 0) + (2*\[Alpha]*C[59] == 0) + (12*\[Alpha]*C[59] == 0) + \
+(-6*C[60] == 0) + (-3*C[60] == 0) + (C[60] == 0) + 4*(3*C[60] == 0) + \
+(6*C[60] == 0) + (\[Alpha]*C[60] == 0) + (6*\[Alpha]*C[60] == 0) + \
+5*(-12*C[61] == 0) + (12*C[61] == 0) + (-6*C[46]*(0 -> 0) == 0) + (3*C[46]*(0 \
+-> 0) == 0) + (-6*C[47]*(0 -> 0) == 0) + (3*C[47]*(0 -> 0) == 0) + \
+3*(-3*C[56]*(0 -> 0) == 0) + (-(C[56]*(0 -> 0)) == 0) + (C[56]*(0 -> 0) == 0) \
++ 8*(3*C[56]*(0 -> 0) == 0) + (6*C[56]*(0 -> 0) == 0) + 3*(-3*C[57]*(0 -> 0) \
+== 0) + (-(C[57]*(0 -> 0)) == 0) + (C[57]*(0 -> 0) == 0) + 8*(3*C[57]*(0 -> \
+0) == 0) + (6*C[57]*(0 -> 0) == 0), (6*\[Alpha]*C[1] == 0) + \
+(24*\[Alpha]*C[1] == 0) + (30*\[Alpha]*C[1] == 0) + 2*(60*\[Alpha]*C[1] == 0) \
++ (-6*C[2] == 0) + 2*(-3*\[Alpha]*C[2] == 0) + (6*\[Alpha]*C[2] == 0) + (12*\
+\[Alpha]*C[2] == 0) + (18*\[Alpha]*C[2] == 0) + (-12*C[3] == 0) + 4*(-6*\
+\[Alpha]*C[3] == 0) + (-3*C[4] == 0) + (-C[4] == 0) + (-6*\[Alpha]*C[4] == 0) \
++ 2*(-3*\[Alpha]*C[4] == 0) + (-(\[Alpha]*C[4]) == 0) + (6*\[Alpha]*C[4] == \
+0) + (12*\[Alpha]*C[4] == 0) + (18*\[Alpha]*C[4] == 0) + (-6*C[5] == 0) + \
+(-2*C[5] == 0) + (-12*\[Alpha]*C[5] == 0) + 4*(-6*\[Alpha]*C[5] == 0) + (-2*\
+\[Alpha]*C[5] == 0) + 2*(-6*C[6] == 0) + 2*(-3*\[Alpha]*C[6] == 0) + (6*\
+\[Alpha]*C[6] == 0) + (12*\[Alpha]*C[6] == 0) + 2*(-3*C[7] == 0) + (-C[7] == \
+0) + (-6*\[Alpha]*C[7] == 0) + 2*(-3*\[Alpha]*C[7] == 0) + (-(\[Alpha]*C[7]) \
+== 0) + 2*(6*\[Alpha]*C[7] == 0) + (-18*C[8] == 0) + (-6*C[8] == 0) + 2*(-3*\
+\[Alpha]*C[8] == 0) + (18*\[Alpha]*C[8] == 0) + (-6*C[9] == 0) + 2*(-3*C[9] \
+== 0) + (-C[9] == 0) + (-6*\[Alpha]*C[9] == 0) + 2*(-3*\[Alpha]*C[9] == 0) + \
+(-(\[Alpha]*C[9]) == 0) + (-6*C[10] == 0) + (-3*C[10] == 0) + (-C[10] == 0) + \
+2*(-6*\[Alpha]*C[10] == 0) + 6*(-3*\[Alpha]*C[10] == 0) + (-(\[Alpha]*C[10]) \
+== 0) + (6*\[Alpha]*C[11] == 0) + (24*\[Alpha]*C[11] == 0) + \
+(30*\[Alpha]*C[11] == 0) + 2*(60*\[Alpha]*C[11] == 0) + (-6*C[12] == 0) + \
+2*(-3*\[Alpha]*C[12] == 0) + (6*\[Alpha]*C[12] == 0) + (12*\[Alpha]*C[12] == \
+0) + (18*\[Alpha]*C[12] == 0) + (-12*C[13] == 0) + 4*(-6*\[Alpha]*C[13] == 0) \
++ (-3*C[14] == 0) + (-C[14] == 0) + (-6*\[Alpha]*C[14] == 0) + \
+2*(-3*\[Alpha]*C[14] == 0) + (-(\[Alpha]*C[14]) == 0) + (6*\[Alpha]*C[14] == \
+0) + (12*\[Alpha]*C[14] == 0) + (18*\[Alpha]*C[14] == 0) + (-6*C[15] == 0) + \
+(-2*C[15] == 0) + (-12*\[Alpha]*C[15] == 0) + 4*(-6*\[Alpha]*C[15] == 0) + \
+(-2*\[Alpha]*C[15] == 0) + 2*(-6*C[16] == 0) + 2*(-3*\[Alpha]*C[16] == 0) + \
+(6*\[Alpha]*C[16] == 0) + (12*\[Alpha]*C[16] == 0) + 2*(-3*C[17] == 0) + \
+(-C[17] == 0) + (-6*\[Alpha]*C[17] == 0) + 2*(-3*\[Alpha]*C[17] == 0) + (-(\
+\[Alpha]*C[17]) == 0) + 2*(6*\[Alpha]*C[17] == 0) + (-18*C[18] == 0) + \
+(-6*C[18] == 0) + 2*(-3*\[Alpha]*C[18] == 0) + (18*\[Alpha]*C[18] == 0) + \
+(-6*C[19] == 0) + 2*(-3*C[19] == 0) + (-C[19] == 0) + (-6*\[Alpha]*C[19] == \
+0) + 2*(-3*\[Alpha]*C[19] == 0) + (-(\[Alpha]*C[19]) == 0) + (-6*C[20] == 0) \
++ (-3*C[20] == 0) + (-C[20] == 0) + 2*(-6*\[Alpha]*C[20] == 0) + 6*(-3*\
+\[Alpha]*C[20] == 0) + (-(\[Alpha]*C[20]) == 0) + (-18*C[21] == 0) + \
+2*(-12*C[21] == 0) + (-3*C[21] == 0) + (3*C[21] == 0) + (6*C[21] == 0) + \
+(-6*C[22] == 0) + (-3*C[22] == 0) + (3*C[22] == 0) + 2*(6*C[22] == 0) + \
+(3*C[23] == 0) + (6*C[23] == 0) + (12*C[23] == 0) + (-6*C[24] == 0) + \
+(-3*C[24] == 0) + (6*C[24] == 0) + (9*C[24] == 0) + (6*C[25] == 0) + \
+(15*C[25] == 0) + (-3*C[26] == 0) + (3*C[26] == 0) + 2*(6*C[26] == 0) + \
+(-3*C[27] == 0) + (3*C[27] == 0) + 2*(6*C[27] == 0) + (3*C[28] == 0) + \
+2*(6*C[28] == 0) + (3*C[29] == 0) + 2*(6*C[29] == 0) + 2*(6*C[30] == 0) + \
+(9*C[30] == 0) + (-18*C[31] == 0) + 2*(-12*C[31] == 0) + (-3*C[31] == 0) + \
+(3*C[31] == 0) + (6*C[31] == 0) + (-6*C[32] == 0) + (-3*C[32] == 0) + \
+(3*C[32] == 0) + 2*(6*C[32] == 0) + (3*C[33] == 0) + (6*C[33] == 0) + \
+(12*C[33] == 0) + (-6*C[34] == 0) + (-3*C[34] == 0) + (6*C[34] == 0) + \
+(9*C[34] == 0) + (6*C[35] == 0) + (15*C[35] == 0) + (-3*C[36] == 0) + \
+(3*C[36] == 0) + 2*(6*C[36] == 0) + (-3*C[37] == 0) + (3*C[37] == 0) + \
+2*(6*C[37] == 0) + (3*C[38] == 0) + 2*(6*C[38] == 0) + (3*C[39] == 0) + \
+2*(6*C[39] == 0) + 2*(6*C[40] == 0) + (9*C[40] == 0) + 3*(-12*C[41] == 0) + \
+4*(-6*\[Alpha]*C[41] == 0) + (4*C[42] == 0) + (12*C[42] == 0) + 2*(24*C[42] \
+== 0) + (4*\[Alpha]*C[42] == 0) + 4*(12*\[Alpha]*C[42] == 0) + \
+(24*\[Alpha]*C[42] == 0) + (-4*C[43] == 0) + (-3*C[43] == 0) + (-C[43] == 0) \
++ 2*(3*\[Alpha]*C[43] == 0) + 2*(\\\\frac{-1}{2}*\[Alpha]*C[43] == 0) + \
+3*(-6*C[44] == 0) + (-9*\[Alpha]*C[44] == 0) + 5*(-3*\[Alpha]*C[44] == 0) + \
+(C[45] == 0) + 4*(3*C[45] == 0) + (4*C[45] == 0) + 3*(6*C[45] == 0) + \
+(9*C[45] == 0) + 2*(\\\\frac{1}{\[Alpha]^{1}}*C[45] == 0) + 3*(3*\\\\frac{1}{\
+\[Alpha]^{1}}*C[45] == 0) + 2*(-6*C[48] == 0) + (-3*C[48] == 0) + (-C[48] == \
+0) + (-6*\[Alpha]*C[48] == 0) + 4*(-3*\[Alpha]*C[48] == 0) + \
+(-(\[Alpha]*C[48]) == 0) + 3*(-12*C[49] == 0) + 4*(-6*\[Alpha]*C[49] == 0) + \
+3*(-6*C[50] == 0) + 4*(-3*\[Alpha]*C[50] == 0) + (4*C[51] == 0) + (12*C[51] \
+== 0) + 2*(24*C[51] == 0) + (4*\[Alpha]*C[51] == 0) + 4*(12*\[Alpha]*C[51] == \
+0) + (24*\[Alpha]*C[51] == 0) + (-6*C[52] == 0) + 3*(12*C[52] == 0) + \
+3*(-24*C[53] == 0) + (12*C[53] == 0) + 3*(-(\\\\frac{1}{\[Alpha]^{1}}*C[54]) \
+== 0) + (\\\\frac{1}{2}*\\\\frac{1}{\[Alpha]^{1}}*C[54] == 0) + \
+4*(-3*\\\\frac{1}{\[Alpha]^{1}}*C[55] == 0) + \
+(\\\\frac{1}{\[Alpha]^{1}}*\\\\frac{3}{2}*C[55] == 0) + (-3*C[58] == 0) + \
+3*(6*C[58] == 0) + (-6*C[59] == 0) + 3*(12*C[59] == 0) + (-3*C[60] == 0) + \
+3*(6*C[60] == 0) + 3*(-24*C[61] == 0) + (12*C[61] == 0) + 4*(-6*C[46]*(0 -> \
+0) == 0) + 2*(-6*\[Alpha]*C[46]*(0 -> 0) == 0) + 6*(-3*\[Alpha]*C[46]*(0 -> \
+0) == 0) + (-(\[Alpha]*C[46]*(0 -> 0)) == 0) + (\[Alpha]*C[46]*(0 -> 0) == 0) \
++ 2*(6*\[Alpha]*C[46]*(0 -> 0) == 0) + 4*(-6*C[47]*(0 -> 0) == 0) + 2*(-6*\
+\[Alpha]*C[47]*(0 -> 0) == 0) + 6*(-3*\[Alpha]*C[47]*(0 -> 0) == 0) + (-(\
+\[Alpha]*C[47]*(0 -> 0)) == 0) + (\[Alpha]*C[47]*(0 -> 0) == 0) + 2*(6*\
+\[Alpha]*C[47]*(0 -> 0) == 0) + (-3*C[56]*(0 -> 0) == 0) + 4*(6*C[56]*(0 -> \
+0) == 0) + (-3*C[57]*(0 -> 0) == 0) + 4*(6*C[57]*(0 -> 0) == 0)}, \
+{-1\\\\frac{1}{\[Alpha]^{1}}C[45]v v_{x} D_x^{-1} + 2C[41] u_{x} D_x^{-1}uI + \
+2C[49] u_{x} D_x^{-1}uI + -4C[42] u_{x} D_x^{-1}vI + -4C[51] u_{x} D_x^{-1}vI \
++ C[10]uvI + C[11] D_x^{4} + C[12]u D_x^{2} + C[13]u^{2}I + C[14]v D_x^{2} + \
+C[15]v^{2}I + C[16] u_{x} D_x^{1} + C[17] v_{x} D_x^{1} + C[18] u_{2 x}I + \
+C[19] v_{2 x}I + C[1] D_x^{4} + C[20]uvI + C[2]u D_x^{2} + C[3]u^{2}I + \
+C[44]u u_{x} D_x^{-1} + C[46]0 -> 0 u_{x} D_x^{-1} + C[47]0 -> 0 u_{x} \
+D_x^{-1} + C[48] u_{x} D_x^{-1}vI + C[4]v D_x^{2} + C[50] u_{x} D_x^{-1}uI + \
+C[5]v^{2}I + C[6] u_{x} D_x^{1} + C[7] v_{x} D_x^{1} + C[8] u_{2 x}I + C[9] \
+v_{2 x}I + \\\\frac{1}{6}C[43] u_{3 x} D_x^{-1}, 2C[52] v_{x} D_x^{-1}uI + \
+2C[59] v_{x} D_x^{-1}uI + -4C[53] v_{x} D_x^{-1}vI + -4C[61] v_{x} D_x^{-1}vI \
++ C[21] D_x^{4} + C[22]u D_x^{2} + C[23]u^{2}I + C[24]v D_x^{2} + C[25]v^{2}I \
++ C[26] u_{x} D_x^{1} + C[27] v_{x} D_x^{1} + C[28] u_{2 x}I + C[29] v_{2 x}I \
++ C[30]uvI + C[31] D_x^{4} + C[32]u D_x^{2} + C[33]u^{2}I + C[34]v D_x^{2} + \
+C[35]v^{2}I + C[36] u_{x} D_x^{1} + C[37] v_{x} D_x^{1} + C[38] u_{2 x}I + \
+C[39] v_{2 x}I + C[40]uvI + C[56]0 -> 0 v_{x} D_x^{-1} + C[57]0 -> 0 v_{x} \
+D_x^{-1} + C[58] v_{x} D_x^{-1}vI + C[60] v_{x} D_x^{-1}uI + \
+\\\\frac{-1}{2}\\\\frac{1}{\[Alpha]^{1}}C[55]u v_{x} D_x^{-1} + \
+\\\\frac{-1}{6}\\\\frac{1}{\[Alpha]^{1}}C[54] v_{3 x} D_x^{-1}} /. {\[Alpha], \
+C[1], C[2], C[3], C[4], C[5], C[6], C[7], C[8], C[9], C[10], C[11], C[12], \
+C[13], C[14], C[15], C[16], C[17], C[18], C[19], C[20], C[21], C[22], C[23], \
+C[24], C[25], C[26], C[27], C[28], C[29], C[30], C[31], C[32], C[33], C[34], \
+C[35], C[36], C[37], C[38], C[39], C[40], C[41], C[42], C[43], C[44], C[45], \
+C[46], C[47], C[48], C[49], C[50], C[51], C[52], C[53], C[54], C[55], C[56], \
+C[57], C[58], C[59], C[60], C[61]}]\"\>"], "Print",
+ CellChangeTimes->{3.972610130179579*^9},
+ CellLabel->
+  "During evaluation of \
+In[28]:=",ExpressionUUID->"9b82de21-944c-410c-82bc-0924438ff67a"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Solve", "ivar", 
+   "\"\\!\\(\\*RowBox[{\\\"{\\\", RowBox[{\\\"\[Alpha]\\\", \\\",\\\", \
+TemplateBox[List[\\\"1\\\"], \\\"C\\\"], \\\",\\\", \
+TemplateBox[List[\\\"2\\\"], \\\"C\\\"], \\\",\\\", \
+TemplateBox[List[\\\"3\\\"], \\\"C\\\"], \\\",\\\", \
+TemplateBox[List[\\\"4\\\"], \\\"C\\\"], \\\",\\\", \
+TemplateBox[List[\\\"5\\\"], \\\"C\\\"], \\\",\\\", \
+TemplateBox[List[\\\"6\\\"], \\\"C\\\"], \\\",\\\", \
+TemplateBox[List[\\\"7\\\"], \\\"C\\\"], \\\",\\\", \
+TemplateBox[List[\\\"8\\\"], \\\"C\\\"], \\\",\\\", \
+TemplateBox[List[\\\"9\\\"], \\\"C\\\"], \\\",\\\", RowBox[{\\\"\
+\[LeftSkeleton]\\\", \\\"52\\\", \\\"\[RightSkeleton]\\\"}]}], \\\"}\\\"}]\\) \
+is not a valid variable.\"", 2, 28, 19, 27858035363772182891, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.972609978951883*^9, 3.9726101302004642`*^9},
+ CellLabel->
+  "During evaluation of \
+In[28]:=",ExpressionUUID->"8f1369c4-619e-4ddc-ab54-df45ac770a9c"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Inner", "heads", 
+   "\"Heads \\!\\(\\*RowBox[{\\\"List\\\"}]\\) and \
+\\!\\(\\*RowBox[{\\\"ReplaceAll\\\"}]\\) at positions \
+\\!\\(\\*RowBox[{\\\"3\\\"}]\\) and \\!\\(\\*RowBox[{\\\"2\\\"}]\\) are \
+expected to be the same.\"", 2, 28, 20, 27858035363772182891, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.972609978951883*^9, 3.9726101302639656`*^9},
+ CellLabel->
+  "During evaluation of \
+In[28]:=",ExpressionUUID->"4474ab25-40cc-46b0-b332-caf7fba72f66"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Inner", "heads", 
+   "\"Heads \\!\\(\\*RowBox[{\\\"List\\\"}]\\) and \
+\\!\\(\\*RowBox[{\\\"ReplaceAll\\\"}]\\) at positions \
+\\!\\(\\*RowBox[{\\\"3\\\"}]\\) and \\!\\(\\*RowBox[{\\\"2\\\"}]\\) are \
+expected to be the same.\"", 2, 28, 21, 27858035363772182891, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.972609978951883*^9, 3.972610130279719*^9},
+ CellLabel->
+  "During evaluation of \
+In[28]:=",ExpressionUUID->"17037dcb-5edd-4957-b276-7b930f07e1ed"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "Inner", "heads", 
+   "\"Heads \\!\\(\\*RowBox[{\\\"List\\\"}]\\) and \
+\\!\\(\\*RowBox[{\\\"ReplaceAll\\\"}]\\) at positions \
+\\!\\(\\*RowBox[{\\\"3\\\"}]\\) and \\!\\(\\*RowBox[{\\\"2\\\"}]\\) are \
+expected to be the same.\"", 2, 28, 22, 27858035363772182891, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.972609978951883*^9, 3.972610130279719*^9},
+ CellLabel->
+  "During evaluation of \
+In[28]:=",ExpressionUUID->"7e257290-18c9-468f-a21a-080aa034d610"],
+
+Cell[BoxData[
+ TemplateBox[{
+  "General", "stop", 
+   "\"Further output of \\!\\(\\*StyleBox[RowBox[{\\\"Inner\\\", \\\"::\\\", \
+\\\"heads\\\"}], \\\"MessageName\\\"]\\) will be suppressed during this \
+calculation.\"", 2, 28, 23, 27858035363772182891, "Local"},
+  "MessageTemplate"]], "Message", "MSG",
+ CellChangeTimes->{3.972609978951883*^9, 3.9726101302957563`*^9},
+ CellLabel->
+  "During evaluation of \
+In[28]:=",ExpressionUUID->"f005dae4-33d8-473c-9595-d017ef13f5e4"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["\<\"DefiningEquation`Operator`Constraints[{-1\\\\frac{1}{\
+\[Alpha]^{1}}C[45]v v_{x} D_x^{-1} + 2C[41] u_{x} D_x^{-1}uI + 2C[49] u_{x} \
+D_x^{-1}uI + -4C[42] u_{x} D_x^{-1}vI + -4C[51] u_{x} D_x^{-1}vI + C[10]uvI + \
+C[11] D_x^{4} + C[12]u D_x^{2} + C[13]u^{2}I + C[14]v D_x^{2} + C[15]v^{2}I + \
+C[16] u_{x} D_x^{1} + C[17] v_{x} D_x^{1} + C[18] u_{2 x}I + C[19] v_{2 x}I + \
+C[1] D_x^{4} + C[20]uvI + C[2]u D_x^{2} + C[3]u^{2}I + C[44]u u_{x} D_x^{-1} \
++ C[46]0 -> 0 u_{x} D_x^{-1} + C[47]0 -> 0 u_{x} D_x^{-1} + C[48] u_{x} \
+D_x^{-1}vI + C[4]v D_x^{2} + C[50] u_{x} D_x^{-1}uI + C[5]v^{2}I + C[6] u_{x} \
+D_x^{1} + C[7] v_{x} D_x^{1} + C[8] u_{2 x}I + C[9] v_{2 x}I + \
+\\\\frac{1}{6}C[43] u_{3 x} D_x^{-1}, 2C[52] v_{x} D_x^{-1}uI + 2C[59] v_{x} \
+D_x^{-1}uI + -4C[53] v_{x} D_x^{-1}vI + -4C[61] v_{x} D_x^{-1}vI + C[21] \
+D_x^{4} + C[22]u D_x^{2} + C[23]u^{2}I + C[24]v D_x^{2} + C[25]v^{2}I + C[26] \
+u_{x} D_x^{1} + C[27] v_{x} D_x^{1} + C[28] u_{2 x}I + C[29] v_{2 x}I + \
+C[30]uvI + C[31] D_x^{4} + C[32]u D_x^{2} + C[33]u^{2}I + C[34]v D_x^{2} + \
+C[35]v^{2}I + C[36] u_{x} D_x^{1} + C[37] v_{x} D_x^{1} + C[38] u_{2 x}I + \
+C[39] v_{2 x}I + C[40]uvI + C[56]0 -> 0 v_{x} D_x^{-1} + C[57]0 -> 0 v_{x} \
+D_x^{-1} + C[58] v_{x} D_x^{-1}vI + C[60] v_{x} D_x^{-1}uI + \
+\\\\frac{-1}{2}\\\\frac{1}{\[Alpha]^{1}}C[55]u v_{x} D_x^{-1} + \
+\\\\frac{-1}{6}\\\\frac{1}{\[Alpha]^{1}}C[54] v_{3 x} D_x^{-1}} /. {2-12 \
+C[21] == 0 + 2-12 C[31] == 0 + 2-3 C[22] == 0 + 23 C[22] == 0 + 23 C[24] == 0 \
++ 23 C[27] == 0 + 23 C[29] == 0 + 2-3 C[32] == 0 + 23 C[32] == 0 + 23 C[34] \
+== 0 + 23 C[37] == 0 + 23 C[39] == 0 + 2-60 C[1] == 0 + 2-60 C[11] == 0 + 2-6 \
+C[1] == 0 + 2-6 C[11] == 0 + 2-6 C[12] == 0 + 2-6 C[14] == 0 + 2-6 C[16] == 0 \
++ 2-6 C[17] == 0 + 2-6 C[2] == 0 + 2-6 C[26] == 0 + 2-6 C[36] == 0 + 2-6 C[4] \
+== 0 + 2-6 C[6] == 0 + 2-6 C[7] == 0 + 26 \[Alpha] C[26] == 0 + 26 \[Alpha] \
+C[36] == 0 + 2\\\\frac{1}{\[Alpha]^{1}} \\\\frac{3}{2} C[54] == 0 + 33 C[26] \
+== 0 + 33 C[28] == 0 + 33 C[36] == 0 + 33 C[38] == 0 + 3-3 C[56] (0 -> 0) == \
+0 + 3-3 C[57] (0 -> 0) == 0 + 3\\\\frac{-1}{2} \\\\frac{1}{\[Alpha]^{1}} \
+C[54] == 0 + 43 C[60] == 0 + 46 C[25] == 0 + 46 C[35] == 0 + 46 C[52] == 0 + \
+46 C[59] == 0 + 5-12 C[53] == 0 + 5-12 C[61] == 0 + 53 C[58] == 0 + 56 C[23] \
+== 0 + 56 C[33] == 0 + 73 C[30] == 0 + 73 C[40] == 0 + \
+7\\\\frac{1}{\[Alpha]^{1}} \\\\frac{-3}{2} C[55] == 0 + 83 C[56] (0 -> 0) == \
+0 + 83 C[57] (0 -> 0) == 0 + 146*False + (C[22] == 0) + (C[26] == 0) + (C[28] \
+== 0) + (C[30] == 0) + (C[32] == 0) + (C[36] == 0) + (C[38] == 0) + (C[40] == \
+0) + (C[60] == 0), 2-12 C[21] == 0 + 2-12 C[31] == 0 + 224 C[42] == 0 + 224 \
+C[51] == 0 + 2-3 C[17] == 0 + 2-3 C[19] == 0 + 2-3 C[7] == 0 + 2-3 C[9] == 0 \
++ 2-3 \[Alpha] C[12] == 0 + 2-3 \[Alpha] C[14] == 0 + 2-3 \[Alpha] C[16] == 0 \
++ 2-3 \[Alpha] C[17] == 0 + 2-3 \[Alpha] C[18] == 0 + 2-3 \[Alpha] C[19] == 0 \
++ 2-3 \[Alpha] C[2] == 0 + 2-3 \[Alpha] C[4] == 0 + 23 \[Alpha] C[43] == 0 + \
+2-3 \[Alpha] C[6] == 0 + 2-3 \[Alpha] C[7] == 0 + 2-3 \[Alpha] C[8] == 0 + \
+2-3 \[Alpha] C[9] == 0 + 260 \[Alpha] C[1] == 0 + 260 \[Alpha] C[11] == 0 + \
+2-6 C[16] == 0 + 26 C[22] == 0 + 26 C[26] == 0 + 26 C[27] == 0 + 26 C[28] == \
+0 + 26 C[29] == 0 + 26 C[30] == 0 + 26 C[32] == 0 + 26 C[36] == 0 + 26 C[37] \
+== 0 + 26 C[38] == 0 + 26 C[39] == 0 + 26 C[40] == 0 + 2-6 C[48] == 0 + 2-6 \
+C[6] == 0 + 2-6 \[Alpha] C[10] == 0 + 26 \[Alpha] C[17] == 0 + 2-6 \[Alpha] \
+C[20] == 0 + 2-6 \[Alpha] C[46] (0 -> 0) == 0 + 26 \[Alpha] C[46] (0 -> 0) == \
+0 + 2-6 \[Alpha] C[47] (0 -> 0) == 0 + 26 \[Alpha] C[47] (0 -> 0) == 0 + 26 \
+\[Alpha] C[7] == 0 + 2\\\\frac{-1}{2} \[Alpha] C[43] == 0 + 2\\\\frac{1}{\
+\[Alpha]^{1}} C[45] == 0 + 3-12 C[41] == 0 + 3-12 C[49] == 0 + 312 C[52] == 0 \
++ 312 C[59] == 0 + 3-24 C[53] == 0 + 3-24 C[61] == 0 + 33 \
+\\\\frac{1}{\[Alpha]^{1}} C[45] == 0 + 3-6 C[44] == 0 + 36 C[45] == 0 + 3-6 \
+C[50] == 0 + 36 C[58] == 0 + 36 C[60] == 0 + 3-(\\\\frac{1}{\[Alpha]^{1}} \
+C[54]) == 0 + 412 \[Alpha] C[42] == 0 + 412 \[Alpha] C[51] == 0 + 43 C[45] == \
+0 + 4-3 \\\\frac{1}{\[Alpha]^{1}} C[55] == 0 + 4-3 \[Alpha] C[48] == 0 + 4-3 \
+\[Alpha] C[50] == 0 + 4-6 C[46] (0 -> 0) == 0 + 4-6 C[47] (0 -> 0) == 0 + 46 \
+C[56] (0 -> 0) == 0 + 46 C[57] (0 -> 0) == 0 + 4-6 \[Alpha] C[13] == 0 + 4-6 \
+\[Alpha] C[15] == 0 + 4-6 \[Alpha] C[3] == 0 + 4-6 \[Alpha] C[41] == 0 + 4-6 \
+\[Alpha] C[49] == 0 + 4-6 \[Alpha] C[5] == 0 + 5-3 \[Alpha] C[44] == 0 + 6-3 \
+\[Alpha] C[10] == 0 + 6-3 \[Alpha] C[20] == 0 + 6-3 \[Alpha] C[46] (0 -> 0) \
+== 0 + 6-3 \[Alpha] C[47] (0 -> 0) == 0 + 148*False + (C[45] == 0)} /. \
+-Inner[DefiningEquation`Operator`ExpressionMultiply, {-6v D_x^{1} + -6 v_{x}I \
++ 6\[Alpha]u D_x^{1} + 6\[Alpha] u_{x}I + \[Alpha] D_x^{3}, -1 D_x^{3} + -3u \
+D_x^{1} + -3 v_{x}I}, -1\\\\frac{1}{\[Alpha]^{1}}C[45]v v_{x} D_x^{-1} + \
+2C[41] u_{x} D_x^{-1}uI + 2C[49] u_{x} D_x^{-1}uI + 2C[52] v_{x} D_x^{-1}uI + \
+2C[59] v_{x} D_x^{-1}uI + -4C[42] u_{x} D_x^{-1}vI + -4C[51] u_{x} D_x^{-1}vI \
++ -4C[53] v_{x} D_x^{-1}vI + -4C[61] v_{x} D_x^{-1}vI + C[10]uvI + C[11] \
+D_x^{4} + C[12]u D_x^{2} + C[13]u^{2}I + C[14]v D_x^{2} + C[15]v^{2}I + C[16] \
+u_{x} D_x^{1} + C[17] v_{x} D_x^{1} + C[18] u_{2 x}I + C[19] v_{2 x}I + C[1] \
+D_x^{4} + C[20]uvI + C[21] D_x^{4} + C[22]u D_x^{2} + C[23]u^{2}I + C[24]v \
+D_x^{2} + C[25]v^{2}I + C[26] u_{x} D_x^{1} + C[27] v_{x} D_x^{1} + C[28] \
+u_{2 x}I + C[29] v_{2 x}I + C[2]u D_x^{2} + C[30]uvI + C[31] D_x^{4} + C[32]u \
+D_x^{2} + C[33]u^{2}I + C[34]v D_x^{2} + C[35]v^{2}I + C[36] u_{x} D_x^{1} + \
+C[37] v_{x} D_x^{1} + C[38] u_{2 x}I + C[39] v_{2 x}I + C[3]u^{2}I + C[40]uvI \
++ C[44]u u_{x} D_x^{-1} + C[46]0 -> 0 u_{x} D_x^{-1} + C[47]0 -> 0 u_{x} \
+D_x^{-1} + C[48] u_{x} D_x^{-1}vI + C[4]v D_x^{2} + C[50] u_{x} D_x^{-1}uI + \
+C[56]0 -> 0 v_{x} D_x^{-1} + C[57]0 -> 0 v_{x} D_x^{-1} + C[58] v_{x} \
+D_x^{-1}vI + C[5]v^{2}I + C[60] v_{x} D_x^{-1}uI + C[6] u_{x} D_x^{1} + C[7] \
+v_{x} D_x^{1} + C[8] u_{2 x}I + C[9] v_{2 x}I + \\\\frac{-1}{2}\\\\frac{1}{\
+\[Alpha]^{1}}C[55]u v_{x} D_x^{-1} + \\\\frac{1}{6}C[43] u_{3 x} D_x^{-1} + \
+\\\\frac{-1}{6}\\\\frac{1}{\[Alpha]^{1}}C[54] v_{3 x} D_x^{-1} /. 212 C[53] \
+== 0 + 212 C[61] == 0 + 2-18 C[21] == 0 + 2-18 C[31] == 0 + 224 C[42] == 0 + \
+224 C[51] == 0 + 2-3 C[10] == 0 + 2-3 C[17] == 0 + 2-3 C[19] == 0 + 2-3 C[20] \
+== 0 + 2-3 C[21] == 0 + 2-3 C[22] == 0 + 23 C[22] == 0 + 2-3 C[24] == 0 + 23 \
+C[24] == 0 + 2-3 C[26] == 0 + 23 C[27] == 0 + 23 C[29] == 0 + 2-3 C[31] == 0 \
++ 2-3 C[32] == 0 + 23 C[32] == 0 + 2-3 C[34] == 0 + 23 C[34] == 0 + 2-3 C[36] \
+== 0 + 23 C[37] == 0 + 23 C[39] == 0 + 2-3 C[58] == 0 + 2-3 C[60] == 0 + 2-3 \
+C[7] == 0 + 2-3 C[9] == 0 + 2-3 \[Alpha] C[12] == 0 + 2-3 \[Alpha] C[14] == 0 \
++ 2-3 \[Alpha] C[16] == 0 + 2-3 \[Alpha] C[17] == 0 + 2-3 \[Alpha] C[18] == 0 \
++ 2-3 \[Alpha] C[19] == 0 + 2-3 \[Alpha] C[2] == 0 + 2-3 \[Alpha] C[4] == 0 + \
+23 \[Alpha] C[43] == 0 + 2-3 \[Alpha] C[6] == 0 + 2-3 \[Alpha] C[7] == 0 + \
+2-3 \[Alpha] C[8] == 0 + 2-3 \[Alpha] C[9] == 0 + 2-60 C[1] == 0 + 2-60 C[11] \
+== 0 + 260 \[Alpha] C[1] == 0 + 260 \[Alpha] C[11] == 0 + 2-6 C[1] == 0 + 2-6 \
+C[10] == 0 + 2-6 C[11] == 0 + 2-6 C[12] == 0 + 2-6 C[14] == 0 + 2-6 C[15] == \
+0 + 2-6 C[17] == 0 + 2-6 C[18] == 0 + 2-6 C[19] == 0 + 2-6 C[2] == 0 + 2-6 \
+C[20] == 0 + 2-6 C[22] == 0 + 26 C[22] == 0 + 2-6 C[24] == 0 + 2-6 C[26] == 0 \
++ 26 C[26] == 0 + 26 C[27] == 0 + 26 C[28] == 0 + 26 C[29] == 0 + 26 C[30] == \
+0 + 2-6 C[32] == 0 + 26 C[32] == 0 + 2-6 C[34] == 0 + 2-6 C[36] == 0 + 26 \
+C[36] == 0 + 26 C[37] == 0 + 26 C[38] == 0 + 26 C[39] == 0 + 2-6 C[4] == 0 + \
+26 C[40] == 0 + 2-6 C[48] == 0 + 2-6 C[5] == 0 + 2-6 C[52] == 0 + 2-6 C[59] \
+== 0 + 2-6 C[7] == 0 + 2-6 C[8] == 0 + 2-6 C[9] == 0 + 2-6 \[Alpha] C[10] == \
+0 + 26 \[Alpha] C[17] == 0 + 2-6 \[Alpha] C[20] == 0 + 26 \[Alpha] C[26] == 0 \
++ 26 \[Alpha] C[36] == 0 + 2-6 \[Alpha] C[46] (0 -> 0) == 0 + 26 \[Alpha] \
+C[46] (0 -> 0) == 0 + 2-6 \[Alpha] C[47] (0 -> 0) == 0 + 26 \[Alpha] C[47] (0 \
+-> 0) == 0 + 26 \[Alpha] C[7] == 0 + 2-C[43] == 0 + 2\\\\frac{1}{2} \
+\\\\frac{1}{\[Alpha]^{1}} C[54] == 0 + 2\\\\frac{-1}{2} \[Alpha] C[43] == 0 + \
+2\\\\frac{1}{\[Alpha]^{1}} C[45] == 0 + 2\\\\frac{1}{\[Alpha]^{1}} \
+\\\\frac{3}{2} C[54] == 0 + 3-12 C[41] == 0 + 3-12 C[49] == 0 + 312 C[52] == \
+0 + 312 C[59] == 0 + 3-24 C[53] == 0 + 3-24 C[61] == 0 + 33 C[26] == 0 + 33 \
+C[28] == 0 + 33 C[36] == 0 + 33 C[38] == 0 + 3-3 C[56] (0 -> 0) == 0 + 3-3 \
+C[57] (0 -> 0) == 0 + 33 \\\\frac{1}{\[Alpha]^{1}} C[45] == 0 + 3-6 C[44] == \
+0 + 36 C[45] == 0 + 3-6 C[50] == 0 + 36 C[58] == 0 + 36 C[60] == 0 + \
+3\\\\frac{-1}{2} \\\\frac{1}{\[Alpha]^{1}} C[54] == 0 + 3-(\\\\frac{1}{\
+\[Alpha]^{1}} C[54]) == 0 + 4-12 C[21] == 0 + 4-12 C[31] == 0 + 412 \[Alpha] \
+C[42] == 0 + 412 \[Alpha] C[51] == 0 + 43 C[45] == 0 + 43 C[60] == 0 + 4-3 \\\
+\\frac{1}{\[Alpha]^{1}} C[55] == 0 + 4-3 \[Alpha] C[48] == 0 + 4-3 \[Alpha] \
+C[50] == 0 + 4-6 C[16] == 0 + 46 C[25] == 0 + 46 C[35] == 0 + 4-6 C[46] (0 -> \
+0) == 0 + 4-6 C[47] (0 -> 0) == 0 + 46 C[52] == 0 + 46 C[56] (0 -> 0) == 0 + \
+46 C[57] (0 -> 0) == 0 + 46 C[59] == 0 + 4-6 C[6] == 0 + 4-6 \[Alpha] C[13] \
+== 0 + 4-6 \[Alpha] C[15] == 0 + 4-6 \[Alpha] C[3] == 0 + 4-6 \[Alpha] C[41] \
+== 0 + 4-6 \[Alpha] C[49] == 0 + 4-6 \[Alpha] C[5] == 0 + 5-12 C[53] == 0 + \
+5-12 C[61] == 0 + 53 C[58] == 0 + 5-3 \[Alpha] C[44] == 0 + 56 C[23] == 0 + \
+56 C[33] == 0 + 6-3 \[Alpha] C[10] == 0 + 6-3 \[Alpha] C[20] == 0 + 6-3 \
+\[Alpha] C[46] (0 -> 0) == 0 + 6-3 \[Alpha] C[47] (0 -> 0) == 0 + 73 C[30] == \
+0 + 73 C[40] == 0 + 7\\\\frac{1}{\[Alpha]^{1}} \\\\frac{-3}{2} C[55] == 0 + \
+83 C[56] (0 -> 0) == 0 + 83 C[57] (0 -> 0) == 0 + 234*False + (C[22] == 0) + \
+(C[26] == 0) + (C[28] == 0) + (C[30] == 0) + (C[32] == 0) + (C[36] == 0) + \
+(C[38] == 0) + (C[40] == 0) + (C[45] == 0) + (C[60] == 0), Plus] + \
+Inner[DefiningEquation`Operator`ExpressionMultiply, \
+-1\\\\frac{1}{\[Alpha]^{1}}C[45]v v_{x} D_x^{-1} + 2C[41] u_{x} D_x^{-1}uI + \
+2C[49] u_{x} D_x^{-1}uI + 2C[52] v_{x} D_x^{-1}uI + 2C[59] v_{x} D_x^{-1}uI + \
+-4C[42] u_{x} D_x^{-1}vI + -4C[51] u_{x} D_x^{-1}vI + -4C[53] v_{x} \
+D_x^{-1}vI + -4C[61] v_{x} D_x^{-1}vI + C[10]uvI + C[11] D_x^{4} + C[12]u \
+D_x^{2} + C[13]u^{2}I + C[14]v D_x^{2} + C[15]v^{2}I + C[16] u_{x} D_x^{1} + \
+C[17] v_{x} D_x^{1} + C[18] u_{2 x}I + C[19] v_{2 x}I + C[1] D_x^{4} + \
+C[20]uvI + C[21] D_x^{4} + C[22]u D_x^{2} + C[23]u^{2}I + C[24]v D_x^{2} + \
+C[25]v^{2}I + C[26] u_{x} D_x^{1} + C[27] v_{x} D_x^{1} + C[28] u_{2 x}I + \
+C[29] v_{2 x}I + C[2]u D_x^{2} + C[30]uvI + C[31] D_x^{4} + C[32]u D_x^{2} + \
+C[33]u^{2}I + C[34]v D_x^{2} + C[35]v^{2}I + C[36] u_{x} D_x^{1} + C[37] \
+v_{x} D_x^{1} + C[38] u_{2 x}I + C[39] v_{2 x}I + C[3]u^{2}I + C[40]uvI + \
+C[44]u u_{x} D_x^{-1} + C[46]0 -> 0 u_{x} D_x^{-1} + C[47]0 -> 0 u_{x} \
+D_x^{-1} + C[48] u_{x} D_x^{-1}vI + C[4]v D_x^{2} + C[50] u_{x} D_x^{-1}uI + \
+C[56]0 -> 0 v_{x} D_x^{-1} + C[57]0 -> 0 v_{x} D_x^{-1} + C[58] v_{x} \
+D_x^{-1}vI + C[5]v^{2}I + C[60] v_{x} D_x^{-1}uI + C[6] u_{x} D_x^{1} + C[7] \
+v_{x} D_x^{1} + C[8] u_{2 x}I + C[9] v_{2 x}I + \\\\frac{-1}{2}\\\\frac{1}{\
+\[Alpha]^{1}}C[55]u v_{x} D_x^{-1} + \\\\frac{1}{6}C[43] u_{3 x} D_x^{-1} + \
+\\\\frac{-1}{6}\\\\frac{1}{\[Alpha]^{1}}C[54] v_{3 x} D_x^{-1} /. 212 C[53] \
+== 0 + 212 C[61] == 0 + 2-18 C[21] == 0 + 2-18 C[31] == 0 + 224 C[42] == 0 + \
+224 C[51] == 0 + 2-3 C[10] == 0 + 2-3 C[17] == 0 + 2-3 C[19] == 0 + 2-3 C[20] \
+== 0 + 2-3 C[21] == 0 + 2-3 C[22] == 0 + 23 C[22] == 0 + 2-3 C[24] == 0 + 23 \
+C[24] == 0 + 2-3 C[26] == 0 + 23 C[27] == 0 + 23 C[29] == 0 + 2-3 C[31] == 0 \
++ 2-3 C[32] == 0 + 23 C[32] == 0 + 2-3 C[34] == 0 + 23 C[34] == 0 + 2-3 C[36] \
+== 0 + 23 C[37] == 0 + 23 C[39] == 0 + 2-3 C[58] == 0 + 2-3 C[60] == 0 + 2-3 \
+C[7] == 0 + 2-3 C[9] == 0 + 2-3 \[Alpha] C[12] == 0 + 2-3 \[Alpha] C[14] == 0 \
++ 2-3 \[Alpha] C[16] == 0 + 2-3 \[Alpha] C[17] == 0 + 2-3 \[Alpha] C[18] == 0 \
++ 2-3 \[Alpha] C[19] == 0 + 2-3 \[Alpha] C[2] == 0 + 2-3 \[Alpha] C[4] == 0 + \
+23 \[Alpha] C[43] == 0 + 2-3 \[Alpha] C[6] == 0 + 2-3 \[Alpha] C[7] == 0 + \
+2-3 \[Alpha] C[8] == 0 + 2-3 \[Alpha] C[9] == 0 + 2-60 C[1] == 0 + 2-60 C[11] \
+== 0 + 260 \[Alpha] C[1] == 0 + 260 \[Alpha] C[11] == 0 + 2-6 C[1] == 0 + 2-6 \
+C[10] == 0 + 2-6 C[11] == 0 + 2-6 C[12] == 0 + 2-6 C[14] == 0 + 2-6 C[15] == \
+0 + 2-6 C[17] == 0 + 2-6 C[18] == 0 + 2-6 C[19] == 0 + 2-6 C[2] == 0 + 2-6 \
+C[20] == 0 + 2-6 C[22] == 0 + 26 C[22] == 0 + 2-6 C[24] == 0 + 2-6 C[26] == 0 \
++ 26 C[26] == 0 + 26 C[27] == 0 + 26 C[28] == 0 + 26 C[29] == 0 + 26 C[30] == \
+0 + 2-6 C[32] == 0 + 26 C[32] == 0 + 2-6 C[34] == 0 + 2-6 C[36] == 0 + 26 \
+C[36] == 0 + 26 C[37] == 0 + 26 C[38] == 0 + 26 C[39] == 0 + 2-6 C[4] == 0 + \
+26 C[40] == 0 + 2-6 C[48] == 0 + 2-6 C[5] == 0 + 2-6 C[52] == 0 + 2-6 C[59] \
+== 0 + 2-6 C[7] == 0 + 2-6 C[8] == 0 + 2-6 C[9] == 0 + 2-6 \[Alpha] C[10] == \
+0 + 26 \[Alpha] C[17] == 0 + 2-6 \[Alpha] C[20] == 0 + 26 \[Alpha] C[26] == 0 \
++ 26 \[Alpha] C[36] == 0 + 2-6 \[Alpha] C[46] (0 -> 0) == 0 + 26 \[Alpha] \
+C[46] (0 -> 0) == 0 + 2-6 \[Alpha] C[47] (0 -> 0) == 0 + 26 \[Alpha] C[47] (0 \
+-> 0) == 0 + 26 \[Alpha] C[7] == 0 + 2-C[43] == 0 + 2\\\\frac{1}{2} \
+\\\\frac{1}{\[Alpha]^{1}} C[54] == 0 + 2\\\\frac{-1}{2} \[Alpha] C[43] == 0 + \
+2\\\\frac{1}{\[Alpha]^{1}} C[45] == 0 + 2\\\\frac{1}{\[Alpha]^{1}} \
+\\\\frac{3}{2} C[54] == 0 + 3-12 C[41] == 0 + 3-12 C[49] == 0 + 312 C[52] == \
+0 + 312 C[59] == 0 + 3-24 C[53] == 0 + 3-24 C[61] == 0 + 33 C[26] == 0 + 33 \
+C[28] == 0 + 33 C[36] == 0 + 33 C[38] == 0 + 3-3 C[56] (0 -> 0) == 0 + 3-3 \
+C[57] (0 -> 0) == 0 + 33 \\\\frac{1}{\[Alpha]^{1}} C[45] == 0 + 3-6 C[44] == \
+0 + 36 C[45] == 0 + 3-6 C[50] == 0 + 36 C[58] == 0 + 36 C[60] == 0 + \
+3\\\\frac{-1}{2} \\\\frac{1}{\[Alpha]^{1}} C[54] == 0 + 3-(\\\\frac{1}{\
+\[Alpha]^{1}} C[54]) == 0 + 4-12 C[21] == 0 + 4-12 C[31] == 0 + 412 \[Alpha] \
+C[42] == 0 + 412 \[Alpha] C[51] == 0 + 43 C[45] == 0 + 43 C[60] == 0 + 4-3 \\\
+\\frac{1}{\[Alpha]^{1}} C[55] == 0 + 4-3 \[Alpha] C[48] == 0 + 4-3 \[Alpha] \
+C[50] == 0 + 4-6 C[16] == 0 + 46 C[25] == 0 + 46 C[35] == 0 + 4-6 C[46] (0 -> \
+0) == 0 + 4-6 C[47] (0 -> 0) == 0 + 46 C[52] == 0 + 46 C[56] (0 -> 0) == 0 + \
+46 C[57] (0 -> 0) == 0 + 46 C[59] == 0 + 4-6 C[6] == 0 + 4-6 \[Alpha] C[13] \
+== 0 + 4-6 \[Alpha] C[15] == 0 + 4-6 \[Alpha] C[3] == 0 + 4-6 \[Alpha] C[41] \
+== 0 + 4-6 \[Alpha] C[49] == 0 + 4-6 \[Alpha] C[5] == 0 + 5-12 C[53] == 0 + \
+5-12 C[61] == 0 + 53 C[58] == 0 + 5-3 \[Alpha] C[44] == 0 + 56 C[23] == 0 + \
+56 C[33] == 0 + 6-3 \[Alpha] C[10] == 0 + 6-3 \[Alpha] C[20] == 0 + 6-3 \
+\[Alpha] C[46] (0 -> 0) == 0 + 6-3 \[Alpha] C[47] (0 -> 0) == 0 + 73 C[30] == \
+0 + 73 C[40] == 0 + 7\\\\frac{1}{\[Alpha]^{1}} \\\\frac{-3}{2} C[55] == 0 + \
+83 C[56] (0 -> 0) == 0 + 83 C[57] (0 -> 0) == 0 + 234*False + (C[22] == 0) + \
+(C[26] == 0) + (C[28] == 0) + (C[30] == 0) + (C[32] == 0) + (C[36] == 0) + \
+(C[38] == 0) + (C[40] == 0) + (C[45] == 0) + (C[60] == 0), {-6v D_x^{1} + -6 \
+v_{x}I + 6\[Alpha]u D_x^{1} + 6\[Alpha] u_{x}I + \[Alpha] D_x^{3}, -1 D_x^{3} \
++ -3u D_x^{1} + -3 v_{x}I}, Plus] + ({0, 0} /. {146*True + (C[22] == 0) + \
+(C[26] == 0) + (C[28] == 0) + (C[30] == 0) + (C[32] == 0) + (C[36] == 0) + \
+(C[38] == 0) + (C[40] == 0) + (C[60] == 0), 148*True + (C[45] == 0)}) + \
+({-12C[13]uv v_{x}I + -12C[3]uv v_{x}I + -12C[41]^{2} v_{x}^{2} D_x^{-1}uI + \
+-12C[41] u_{x} D_x^{-1}v v_{x}I + -12C[41]v v_{2 x} D_x^{-1}uI + 12C[42] \
+u_{x} D_x^{-1}u v_{x}I + -12C[49]^{2} v_{x}^{2} D_x^{-1}uI + -12C[49] u_{x} \
+D_x^{-1}v v_{x}I + -12C[49]v v_{2 x} D_x^{-1}uI + 12C[51] u_{x} D_x^{-1}u \
+v_{x}I + 12\[Alpha]C[13]u^{2} u_{x}I + 12\[Alpha]C[3]u^{2} u_{x}I + \
+12\[Alpha]C[41]^{2} u_{x}^{2} D_x^{-1}uI + 12\[Alpha]C[41]u u_{2 x} \
+D_x^{-1}uI + 12\[Alpha]C[41] u_{x} D_x^{-1}u u_{x}I + 12\[Alpha]C[44]u^{2} \
+u_{x}^{2} D_x^{-1} + 12\[Alpha]C[49]^{2} u_{x}^{2} D_x^{-1}uI + \
+12\[Alpha]C[49]u u_{2 x} D_x^{-1}uI + 12\[Alpha]C[49] u_{x} D_x^{-1}u u_{x}I \
++ -18C[18] v_{x} v_{2 x}I + -18C[8] v_{x} v_{2 x}I + 18\[Alpha]C[18] u_{x} \
+u_{2 x}I + 18\[Alpha]C[8] u_{x} u_{2 x}I + -1C[10]u v_{3 x}I + -1C[14] v_{3 \
+x} D_x^{2} + -1C[17] v_{4 x} D_x^{1} + -1C[19] v_{5 x}I + -1C[20]u v_{3 x}I + \
+-1C[43]v v_{4 x} D_x^{-1} + -1C[48] u_{x} D_x^{-1} v_{3 x}I + -1C[4] v_{3 x} \
+D_x^{2} + -1C[7] v_{4 x} D_x^{1} + -1C[9] v_{5 x}I + 24C[42]^{2} v_{x}^{2} \
+D_x^{-1}vI + 24C[42]v v_{2 x} D_x^{-1}vI + 24C[51]^{2} v_{x}^{2} D_x^{-1}vI + \
+24C[51]v v_{2 x} D_x^{-1}vI + -24\[Alpha]C[42]^{2} u_{x}^{2} D_x^{-1}vI + -24\
+\[Alpha]C[42]u u_{2 x} D_x^{-1}vI + -24\[Alpha]C[51]^{2} u_{x}^{2} D_x^{-1}vI \
++ -24\[Alpha]C[51]u u_{2 x} D_x^{-1}vI + -2C[15]v v_{3 x}I + -2C[5]v v_{3 x}I \
++ 2\[Alpha]C[13]u u_{3 x}I + 2\[Alpha]C[3]u u_{3 x}I + 2\[Alpha]C[41] u_{4 x} \
+D_x^{-1}uI + 2\[Alpha]C[41] u_{x} D_x^{-1} u_{3 x}I + 2\[Alpha]C[49] u_{4 x} \
+D_x^{-1}uI + 2\[Alpha]C[49] u_{x} D_x^{-1} u_{3 x}I + -3C[10]u^{2} v_{x}I + \
+-3C[14]u v_{x} D_x^{2} + -3C[17]u v_{2 x} D_x^{1} + -3C[17] u_{x} v_{x} \
+D_x^{1} + -3C[19]u v_{3 x}I + -3C[19] v_{x} u_{2 x}I + -3C[20]u^{2} v_{x}I + \
+-3C[43]^{2} v_{2 x}^{2} D_x^{-1} + -3C[48] u_{x} D_x^{-1}u v_{x}I + -3C[4]u \
+v_{x} D_x^{2} + -3C[7]u v_{2 x} D_x^{1} + -3C[7] u_{x} v_{x} D_x^{1} + \
+-3C[9]u v_{3 x}I + -3C[9] v_{x} u_{2 x}I + \
+3\\\\frac{1}{\[Alpha]^{1}}C[45]u^{2} v_{x}^{2} D_x^{-1} + 3\\\\frac{1}{\
+\[Alpha]^{1}}C[45]uv v_{2 x} D_x^{-1} + 3\\\\frac{1}{\[Alpha]^{1}}C[45]v \
+u_{x} v_{x} D_x^{-1} + 3\[Alpha]C[43]^{2} u_{2 x}^{2} D_x^{-1} + 4C[42] u_{x} \
+D_x^{-1} v_{3 x}I + -4C[43] v_{x} v_{3 x} D_x^{-1} + 4C[51] u_{x} D_x^{-1} \
+v_{3 x}I + -4\[Alpha]C[42] u_{4 x} D_x^{-1}vI + 4\[Alpha]C[43] u_{x} u_{3 x} \
+D_x^{-1} + -4\[Alpha]C[51] u_{4 x} D_x^{-1}vI + -6C[10]v^{2} v_{x}I + \
+-6C[12]v v_{x} D_x^{2} + -6C[15]uv v_{x}I + -6C[16]^{2} v_{x}^{2} D_x^{1} + \
+-6C[16]v v_{2 x} D_x^{1} + -6C[18]v v_{3 x}I + -6C[19] u_{x} v_{2 x}I + \
+-6C[20]v^{2} v_{x}I + -6C[2]v v_{x} D_x^{2} + -6C[44]u^{2} v_{x}^{2} D_x^{-1} \
++ -6C[44]uv v_{2 x} D_x^{-1} + -6C[44]v u_{x} v_{x} D_x^{-1} + -6C[46]0 -> \
+0^{2} v_{x}^{2} D_x^{-1} + -6C[46]0 -> 0 u_{x}^{2} v_{x}^{2} D_x^{-1} + \
+-6C[46]0 -> 0v u_{x} v_{2 x} D_x^{-1} + -6C[46]0 -> 0v v_{2 x} D_x^{-1} + \
+-6C[47]0 -> 0^{2} v_{x}^{2} D_x^{-1} + -6C[47]0 -> 0 u_{x}^{2} v_{x}^{2} \
+D_x^{-1} + -6C[47]0 -> 0v u_{x} v_{2 x} D_x^{-1} + -6C[47]0 -> 0v v_{2 x} \
+D_x^{-1} + -6C[48]^{2} v_{x}^{2} D_x^{-1}vI + -6C[48]v v_{2 x} D_x^{-1}vI + \
+-6C[50]^{2} v_{x}^{2} D_x^{-1}uI + -6C[50] u_{x} D_x^{-1}v v_{x}I + -6C[50]v \
+v_{2 x} D_x^{-1}uI + -6C[5]uv v_{x}I + -6C[6]^{2} v_{x}^{2} D_x^{1} + -6C[6]v \
+v_{2 x} D_x^{1} + -6C[8]v v_{3 x}I + -6C[9] u_{x} v_{2 x}I + 6\[Alpha]C[10]uv \
+u_{x}I + 6\[Alpha]C[12]u u_{x} D_x^{2} + 6\[Alpha]C[16]^{2} u_{x}^{2} D_x^{1} \
++ 6\[Alpha]C[16]u u_{2 x} D_x^{1} + 6\[Alpha]C[18]u u_{3 x}I + \
+6\[Alpha]C[20]uv u_{x}I + 6\[Alpha]C[2]u u_{x} D_x^{2} + 6\[Alpha]C[44]u^{2} \
+u_{2 x} D_x^{-1} + 6\[Alpha]C[46]0 -> 0^{2} u_{x}^{2} D_x^{-1} + \
+6\[Alpha]C[46]0 -> 0^{3} u_{x}^{3} D_x^{-1} + 6\[Alpha]C[46]0 -> 0u u_{2 x} \
+D_x^{-1} + 6\[Alpha]C[46]0 -> 0u u_{x} u_{2 x} D_x^{-1} + 6\[Alpha]C[47]0 -> \
+0^{2} u_{x}^{2} D_x^{-1} + 6\[Alpha]C[47]0 -> 0^{3} u_{x}^{3} D_x^{-1} + 6\
+\[Alpha]C[47]0 -> 0u u_{2 x} D_x^{-1} + 6\[Alpha]C[47]0 -> 0u u_{x} u_{2 x} \
+D_x^{-1} + 6\[Alpha]C[48]^{2} u_{x}^{2} D_x^{-1}vI + 6\[Alpha]C[48]u u_{2 x} \
+D_x^{-1}vI + 6\[Alpha]C[50]^{2} u_{x}^{2} D_x^{-1}uI + 6\[Alpha]C[50]u u_{2 \
+x} D_x^{-1}uI + 6\[Alpha]C[50] u_{x} D_x^{-1}u u_{x}I + 6\[Alpha]C[6]^{2} \
+u_{x}^{2} D_x^{1} + 6\[Alpha]C[6]u u_{2 x} D_x^{1} + 6\[Alpha]C[8]u u_{3 x}I \
++ \\\\frac{1}{6}\[Alpha]C[43] u_{6 x} D_x^{-1} + \
+\\\\frac{1}{\[Alpha]^{1}}C[45]v v_{4 x} D_x^{-1} + \
+\\\\frac{1}{\[Alpha]^{1}}C[45] v_{x} v_{3 x} D_x^{-1} + \[Alpha]C[10]v u_{3 \
+x}I + \[Alpha]C[12] u_{3 x} D_x^{2} + \[Alpha]C[16] u_{4 x} D_x^{1} + \
+\[Alpha]C[18] u_{5 x}I + \[Alpha]C[20]v u_{3 x}I + \[Alpha]C[2] u_{3 x} \
+D_x^{2} + \[Alpha]C[43]u u_{4 x} D_x^{-1} + \[Alpha]C[44]u u_{4 x} D_x^{-1} + \
+\[Alpha]C[44] u_{x} u_{3 x} D_x^{-1} + \[Alpha]C[46]0 -> 0 u_{4 x} D_x^{-1} + \
+\[Alpha]C[46]0 -> 0 u_{x} u_{4 x} D_x^{-1} + \[Alpha]C[47]0 -> 0 u_{4 x} \
+D_x^{-1} + \[Alpha]C[47]0 -> 0 u_{x} u_{4 x} D_x^{-1} + \[Alpha]C[48] u_{4 x} \
+D_x^{-1}vI + \[Alpha]C[50] u_{4 x} D_x^{-1}uI + \[Alpha]C[50] u_{x} D_x^{-1} \
+u_{3 x}I + \[Alpha]C[6] u_{4 x} D_x^{1} + \[Alpha]C[8] u_{5 x}I, -12C[23]uv \
+v_{x}I + -12C[33]uv v_{x}I + -12C[52] v_{x} D_x^{-1}v v_{x}I + 12C[53]u v_{2 \
+x} D_x^{-1}vI + 12C[53] u_{x} v_{x} D_x^{-1}vI + 12C[53] v_{x} D_x^{-1}u \
+v_{x}I + -12C[59] v_{x} D_x^{-1}v v_{x}I + 12C[61]u v_{2 x} D_x^{-1}vI + \
+12C[61] u_{x} v_{x} D_x^{-1}vI + 12C[61] v_{x} D_x^{-1}u v_{x}I + \
+12\[Alpha]C[23]u^{2} u_{x}I + 12\[Alpha]C[33]u^{2} u_{x}I + 12\[Alpha]C[52] \
+v_{x} D_x^{-1}u u_{x}I + 12\[Alpha]C[59] v_{x} D_x^{-1}u u_{x}I + -18C[28] \
+v_{x} v_{2 x}I + -18C[38] v_{x} v_{2 x}I + 18\[Alpha]C[28] u_{x} u_{2 x}I + \
+18\[Alpha]C[38] u_{x} u_{2 x}I + -1C[24] v_{3 x} D_x^{2} + -1C[27] v_{4 x} \
+D_x^{1} + -1C[29] v_{5 x}I + -1C[30]u v_{3 x}I + -1C[34] v_{3 x} D_x^{2} + \
+-1C[37] v_{4 x} D_x^{1} + -1C[39] v_{5 x}I + -1C[40]u v_{3 x}I + -1C[56]0 -> \
+0 v_{4 x} D_x^{-1} + -1C[56]0 -> 0 v_{x} v_{4 x} D_x^{-1} + -1C[57]0 -> 0 \
+v_{4 x} D_x^{-1} + -1C[57]0 -> 0 v_{x} v_{4 x} D_x^{-1} + -1C[58] v_{4 x} \
+D_x^{-1}vI + -1C[58] v_{x} D_x^{-1} v_{3 x}I + -1C[60] v_{4 x} D_x^{-1}uI + \
+-2C[25]v v_{3 x}I + -2C[35]v v_{3 x}I + -2C[52] v_{4 x} D_x^{-1}uI + -2C[59] \
+v_{4 x} D_x^{-1}uI + 2\[Alpha]C[23]u u_{3 x}I + 2\[Alpha]C[33]u u_{3 x}I + 2\
+\[Alpha]C[52] v_{x} D_x^{-1} u_{3 x}I + 2\[Alpha]C[59] v_{x} D_x^{-1} u_{3 \
+x}I + -3C[24]u v_{x} D_x^{2} + -3C[27]u v_{2 x} D_x^{1} + -3C[27] u_{x} v_{x} \
+D_x^{1} + -3C[29]u v_{3 x}I + -3C[29] v_{x} u_{2 x}I + -3C[30]u^{2} v_{x}I + \
+-3C[34]u v_{x} D_x^{2} + -3C[37]u v_{2 x} D_x^{1} + -3C[37] u_{x} v_{x} \
+D_x^{1} + -3C[39]u v_{3 x}I + -3C[39] v_{x} u_{2 x}I + -3C[40]u^{2} v_{x}I + \
+-3C[55]u u_{x} v_{x} D_x^{-1} + -3C[56]0 -> 0u v_{2 x} D_x^{-1} + -3C[56]0 -> \
+0u v_{x} v_{2 x} D_x^{-1} + -3C[56]0 -> 0 u_{x}^{2} v_{x}^{2} D_x^{-1} + \
+-3C[56]0 -> 0 u_{x} v_{x} D_x^{-1} + -3C[57]0 -> 0u v_{2 x} D_x^{-1} + \
+-3C[57]0 -> 0u v_{x} v_{2 x} D_x^{-1} + -3C[57]0 -> 0 u_{x}^{2} v_{x}^{2} \
+D_x^{-1} + -3C[57]0 -> 0 u_{x} v_{x} D_x^{-1} + -3C[58]u v_{2 x} D_x^{-1}vI + \
+-3C[58] u_{x} v_{x} D_x^{-1}vI + -3C[58] v_{x} D_x^{-1}u v_{x}I + -3C[60]u \
+v_{2 x} D_x^{-1}uI + -3C[60] u_{x} v_{x} D_x^{-1}uI + \
+3\\\\frac{1}{\[Alpha]^{1}}C[55]v^{2} v_{x}^{2} D_x^{-1} + 4C[53] v_{4 x} \
+D_x^{-1}vI + 4C[53] v_{x} D_x^{-1} v_{3 x}I + 4C[61] v_{4 x} D_x^{-1}vI + \
+4C[61] v_{x} D_x^{-1} v_{3 x}I + -6C[22]v v_{x} D_x^{2} + -6C[25]uv v_{x}I + \
+-6C[26]^{2} v_{x}^{2} D_x^{1} + -6C[26]v v_{2 x} D_x^{1} + -6C[28]v v_{3 x}I \
++ -6C[29] u_{x} v_{2 x}I + -6C[30]v^{2} v_{x}I + -6C[32]v v_{x} D_x^{2} + \
+-6C[35]uv v_{x}I + -6C[36]^{2} v_{x}^{2} D_x^{1} + -6C[36]v v_{2 x} D_x^{1} + \
+-6C[38]v v_{3 x}I + -6C[39] u_{x} v_{2 x}I + -6C[40]v^{2} v_{x}I + -6C[52]u \
+v_{2 x} D_x^{-1}uI + -6C[52] u_{x} v_{x} D_x^{-1}uI + -6C[59]u v_{2 x} \
+D_x^{-1}uI + -6C[59] u_{x} v_{x} D_x^{-1}uI + -6C[60] v_{x} D_x^{-1}v v_{x}I \
++ 6\[Alpha]C[22]u u_{x} D_x^{2} + 6\[Alpha]C[26]^{2} u_{x}^{2} D_x^{1} + 6\
+\[Alpha]C[26]u u_{2 x} D_x^{1} + 6\[Alpha]C[28]u u_{3 x}I + 6\[Alpha]C[30]uv \
+u_{x}I + 6\[Alpha]C[32]u u_{x} D_x^{2} + 6\[Alpha]C[36]^{2} u_{x}^{2} D_x^{1} \
++ 6\[Alpha]C[36]u u_{2 x} D_x^{1} + 6\[Alpha]C[38]u u_{3 x}I + \
+6\[Alpha]C[40]uv u_{x}I + 6\[Alpha]C[60] v_{x} D_x^{-1}u u_{x}I + \
+\\\\frac{-1}{2}C[55] v_{x} u_{3 x} D_x^{-1} + \\\\frac{1}{2}\\\\frac{1}{\
+\[Alpha]^{1}}C[54]u v_{4 x} D_x^{-1} + \
+\\\\frac{1}{2}\\\\frac{1}{\[Alpha]^{1}}C[54] v_{x} u_{3 x} D_x^{-1} + \
+\\\\frac{1}{2}\\\\frac{1}{\[Alpha]^{1}}C[55]u v_{4 x} D_x^{-1} + \
+\\\\frac{1}{6}\\\\frac{1}{\[Alpha]^{1}}C[54] v_{6 x} D_x^{-1} + \
+\\\\frac{3}{2}\\\\frac{1}{\[Alpha]^{1}}C[54] u_{2 x} v_{2 x} D_x^{-1} + \
+\\\\frac{3}{2}\\\\frac{1}{\[Alpha]^{1}}C[54] u_{x} v_{3 x} D_x^{-1} + \
+\\\\frac{3}{2}\\\\frac{1}{\[Alpha]^{1}}C[55]u^{2} v_{2 x} D_x^{-1} + \
+\\\\frac{3}{2}\\\\frac{1}{\[Alpha]^{1}}C[55]u u_{x} v_{x} D_x^{-1} + \
+\[Alpha]C[22] u_{3 x} D_x^{2} + \[Alpha]C[26] u_{4 x} D_x^{1} + \[Alpha]C[28] \
+u_{5 x}I + \[Alpha]C[30]v u_{3 x}I + \[Alpha]C[32] u_{3 x} D_x^{2} + \
+\[Alpha]C[36] u_{4 x} D_x^{1} + \[Alpha]C[38] u_{5 x}I + \[Alpha]C[40]v u_{3 \
+x}I + \[Alpha]C[60] v_{x} D_x^{-1} u_{3 x}I} /. {0, 0}), {-1\\\\frac{1}{\
+\[Alpha]^{1}}C[45]v v_{x} D_x^{-1} + 2C[41] u_{x} D_x^{-1}uI + 2C[49] u_{x} \
+D_x^{-1}uI + -4C[42] u_{x} D_x^{-1}vI + -4C[51] u_{x} D_x^{-1}vI + C[10]uvI + \
+C[11] D_x^{4} + C[12]u D_x^{2} + C[13]u^{2}I + C[14]v D_x^{2} + C[15]v^{2}I + \
+C[16] u_{x} D_x^{1} + C[17] v_{x} D_x^{1} + C[18] u_{2 x}I + C[19] v_{2 x}I + \
+C[1] D_x^{4} + C[20]uvI + C[2]u D_x^{2} + C[3]u^{2}I + C[44]u u_{x} D_x^{-1} \
++ C[46]0 -> 0 u_{x} D_x^{-1} + C[47]0 -> 0 u_{x} D_x^{-1} + C[48] u_{x} \
+D_x^{-1}vI + C[4]v D_x^{2} + C[50] u_{x} D_x^{-1}uI + C[5]v^{2}I + C[6] u_{x} \
+D_x^{1} + C[7] v_{x} D_x^{1} + C[8] u_{2 x}I + C[9] v_{2 x}I + \
+\\\\frac{1}{6}C[43] u_{3 x} D_x^{-1}, 2C[52] v_{x} D_x^{-1}uI + 2C[59] v_{x} \
+D_x^{-1}uI + -4C[53] v_{x} D_x^{-1}vI + -4C[61] v_{x} D_x^{-1}vI + C[21] \
+D_x^{4} + C[22]u D_x^{2} + C[23]u^{2}I + C[24]v D_x^{2} + C[25]v^{2}I + C[26] \
+u_{x} D_x^{1} + C[27] v_{x} D_x^{1} + C[28] u_{2 x}I + C[29] v_{2 x}I + \
+C[30]uvI + C[31] D_x^{4} + C[32]u D_x^{2} + C[33]u^{2}I + C[34]v D_x^{2} + \
+C[35]v^{2}I + C[36] u_{x} D_x^{1} + C[37] v_{x} D_x^{1} + C[38] u_{2 x}I + \
+C[39] v_{2 x}I + C[40]uvI + C[56]0 -> 0 v_{x} D_x^{-1} + C[57]0 -> 0 v_{x} \
+D_x^{-1} + C[58] v_{x} D_x^{-1}vI + C[60] v_{x} D_x^{-1}uI + \
+\\\\frac{-1}{2}\\\\frac{1}{\[Alpha]^{1}}C[55]u v_{x} D_x^{-1} + \
+\\\\frac{-1}{6}\\\\frac{1}{\[Alpha]^{1}}C[54] v_{3 x} D_x^{-1}} /. {2-12 \
+C[21] == 0 + 2-12 C[31] == 0 + 2-3 C[22] == 0 + 23 C[22] == 0 + 23 C[24] == 0 \
++ 23 C[27] == 0 + 23 C[29] == 0 + 2-3 C[32] == 0 + 23 C[32] == 0 + 23 C[34] \
+== 0 + 23 C[37] == 0 + 23 C[39] == 0 + 2-60 C[1] == 0 + 2-60 C[11] == 0 + 2-6 \
+C[1] == 0 + 2-6 C[11] == 0 + 2-6 C[12] == 0 + 2-6 C[14] == 0 + 2-6 C[16] == 0 \
++ 2-6 C[17] == 0 + 2-6 C[2] == 0 + 2-6 C[26] == 0 + 2-6 C[36] == 0 + 2-6 C[4] \
+== 0 + 2-6 C[6] == 0 + 2-6 C[7] == 0 + 26 \[Alpha] C[26] == 0 + 26 \[Alpha] \
+C[36] == 0 + 2\\\\frac{1}{\[Alpha]^{1}} \\\\frac{3}{2} C[54] == 0 + 33 C[26] \
+== 0 + 33 C[28] == 0 + 33 C[36] == 0 + 33 C[38] == 0 + 3-3 C[56] (0 -> 0) == \
+0 + 3-3 C[57] (0 -> 0) == 0 + 3\\\\frac{-1}{2} \\\\frac{1}{\[Alpha]^{1}} \
+C[54] == 0 + 43 C[60] == 0 + 46 C[25] == 0 + 46 C[35] == 0 + 46 C[52] == 0 + \
+46 C[59] == 0 + 5-12 C[53] == 0 + 5-12 C[61] == 0 + 53 C[58] == 0 + 56 C[23] \
+== 0 + 56 C[33] == 0 + 73 C[30] == 0 + 73 C[40] == 0 + \
+7\\\\frac{1}{\[Alpha]^{1}} \\\\frac{-3}{2} C[55] == 0 + 83 C[56] (0 -> 0) == \
+0 + 83 C[57] (0 -> 0) == 0 + 146*False + (C[22] == 0) + (C[26] == 0) + (C[28] \
+== 0) + (C[30] == 0) + (C[32] == 0) + (C[36] == 0) + (C[38] == 0) + (C[40] == \
+0) + (C[60] == 0), 2-12 C[21] == 0 + 2-12 C[31] == 0 + 224 C[42] == 0 + 224 \
+C[51] == 0 + 2-3 C[17] == 0 + 2-3 C[19] == 0 + 2-3 C[7] == 0 + 2-3 C[9] == 0 \
++ 2-3 \[Alpha] C[12] == 0 + 2-3 \[Alpha] C[14] == 0 + 2-3 \[Alpha] C[16] == 0 \
++ 2-3 \[Alpha] C[17] == 0 + 2-3 \[Alpha] C[18] == 0 + 2-3 \[Alpha] C[19] == 0 \
++ 2-3 \[Alpha] C[2] == 0 + 2-3 \[Alpha] C[4] == 0 + 23 \[Alpha] C[43] == 0 + \
+2-3 \[Alpha] C[6] == 0 + 2-3 \[Alpha] C[7] == 0 + 2-3 \[Alpha] C[8] == 0 + \
+2-3 \[Alpha] C[9] == 0 + 260 \[Alpha] C[1] == 0 + 260 \[Alpha] C[11] == 0 + \
+2-6 C[16] == 0 + 26 C[22] == 0 + 26 C[26] == 0 + 26 C[27] == 0 + 26 C[28] == \
+0 + 26 C[29] == 0 + 26 C[30] == 0 + 26 C[32] == 0 + 26 C[36] == 0 + 26 C[37] \
+== 0 + 26 C[38] == 0 + 26 C[39] == 0 + 26 C[40] == 0 + 2-6 C[48] == 0 + 2-6 \
+C[6] == 0 + 2-6 \[Alpha] C[10] == 0 + 26 \[Alpha] C[17] == 0 + 2-6 \[Alpha] \
+C[20] == 0 + 2-6 \[Alpha] C[46] (0 -> 0) == 0 + 26 \[Alpha] C[46] (0 -> 0) == \
+0 + 2-6 \[Alpha] C[47] (0 -> 0) == 0 + 26 \[Alpha] C[47] (0 -> 0) == 0 + 26 \
+\[Alpha] C[7] == 0 + 2\\\\frac{-1}{2} \[Alpha] C[43] == 0 + 2\\\\frac{1}{\
+\[Alpha]^{1}} C[45] == 0 + 3-12 C[41] == 0 + 3-12 C[49] == 0 + 312 C[52] == 0 \
++ 312 C[59] == 0 + 3-24 C[53] == 0 + 3-24 C[61] == 0 + 33 \
+\\\\frac{1}{\[Alpha]^{1}} C[45] == 0 + 3-6 C[44] == 0 + 36 C[45] == 0 + 3-6 \
+C[50] == 0 + 36 C[58] == 0 + 36 C[60] == 0 + 3-(\\\\frac{1}{\[Alpha]^{1}} \
+C[54]) == 0 + 412 \[Alpha] C[42] == 0 + 412 \[Alpha] C[51] == 0 + 43 C[45] == \
+0 + 4-3 \\\\frac{1}{\[Alpha]^{1}} C[55] == 0 + 4-3 \[Alpha] C[48] == 0 + 4-3 \
+\[Alpha] C[50] == 0 + 4-6 C[46] (0 -> 0) == 0 + 4-6 C[47] (0 -> 0) == 0 + 46 \
+C[56] (0 -> 0) == 0 + 46 C[57] (0 -> 0) == 0 + 4-6 \[Alpha] C[13] == 0 + 4-6 \
+\[Alpha] C[15] == 0 + 4-6 \[Alpha] C[3] == 0 + 4-6 \[Alpha] C[41] == 0 + 4-6 \
+\[Alpha] C[49] == 0 + 4-6 \[Alpha] C[5] == 0 + 5-3 \[Alpha] C[44] == 0 + 6-3 \
+\[Alpha] C[10] == 0 + 6-3 \[Alpha] C[20] == 0 + 6-3 \[Alpha] C[46] (0 -> 0) \
+== 0 + 6-3 \[Alpha] C[47] (0 -> 0) == 0 + 148*False + (C[45] == 0)}, \
+{-1\\\\frac{1}{\[Alpha]^{1}}C[45]v v_{x} D_x^{-1} + 2C[41] u_{x} D_x^{-1}uI + \
+2C[49] u_{x} D_x^{-1}uI + -4C[42] u_{x} D_x^{-1}vI + -4C[51] u_{x} D_x^{-1}vI \
++ C[10]uvI + C[11] D_x^{4} + C[12]u D_x^{2} + C[13]u^{2}I + C[14]v D_x^{2} + \
+C[15]v^{2}I + C[16] u_{x} D_x^{1} + C[17] v_{x} D_x^{1} + C[18] u_{2 x}I + \
+C[19] v_{2 x}I + C[1] D_x^{4} + C[20]uvI + C[2]u D_x^{2} + C[3]u^{2}I + \
+C[44]u u_{x} D_x^{-1} + C[46]0 -> 0 u_{x} D_x^{-1} + C[47]0 -> 0 u_{x} \
+D_x^{-1} + C[48] u_{x} D_x^{-1}vI + C[4]v D_x^{2} + C[50] u_{x} D_x^{-1}uI + \
+C[5]v^{2}I + C[6] u_{x} D_x^{1} + C[7] v_{x} D_x^{1} + C[8] u_{2 x}I + C[9] \
+v_{2 x}I + \\\\frac{1}{6}C[43] u_{3 x} D_x^{-1}, 2C[52] v_{x} D_x^{-1}uI + \
+2C[59] v_{x} D_x^{-1}uI + -4C[53] v_{x} D_x^{-1}vI + -4C[61] v_{x} D_x^{-1}vI \
++ C[21] D_x^{4} + C[22]u D_x^{2} + C[23]u^{2}I + C[24]v D_x^{2} + C[25]v^{2}I \
++ C[26] u_{x} D_x^{1} + C[27] v_{x} D_x^{1} + C[28] u_{2 x}I + C[29] v_{2 x}I \
++ C[30]uvI + C[31] D_x^{4} + C[32]u D_x^{2} + C[33]u^{2}I + C[34]v D_x^{2} + \
+C[35]v^{2}I + C[36] u_{x} D_x^{1} + C[37] v_{x} D_x^{1} + C[38] u_{2 x}I + \
+C[39] v_{2 x}I + C[40]uvI + C[56]0 -> 0 v_{x} D_x^{-1} + C[57]0 -> 0 v_{x} \
+D_x^{-1} + C[58] v_{x} D_x^{-1}vI + C[60] v_{x} D_x^{-1}uI + \
+\\\\frac{-1}{2}\\\\frac{1}{\[Alpha]^{1}}C[55]u v_{x} D_x^{-1} + \
+\\\\frac{-1}{6}\\\\frac{1}{\[Alpha]^{1}}C[54] v_{3 x} D_x^{-1}} /. {2-12 \
+C[21] == 0 + 2-12 C[31] == 0 + 2-3 C[22] == 0 + 23 C[22] == 0 + 23 C[24] == 0 \
++ 23 C[27] == 0 + 23 C[29] == 0 + 2-3 C[32] == 0 + 23 C[32] == 0 + 23 C[34] \
+== 0 + 23 C[37] == 0 + 23 C[39] == 0 + 2-60 C[1] == 0 + 2-60 C[11] == 0 + 2-6 \
+C[1] == 0 + 2-6 C[11] == 0 + 2-6 C[12] == 0 + 2-6 C[14] == 0 + 2-6 C[16] == 0 \
++ 2-6 C[17] == 0 + 2-6 C[2] == 0 + 2-6 C[26] == 0 + 2-6 C[36] == 0 + 2-6 C[4] \
+== 0 + 2-6 C[6] == 0 + 2-6 C[7] == 0 + 26 \[Alpha] C[26] == 0 + 26 \[Alpha] \
+C[36] == 0 + 2\\\\frac{1}{\[Alpha]^{1}} \\\\frac{3}{2} C[54] == 0 + 33 C[26] \
+== 0 + 33 C[28] == 0 + 33 C[36] == 0 + 33 C[38] == 0 + 3-3 C[56] (0 -> 0) == \
+0 + 3-3 C[57] (0 -> 0) == 0 + 3\\\\frac{-1}{2} \\\\frac{1}{\[Alpha]^{1}} \
+C[54] == 0 + 43 C[60] == 0 + 46 C[25] == 0 + 46 C[35] == 0 + 46 C[52] == 0 + \
+46 C[59] == 0 + 5-12 C[53] == 0 + 5-12 C[61] == 0 + 53 C[58] == 0 + 56 C[23] \
+== 0 + 56 C[33] == 0 + 73 C[30] == 0 + 73 C[40] == 0 + \
+7\\\\frac{1}{\[Alpha]^{1}} \\\\frac{-3}{2} C[55] == 0 + 83 C[56] (0 -> 0) == \
+0 + 83 C[57] (0 -> 0) == 0 + 146*False + (C[22] == 0) + (C[26] == 0) + (C[28] \
+== 0) + (C[30] == 0) + (C[32] == 0) + (C[36] == 0) + (C[38] == 0) + (C[40] == \
+0) + (C[60] == 0), 2-12 C[21] == 0 + 2-12 C[31] == 0 + 224 C[42] == 0 + 224 \
+C[51] == 0 + 2-3 C[17] == 0 + 2-3 C[19] == 0 + 2-3 C[7] == 0 + 2-3 C[9] == 0 \
++ 2-3 \[Alpha] C[12] == 0 + 2-3 \[Alpha] C[14] == 0 + 2-3 \[Alpha] C[16] == 0 \
++ 2-3 \[Alpha] C[17] == 0 + 2-3 \[Alpha] C[18] == 0 + 2-3 \[Alpha] C[19] == 0 \
++ 2-3 \[Alpha] C[2] == 0 + 2-3 \[Alpha] C[4] == 0 + 23 \[Alpha] C[43] == 0 + \
+2-3 \[Alpha] C[6] == 0 + 2-3 \[Alpha] C[7] == 0 + 2-3 \[Alpha] C[8] == 0 + \
+2-3 \[Alpha] C[9] == 0 + 260 \[Alpha] C[1] == 0 + 260 \[Alpha] C[11] == 0 + \
+2-6 C[16] == 0 + 26 C[22] == 0 + 26 C[26] == 0 + 26 C[27] == 0 + 26 C[28] == \
+0 + 26 C[29] == 0 + 26 C[30] == 0 + 26 C[32] == 0 + 26 C[36] == 0 + 26 C[37] \
+== 0 + 26 C[38] == 0 + 26 C[39] == 0 + 26 C[40] == 0 + 2-6 C[48] == 0 + 2-6 \
+C[6] == 0 + 2-6 \[Alpha] C[10] == 0 + 26 \[Alpha] C[17] == 0 + 2-6 \[Alpha] \
+C[20] == 0 + 2-6 \[Alpha] C[46] (0 -> 0) == 0 + 26 \[Alpha] C[46] (0 -> 0) == \
+0 + 2-6 \[Alpha] C[47] (0 -> 0) == 0 + 26 \[Alpha] C[47] (0 -> 0) == 0 + 26 \
+\[Alpha] C[7] == 0 + 2\\\\frac{-1}{2} \[Alpha] C[43] == 0 + 2\\\\frac{1}{\
+\[Alpha]^{1}} C[45] == 0 + 3-12 C[41] == 0 + 3-12 C[49] == 0 + 312 C[52] == 0 \
++ 312 C[59] == 0 + 3-24 C[53] == 0 + 3-24 C[61] == 0 + 33 \
+\\\\frac{1}{\[Alpha]^{1}} C[45] == 0 + 3-6 C[44] == 0 + 36 C[45] == 0 + 3-6 \
+C[50] == 0 + 36 C[58] == 0 + 36 C[60] == 0 + 3-(\\\\frac{1}{\[Alpha]^{1}} \
+C[54]) == 0 + 412 \[Alpha] C[42] == 0 + 412 \[Alpha] C[51] == 0 + 43 C[45] == \
+0 + 4-3 \\\\frac{1}{\[Alpha]^{1}} C[55] == 0 + 4-3 \[Alpha] C[48] == 0 + 4-3 \
+\[Alpha] C[50] == 0 + 4-6 C[46] (0 -> 0) == 0 + 4-6 C[47] (0 -> 0) == 0 + 46 \
+C[56] (0 -> 0) == 0 + 46 C[57] (0 -> 0) == 0 + 4-6 \[Alpha] C[13] == 0 + 4-6 \
+\[Alpha] C[15] == 0 + 4-6 \[Alpha] C[3] == 0 + 4-6 \[Alpha] C[41] == 0 + 4-6 \
+\[Alpha] C[49] == 0 + 4-6 \[Alpha] C[5] == 0 + 5-3 \[Alpha] C[44] == 0 + 6-3 \
+\[Alpha] C[10] == 0 + 6-3 \[Alpha] C[20] == 0 + 6-3 \[Alpha] C[46] (0 -> 0) \
+== 0 + 6-3 \[Alpha] C[47] (0 -> 0) == 0 + 148*False + (C[45] == 0)}, \
+{-1\\\\frac{1}{\[Alpha]^{1}}C[45]v v_{x} D_x^{-1} + 2C[41] u_{x} D_x^{-1}uI + \
+2C[49] u_{x} D_x^{-1}uI + -4C[42] u_{x} D_x^{-1}vI + -4C[51] u_{x} D_x^{-1}vI \
++ C[10]uvI + C[11] D_x^{4} + C[12]u D_x^{2} + C[13]u^{2}I + C[14]v D_x^{2} + \
+C[15]v^{2}I + C[16] u_{x} D_x^{1} + C[17] v_{x} D_x^{1} + C[18] u_{2 x}I + \
+C[19] v_{2 x}I + C[1] D_x^{4} + C[20]uvI + C[2]u D_x^{2} + C[3]u^{2}I + \
+C[44]u u_{x} D_x^{-1} + C[46]0 -> 0 u_{x} D_x^{-1} + C[47]0 -> 0 u_{x} \
+D_x^{-1} + C[48] u_{x} D_x^{-1}vI + C[4]v D_x^{2} + C[50] u_{x} D_x^{-1}uI + \
+C[5]v^{2}I + C[6] u_{x} D_x^{1} + C[7] v_{x} D_x^{1} + C[8] u_{2 x}I + C[9] \
+v_{2 x}I + \\\\frac{1}{6}C[43] u_{3 x} D_x^{-1}, 2C[52] v_{x} D_x^{-1}uI + \
+2C[59] v_{x} D_x^{-1}uI + -4C[53] v_{x} D_x^{-1}vI + -4C[61] v_{x} D_x^{-1}vI \
++ C[21] D_x^{4} + C[22]u D_x^{2} + C[23]u^{2}I + C[24]v D_x^{2} + C[25]v^{2}I \
++ C[26] u_{x} D_x^{1} + C[27] v_{x} D_x^{1} + C[28] u_{2 x}I + C[29] v_{2 x}I \
++ C[30]uvI + C[31] D_x^{4} + C[32]u D_x^{2} + C[33]u^{2}I + C[34]v D_x^{2} + \
+C[35]v^{2}I + C[36] u_{x} D_x^{1} + C[37] v_{x} D_x^{1} + C[38] u_{2 x}I + \
+C[39] v_{2 x}I + C[40]uvI + C[56]0 -> 0 v_{x} D_x^{-1} + C[57]0 -> 0 v_{x} \
+D_x^{-1} + C[58] v_{x} D_x^{-1}vI + C[60] v_{x} D_x^{-1}uI + \
+\\\\frac{-1}{2}\\\\frac{1}{\[Alpha]^{1}}C[55]u v_{x} D_x^{-1} + \
+\\\\frac{-1}{6}\\\\frac{1}{\[Alpha]^{1}}C[54] v_{3 x} D_x^{-1}} /. {2-12 \
+C[21] == 0 + 2-12 C[31] == 0 + 2-3 C[22] == 0 + 23 C[22] == 0 + 23 C[24] == 0 \
++ 23 C[27] == 0 + 23 C[29] == 0 + 2-3 C[32] == 0 + 23 C[32] == 0 + 23 C[34] \
+== 0 + 23 C[37] == 0 + 23 C[39] == 0 + 2-60 C[1] == 0 + 2-60 C[11] == 0 + 2-6 \
+C[1] == 0 + 2-6 C[11] == 0 + 2-6 C[12] == 0 + 2-6 C[14] == 0 + 2-6 C[16] == 0 \
++ 2-6 C[17] == 0 + 2-6 C[2] == 0 + 2-6 C[26] == 0 + 2-6 C[36] == 0 + 2-6 C[4] \
+== 0 + 2-6 C[6] == 0 + 2-6 C[7] == 0 + 26 \[Alpha] C[26] == 0 + 26 \[Alpha] \
+C[36] == 0 + 2\\\\frac{1}{\[Alpha]^{1}} \\\\frac{3}{2} C[54] == 0 + 33 C[26] \
+== 0 + 33 C[28] == 0 + 33 C[36] == 0 + 33 C[38] == 0 + 3-3 C[56] (0 -> 0) == \
+0 + 3-3 C[57] (0 -> 0) == 0 + 3\\\\frac{-1}{2} \\\\frac{1}{\[Alpha]^{1}} \
+C[54] == 0 + 43 C[60] == 0 + 46 C[25] == 0 + 46 C[35] == 0 + 46 C[52] == 0 + \
+46 C[59] == 0 + 5-12 C[53] == 0 + 5-12 C[61] == 0 + 53 C[58] == 0 + 56 C[23] \
+== 0 + 56 C[33] == 0 + 73 C[30] == 0 + 73 C[40] == 0 + \
+7\\\\frac{1}{\[Alpha]^{1}} \\\\frac{-3}{2} C[55] == 0 + 83 C[56] (0 -> 0) == \
+0 + 83 C[57] (0 -> 0) == 0 + 146*False + (C[22] == 0) + (C[26] == 0) + (C[28] \
+== 0) + (C[30] == 0) + (C[32] == 0) + (C[36] == 0) + (C[38] == 0) + (C[40] == \
+0) + (C[60] == 0), 2-12 C[21] == 0 + 2-12 C[31] == 0 + 224 C[42] == 0 + 224 \
+C[51] == 0 + 2-3 C[17] == 0 + 2-3 C[19] == 0 + 2-3 C[7] == 0 + 2-3 C[9] == 0 \
++ 2-3 \[Alpha] C[12] == 0 + 2-3 \[Alpha] C[14] == 0 + 2-3 \[Alpha] C[16] == 0 \
++ 2-3 \[Alpha] C[17] == 0 + 2-3 \[Alpha] C[18] == 0 + 2-3 \[Alpha] C[19] == 0 \
++ 2-3 \[Alpha] C[2] == 0 + 2-3 \[Alpha] C[4] == 0 + 23 \[Alpha] C[43] == 0 + \
+2-3 \[Alpha] C[6] == 0 + 2-3 \[Alpha] C[7] == 0 + 2-3 \[Alpha] C[8] == 0 + \
+2-3 \[Alpha] C[9] == 0 + 260 \[Alpha] C[1] == 0 + 260 \[Alpha] C[11] == 0 + \
+2-6 C[16] == 0 + 26 C[22] == 0 + 26 C[26] == 0 + 26 C[27] == 0 + 26 C[28] == \
+0 + 26 C[29] == 0 + 26 C[30] == 0 + 26 C[32] == 0 + 26 C[36] == 0 + 26 C[37] \
+== 0 + 26 C[38] == 0 + 26 C[39] == 0 + 26 C[40] == 0 + 2-6 C[48] == 0 + 2-6 \
+C[6] == 0 + 2-6 \[Alpha] C[10] == 0 + 26 \[Alpha] C[17] == 0 + 2-6 \[Alpha] \
+C[20] == 0 + 2-6 \[Alpha] C[46] (0 -> 0) == 0 + 26 \[Alpha] C[46] (0 -> 0) == \
+0 + 2-6 \[Alpha] C[47] (0 -> 0) == 0 + 26 \[Alpha] C[47] (0 -> 0) == 0 + 26 \
+\[Alpha] C[7] == 0 + 2\\\\frac{-1}{2} \[Alpha] C[43] == 0 + 2\\\\frac{1}{\
+\[Alpha]^{1}} C[45] == 0 + 3-12 C[41] == 0 + 3-12 C[49] == 0 + 312 C[52] == 0 \
++ 312 C[59] == 0 + 3-24 C[53] == 0 + 3-24 C[61] == 0 + 33 \
+\\\\frac{1}{\[Alpha]^{1}} C[45] == 0 + 3-6 C[44] == 0 + 36 C[45] == 0 + 3-6 \
+C[50] == 0 + 36 C[58] == 0 + 36 C[60] == 0 + 3-(\\\\frac{1}{\[Alpha]^{1}} \
+C[54]) == 0 + 412 \[Alpha] C[42] == 0 + 412 \[Alpha] C[51] == 0 + 43 C[45] == \
+0 + 4-3 \\\\frac{1}{\[Alpha]^{1}} C[55] == 0 + 4-3 \[Alpha] C[48] == 0 + 4-3 \
+\[Alpha] C[50] == 0 + 4-6 C[46] (0 -> 0) == 0 + 4-6 C[47] (0 -> 0) == 0 + 46 \
+C[56] (0 -> 0) == 0 + 46 C[57] (0 -> 0) == 0 + 4-6 \[Alpha] C[13] == 0 + 4-6 \
+\[Alpha] C[15] == 0 + 4-6 \[Alpha] C[3] == 0 + 4-6 \[Alpha] C[41] == 0 + 4-6 \
+\[Alpha] C[49] == 0 + 4-6 \[Alpha] C[5] == 0 + 5-3 \[Alpha] C[44] == 0 + 6-3 \
+\[Alpha] C[10] == 0 + 6-3 \[Alpha] C[20] == 0 + 6-3 \[Alpha] C[46] (0 -> 0) \
+== 0 + 6-3 \[Alpha] C[47] (0 -> 0) == 0 + 148*False + (C[45] == 0)}]\"\>"], \
+"Print",
+ CellChangeTimes->{3.9726101314970093`*^9},
+ CellLabel->
+  "During evaluation of \
+In[28]:=",ExpressionUUID->"60d96568-92e6-408d-9b3f-58524e7c5960"],
+
+Cell[BoxData["\<\"DefiningEquation`Operator`Constraints[{-1\\\\frac{1}{\
+\[Alpha]^{1}}C[45]v v_{x} D_x^{-1} + 2C[41] u_{x} D_x^{-1}uI + 2C[49] u_{x} \
+D_x^{-1}uI + -4C[42] u_{x} D_x^{-1}vI + -4C[51] u_{x} D_x^{-1}vI + C[10]uvI + \
+C[11] D_x^{4} + C[12]u D_x^{2} + C[13]u^{2}I + C[14]v D_x^{2} + C[15]v^{2}I + \
+C[16] u_{x} D_x^{1} + C[17] v_{x} D_x^{1} + C[18] u_{2 x}I + C[19] v_{2 x}I + \
+C[1] D_x^{4} + C[20]uvI + C[2]u D_x^{2} + C[3]u^{2}I + C[44]u u_{x} D_x^{-1} \
++ C[46]0 -> 0 u_{x} D_x^{-1} + C[47]0 -> 0 u_{x} D_x^{-1} + C[48] u_{x} \
+D_x^{-1}vI + C[4]v D_x^{2} + C[50] u_{x} D_x^{-1}uI + C[5]v^{2}I + C[6] u_{x} \
+D_x^{1} + C[7] v_{x} D_x^{1} + C[8] u_{2 x}I + C[9] v_{2 x}I + \
+\\\\frac{1}{6}C[43] u_{3 x} D_x^{-1}, 2C[52] v_{x} D_x^{-1}uI + 2C[59] v_{x} \
+D_x^{-1}uI + -4C[53] v_{x} D_x^{-1}vI + -4C[61] v_{x} D_x^{-1}vI + C[21] \
+D_x^{4} + C[22]u D_x^{2} + C[23]u^{2}I + C[24]v D_x^{2} + C[25]v^{2}I + C[26] \
+u_{x} D_x^{1} + C[27] v_{x} D_x^{1} + C[28] u_{2 x}I + C[29] v_{2 x}I + \
+C[30]uvI + C[31] D_x^{4} + C[32]u D_x^{2} + C[33]u^{2}I + C[34]v D_x^{2} + \
+C[35]v^{2}I + C[36] u_{x} D_x^{1} + C[37] v_{x} D_x^{1} + C[38] u_{2 x}I + \
+C[39] v_{2 x}I + C[40]uvI + C[56]0 -> 0 v_{x} D_x^{-1} + C[57]0 -> 0 v_{x} \
+D_x^{-1} + C[58] v_{x} D_x^{-1}vI + C[60] v_{x} D_x^{-1}uI + \
+\\\\frac{-1}{2}\\\\frac{1}{\[Alpha]^{1}}C[55]u v_{x} D_x^{-1} + \
+\\\\frac{-1}{6}\\\\frac{1}{\[Alpha]^{1}}C[54] v_{3 x} D_x^{-1}} /. {\[Alpha], \
+C[1], C[2], C[3], C[4], C[5], C[6], C[7], C[8], C[9], C[10], C[11], C[12], \
+C[13], C[14], C[15], C[16], C[17], C[18], C[19], C[20], C[21], C[22], C[23], \
+C[24], C[25], C[26], C[27], C[28], C[29], C[30], C[31], C[32], C[33], C[34], \
+C[35], C[36], C[37], C[38], C[39], C[40], C[41], C[42], C[43], C[44], C[45], \
+C[46], C[47], C[48], C[49], C[50], C[51], C[52], C[53], C[54], C[55], C[56], \
+C[57], C[58], C[59], C[60], C[61]} /. \
+-Inner[DefiningEquation`Operator`ExpressionMultiply, {-6v D_x^{1} + -6 v_{x}I \
++ 6\[Alpha]u D_x^{1} + 6\[Alpha] u_{x}I + \[Alpha] D_x^{3}, -1 D_x^{3} + -3u \
+D_x^{1} + -3 v_{x}I}, -1\\\\frac{1}{\[Alpha]^{1}}C[45]v v_{x} D_x^{-1} + \
+2C[41] u_{x} D_x^{-1}uI + 2C[49] u_{x} D_x^{-1}uI + 2C[52] v_{x} D_x^{-1}uI + \
+2C[59] v_{x} D_x^{-1}uI + -4C[42] u_{x} D_x^{-1}vI + -4C[51] u_{x} D_x^{-1}vI \
++ -4C[53] v_{x} D_x^{-1}vI + -4C[61] v_{x} D_x^{-1}vI + C[10]uvI + C[11] \
+D_x^{4} + C[12]u D_x^{2} + C[13]u^{2}I + C[14]v D_x^{2} + C[15]v^{2}I + C[16] \
+u_{x} D_x^{1} + C[17] v_{x} D_x^{1} + C[18] u_{2 x}I + C[19] v_{2 x}I + C[1] \
+D_x^{4} + C[20]uvI + C[21] D_x^{4} + C[22]u D_x^{2} + C[23]u^{2}I + C[24]v \
+D_x^{2} + C[25]v^{2}I + C[26] u_{x} D_x^{1} + C[27] v_{x} D_x^{1} + C[28] \
+u_{2 x}I + C[29] v_{2 x}I + C[2]u D_x^{2} + C[30]uvI + C[31] D_x^{4} + C[32]u \
+D_x^{2} + C[33]u^{2}I + C[34]v D_x^{2} + C[35]v^{2}I + C[36] u_{x} D_x^{1} + \
+C[37] v_{x} D_x^{1} + C[38] u_{2 x}I + C[39] v_{2 x}I + C[3]u^{2}I + C[40]uvI \
++ C[44]u u_{x} D_x^{-1} + C[46]0 -> 0 u_{x} D_x^{-1} + C[47]0 -> 0 u_{x} \
+D_x^{-1} + C[48] u_{x} D_x^{-1}vI + C[4]v D_x^{2} + C[50] u_{x} D_x^{-1}uI + \
+C[56]0 -> 0 v_{x} D_x^{-1} + C[57]0 -> 0 v_{x} D_x^{-1} + C[58] v_{x} \
+D_x^{-1}vI + C[5]v^{2}I + C[60] v_{x} D_x^{-1}uI + C[6] u_{x} D_x^{1} + C[7] \
+v_{x} D_x^{1} + C[8] u_{2 x}I + C[9] v_{2 x}I + \\\\frac{-1}{2}\\\\frac{1}{\
+\[Alpha]^{1}}C[55]u v_{x} D_x^{-1} + \\\\frac{1}{6}C[43] u_{3 x} D_x^{-1} + \
+\\\\frac{-1}{6}\\\\frac{1}{\[Alpha]^{1}}C[54] v_{3 x} D_x^{-1} /. \[Alpha] + \
+C[1] + C[2] + C[3] + C[4] + C[5] + C[6] + C[7] + C[8] + C[9] + C[10] + C[11] \
++ C[12] + C[13] + C[14] + C[15] + C[16] + C[17] + C[18] + C[19] + C[20] + \
+C[21] + C[22] + C[23] + C[24] + C[25] + C[26] + C[27] + C[28] + C[29] + C[30] \
++ C[31] + C[32] + C[33] + C[34] + C[35] + C[36] + C[37] + C[38] + C[39] + \
+C[40] + C[41] + C[42] + C[43] + C[44] + C[45] + C[46] + C[47] + C[48] + C[49] \
++ C[50] + C[51] + C[52] + C[53] + C[54] + C[55] + C[56] + C[57] + C[58] + \
+C[59] + C[60] + C[61], Plus] + \
+Inner[DefiningEquation`Operator`ExpressionMultiply, \
+-1\\\\frac{1}{\[Alpha]^{1}}C[45]v v_{x} D_x^{-1} + 2C[41] u_{x} D_x^{-1}uI + \
+2C[49] u_{x} D_x^{-1}uI + 2C[52] v_{x} D_x^{-1}uI + 2C[59] v_{x} D_x^{-1}uI + \
+-4C[42] u_{x} D_x^{-1}vI + -4C[51] u_{x} D_x^{-1}vI + -4C[53] v_{x} \
+D_x^{-1}vI + -4C[61] v_{x} D_x^{-1}vI + C[10]uvI + C[11] D_x^{4} + C[12]u \
+D_x^{2} + C[13]u^{2}I + C[14]v D_x^{2} + C[15]v^{2}I + C[16] u_{x} D_x^{1} + \
+C[17] v_{x} D_x^{1} + C[18] u_{2 x}I + C[19] v_{2 x}I + C[1] D_x^{4} + \
+C[20]uvI + C[21] D_x^{4} + C[22]u D_x^{2} + C[23]u^{2}I + C[24]v D_x^{2} + \
+C[25]v^{2}I + C[26] u_{x} D_x^{1} + C[27] v_{x} D_x^{1} + C[28] u_{2 x}I + \
+C[29] v_{2 x}I + C[2]u D_x^{2} + C[30]uvI + C[31] D_x^{4} + C[32]u D_x^{2} + \
+C[33]u^{2}I + C[34]v D_x^{2} + C[35]v^{2}I + C[36] u_{x} D_x^{1} + C[37] \
+v_{x} D_x^{1} + C[38] u_{2 x}I + C[39] v_{2 x}I + C[3]u^{2}I + C[40]uvI + \
+C[44]u u_{x} D_x^{-1} + C[46]0 -> 0 u_{x} D_x^{-1} + C[47]0 -> 0 u_{x} \
+D_x^{-1} + C[48] u_{x} D_x^{-1}vI + C[4]v D_x^{2} + C[50] u_{x} D_x^{-1}uI + \
+C[56]0 -> 0 v_{x} D_x^{-1} + C[57]0 -> 0 v_{x} D_x^{-1} + C[58] v_{x} \
+D_x^{-1}vI + C[5]v^{2}I + C[60] v_{x} D_x^{-1}uI + C[6] u_{x} D_x^{1} + C[7] \
+v_{x} D_x^{1} + C[8] u_{2 x}I + C[9] v_{2 x}I + \\\\frac{-1}{2}\\\\frac{1}{\
+\[Alpha]^{1}}C[55]u v_{x} D_x^{-1} + \\\\frac{1}{6}C[43] u_{3 x} D_x^{-1} + \
+\\\\frac{-1}{6}\\\\frac{1}{\[Alpha]^{1}}C[54] v_{3 x} D_x^{-1} /. \[Alpha] + \
+C[1] + C[2] + C[3] + C[4] + C[5] + C[6] + C[7] + C[8] + C[9] + C[10] + C[11] \
++ C[12] + C[13] + C[14] + C[15] + C[16] + C[17] + C[18] + C[19] + C[20] + \
+C[21] + C[22] + C[23] + C[24] + C[25] + C[26] + C[27] + C[28] + C[29] + C[30] \
++ C[31] + C[32] + C[33] + C[34] + C[35] + C[36] + C[37] + C[38] + C[39] + \
+C[40] + C[41] + C[42] + C[43] + C[44] + C[45] + C[46] + C[47] + C[48] + C[49] \
++ C[50] + C[51] + C[52] + C[53] + C[54] + C[55] + C[56] + C[57] + C[58] + \
+C[59] + C[60] + C[61], {-6v D_x^{1} + -6 v_{x}I + 6\[Alpha]u D_x^{1} + 6\
+\[Alpha] u_{x}I + \[Alpha] D_x^{3}, -1 D_x^{3} + -3u D_x^{1} + -3 v_{x}I}, \
+Plus] + ({0, 0} /. {\[Alpha], C[1], C[2], C[3], C[4], C[5], C[6], C[7], C[8], \
+C[9], C[10], C[11], C[12], C[13], C[14], C[15], C[16], C[17], C[18], C[19], \
+C[20], C[21], C[22], C[23], C[24], C[25], C[26], C[27], C[28], C[29], C[30], \
+C[31], C[32], C[33], C[34], C[35], C[36], C[37], C[38], C[39], C[40], C[41], \
+C[42], C[43], C[44], C[45], C[46], C[47], C[48], C[49], C[50], C[51], C[52], \
+C[53], C[54], C[55], C[56], C[57], C[58], C[59], C[60], C[61]}) + \
+({-12C[13]uv v_{x}I + -12C[3]uv v_{x}I + -12C[41]^{2} v_{x}^{2} D_x^{-1}uI + \
+-12C[41] u_{x} D_x^{-1}v v_{x}I + -12C[41]v v_{2 x} D_x^{-1}uI + 12C[42] \
+u_{x} D_x^{-1}u v_{x}I + -12C[49]^{2} v_{x}^{2} D_x^{-1}uI + -12C[49] u_{x} \
+D_x^{-1}v v_{x}I + -12C[49]v v_{2 x} D_x^{-1}uI + 12C[51] u_{x} D_x^{-1}u \
+v_{x}I + 12\[Alpha]C[13]u^{2} u_{x}I + 12\[Alpha]C[3]u^{2} u_{x}I + \
+12\[Alpha]C[41]^{2} u_{x}^{2} D_x^{-1}uI + 12\[Alpha]C[41]u u_{2 x} \
+D_x^{-1}uI + 12\[Alpha]C[41] u_{x} D_x^{-1}u u_{x}I + 12\[Alpha]C[44]u^{2} \
+u_{x}^{2} D_x^{-1} + 12\[Alpha]C[49]^{2} u_{x}^{2} D_x^{-1}uI + \
+12\[Alpha]C[49]u u_{2 x} D_x^{-1}uI + 12\[Alpha]C[49] u_{x} D_x^{-1}u u_{x}I \
++ -18C[18] v_{x} v_{2 x}I + -18C[8] v_{x} v_{2 x}I + 18\[Alpha]C[18] u_{x} \
+u_{2 x}I + 18\[Alpha]C[8] u_{x} u_{2 x}I + -1C[10]u v_{3 x}I + -1C[14] v_{3 \
+x} D_x^{2} + -1C[17] v_{4 x} D_x^{1} + -1C[19] v_{5 x}I + -1C[20]u v_{3 x}I + \
+-1C[43]v v_{4 x} D_x^{-1} + -1C[48] u_{x} D_x^{-1} v_{3 x}I + -1C[4] v_{3 x} \
+D_x^{2} + -1C[7] v_{4 x} D_x^{1} + -1C[9] v_{5 x}I + 24C[42]^{2} v_{x}^{2} \
+D_x^{-1}vI + 24C[42]v v_{2 x} D_x^{-1}vI + 24C[51]^{2} v_{x}^{2} D_x^{-1}vI + \
+24C[51]v v_{2 x} D_x^{-1}vI + -24\[Alpha]C[42]^{2} u_{x}^{2} D_x^{-1}vI + -24\
+\[Alpha]C[42]u u_{2 x} D_x^{-1}vI + -24\[Alpha]C[51]^{2} u_{x}^{2} D_x^{-1}vI \
++ -24\[Alpha]C[51]u u_{2 x} D_x^{-1}vI + -2C[15]v v_{3 x}I + -2C[5]v v_{3 x}I \
++ 2\[Alpha]C[13]u u_{3 x}I + 2\[Alpha]C[3]u u_{3 x}I + 2\[Alpha]C[41] u_{4 x} \
+D_x^{-1}uI + 2\[Alpha]C[41] u_{x} D_x^{-1} u_{3 x}I + 2\[Alpha]C[49] u_{4 x} \
+D_x^{-1}uI + 2\[Alpha]C[49] u_{x} D_x^{-1} u_{3 x}I + -3C[10]u^{2} v_{x}I + \
+-3C[14]u v_{x} D_x^{2} + -3C[17]u v_{2 x} D_x^{1} + -3C[17] u_{x} v_{x} \
+D_x^{1} + -3C[19]u v_{3 x}I + -3C[19] v_{x} u_{2 x}I + -3C[20]u^{2} v_{x}I + \
+-3C[43]^{2} v_{2 x}^{2} D_x^{-1} + -3C[48] u_{x} D_x^{-1}u v_{x}I + -3C[4]u \
+v_{x} D_x^{2} + -3C[7]u v_{2 x} D_x^{1} + -3C[7] u_{x} v_{x} D_x^{1} + \
+-3C[9]u v_{3 x}I + -3C[9] v_{x} u_{2 x}I + \
+3\\\\frac{1}{\[Alpha]^{1}}C[45]u^{2} v_{x}^{2} D_x^{-1} + 3\\\\frac{1}{\
+\[Alpha]^{1}}C[45]uv v_{2 x} D_x^{-1} + 3\\\\frac{1}{\[Alpha]^{1}}C[45]v \
+u_{x} v_{x} D_x^{-1} + 3\[Alpha]C[43]^{2} u_{2 x}^{2} D_x^{-1} + 4C[42] u_{x} \
+D_x^{-1} v_{3 x}I + -4C[43] v_{x} v_{3 x} D_x^{-1} + 4C[51] u_{x} D_x^{-1} \
+v_{3 x}I + -4\[Alpha]C[42] u_{4 x} D_x^{-1}vI + 4\[Alpha]C[43] u_{x} u_{3 x} \
+D_x^{-1} + -4\[Alpha]C[51] u_{4 x} D_x^{-1}vI + -6C[10]v^{2} v_{x}I + \
+-6C[12]v v_{x} D_x^{2} + -6C[15]uv v_{x}I + -6C[16]^{2} v_{x}^{2} D_x^{1} + \
+-6C[16]v v_{2 x} D_x^{1} + -6C[18]v v_{3 x}I + -6C[19] u_{x} v_{2 x}I + \
+-6C[20]v^{2} v_{x}I + -6C[2]v v_{x} D_x^{2} + -6C[44]u^{2} v_{x}^{2} D_x^{-1} \
++ -6C[44]uv v_{2 x} D_x^{-1} + -6C[44]v u_{x} v_{x} D_x^{-1} + -6C[46]0 -> \
+0^{2} v_{x}^{2} D_x^{-1} + -6C[46]0 -> 0 u_{x}^{2} v_{x}^{2} D_x^{-1} + \
+-6C[46]0 -> 0v u_{x} v_{2 x} D_x^{-1} + -6C[46]0 -> 0v v_{2 x} D_x^{-1} + \
+-6C[47]0 -> 0^{2} v_{x}^{2} D_x^{-1} + -6C[47]0 -> 0 u_{x}^{2} v_{x}^{2} \
+D_x^{-1} + -6C[47]0 -> 0v u_{x} v_{2 x} D_x^{-1} + -6C[47]0 -> 0v v_{2 x} \
+D_x^{-1} + -6C[48]^{2} v_{x}^{2} D_x^{-1}vI + -6C[48]v v_{2 x} D_x^{-1}vI + \
+-6C[50]^{2} v_{x}^{2} D_x^{-1}uI + -6C[50] u_{x} D_x^{-1}v v_{x}I + -6C[50]v \
+v_{2 x} D_x^{-1}uI + -6C[5]uv v_{x}I + -6C[6]^{2} v_{x}^{2} D_x^{1} + -6C[6]v \
+v_{2 x} D_x^{1} + -6C[8]v v_{3 x}I + -6C[9] u_{x} v_{2 x}I + 6\[Alpha]C[10]uv \
+u_{x}I + 6\[Alpha]C[12]u u_{x} D_x^{2} + 6\[Alpha]C[16]^{2} u_{x}^{2} D_x^{1} \
++ 6\[Alpha]C[16]u u_{2 x} D_x^{1} + 6\[Alpha]C[18]u u_{3 x}I + \
+6\[Alpha]C[20]uv u_{x}I + 6\[Alpha]C[2]u u_{x} D_x^{2} + 6\[Alpha]C[44]u^{2} \
+u_{2 x} D_x^{-1} + 6\[Alpha]C[46]0 -> 0^{2} u_{x}^{2} D_x^{-1} + \
+6\[Alpha]C[46]0 -> 0^{3} u_{x}^{3} D_x^{-1} + 6\[Alpha]C[46]0 -> 0u u_{2 x} \
+D_x^{-1} + 6\[Alpha]C[46]0 -> 0u u_{x} u_{2 x} D_x^{-1} + 6\[Alpha]C[47]0 -> \
+0^{2} u_{x}^{2} D_x^{-1} + 6\[Alpha]C[47]0 -> 0^{3} u_{x}^{3} D_x^{-1} + 6\
+\[Alpha]C[47]0 -> 0u u_{2 x} D_x^{-1} + 6\[Alpha]C[47]0 -> 0u u_{x} u_{2 x} \
+D_x^{-1} + 6\[Alpha]C[48]^{2} u_{x}^{2} D_x^{-1}vI + 6\[Alpha]C[48]u u_{2 x} \
+D_x^{-1}vI + 6\[Alpha]C[50]^{2} u_{x}^{2} D_x^{-1}uI + 6\[Alpha]C[50]u u_{2 \
+x} D_x^{-1}uI + 6\[Alpha]C[50] u_{x} D_x^{-1}u u_{x}I + 6\[Alpha]C[6]^{2} \
+u_{x}^{2} D_x^{1} + 6\[Alpha]C[6]u u_{2 x} D_x^{1} + 6\[Alpha]C[8]u u_{3 x}I \
++ \\\\frac{1}{6}\[Alpha]C[43] u_{6 x} D_x^{-1} + \
+\\\\frac{1}{\[Alpha]^{1}}C[45]v v_{4 x} D_x^{-1} + \
+\\\\frac{1}{\[Alpha]^{1}}C[45] v_{x} v_{3 x} D_x^{-1} + \[Alpha]C[10]v u_{3 \
+x}I + \[Alpha]C[12] u_{3 x} D_x^{2} + \[Alpha]C[16] u_{4 x} D_x^{1} + \
+\[Alpha]C[18] u_{5 x}I + \[Alpha]C[20]v u_{3 x}I + \[Alpha]C[2] u_{3 x} \
+D_x^{2} + \[Alpha]C[43]u u_{4 x} D_x^{-1} + \[Alpha]C[44]u u_{4 x} D_x^{-1} + \
+\[Alpha]C[44] u_{x} u_{3 x} D_x^{-1} + \[Alpha]C[46]0 -> 0 u_{4 x} D_x^{-1} + \
+\[Alpha]C[46]0 -> 0 u_{x} u_{4 x} D_x^{-1} + \[Alpha]C[47]0 -> 0 u_{4 x} \
+D_x^{-1} + \[Alpha]C[47]0 -> 0 u_{x} u_{4 x} D_x^{-1} + \[Alpha]C[48] u_{4 x} \
+D_x^{-1}vI + \[Alpha]C[50] u_{4 x} D_x^{-1}uI + \[Alpha]C[50] u_{x} D_x^{-1} \
+u_{3 x}I + \[Alpha]C[6] u_{4 x} D_x^{1} + \[Alpha]C[8] u_{5 x}I, -12C[23]uv \
+v_{x}I + -12C[33]uv v_{x}I + -12C[52] v_{x} D_x^{-1}v v_{x}I + 12C[53]u v_{2 \
+x} D_x^{-1}vI + 12C[53] u_{x} v_{x} D_x^{-1}vI + 12C[53] v_{x} D_x^{-1}u \
+v_{x}I + -12C[59] v_{x} D_x^{-1}v v_{x}I + 12C[61]u v_{2 x} D_x^{-1}vI + \
+12C[61] u_{x} v_{x} D_x^{-1}vI + 12C[61] v_{x} D_x^{-1}u v_{x}I + \
+12\[Alpha]C[23]u^{2} u_{x}I + 12\[Alpha]C[33]u^{2} u_{x}I + 12\[Alpha]C[52] \
+v_{x} D_x^{-1}u u_{x}I + 12\[Alpha]C[59] v_{x} D_x^{-1}u u_{x}I + -18C[28] \
+v_{x} v_{2 x}I + -18C[38] v_{x} v_{2 x}I + 18\[Alpha]C[28] u_{x} u_{2 x}I + \
+18\[Alpha]C[38] u_{x} u_{2 x}I + -1C[24] v_{3 x} D_x^{2} + -1C[27] v_{4 x} \
+D_x^{1} + -1C[29] v_{5 x}I + -1C[30]u v_{3 x}I + -1C[34] v_{3 x} D_x^{2} + \
+-1C[37] v_{4 x} D_x^{1} + -1C[39] v_{5 x}I + -1C[40]u v_{3 x}I + -1C[56]0 -> \
+0 v_{4 x} D_x^{-1} + -1C[56]0 -> 0 v_{x} v_{4 x} D_x^{-1} + -1C[57]0 -> 0 \
+v_{4 x} D_x^{-1} + -1C[57]0 -> 0 v_{x} v_{4 x} D_x^{-1} + -1C[58] v_{4 x} \
+D_x^{-1}vI + -1C[58] v_{x} D_x^{-1} v_{3 x}I + -1C[60] v_{4 x} D_x^{-1}uI + \
+-2C[25]v v_{3 x}I + -2C[35]v v_{3 x}I + -2C[52] v_{4 x} D_x^{-1}uI + -2C[59] \
+v_{4 x} D_x^{-1}uI + 2\[Alpha]C[23]u u_{3 x}I + 2\[Alpha]C[33]u u_{3 x}I + 2\
+\[Alpha]C[52] v_{x} D_x^{-1} u_{3 x}I + 2\[Alpha]C[59] v_{x} D_x^{-1} u_{3 \
+x}I + -3C[24]u v_{x} D_x^{2} + -3C[27]u v_{2 x} D_x^{1} + -3C[27] u_{x} v_{x} \
+D_x^{1} + -3C[29]u v_{3 x}I + -3C[29] v_{x} u_{2 x}I + -3C[30]u^{2} v_{x}I + \
+-3C[34]u v_{x} D_x^{2} + -3C[37]u v_{2 x} D_x^{1} + -3C[37] u_{x} v_{x} \
+D_x^{1} + -3C[39]u v_{3 x}I + -3C[39] v_{x} u_{2 x}I + -3C[40]u^{2} v_{x}I + \
+-3C[55]u u_{x} v_{x} D_x^{-1} + -3C[56]0 -> 0u v_{2 x} D_x^{-1} + -3C[56]0 -> \
+0u v_{x} v_{2 x} D_x^{-1} + -3C[56]0 -> 0 u_{x}^{2} v_{x}^{2} D_x^{-1} + \
+-3C[56]0 -> 0 u_{x} v_{x} D_x^{-1} + -3C[57]0 -> 0u v_{2 x} D_x^{-1} + \
+-3C[57]0 -> 0u v_{x} v_{2 x} D_x^{-1} + -3C[57]0 -> 0 u_{x}^{2} v_{x}^{2} \
+D_x^{-1} + -3C[57]0 -> 0 u_{x} v_{x} D_x^{-1} + -3C[58]u v_{2 x} D_x^{-1}vI + \
+-3C[58] u_{x} v_{x} D_x^{-1}vI + -3C[58] v_{x} D_x^{-1}u v_{x}I + -3C[60]u \
+v_{2 x} D_x^{-1}uI + -3C[60] u_{x} v_{x} D_x^{-1}uI + \
+3\\\\frac{1}{\[Alpha]^{1}}C[55]v^{2} v_{x}^{2} D_x^{-1} + 4C[53] v_{4 x} \
+D_x^{-1}vI + 4C[53] v_{x} D_x^{-1} v_{3 x}I + 4C[61] v_{4 x} D_x^{-1}vI + \
+4C[61] v_{x} D_x^{-1} v_{3 x}I + -6C[22]v v_{x} D_x^{2} + -6C[25]uv v_{x}I + \
+-6C[26]^{2} v_{x}^{2} D_x^{1} + -6C[26]v v_{2 x} D_x^{1} + -6C[28]v v_{3 x}I \
++ -6C[29] u_{x} v_{2 x}I + -6C[30]v^{2} v_{x}I + -6C[32]v v_{x} D_x^{2} + \
+-6C[35]uv v_{x}I + -6C[36]^{2} v_{x}^{2} D_x^{1} + -6C[36]v v_{2 x} D_x^{1} + \
+-6C[38]v v_{3 x}I + -6C[39] u_{x} v_{2 x}I + -6C[40]v^{2} v_{x}I + -6C[52]u \
+v_{2 x} D_x^{-1}uI + -6C[52] u_{x} v_{x} D_x^{-1}uI + -6C[59]u v_{2 x} \
+D_x^{-1}uI + -6C[59] u_{x} v_{x} D_x^{-1}uI + -6C[60] v_{x} D_x^{-1}v v_{x}I \
++ 6\[Alpha]C[22]u u_{x} D_x^{2} + 6\[Alpha]C[26]^{2} u_{x}^{2} D_x^{1} + 6\
+\[Alpha]C[26]u u_{2 x} D_x^{1} + 6\[Alpha]C[28]u u_{3 x}I + 6\[Alpha]C[30]uv \
+u_{x}I + 6\[Alpha]C[32]u u_{x} D_x^{2} + 6\[Alpha]C[36]^{2} u_{x}^{2} D_x^{1} \
++ 6\[Alpha]C[36]u u_{2 x} D_x^{1} + 6\[Alpha]C[38]u u_{3 x}I + \
+6\[Alpha]C[40]uv u_{x}I + 6\[Alpha]C[60] v_{x} D_x^{-1}u u_{x}I + \
+\\\\frac{-1}{2}C[55] v_{x} u_{3 x} D_x^{-1} + \\\\frac{1}{2}\\\\frac{1}{\
+\[Alpha]^{1}}C[54]u v_{4 x} D_x^{-1} + \
+\\\\frac{1}{2}\\\\frac{1}{\[Alpha]^{1}}C[54] v_{x} u_{3 x} D_x^{-1} + \
+\\\\frac{1}{2}\\\\frac{1}{\[Alpha]^{1}}C[55]u v_{4 x} D_x^{-1} + \
+\\\\frac{1}{6}\\\\frac{1}{\[Alpha]^{1}}C[54] v_{6 x} D_x^{-1} + \
+\\\\frac{3}{2}\\\\frac{1}{\[Alpha]^{1}}C[54] u_{2 x} v_{2 x} D_x^{-1} + \
+\\\\frac{3}{2}\\\\frac{1}{\[Alpha]^{1}}C[54] u_{x} v_{3 x} D_x^{-1} + \
+\\\\frac{3}{2}\\\\frac{1}{\[Alpha]^{1}}C[55]u^{2} v_{2 x} D_x^{-1} + \
+\\\\frac{3}{2}\\\\frac{1}{\[Alpha]^{1}}C[55]u u_{x} v_{x} D_x^{-1} + \
+\[Alpha]C[22] u_{3 x} D_x^{2} + \[Alpha]C[26] u_{4 x} D_x^{1} + \[Alpha]C[28] \
+u_{5 x}I + \[Alpha]C[30]v u_{3 x}I + \[Alpha]C[32] u_{3 x} D_x^{2} + \
+\[Alpha]C[36] u_{4 x} D_x^{1} + \[Alpha]C[38] u_{5 x}I + \[Alpha]C[40]v u_{3 \
+x}I + \[Alpha]C[60] v_{x} D_x^{-1} u_{3 x}I} /. {0, 0, 0, 0, 0, 0, 0, 0, 0, \
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, \
+0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, \
+0}), {-1\\\\frac{1}{\[Alpha]^{1}}C[45]v v_{x} D_x^{-1} + 2C[41] u_{x} \
+D_x^{-1}uI + 2C[49] u_{x} D_x^{-1}uI + -4C[42] u_{x} D_x^{-1}vI + -4C[51] \
+u_{x} D_x^{-1}vI + C[10]uvI + C[11] D_x^{4} + C[12]u D_x^{2} + C[13]u^{2}I + \
+C[14]v D_x^{2} + C[15]v^{2}I + C[16] u_{x} D_x^{1} + C[17] v_{x} D_x^{1} + \
+C[18] u_{2 x}I + C[19] v_{2 x}I + C[1] D_x^{4} + C[20]uvI + C[2]u D_x^{2} + \
+C[3]u^{2}I + C[44]u u_{x} D_x^{-1} + C[46]0 -> 0 u_{x} D_x^{-1} + C[47]0 -> 0 \
+u_{x} D_x^{-1} + C[48] u_{x} D_x^{-1}vI + C[4]v D_x^{2} + C[50] u_{x} \
+D_x^{-1}uI + C[5]v^{2}I + C[6] u_{x} D_x^{1} + C[7] v_{x} D_x^{1} + C[8] u_{2 \
+x}I + C[9] v_{2 x}I + \\\\frac{1}{6}C[43] u_{3 x} D_x^{-1}, 2C[52] v_{x} \
+D_x^{-1}uI + 2C[59] v_{x} D_x^{-1}uI + -4C[53] v_{x} D_x^{-1}vI + -4C[61] \
+v_{x} D_x^{-1}vI + C[21] D_x^{4} + C[22]u D_x^{2} + C[23]u^{2}I + C[24]v \
+D_x^{2} + C[25]v^{2}I + C[26] u_{x} D_x^{1} + C[27] v_{x} D_x^{1} + C[28] \
+u_{2 x}I + C[29] v_{2 x}I + C[30]uvI + C[31] D_x^{4} + C[32]u D_x^{2} + \
+C[33]u^{2}I + C[34]v D_x^{2} + C[35]v^{2}I + C[36] u_{x} D_x^{1} + C[37] \
+v_{x} D_x^{1} + C[38] u_{2 x}I + C[39] v_{2 x}I + C[40]uvI + C[56]0 -> 0 \
+v_{x} D_x^{-1} + C[57]0 -> 0 v_{x} D_x^{-1} + C[58] v_{x} D_x^{-1}vI + C[60] \
+v_{x} D_x^{-1}uI + \\\\frac{-1}{2}\\\\frac{1}{\[Alpha]^{1}}C[55]u v_{x} \
+D_x^{-1} + \\\\frac{-1}{6}\\\\frac{1}{\[Alpha]^{1}}C[54] v_{3 x} D_x^{-1}} /. \
+{\[Alpha], C[1], C[2], C[3], C[4], C[5], C[6], C[7], C[8], C[9], C[10], \
+C[11], C[12], C[13], C[14], C[15], C[16], C[17], C[18], C[19], C[20], C[21], \
+C[22], C[23], C[24], C[25], C[26], C[27], C[28], C[29], C[30], C[31], C[32], \
+C[33], C[34], C[35], C[36], C[37], C[38], C[39], C[40], C[41], C[42], C[43], \
+C[44], C[45], C[46], C[47], C[48], C[49], C[50], C[51], C[52], C[53], C[54], \
+C[55], C[56], C[57], C[58], C[59], C[60], C[61]}, \
+{-1\\\\frac{1}{\[Alpha]^{1}}C[45]v v_{x} D_x^{-1} + 2C[41] u_{x} D_x^{-1}uI + \
+2C[49] u_{x} D_x^{-1}uI + -4C[42] u_{x} D_x^{-1}vI + -4C[51] u_{x} D_x^{-1}vI \
++ C[10]uvI + C[11] D_x^{4} + C[12]u D_x^{2} + C[13]u^{2}I + C[14]v D_x^{2} + \
+C[15]v^{2}I + C[16] u_{x} D_x^{1} + C[17] v_{x} D_x^{1} + C[18] u_{2 x}I + \
+C[19] v_{2 x}I + C[1] D_x^{4} + C[20]uvI + C[2]u D_x^{2} + C[3]u^{2}I + \
+C[44]u u_{x} D_x^{-1} + C[46]0 -> 0 u_{x} D_x^{-1} + C[47]0 -> 0 u_{x} \
+D_x^{-1} + C[48] u_{x} D_x^{-1}vI + C[4]v D_x^{2} + C[50] u_{x} D_x^{-1}uI + \
+C[5]v^{2}I + C[6] u_{x} D_x^{1} + C[7] v_{x} D_x^{1} + C[8] u_{2 x}I + C[9] \
+v_{2 x}I + \\\\frac{1}{6}C[43] u_{3 x} D_x^{-1}, 2C[52] v_{x} D_x^{-1}uI + \
+2C[59] v_{x} D_x^{-1}uI + -4C[53] v_{x} D_x^{-1}vI + -4C[61] v_{x} D_x^{-1}vI \
++ C[21] D_x^{4} + C[22]u D_x^{2} + C[23]u^{2}I + C[24]v D_x^{2} + C[25]v^{2}I \
++ C[26] u_{x} D_x^{1} + C[27] v_{x} D_x^{1} + C[28] u_{2 x}I + C[29] v_{2 x}I \
++ C[30]uvI + C[31] D_x^{4} + C[32]u D_x^{2} + C[33]u^{2}I + C[34]v D_x^{2} + \
+C[35]v^{2}I + C[36] u_{x} D_x^{1} + C[37] v_{x} D_x^{1} + C[38] u_{2 x}I + \
+C[39] v_{2 x}I + C[40]uvI + C[56]0 -> 0 v_{x} D_x^{-1} + C[57]0 -> 0 v_{x} \
+D_x^{-1} + C[58] v_{x} D_x^{-1}vI + C[60] v_{x} D_x^{-1}uI + \
+\\\\frac{-1}{2}\\\\frac{1}{\[Alpha]^{1}}C[55]u v_{x} D_x^{-1} + \
+\\\\frac{-1}{6}\\\\frac{1}{\[Alpha]^{1}}C[54] v_{3 x} D_x^{-1}} /. {\[Alpha], \
+C[1], C[2], C[3], C[4], C[5], C[6], C[7], C[8], C[9], C[10], C[11], C[12], \
+C[13], C[14], C[15], C[16], C[17], C[18], C[19], C[20], C[21], C[22], C[23], \
+C[24], C[25], C[26], C[27], C[28], C[29], C[30], C[31], C[32], C[33], C[34], \
+C[35], C[36], C[37], C[38], C[39], C[40], C[41], C[42], C[43], C[44], C[45], \
+C[46], C[47], C[48], C[49], C[50], C[51], C[52], C[53], C[54], C[55], C[56], \
+C[57], C[58], C[59], C[60], C[61]}, {-1\\\\frac{1}{\[Alpha]^{1}}C[45]v v_{x} \
+D_x^{-1} + 2C[41] u_{x} D_x^{-1}uI + 2C[49] u_{x} D_x^{-1}uI + -4C[42] u_{x} \
+D_x^{-1}vI + -4C[51] u_{x} D_x^{-1}vI + C[10]uvI + C[11] D_x^{4} + C[12]u \
+D_x^{2} + C[13]u^{2}I + C[14]v D_x^{2} + C[15]v^{2}I + C[16] u_{x} D_x^{1} + \
+C[17] v_{x} D_x^{1} + C[18] u_{2 x}I + C[19] v_{2 x}I + C[1] D_x^{4} + \
+C[20]uvI + C[2]u D_x^{2} + C[3]u^{2}I + C[44]u u_{x} D_x^{-1} + C[46]0 -> 0 \
+u_{x} D_x^{-1} + C[47]0 -> 0 u_{x} D_x^{-1} + C[48] u_{x} D_x^{-1}vI + C[4]v \
+D_x^{2} + C[50] u_{x} D_x^{-1}uI + C[5]v^{2}I + C[6] u_{x} D_x^{1} + C[7] \
+v_{x} D_x^{1} + C[8] u_{2 x}I + C[9] v_{2 x}I + \\\\frac{1}{6}C[43] u_{3 x} \
+D_x^{-1}, 2C[52] v_{x} D_x^{-1}uI + 2C[59] v_{x} D_x^{-1}uI + -4C[53] v_{x} \
+D_x^{-1}vI + -4C[61] v_{x} D_x^{-1}vI + C[21] D_x^{4} + C[22]u D_x^{2} + \
+C[23]u^{2}I + C[24]v D_x^{2} + C[25]v^{2}I + C[26] u_{x} D_x^{1} + C[27] \
+v_{x} D_x^{1} + C[28] u_{2 x}I + C[29] v_{2 x}I + C[30]uvI + C[31] D_x^{4} + \
+C[32]u D_x^{2} + C[33]u^{2}I + C[34]v D_x^{2} + C[35]v^{2}I + C[36] u_{x} \
+D_x^{1} + C[37] v_{x} D_x^{1} + C[38] u_{2 x}I + C[39] v_{2 x}I + C[40]uvI + \
+C[56]0 -> 0 v_{x} D_x^{-1} + C[57]0 -> 0 v_{x} D_x^{-1} + C[58] v_{x} \
+D_x^{-1}vI + C[60] v_{x} D_x^{-1}uI + \
+\\\\frac{-1}{2}\\\\frac{1}{\[Alpha]^{1}}C[55]u v_{x} D_x^{-1} + \
+\\\\frac{-1}{6}\\\\frac{1}{\[Alpha]^{1}}C[54] v_{3 x} D_x^{-1}} /. {\[Alpha], \
+C[1], C[2], C[3], C[4], C[5], C[6], C[7], C[8], C[9], C[10], C[11], C[12], \
+C[13], C[14], C[15], C[16], C[17], C[18], C[19], C[20], C[21], C[22], C[23], \
+C[24], C[25], C[26], C[27], C[28], C[29], C[30], C[31], C[32], C[33], C[34], \
+C[35], C[36], C[37], C[38], C[39], C[40], C[41], C[42], C[43], C[44], C[45], \
+C[46], C[47], C[48], C[49], C[50], C[51], C[52], C[53], C[54], C[55], C[56], \
+C[57], C[58], C[59], C[60], C[61]}]\"\>"], "Print",
+ CellChangeTimes->{3.9726101326456404`*^9},
+ CellLabel->
+  "During evaluation of \
+In[28]:=",ExpressionUUID->"4dacb0ea-8424-4112-b8d3-5ed67907b35f"]
+}, Open  ]],
+
+Cell[BoxData[
+ TemplateBox[{
+  "RecursionOperator", "failed", 
+   "\"A valid recursion operator wasn't found.  Please try setting the Seed \
+option\\nto an interger greater than one.  For example, Seed -> 2.\"", 2, 28, 
+   24, 27858035363772182891, "Local", "recursionOperator`RecursionOperator"},
+  "MessageTemplate2"]], "Message", "MSG",
+ CellChangeTimes->{3.972609978951883*^9, 3.9726101326786203`*^9},
+ CellLabel->
+  "During evaluation of \
+In[28]:=",ExpressionUUID->"0edde755-0098-404a-8941-6e0f3b7eef7e"],
+
+Cell[BoxData["$Aborted"], "Output",
+ CellChangeTimes->{3.972609978999166*^9, 3.9726101326962533`*^9},
+ CellLabel->"Out[28]=",ExpressionUUID->"c56e1cc5-6c05-485a-98f0-fdbe27fda368"]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"(*", " ", 
+  RowBox[{
+   RowBox[{
+   "The", " ", "code", " ", "does", " ", "NOT", " ", "automatically", " ", 
+    "compute", " ", "that", " ", "alpha"}], " ", "=", " ", 
+   RowBox[{
+    RowBox[{"1", "/", "2"}], " ", "but", " ", "by", " ", "following", " ", 
+    "the", " ", "computations", " ", "you", " ", "can", " ", "see", " ", 
+    "the", " ", "condition", " ", "to", " ", "be", " ", "satisfied"}]}], " ", 
+  "*)"}]], "Input",
+ CellChangeTimes->{{3.9726081071902666`*^9, 3.972608136897026*^9}, {
+  3.972608227069744*^9, 
+  3.9726082480000353`*^9}},ExpressionUUID->"8baf1719-d26d-4184-9e1b-\
+e239d4258497"],
+
+Cell[BoxData[
+ RowBox[{"RecursionOperator", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"HirotaSatsumaEq1Par", ",", "HirotaSatsumaEq2Par"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"u", "[", 
+      RowBox[{"x", ",", "t"}], "]"}], ",", 
+     RowBox[{"v", "[", 
+      RowBox[{"x", ",", "t"}], "]"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "t"}], "}"}], ",", 
+   RowBox[{"Seed", "\[Rule]", "2"}], ",", " ", 
+   RowBox[{"Verbose", " ", "->", " ", "True"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.972608150443795*^9, 3.9726081523302603`*^9}},
+ CellLabel->"In[31]:=",ExpressionUUID->"66d8d5e3-acf5-4c3a-a704-1988fc1d4eae"],
+
+Cell[BoxData[
+ RowBox[{"(*", " ", 
+  RowBox[{
+   RowBox[{"Rerun", " ", "the", " ", "code", " ", "with", " ", "alpha"}], " ",
+    "=", " ", 
+   RowBox[{
+    RowBox[{"1", "/", "2"}], " ", "given"}]}], " ", "*)"}]], "Input",
+ CellChangeTimes->{{3.9726096192330065`*^9, 
+  3.9726096360191016`*^9}},ExpressionUUID->"a6e0552e-615d-4811-af2a-\
+40ed951275ce"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"HirotaSatsumacKdVEqsNew", " ", "=", 
+  RowBox[{"Evaluate", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"HirotaSatsumaEq1Par", ",", "HirotaSatsumaEq2Par"}], "}"}], " ", 
+    "/.", " ", 
+    RowBox[{"{", 
+     RowBox[{"\[Alpha]", "\[Rule]", 
+      FractionBox["1", "2"]}], "}"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{
+  3.9726085433394017`*^9, {3.972609642571021*^9, 3.9726096688692446`*^9}},
+ CellLabel->"In[29]:=",ExpressionUUID->"98b17cd8-930b-4cf7-bb87-3f8d28e190e2"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["u", 
+      TagBox[
+       RowBox[{"(", 
+        RowBox[{"0", ",", "1"}], ")"}],
+       Derivative],
+      MultilineFunction->None], "[", 
+     RowBox[{"x", ",", "t"}], "]"}], "\[Equal]", 
+    RowBox[{
+     RowBox[{"3", " ", 
+      RowBox[{"u", "[", 
+       RowBox[{"x", ",", "t"}], "]"}], " ", 
+      RowBox[{
+       SuperscriptBox["u", 
+        TagBox[
+         RowBox[{"(", 
+          RowBox[{"1", ",", "0"}], ")"}],
+         Derivative],
+        MultilineFunction->None], "[", 
+       RowBox[{"x", ",", "t"}], "]"}]}], "-", 
+     RowBox[{"6", " ", 
+      RowBox[{"v", "[", 
+       RowBox[{"x", ",", "t"}], "]"}], " ", 
+      RowBox[{
+       SuperscriptBox["v", 
+        TagBox[
+         RowBox[{"(", 
+          RowBox[{"1", ",", "0"}], ")"}],
+         Derivative],
+        MultilineFunction->None], "[", 
+       RowBox[{"x", ",", "t"}], "]"}]}], "+", 
+     RowBox[{
+      FractionBox["1", "2"], " ", 
+      RowBox[{
+       SuperscriptBox["u", 
+        TagBox[
+         RowBox[{"(", 
+          RowBox[{"3", ",", "0"}], ")"}],
+         Derivative],
+        MultilineFunction->None], "[", 
+       RowBox[{"x", ",", "t"}], "]"}]}]}]}], ",", 
+   RowBox[{
+    RowBox[{
+     SuperscriptBox["v", 
+      TagBox[
+       RowBox[{"(", 
+        RowBox[{"0", ",", "1"}], ")"}],
+       Derivative],
+      MultilineFunction->None], "[", 
+     RowBox[{"x", ",", "t"}], "]"}], "\[Equal]", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"-", "3"}], " ", 
+      RowBox[{"u", "[", 
+       RowBox[{"x", ",", "t"}], "]"}], " ", 
+      RowBox[{
+       SuperscriptBox["v", 
+        TagBox[
+         RowBox[{"(", 
+          RowBox[{"1", ",", "0"}], ")"}],
+         Derivative],
+        MultilineFunction->None], "[", 
+       RowBox[{"x", ",", "t"}], "]"}]}], "-", 
+     RowBox[{
+      SuperscriptBox["v", 
+       TagBox[
+        RowBox[{"(", 
+         RowBox[{"3", ",", "0"}], ")"}],
+        Derivative],
+       MultilineFunction->None], "[", 
+      RowBox[{"x", ",", "t"}], "]"}]}]}]}], "}"}]], "Output",
+ CellChangeTimes->{3.9726099935527787`*^9, 3.9726101327279778`*^9},
+ CellLabel->"Out[29]=",ExpressionUUID->"763b96ea-fd1f-45f8-82d1-3857601a183e"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"RecursionOperator", "[", 
+  RowBox[{"HirotaSatsumacKdVEqsNew", ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"u", "[", 
+      RowBox[{"x", ",", "t"}], "]"}], ",", 
+     RowBox[{"v", "[", 
+      RowBox[{"x", ",", "t"}], "]"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"x", ",", "t"}], "}"}], ",", 
+   RowBox[{"Seed", "\[Rule]", "2"}], ",", " ", 
+   RowBox[{"Verbose", " ", "->", " ", "False"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.972609685050301*^9, 3.972609692795932*^9}, 
+   3.9726100123074903`*^9},
+ CellLabel->"In[30]:=",ExpressionUUID->"642d9301-1f2c-48d9-bca5-8c594dafde43"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["\<\"{{{-12 C[48]v v_{x} D_x^{-1} + 2C[48] u_{x} D_x^{-1}uI + 4 \
+C[48] u_{2 x}I + 4 C[48]u D_x^{2} + 6 C[48] u_{x} D_x^{1} + 8 C[48]u^{2}I + \
+-8 C[48]v^{2}I + \\\\frac{-1}{12}-12 C[48] u_{3 x} D_x^{-1} + \
+\\\\frac{-1}{2}-12 C[48]u u_{x} D_x^{-1} + \\\\frac{1}{2} C[48] D_x^{4}, -10 \
+C[48]v D_x^{2} + -2 C[48] v_{2 x}I + -4C[48] u_{x} D_x^{-1}vI + -8 C[48]uvI + \
+-8 C[48] v_{x} D_x^{1}}, {2C[48] v_{x} D_x^{-1}uI + -5 C[48] v_{x} D_x^{1} + \
+-6 C[48] v_{2 x}I + \\\\frac{1}{2}-12 C[48]u v_{x} D_x^{-1} + \
+\\\\frac{1}{6}-12 C[48] v_{3 x} D_x^{-1}, -2 C[48] D_x^{4} + -4 C[48] u_{x} \
+D_x^{1} + -4C[48] v_{x} D_x^{-1}vI + -8 C[48]u D_x^{2} + -8 \
+C[48]v^{2}I}}}\"\>"], "Print",
+ CellChangeTimes->{3.972610139632321*^9},
+ CellLabel->
+  "During evaluation of \
+In[30]:=",ExpressionUUID->"4c7ed822-cad9-40d0-92c3-7992287949cd"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        FractionBox[
+         TemplateBox[{"48"},
+          "C"], "2"], ".", 
+        SubsuperscriptBox["D", "x", "\<\"4\"\>"]}], "+", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "8"}], " ", 
+          TemplateBox[{"48"},
+           "C"]}], ")"}], ".", 
+        SuperscriptBox["v", "2"], ".", "\<\"I\"\>"}], "+", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"4", " ", 
+          TemplateBox[{"48"},
+           "C"]}], ")"}], ".", "u", ".", 
+        SubsuperscriptBox["D", "x", "\<\"2\"\>"]}], "+", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"4", " ", 
+          TemplateBox[{"48"},
+           "C"]}], ")"}], ".", 
+        SubscriptBox["u", 
+         TemplateBox[{"x", "x"},
+          "RowDefault"]], ".", "\<\"I\"\>"}], "+", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"6", " ", 
+          TemplateBox[{"48"},
+           "C"]}], ")"}], ".", 
+        SubscriptBox["u", 
+         TemplateBox[{"x"},
+          "RowDefault"]], ".", 
+        SubsuperscriptBox["D", "x", "\<\"1\"\>"]}], "+", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"8", " ", 
+          TemplateBox[{"48"},
+           "C"]}], ")"}], ".", 
+        SuperscriptBox["u", "2"], ".", "\<\"I\"\>"}], "+", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"-", 
+          FractionBox["1", "12"]}], ")"}], ".", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "12"}], " ", 
+          TemplateBox[{"48"},
+           "C"]}], ")"}], ".", 
+        SubscriptBox["u", 
+         TemplateBox[{"x", "x", "x"},
+          "RowDefault"]], ".", 
+        SubsuperscriptBox["D", "x", "\<\"-1\"\>"]}], "+", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "12"}], " ", 
+          TemplateBox[{"48"},
+           "C"]}], ")"}], ".", "v", ".", 
+        SubscriptBox["v", 
+         TemplateBox[{"x"},
+          "RowDefault"]], ".", 
+        SubsuperscriptBox["D", "x", "\<\"-1\"\>"]}], "+", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"-", 
+          FractionBox["1", "2"]}], ")"}], ".", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "12"}], " ", 
+          TemplateBox[{"48"},
+           "C"]}], ")"}], ".", "u", ".", 
+        SubscriptBox["u", 
+         TemplateBox[{"x"},
+          "RowDefault"]], ".", 
+        SubsuperscriptBox["D", "x", "\<\"-1\"\>"]}], "+", 
+       RowBox[{"2", ".", 
+        TemplateBox[{"48"},
+         "C"], ".", 
+        SubscriptBox["u", 
+         TemplateBox[{"x"},
+          "RowDefault"]], ".", 
+        SubsuperscriptBox["D", "x", "\<\"-1\"\>"], ".", "u", 
+        ".", "\<\"I\"\>"}]}], ",", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "10"}], " ", 
+          TemplateBox[{"48"},
+           "C"]}], ")"}], ".", "v", ".", 
+        SubsuperscriptBox["D", "x", "\<\"2\"\>"]}], "+", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "8"}], " ", 
+          TemplateBox[{"48"},
+           "C"]}], ")"}], ".", 
+        SubscriptBox["v", 
+         TemplateBox[{"x"},
+          "RowDefault"]], ".", 
+        SubsuperscriptBox["D", "x", "\<\"1\"\>"]}], "+", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "2"}], " ", 
+          TemplateBox[{"48"},
+           "C"]}], ")"}], ".", 
+        SubscriptBox["v", 
+         TemplateBox[{"x", "x"},
+          "RowDefault"]], ".", "\<\"I\"\>"}], "+", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "8"}], " ", 
+          TemplateBox[{"48"},
+           "C"]}], ")"}], ".", "u", ".", "v", ".", "\<\"I\"\>"}], "+", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"-", "4"}], ")"}], ".", 
+        TemplateBox[{"48"},
+         "C"], ".", 
+        SubscriptBox["u", 
+         TemplateBox[{"x"},
+          "RowDefault"]], ".", 
+        SubsuperscriptBox["D", "x", "\<\"-1\"\>"], ".", "v", 
+        ".", "\<\"I\"\>"}]}]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "6"}], " ", 
+          TemplateBox[{"48"},
+           "C"]}], ")"}], ".", 
+        SubscriptBox["v", 
+         TemplateBox[{"x", "x"},
+          "RowDefault"]], ".", "\<\"I\"\>"}], "+", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "5"}], " ", 
+          TemplateBox[{"48"},
+           "C"]}], ")"}], ".", 
+        SubscriptBox["v", 
+         TemplateBox[{"x"},
+          "RowDefault"]], ".", 
+        SubsuperscriptBox["D", "x", "\<\"1\"\>"]}], "+", 
+       RowBox[{
+        FractionBox["1", "6"], ".", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "12"}], " ", 
+          TemplateBox[{"48"},
+           "C"]}], ")"}], ".", 
+        SubscriptBox["v", 
+         TemplateBox[{"x", "x", "x"},
+          "RowDefault"]], ".", 
+        SubsuperscriptBox["D", "x", "\<\"-1\"\>"]}], "+", 
+       RowBox[{
+        FractionBox["1", "2"], ".", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "12"}], " ", 
+          TemplateBox[{"48"},
+           "C"]}], ")"}], ".", "u", ".", 
+        SubscriptBox["v", 
+         TemplateBox[{"x"},
+          "RowDefault"]], ".", 
+        SubsuperscriptBox["D", "x", "\<\"-1\"\>"]}], "+", 
+       RowBox[{"2", ".", 
+        TemplateBox[{"48"},
+         "C"], ".", 
+        SubscriptBox["v", 
+         TemplateBox[{"x"},
+          "RowDefault"]], ".", 
+        SubsuperscriptBox["D", "x", "\<\"-1\"\>"], ".", "u", 
+        ".", "\<\"I\"\>"}]}], ",", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "2"}], " ", 
+          TemplateBox[{"48"},
+           "C"]}], ")"}], ".", 
+        SubsuperscriptBox["D", "x", "\<\"4\"\>"]}], "+", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "8"}], " ", 
+          TemplateBox[{"48"},
+           "C"]}], ")"}], ".", "u", ".", 
+        SubsuperscriptBox["D", "x", "\<\"2\"\>"]}], "+", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "8"}], " ", 
+          TemplateBox[{"48"},
+           "C"]}], ")"}], ".", 
+        SuperscriptBox["v", "2"], ".", "\<\"I\"\>"}], "+", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"-", "4"}], " ", 
+          TemplateBox[{"48"},
+           "C"]}], ")"}], ".", 
+        SubscriptBox["u", 
+         TemplateBox[{"x"},
+          "RowDefault"]], ".", 
+        SubsuperscriptBox["D", "x", "\<\"1\"\>"]}], "+", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"-", "4"}], ")"}], ".", 
+        TemplateBox[{"48"},
+         "C"], ".", 
+        SubscriptBox["v", 
+         TemplateBox[{"x"},
+          "RowDefault"]], ".", 
+        SubsuperscriptBox["D", "x", "\<\"-1\"\>"], ".", "v", 
+        ".", "\<\"I\"\>"}]}]}], "}"}]}], "}"}], "}"}]], "Print",
+ CellChangeTimes->{3.97261014004789*^9},
+ CellLabel->
+  "During evaluation of \
+In[30]:=",ExpressionUUID->"13a17404-5fd2-49b9-b4c9-9c648080ab52"],
+
+Cell[BoxData["Null"], "Print",
+ CellChangeTimes->{3.9726101400637293`*^9},
+ CellLabel->
+  "During evaluation of \
+In[30]:=",ExpressionUUID->"0bf6e203-ffd9-4e14-be1b-277562edc776"]
+}, Open  ]],
+
+Cell["\<\
+{{{(C[48]*operatorD[4])/2 + 4*C[48]*operatorD[2]*u[x, t] + 
+    8*C[48]*operatorD[0]*u[x, t]^2 - 8*C[48]*operatorD[0]*
+     v[x, t]^2 + 6*C[48]*operatorD[1]*Derivative[1, 0][u][x, 
+      t] + 6*C[48]*operatorD[-1]*u[x, t]*
+     Derivative[1, 0][u][x, t] + 2*C[48]*operatorD[-1]*
+     operatorD[0]*u[x, t]*Derivative[1, 0][u][x, t] - 
+    12*C[48]*operatorD[-1]*v[x, t]*Derivative[1, 0][v][x, 
+      t] + 4*C[48]*operatorD[0]*Derivative[2, 0][u][x, t] + 
+    C[48]*operatorD[-1]*Derivative[3, 0][u][x, t], 
+   -10*C[48]*operatorD[2]*v[x, t] - 8*C[48]*operatorD[0]*
+     u[x, t]*v[x, t] - 4*C[48]*operatorD[-1]*operatorD[0]*
+     v[x, t]*Derivative[1, 0][u][x, t] - 
+    8*C[48]*operatorD[1]*Derivative[1, 0][v][x, t] - 
+    2*C[48]*operatorD[0]*Derivative[2, 0][v][x, t]}, 
+  {-5*C[48]*operatorD[1]*Derivative[1, 0][v][x, t] - 
+    6*C[48]*operatorD[-1]*u[x, t]*Derivative[1, 0][v][x, 
+      t] + 2*C[48]*operatorD[-1]*operatorD[0]*u[x, t]*
+     Derivative[1, 0][v][x, t] - 6*C[48]*operatorD[0]*
+     Derivative[2, 0][v][x, t] - 2*C[48]*operatorD[-1]*
+     Derivative[3, 0][v][x, t], -2*C[48]*operatorD[4] - 
+    8*C[48]*operatorD[2]*u[x, t] - 8*C[48]*operatorD[0]*
+     v[x, t]^2 - 4*C[48]*operatorD[1]*Derivative[1, 0][u][x, 
+      t] - 4*C[48]*operatorD[-1]*operatorD[0]*v[x, t]*
+     Derivative[1, 0][v][x, t]}}}\
+\>", "Output",
+ CellChangeTimes->{3.972610015457389*^9, 3.9726101400637293`*^9},
+ CellLabel->
+  "Out[30]//InputForm=",ExpressionUUID->"819a909c-4f7e-4a9e-8e27-\
+2e717c43a583"]
+}, Open  ]]
+},
+WindowSize->{812.5714285714286, 420.85714285714283`},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+PrintingCopies->1,
+PrintingPageRange->{Automatic, Automatic},
+PrivateNotebookOptions->{"VersionedStylesheet"->{"Default.nb"[8.] -> False}},
+Magnification->1.25,
+FrontEndVersion->"13.2 for Microsoft Windows (64-bit) (January 30, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"edd75110-42c4-48c3-b467-413307102ded"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "Examples"->{
+  Cell[4689, 133, 1692, 42, 84, "Input",ExpressionUUID->"78a25c54-5640-401b-a521-823f311dc292",
+   CellTags->"Examples"]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"Examples", 155234, 3165}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 474, 12, 60, "Input",ExpressionUUID->"8e7798ea-d49c-4b8c-9fd9-14bde0da1dc6"],
+Cell[CellGroupData[{
+Cell[1057, 36, 403, 7, 35, "Input",ExpressionUUID->"72da48ff-d013-4217-b126-dca01c0458a9"],
+Cell[1463, 45, 208, 3, 40, "Output",ExpressionUUID->"6ed65ad0-1a3a-4072-934d-801678b108dd"]
+}, Open  ]],
+Cell[1686, 51, 375, 7, 60, "Input",ExpressionUUID->"809f447b-93de-464f-bbdd-7f921b1b88cf"],
+Cell[CellGroupData[{
+Cell[2086, 62, 588, 9, 35, "Input",ExpressionUUID->"0a5f21b9-5082-4e69-8051-a4ccc13253e9"],
+Cell[CellGroupData[{
+Cell[2699, 75, 239, 5, 27, "Print",ExpressionUUID->"7c63dd76-d162-4e0b-9238-3f8e6ca71275"],
+Cell[2941, 82, 254, 5, 27, "Print",ExpressionUUID->"aabb2a03-c9f8-4807-b4d4-2840c430cdbb"],
+Cell[3198, 89, 239, 5, 27, "Print",ExpressionUUID->"f4e7f53e-85fa-4798-8ed7-feb5df49b86a"],
+Cell[3440, 96, 247, 5, 27, "Print",ExpressionUUID->"d586ade5-c71d-465b-b990-90cff690ae94"],
+Cell[3690, 103, 251, 5, 27, "Print",ExpressionUUID->"eb102a02-a11b-48ff-bde7-dd312bb9a076"],
+Cell[3944, 110, 247, 5, 27, "Print",ExpressionUUID->"446465cc-d751-4933-8ed4-4d5a04d9d8c8"]
+}, Open  ]]
+}, Open  ]],
+Cell[4218, 119, 468, 12, 35, "Input",ExpressionUUID->"ab2ec4d5-f5a5-4f1a-ac09-4c479d16f59f"],
+Cell[4689, 133, 1692, 42, 84, "Input",ExpressionUUID->"78a25c54-5640-401b-a521-823f311dc292",
+ CellTags->"Examples"],
+Cell[CellGroupData[{
+Cell[6406, 179, 281, 4, 35, "Input",ExpressionUUID->"74f9ca84-67d1-4416-b4f8-5497673fd39e"],
+Cell[6690, 185, 1255, 44, 66, "Output",ExpressionUUID->"4a63b37d-f043-46a5-8b51-6873f21f2581"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7982, 234, 781, 19, 83, "Input",ExpressionUUID->"7d947f8f-8fc7-4493-b879-a928e014d974"],
+Cell[CellGroupData[{
+Cell[8788, 257, 346, 6, 50, "Print",ExpressionUUID->"0f934371-694a-4c6e-887c-4acd7afbbc75"],
+Cell[9137, 265, 1111, 34, 46, "Print",ExpressionUUID->"67083091-09b4-43c8-909a-15cdf6bc5205"],
+Cell[10251, 301, 176, 4, 27, "Print",ExpressionUUID->"c5edbfca-3e55-40c7-9826-f494dccd4bb1"]
+}, Open  ]],
+Cell[10442, 308, 430, 10, 165, "Output",ExpressionUUID->"a448546f-8e54-4238-8f3e-86aff0e7720c"]
+}, Open  ]],
+Cell[10887, 321, 361, 9, 35, "Input",ExpressionUUID->"98f71d01-1bf8-4690-8782-71101f889d14"],
+Cell[11251, 332, 1543, 29, 83, "Input",ExpressionUUID->"deb6ca51-4790-4159-b7f0-5fbd35c202d1"],
+Cell[12797, 363, 458, 11, 35, "Input",ExpressionUUID->"a8e2ca6f-b53a-40c5-9af2-95d21c45cb5b"],
+Cell[13258, 376, 2128, 62, 107, "Input",ExpressionUUID->"d8c859c6-78d9-4f8d-83b8-c5d0ec09c27d"],
+Cell[CellGroupData[{
+Cell[15411, 442, 240, 3, 35, "Input",ExpressionUUID->"cdefed80-871e-4da4-bb9e-d51a317796bb"],
+Cell[15654, 447, 2301, 79, 93, "Output",ExpressionUUID->"5452b2e8-4457-4a23-a646-53deea049cfa"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[17992, 531, 691, 16, 60, "Input",ExpressionUUID->"27d31476-b25a-4125-a744-c04b97aba2d5"],
+Cell[CellGroupData[{
+Cell[18708, 551, 841, 13, 204, "Print",ExpressionUUID->"b0f11beb-a8ba-40bf-adf2-4560a8dd591c"],
+Cell[19552, 566, 7087, 232, 272, "Print",ExpressionUUID->"e9d5baf4-d636-481b-b4ef-cd40eb74567d"],
+Cell[26642, 800, 178, 4, 27, "Print",ExpressionUUID->"822477aa-0fed-4e0d-bbe5-6203e09c78b9"]
+}, Open  ]],
+Cell[26835, 807, 1477, 28, 547, "Output",ExpressionUUID->"ec86dcbd-5b91-4ec9-86b5-419f54ae961c"]
+}, Open  ]],
+Cell[28327, 838, 361, 9, 35, "Input",ExpressionUUID->"507bc9ff-8428-4d18-917c-d0f53f1ed6b5"],
+Cell[28691, 849, 564, 15, 60, "Input",ExpressionUUID->"0680ad1c-b05e-47c5-b70b-661a2df7673c"],
+Cell[29258, 866, 685, 15, 60, "Input",ExpressionUUID->"6738b85c-c527-4bf6-a6b5-b07d2827f899"],
+Cell[29946, 883, 374, 9, 35, "Input",ExpressionUUID->"c9fb1319-489b-468f-9148-717ca73a8dbc"],
+Cell[30323, 894, 1156, 32, 61, "Input",ExpressionUUID->"adac03ff-89a4-4654-873d-f9be2c8e157e"],
+Cell[CellGroupData[{
+Cell[31504, 930, 270, 3, 35, "Input",ExpressionUUID->"2f7a2244-e7b9-40d8-b4c4-b433b8b5cdfd"],
+Cell[31777, 935, 1243, 43, 41, "Output",ExpressionUUID->"3485697d-89dd-4d42-8e9f-940decbc5fce"]
+}, Open  ]],
+Cell[33035, 981, 834, 24, 37, "Input",ExpressionUUID->"c88fd7e8-91e4-4b7c-9686-4fb4a912b7af"],
+Cell[CellGroupData[{
+Cell[33894, 1009, 194, 2, 35, "Input",ExpressionUUID->"5991285b-054c-4341-a338-2ea006f1997a"],
+Cell[34091, 1013, 922, 32, 41, "Output",ExpressionUUID->"d6f98244-52b4-4d9b-8bc7-a4e6f95ce4d5"]
+}, Open  ]],
+Cell[35028, 1048, 409, 10, 35, "Input",ExpressionUUID->"3c713248-916d-41f3-94aa-2e6cb960fffd"],
+Cell[CellGroupData[{
+Cell[35462, 1062, 252, 4, 35, "Input",ExpressionUUID->"412a812a-2297-4f61-ac78-aced7e67bc62"],
+Cell[35717, 1068, 2206, 76, 93, "Output",ExpressionUUID->"fa96eba7-5bc2-47d4-a4f9-783442b64d98"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[37960, 1149, 465, 8, 35, "Input",ExpressionUUID->"7f651977-a47e-4e3e-ac4d-58f7d11dd1c1"],
+Cell[38428, 1159, 1266, 44, 58, "Output",ExpressionUUID->"baf5396d-afaf-4c91-b05b-5a0b861ea011"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[39731, 1208, 317, 6, 35, "Input",ExpressionUUID->"1959cf42-ba8d-4549-9e24-91bab7f280f5"],
+Cell[40051, 1216, 926, 32, 41, "Output",ExpressionUUID->"3d395ab3-836d-4861-9ddc-b59bbca1ed7c"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[41014, 1253, 754, 18, 60, "Input",ExpressionUUID->"8822d26c-6e8c-455f-a37e-17173da55943"],
+Cell[41771, 1273, 452, 10, 35, "Message",ExpressionUUID->"bd4eb63b-7014-46f3-8781-4cff82a90b7a"],
+Cell[42226, 1285, 450, 10, 35, "Message",ExpressionUUID->"3fa255ce-407c-48c9-a7bc-a90d58f8c11f"],
+Cell[42679, 1297, 452, 10, 35, "Message",ExpressionUUID->"21c9d2ff-7bdb-4455-8cfb-0bf5c1ddb562"],
+Cell[43134, 1309, 476, 10, 35, "Message",ExpressionUUID->"b699659e-6eda-4315-a89c-4ec7d8b8fc62"],
+Cell[43613, 1321, 3935, 58, 127, "Message",ExpressionUUID->"dfd6472e-1a24-4bfe-95a2-72948f27e9f4"],
+Cell[47551, 1381, 3933, 58, 127, "Message",ExpressionUUID->"47777ed6-1868-4113-8c6b-7ec7cc7515a8"],
+Cell[51487, 1441, 4017, 59, 128, "Message",ExpressionUUID->"0859cda1-50d8-4d98-afd4-139277e723f2"],
+Cell[55507, 1502, 1069, 20, 59, "Message",ExpressionUUID->"c3c3777f-8d0f-417b-8d2f-8e11c2100ad9"],
+Cell[56579, 1524, 1840, 30, 107, "Message",ExpressionUUID->"94cc4660-afa4-4f54-b714-b2f7770d6b4d"],
+Cell[58422, 1556, 471, 10, 35, "Message",ExpressionUUID->"8df9622d-b4a7-42ff-b8bb-853e21622fee"],
+Cell[58896, 1568, 4019, 59, 128, "Message",ExpressionUUID->"3c4492bb-08e4-460b-a9d7-4111a1f47949"],
+Cell[62918, 1629, 477, 10, 35, "Message",ExpressionUUID->"5fda6a91-1973-41dd-b385-7d514d0083f8"],
+Cell[63398, 1641, 13394, 180, 3672, "Print",ExpressionUUID->"9b82de21-944c-410c-82bc-0924438ff67a"],
+Cell[76795, 1823, 983, 19, 35, "Message",ExpressionUUID->"8f1369c4-619e-4ddc-ab54-df45ac770a9c"],
+Cell[77781, 1844, 516, 11, 35, "Message",ExpressionUUID->"4474ab25-40cc-46b0-b332-caf7fba72f66"],
+Cell[78300, 1857, 514, 11, 35, "Message",ExpressionUUID->"17037dcb-5edd-4957-b276-7b930f07e1ed"],
+Cell[78817, 1870, 514, 11, 35, "Message",ExpressionUUID->"7e257290-18c9-468f-a21a-080aa034d610"],
+Cell[79334, 1883, 475, 10, 35, "Message",ExpressionUUID->"f005dae4-33d8-473c-9595-d017ef13f5e4"],
+Cell[CellGroupData[{
+Cell[79834, 1897, 38137, 499, 10720, "Print",ExpressionUUID->"60d96568-92e6-408d-9b3f-58524e7c5960"],
+Cell[117974, 2398, 21297, 283, 6131, "Print",ExpressionUUID->"4dacb0ea-8424-4112-b8d3-5ed67907b35f"]
+}, Open  ]],
+Cell[139286, 2684, 510, 10, 59, "Message",ExpressionUUID->"0edde755-0098-404a-8941-6e0f3b7eef7e"],
+Cell[139799, 2696, 180, 2, 40, "Output",ExpressionUUID->"c56e1cc5-6c05-485a-98f0-fdbe27fda368"]
+}, Open  ]],
+Cell[139994, 2701, 633, 14, 83, "Input",ExpressionUUID->"8baf1719-d26d-4184-9e1b-e239d4258497"],
+Cell[140630, 2717, 651, 16, 60, "Input",ExpressionUUID->"66d8d5e3-acf5-4c3a-a704-1988fc1d4eae"],
+Cell[141284, 2735, 351, 9, 35, "Input",ExpressionUUID->"a6e0552e-615d-4811-af2a-40ed951275ce"],
+Cell[CellGroupData[{
+Cell[141660, 2748, 501, 12, 81, "Input",ExpressionUUID->"98b17cd8-930b-4cf7-bb87-3f8d28e190e2"],
+Cell[142164, 2762, 2210, 76, 93, "Output",ExpressionUUID->"763b96ea-fd1f-45f8-82d1-3857601a183e"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[144411, 2843, 615, 15, 60, "Input",ExpressionUUID->"642d9301-1f2c-48d9-bca5-8c594dafde43"],
+Cell[CellGroupData[{
+Cell[145051, 2862, 840, 13, 204, "Print",ExpressionUUID->"4c7ed822-cad9-40d0-92c3-7992287949cd"],
+Cell[145894, 2877, 7085, 232, 272, "Print",ExpressionUUID->"13a17404-5fd2-49b9-b4c9-9c648080ab52"],
+Cell[152982, 3111, 179, 4, 27, "Print",ExpressionUUID->"0bf6e203-ffd9-4e14-be1b-277562edc776"]
+}, Open  ]],
+Cell[153176, 3118, 1502, 29, 547, "Output",ExpressionUUID->"819a909c-4f7e-4a9e-8e27-2e717c43a583"]
+}, Open  ]]
+}
+]
+*)
+
